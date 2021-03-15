@@ -1,0 +1,8 @@
+And you want the set of ‘(a, 1)’ and ‘(b, 2)’ and so on. Use ‘with_together’ to get this:
+
+tasks:
+    - debug:
+        msg: "{{ item.0 }} and {{ item.1 }}"
+      with_together:
+        - "{{ alpha }}"
+        - "{{ numbers }}"

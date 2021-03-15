@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>tld.domain.APPNAME</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>PATH_TO_APP</string>
+  </array>
+
+  <key>Nice</key>
+  <integer>1</integer>
+
+  <key>StartInterval</key>
+  <integer>60</integer>
+
+  <!-- Remember to create these files and replace uppercase! -->
+  <key>StandardErrorPath</key>
+  <string>/Users/USERNAME/Library/Logs/APPNAME/stderr.log</string>
+
+  <key>StandardOutPath</key>
+  <string>/Users/USERNAME/Library/Logs/APPNAME/stdout.log</string>
+</dict>
+</plist>

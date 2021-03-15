@@ -1,0 +1,1 @@
+﻿#INDENT#<div class="alert" role="alert">    <button class="close" data-dismiss="alert">×</button>    <strong>#PLACEHOLDERSTART#Warning!#PLACEHOLDEREND#</strong> #PLACEHOLDERSTART#Best check yo self, you're not looking too good.#PLACEHOLDEREND#</div>

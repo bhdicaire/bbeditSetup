@@ -1,0 +1,11 @@
+cheatsheet do
+  title '<##>'               # Will be displayed by Dash in the docset list
+  docset_file_name '<##>'    # Used for the filename of the docset
+  keyword '<##>'             # Used as the initial search keyword (listed in Preferences > Docsets)
+  # resources 'resources_dir'  # An optional resources folder which can contain images or anything else
+
+  introduction '<##>'
+
+  # A cheat sheet must consist of categories
+ category<#?#>
+end

@@ -1,0 +1,17 @@
+– set_fact:
+my_strings: “{{ my_strings + [ my_name ] }}”
+– set_fact:
+my_strings: “{{ my_strings + [ ‘Power’ ] }}”
+
+# This way you know that everything between the {{ }} is jinja so you don’t have to keep
+# mentally switching back and forth between yaml and jinja syntax as you read along the line.
+# In case any other readers are wondering, here’s how to append a dict created on-the-fly
+# to a list of dicts
+
+– set_fact:
+my_dicts: “{{ my_dicts + [ { ‘name’: ‘fred’, ‘age’: computed_age } ] }}”
+
+# You can put quoted strings or variables as keys and values and 
+# the variables will be dereferenced properly. 
+
+# Those variables can even be other lists and dicts if you’re assembling some complex data.

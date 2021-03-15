@@ -1,0 +1,1 @@
+﻿#INDENT#<div class="jumbotron">    <h1>#PLACEHOLDERSTART#Heading#PLACEHOLDEREND#</h1>    <p>#PLACEHOLDERSTART#Tagline#PLACEHOLDEREND#</p>    <p>        <a class="btn btn-primary btn-large">            Learn more        </a>    </p></div>

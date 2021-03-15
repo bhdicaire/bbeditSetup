@@ -1,0 +1,14 @@
+#INDENT#
+<ul class="nav nav-pills">
+    <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle"
+            data-toggle="dropdown"
+            href="#">
+            #PLACEHOLDERSTART#Dropdown#PLACEHOLDEREND#
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            li<#?#>
+        </ul>
+    </li>
+</ul>

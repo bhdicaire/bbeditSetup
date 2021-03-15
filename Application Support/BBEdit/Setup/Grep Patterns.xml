@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SavedGrepPatterns</key>
+	<array>
+		<dict>
+			<key>ReplacePattern</key>
+			<string></string>
+			<key>SearchPattern</key>
+			<string>^\s*$\n</string>
+			<key>Title</key>
+			<string>Remove Blank Lines</string>
+		</dict>
+		<dict>
+			<key>ReplacePattern</key>
+			<string>/* \1 */</string>
+			<key>SearchPattern</key>
+			<string>{([^}]*)}</string>
+			<key>Title</key>
+			<string>Pascal Comment to C Comment</string>
+		</dict>
+		<dict>
+			<key>ReplacePattern</key>
+			<string>/* \1 */</string>
+			<key>SearchPattern</key>
+			<string>//(.*)</string>
+			<key>Title</key>
+			<string>C++ Comment to C Comment</string>
+		</dict>
+		<dict>
+			<key>ReplacePattern</key>
+			<string>\t</string>
+			<key>SearchPattern</key>
+			<string> +</string>
+			<key>Title</key>
+			<string>Run of Spaces to One Tab</string>
+		</dict>
+		<dict>
+			<key>ReplacePattern</key>
+			<string></string>
+			<key>SearchPattern</key>
+			<string>^[^ \t#\r/@][^\r]*\([^\r]*\)$</string>
+			<key>Title</key>
+			<string>C Function Header</string>
+		</dict>
+		<dict>
+			<key>ReplacePattern</key>
+			<string>{\1}</string>
+			<key>SearchPattern</key>
+			<string>/\*([^\r]*)\*/</string>
+			<key>Title</key>
+			<string>C Comment to Pascal Comment</string>
+		</dict>
+		<dict>
+			<key>ReplacePattern</key>
+			<string>\1\2\t\3</string>
+			<key>SearchPattern</key>
+			<string>(.*)(\t\t*)(.*)</string>
+			<key>Title</key>
+			<string>Shift Variables Right</string>
+		</dict>
+		<dict>
+			<key>ReplacePattern</key>
+			<string>\1\3\4</string>
+			<key>SearchPattern</key>
+			<string>(.*)(\t)(\t*)(.*)</string>
+			<key>Title</key>
+			<string>Shift Variables Left</string>
+		</dict>
+		<dict>
+			<key>ReplacePattern</key>
+			<string>\1\L\2\E\3</string>
+			<key>SearchPattern</key>
+			<string>(&lt;img [^&gt;]*src\s*=\s*")([^"]+)("[^&gt;]*&gt;)</string>
+			<key>Title</key>
+			<string>Lower Case SRC values in IMG tags</string>
+		</dict>
+		<dict>
+			<key>ReplacePattern</key>
+			<string>\1\L\2\E\3</string>
+			<key>SearchPattern</key>
+			<string>(&lt;a [^&gt;]*href\s*=\s*")([^"]+)("[^&gt;]*&gt;)</string>
+			<key>Title</key>
+			<string>Lower Case HREF values in A tags</string>
+		</dict>
+		<dict>
+			<key>ReplacePattern</key>
+			<string>\1</string>
+			<key>SearchPattern</key>
+			<string>^[^\t]+\t([^\t]+)</string>
+			<key>Title</key>
+			<string>Column #2</string>
+		</dict>
+		<dict>
+			<key>ReplacePattern</key>
+			<string>foo bar</string>
+			<key>SearchPattern</key>
+			<string>(\d+\.){3}\d+</string>
+			<key>Title</key>
+			<string>Dotted Quad</string>
+		</dict>
+		<dict>
+			<key>ReplacePattern</key>
+			<string>\1\r</string>
+			<key>SearchPattern</key>
+			<string>\s(\d\d\d\D\d\d\d\D\d\d\d\d)\s*SMS\sAvailable\sMontreal\sQuébec</string>
+			<key>Title</key>
+			<string>VoIP</string>
+			<key>UniqueID</key>
+			<string>31E8A68B-94F2-4092-88C7-824A01EBF820</string>
+		</dict>
+		<dict>
+			<key>ReplacePattern</key>
+			<string></string>
+			<key>SearchPattern</key>
+			<string>\$\d.\d*.*\r</string>
+			<key>Title</key>
+			<string>VoIP #2</string>
+			<key>UniqueID</key>
+			<string>FB88AF9A-486A-4BD5-9F7F-449F50B183CC</string>
+		</dict>
+	</array>
+</dict>
+</plist>

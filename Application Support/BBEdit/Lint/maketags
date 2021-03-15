@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Run BBEdit maketags on Go standard library (exported classes only)
+
+CTAGS=/Applications/BBEdit.app/Contents/Helpers/ctags
+TAGFILE="../Completion Data/CoffeeScript/CoffeeScript Standard Library.tags"
+
+if [ -d $GOROOT ]; then
+    $CTAGS --recurse --langdef=CoffeeScript --langmap=CoffeeScript:.coffee \
+        --regex-CoffeeScript="/^[ \t]*(@?[a-zA-Z$_\.1-9]+)[ \t]*(=|\:)[ \t]*(\(.*\))?[ \t]*(-|=)>/\1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*([a-zA-Z$_1-9]+\:\:[a-zA-Z$_\.1-9]+)[ \t]*(=|\:)[ \t]*(\(.*\))?[ \t]*(-|=)>/\1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*describe[ \t]"(.+)"[ \t]*,[ \t]+[-=]>/\1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*describe[ \t]'(.+)'[ \t]*,[ \t]+[-=]>/\1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*it[ \t]\"([^\"]+)\"[ \t]*,[ \t]+[-=]>/\1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*it[ \t]'([^']+)'[ \t]*,[ \t]+[-=]>/\1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*f+describe[ \t]\"(.+)\"[ \t]*,[ \t]+[-=]>/focused\: \1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*f+describe[ \t]'(.+)'[ \t]*,[ \t]+[-=]>/focused: \1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*f+it[ \t]\"([^\"]+)\"[ \t]*,[ \t]+[-=]>/focused: \1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*f+it[ \t]'([^']+)'[ \t]*,[ \t]+[-=]>/focused: \1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*xdescribe[ \t]\"(.+)\"[ \t]*,[ \t]+[-=]>/disabled\: \1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*xdescribe[ \t]'(.+)'[ \t]*,[ \t]+[-=]>/disabled: \1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*xit[ \t]\"([^\"]+)\"[ \t]*,[ \t]+[-=]>/disabled: \1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*xit[ \t]'([^']+)'[ \t]*,[ \t]+[-=]>/disabled: \1/f,function/" \
+        --regex-CoffeeScript="/^[ \t]*class[ \t]*([a-zA-Z$_\.1-9]+)[ \t]*/\1/f,function/" \
+        --languages=CoffeeScript --fields=+a+m+n+S --excmd=number --tag-relative=no \
+        -f coffeestdlib.tags $GOROOT/src/pkg
+    if [ -e ./gostdlib.tags ]; then
+        mv ./gostdlib.tags "${TAGFILE}"
+    fi
+fi

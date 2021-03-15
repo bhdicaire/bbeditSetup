@@ -1,0 +1,201 @@
+/* http://jekyllrb.com/docs/templates/
+/* https://github.com/mojombo/tpw/tree/master/css/syntax.css
+/* “For an example stylesheet you can look at syntax.css. These are the same styles as used by GitHub and you are free to use them for your own site.” */
+.code_quote {
+	white-space : pre-line;
+	word-break : normal
+}
+
+.c,/* Comment */
+.cm,/* Comment Multiline */
+.c1,/* Comment Single */
+.cs,/* Comment Special */
+.ge {/* Generic Emphasis */
+	font-style : italic
+}
+
+.k,/* Keyword */
+.o,/* Operator */
+.cp,/* Comment Preproc */
+.cs,/* Comment Special */
+.gs,/* Generic Strong */
+.kc,/* Keyword Constant */
+.kd,/* Keyword Declaration */
+.kp,/* Keyword Pseudo */
+.kr,/* Keyword Reserved */
+.kt,/* Keyword Type */
+.nc,/* Name Class */
+.ne,/* Name Exception */
+.nf,/* Name Function */
+.ow {/* Operator Word */
+	font-weight : bold
+}
+
+.c,/* Comment */
+.cm,/* Comment Multiline */
+.c1,/* Comment Single */
+.cp,/* Comment Preproc */
+.cs,/* Comment Special */
+.bp,/* Name Builtin Pseudo */
+.gh,/* Generic Heading */
+.gr,/* Generic Error */
+.gt,/* Generic Traceback */
+.go,/* Generic Output */
+.gp,/* Generic Prompt */
+.nn,/* Name Namespace */
+.gu,/* Generic Subheading */
+.kt,/* Keyword Type */
+.nc,/* Name Class */
+.m,/* Literal Number */
+.mf,/* Literal Number Float */
+.mh,/* Literal Number Hex */
+.mi,/* Literal Number Integer */
+.mo,/* Literal Number Oct */
+.il,/* Literal Number Integer Long */
+.s,/* Literal String */
+.sb,/* Literal String Backtick */
+.sc,/* Literal String Char */
+.sd,/* Literal String Doc */
+.s2,/* Literal String Double */
+.se,/* Literal String Escape */
+.sh,/* Literal String Heredoc */
+.si,/* Literal String Interpol */
+.sx,/* Literal String Other */
+.s1,/* Literal String Single */
+.na,/* Name Attribute */
+.no,/* Name Constant */
+.ni,/* Name Entity */
+.nv,/* Name Variable */
+.vc,/* Name Variable Class */
+.vg,/* Name Variable Global */
+.vi,/* Name Variable Instance */
+.nb,/* Name.Builtin */
+.ne,/* Name Exception */
+.nf,/* Name Function */
+.nt,/* Name Tag */
+.w,/* Text.Whitespace */
+.sr,/* Literal String Regex */
+.ss {/* Literal String Symbol */
+	background-color : inherit
+}
+
+.c,/* Comment */
+.cm,/* Comment Multiline */
+.c1 {/* Comment Single */
+	color : #998
+}
+
+.err {/* Error */
+	background-color : #e3d2d2;
+	color : #a61717
+}
+
+.cp,/* Comment Preproc */
+.cs,/* Comment Special */
+.bp,/* Name Builtin Pseudo */
+.gh {/* Generic Heading */
+	color : #999
+}
+
+.gd,/* Generic Deleted */
+.gi {/* Generic Inserted */
+	color : #000
+}
+
+.gd {/* Generic Deleted */
+	background-color : #fdd
+}
+
+.gd .x {/* Generic Deleted Specific */
+	background-color : #faa;
+	color : inherit
+}
+
+.gr,/* Generic Error */
+.gt {/* Generic Traceback */
+	color : #a00
+}
+
+.gi {/* Generic Inserted */
+	background-color : #dfd
+}
+
+.gi .x {/* Generic Inserted Specific */
+	background-color : #afa;
+	color : inherit
+}
+
+.go {/* Generic Output */
+	color : #888
+}
+
+.gp,/* Generic Prompt */
+.nn {/* Name Namespace */
+	color : #555
+}
+
+.gu {/* Generic Subheading */
+	color : #aaa
+}
+
+.kt,/* Keyword Type */
+.nc {/* Name Class */
+	color : #458
+}
+
+.m,/* Literal Number */
+.mf,/* Literal Number Float */
+.mh,/* Literal Number Hex */
+.mi,/* Literal Number Integer */
+.mo,/* Literal Number Oct */
+.il {/* Literal Number Integer Long */
+	color : #099
+}
+
+.s,/* Literal String */
+.sb,/* Literal String Backtick */
+.sc,/* Literal String Char */
+.sd,/* Literal String Doc */
+.s2,/* Literal String Double */
+.se,/* Literal String Escape */
+.sh,/* Literal String Heredoc */
+.si,/* Literal String Interpol */
+.sx,/* Literal String Other */
+.s1 {/* Literal String Single */
+	color : #d14
+}
+
+.na,/* Name Attribute */
+.no,/* Name Constant */
+.ni,/* Name Entity */
+.nv,/* Name Variable */
+.vc,/* Name Variable Class */
+.vg,/* Name Variable Global */
+.vi {/* Name Variable Instance */
+	color : #008080
+}
+
+.nb {/* Name.Builtin */
+	color : #0086B3
+}
+
+.ne,/* Name Exception */
+.nf {/* Name Function */
+	color : #900
+}
+
+.nt {/* Name Tag */
+	color : #000080
+}
+
+.w {/* Text.Whitespace */
+	color : #bbb
+}
+
+.sr {/* Literal String Regex */
+	color : #009926
+}
+
+.ss {/* Literal String Symbol */
+	color : #990073
+}

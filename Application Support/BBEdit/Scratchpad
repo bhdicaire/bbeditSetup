@@ -1,0 +1,171 @@
+<div class="column is-one-third">
+  <div class="card">
+    <div class="card-content">
+      <a class="title is-size-4 is-size-5-mobile has-text-primary has-text-weight-bold">
+        {{ .group }}
+      </a>
+
+
+      {{ range .items }}
+ 
+        <div class="column is-multiline">     <div class="content is-medium">
+        <a href="{{ .url }}" target="_blank">{{ .name }}</a>
+        </div></div>
+       
+     {{ end }}
+     
+  
+    </div>
+
+  </div>
+</div>
+
+
+<!-- 
+ {{ if mod $rowItem 3 | eq 0 }}
+{{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+{{ $k := .Scratch.Get "i" }}
+{{ if lt $k 2 }}
+{{ if and ((ne .URL $slug) (lt $k 2) ) }}
+ -->
+
+
+{{ $title := .Title }} 
+{{ $desc := .Description }} 
+<section class="hero is-black has-background-pattern">
+	<div class="hero-body">
+		<div class="container">
+			<p class="title is-size-1 is-size-2-mobile has-text-weight-bold{{ if $desc }} is-spaced{{ end }}">
+				{{ .Title }} 
+			</p>
+			{{ with $desc }} 
+			<p class="subtitle is-size-3 is-size-4-mobile">
+				{{ with $desc }} 
+			</p>
+		</div>
+	</div>
+</section>
+
+-----
+
+
+Blogh title single
+
+Borg Backups with MinIO and Scaleway
+ PERMALINK  8 MINUTE READ  25 AUG, 2019 UPDATED
+
+Bulma  
+  
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Hello World
+      </h1>
+      <p class="subtitle">
+        My first website with <strong>Bulma</strong>!
+      </p>
+    </div>
+  </section>
+
+// Set your brand colors
+// $primary: #8A4D76
+// $info: #FA7C91
+// $success: #757763
+// $danger: red
+// $light: #ccc
+// $dark: #444
+
+// Set your brand colors
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+
+// Update some of Bulma's component variables
+$control-border-width: 2px;
+$input-background-color: $beige-lighter;
+$input-border-color: transparent;
+$input-shadow: none;
+
+@import "utilities/_all"
+@import "base/_all"
+@import "elements/_all"
+@import "form/_all"
+@import "components/_all"
+@import "grid/_all"
+@import "layout/_all"
+
+<!-- 
+{{ define "main" }}
+Hello Again !!
+{{ end }}
+ -->
+ 
+   
+  
+  <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <meta name="Description" content="Mark Boulton is a design director, writer, and speaker. He helps in-house teams and organisations with design leadership, strategy, and design systems.">
+
+ 
+
+ {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
+  {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+  {{ else }}
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  {{ end }}
+
+  <link rel="stylesheet" href="/css/index.css">
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+
+<!-- 
+   <link rel="alternate" href="journal/feed/feed.xml" type="application/atom+xml" title="Mark Boulton">
+   <link rel="alternate" href="https://feeds.pinboard.in/rss/u:markboulton/t:ofinterest" type="application/atom+xml" title="Mark Boulton's Reading Links RSS'">
+  
+ -->
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json" />
+      
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+    {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
+    {{- template "_internal/opengraph.html" . -}}
+    {{- template "_internal/schema.html" . -}}
+    {{- template "_internal/twitter_cards.html" . -}}
+
+    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+      {{ template "_internal/google_analytics_async.html" . }}
+    {{ end }}  
+  
+   <!-- SEO -->
+    <link href="index.html" rel="home" />
+    <link href="index.html" rel="canonical" />
+    <link type="text/plain" rel="author" href="humans.txt" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
