@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>TextTransform</string>
+	<key>TextTransformComponents</key>
+	<array>
+		<dict>
+			<key>ComponentArguments</key>
+			<dict>
+				<key>SortIgnoreLeadingWhiteSpace</key>
+				<true/>
+				<key>SortLines_SortedLinesReplaceSelection</key>
+				<true/>
+				<key>SortNumerically</key>
+				<true/>
+				<key>SortSubPatternType</key>
+				<string>EntireSearchPattern</string>
+			</dict>
+			<key>ComponentName</key>
+			<string>SortLines</string>
+		</dict>
+		<dict>
+			<key>ComponentArguments</key>
+			<dict>
+				<key>MatchIgnoreLeadingWhiteSpace</key>
+				<true/>
+				<key>MatchSubPatternType</key>
+				<string>EntireSearchPattern</string>
+				<key>ProcessAllMatches</key>
+				<integer>0</integer>
+				<key>ProcessDuplicateLines_DeleteDuplicateLines</key>
+				<true/>
+			</dict>
+			<key>ComponentName</key>
+			<string>ProcessDuplicateLines</string>
+		</dict>
+	</array>
+	<key>TextTransformOptions</key>
+	<dict>
+		<key>SaveMode</key>
+		<string>ask </string>
+		<key>SearchInvisibles</key>
+		<false/>
+		<key>SearchRecursive</key>
+		<true/>
+		<key>SkipShielded</key>
+		<false/>
+		<key>TextFilesOnly</key>
+		<true/>
+	</dict>
+	<key>TextTransformSources</key>
+	<array/>
+	<key>com.barebones.DocumentType</key>
+	<string>TextTransform</string>
+</dict>
+</plist>

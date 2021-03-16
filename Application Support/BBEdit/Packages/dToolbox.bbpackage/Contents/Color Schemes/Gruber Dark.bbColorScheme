@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BackgroundColor</key>
+	<string>rgba(0.157259,0.157259,0.157259,1.0)</string>
+	<key>EditingWindowGuideContrast</key>
+	<string>2</string>
+	<key>HighlightInsertionPoint</key>
+	<string>0</string>
+	<key>InsertionPointLineHighlightColor</key>
+	<string>rgba(0.152941,0.152941,0.152941,1.0)</string>
+	<key>PrimaryHighlightColor</key>
+	<string>rgba(0.373800,0.383276,0.496376,1.0)</string>
+	<key>SecondaryHighlightColor</key>
+	<string>rgba(0.283711,0.286687,0.317082,1.0)</string>
+	<key>UseCustomHighlightColor</key>
+	<string>1</string>
+	<key>com.barebones.bblm.code</key>
+	<string>rgba(0.955642,0.955642,1.000000,1.0)</string>
+	<key>com.barebones.bblm.comment</key>
+	<string>rgba(0.800000,0.549020,0.235294,1.0)</string>
+	<key>com.barebones.bblm.html.anchor</key>
+	<string>rgba(0.366934,0.592737,0.956863,1.0)</string>
+	<key>com.barebones.bblm.html.attribute-name</key>
+	<string>rgba(0.584680,0.662745,0.623529,1.0)</string>
+	<key>com.barebones.bblm.html.attribute-value</key>
+	<string>rgba(0.450980,0.800000,0.211765,1.0)</string>
+	<key>com.barebones.bblm.html.image</key>
+	<string>rgba(0.521569,0.556863,0.956863,1.0)</string>
+	<key>com.barebones.bblm.indexed-symbol</key>
+	<string>rgba(0.600000,0.000000,0.400000,1.0)</string>
+	<key>com.barebones.bblm.keyword</key>
+	<string>rgba(0.588235,0.650980,0.784314,1.0)</string>
+	<key>com.barebones.bblm.sgml-tag</key>
+	<string>rgba(0.521569,0.556863,0.956863,1.0)</string>
+	<key>com.barebones.bblm.string</key>
+	<string>rgba(0.450980,0.786297,0.211765,1.0)</string>
+	<key>com.barebones.bblm.xml-pi</key>
+	<string>rgba(1.000000,0.866941,0.200000,1.0)</string>
+</dict>
+</plist>

@@ -1,0 +1,44 @@
+#INDENT#defmodule #SELSTART#Server.Name#SELEND# do
+	use GenServer.Behaviour
+	
+	@vsn "0"
+	
+	defrecord State, state: {} :: any()
+	
+	def init(_args) do
+		{:ok, State.new}
+	end
+	
+	@spec start_link() :: {:ok, pid()} | :ignore | {:error, any()}
+	def start_link() do
+		:gen_server.start_link(__MODULE__, [], [])
+	end
+	
+	def handle_cast(:stop, state) do
+		{:stop, :normal, :state}
+	end
+	
+	def handle_call(:state, _from, state) do
+		{:reply, state, state}
+	end
+	
+	def handle_call(_request, _from, state) do
+		{:reply, :ignored, state}
+	end
+	
+	def handle_cast(_request, state) do
+		{:noreply, state}
+	end
+	
+	def handle_info(_info, state) do
+		{:noreply, state}
+	end
+	
+	def terminate(_reason, _state) do
+		:ok
+	end
+	
+	def code_change(_from_version, state, _extra) do
+		{:ok, state}
+	end
+end

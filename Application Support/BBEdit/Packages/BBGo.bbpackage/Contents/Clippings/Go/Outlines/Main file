@@ -1,0 +1,45 @@
+// #PLACEHOLDERSTART#Project Name#PLACEHOLDEREND#
+//
+// Copyright (C) #PLACEHOLDERSTART#Year#PLACEHOLDEREND# #PLACEHOLDERSTART#Name#PLACEHOLDEREND#
+//
+// All rights reserved. Use of this source code is governed
+// by the #PLACEHOLDERSTART#License#PLACEHOLDEREND#.
+
+package main
+
+//--------------------
+// IMPORTS
+//--------------------
+
+import (
+	"fmt"
+)
+
+//--------------------
+// MAIN
+//--------------------
+
+// Main contains the main program as own type for better unit testing.
+type Main struct {
+	#PLACEHOLDERSTART#...#PLACEHOLDEREND#	
+}
+
+// NewMain initialises the main program.
+fun NewMain() *Main {
+	return &Main{
+		#PLACEHOLDERSTART#...#PLACEHOLDEREND#	
+	}
+}
+
+// Run implements the core main program.
+func (m *Main) Run() {
+	#PLACEHOLDERSTART#fmt.Println("Hello, World!")#PLACEHOLDEREND#
+}
+
+func main() {
+	m := NewMain()
+
+	m.Run()
+}
+
+// EOF

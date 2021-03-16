@@ -1,0 +1,32 @@
+// #SELSTART#Package Name#SELEND# - Unit Tests
+//
+// Copyright (C) #PLACEHOLDERSTART#Year#PLACEHOLDEREND# #PLACEHOLDERSTART#Name#PLACEHOLDEREND#
+//
+// All rights reserved. Use of this source code is governed
+// by the #PLACEHOLDERSTART#License#PLACEHOLDEREND#.
+
+package #PLACEHOLDERSTART#Package Name#PLACEHOLDEREND#_test
+
+//--------------------
+// IMPORTS
+//--------------------
+
+import (
+	"testing"
+)
+
+//--------------------
+// TESTS
+//--------------------
+
+// #PLACEHOLDERSTART#Test Description#PLACEHOLDEREND#
+func Test#PLACEHOLDERSTART#Name#PLACEHOLDEREND#(t *testing.T) {
+	#PLACEHOLDERSTART#Body#PLACEHOLDEREND#
+}
+
+// #PLACEHOLDERSTART#Benchmark Description#PLACEHOLDEREND#
+func Benchmark#PLACEHOLDERSTART#Name#PLACEHOLDEREND#(b *testing.B) {
+	#PLACEHOLDERSTART#Body#PLACEHOLDEREND#
+}
+
+// EOF

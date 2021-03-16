@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+  BBEdit Applescript Codeless Language Module.
+  Bill Hernandez  <http://www.mac-specialist.com/>
+  Version 1.0.1
+  Updated - Monday, November 20, 2006 ( 6:41 PM )
+  Updated - Tuesday, November 21, 2006 ( 10:05 PM )
+  Updated - Wednesday, November 22, 2006 ( 7:26 PM )
+  Updated - Tuesday, December 05, 2006 ( 1:11 PM )
+
+  Released under a Creative Commons Attribution-ShareAlike License:
+  <http://creativecommons.org/licenses/by-sa/2.5/>
+
+    Requires BBEdit 8.x.x
+    
+    To install :
+    
+    ( 1 ) You need to open the following folder : ~/Library/Application Support/BBEdit/Language Modules/ 
+    
+    ( 2 ) Copy the string -&gt; ~/Library/Application Support/BBEdit/Language Modules/   
+    ( 3 ) From the Finder menu, select "Go -> Go to Folder...", paste, and hit return, 
+           it should open the Language Modules folder :
+    
+    ( 4 ) if you get no results in the way of an open window, try the GO menu again with : 
+    ( 5 ) Copy the string -&gt; ~/Library/Application Support/BBEdit/
+    
+    In my case the [Language Modules] folder was missing, so I created one.
+    You can do the same, so create a new [Language Modules] folder (if required).
+    
+    Do one of the following :
+        ( 1 ) Download the plist at the top of this document, and put it in the [Language Modules] folder
+    or
+        ( 1 ) Create an empty document in BBEdit
+        ( 2 ) Paste the contents of this plist, beginning with "<?xml"
+        ( 3 ) Save to the [Language Modules] folder with the name "AppleScript_CLM.plist" 
+        ( 4 ) Menu Select "Text -> Zap Gremlins..." to clear up any platform html incompatibilities
+        ( 5 ) Make sure the TYPE AND CREATOR are empty, and restart BBEdit.
+-->
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>Bill</string>
+		<string>Hernandez</string>
+		<string>{</string>
+		<string>}</string>
+		<string>about_window</string>
+		<string>activate</string>
+		<string>add</string>
+		<string>after</string>
+		<string>and</string>
+		<string>answer</string>
+		<string>AppleScript's</string>
+		<string>application</string>
+		<string>apply</string>
+		<string>as</string>
+		<string>ASCII</string>
+		<string>balance</string>
+		<string>breaks</string>
+		<string>browser</string>
+		<string>button</string>
+		<string>buttons</string>
+		<string>case</string>
+		<string>change</string>
+		<string>character</string>
+		<string>check</string>
+		<string>choose</string>
+		<string>Classes</string>
+		<string>cleaner</string>
+		<string>clear</string>
+		<string>clipboard</string>
+		<string>clipboard_window</string>
+		<string>clipping</string>
+		<string>close</string>
+		<string>column</string>
+		<string>compare</string>
+		<string>containing</string>
+		<string>convert</string>
+		<string>copy</string>
+		<string>count</string>
+		<string>cut</string>
+		<string>decrement</string>
+		<string>default</string>
+		<string>delete</string>
+		<string>delimiters</string>
+		<string>detab</string>
+		<string>dialog</string>
+		<string>differences_window</string>
+		<string>disk</string>
+		<string>display</string>
+		<string>display_line</string>
+		<string>document</string>
+		<string>duplicate</string>
+		<string>Duplicates</string>
+		<string>educate</string>
+		<string>end</string>
+		<string>endings</string>
+		<string>entab</string>
+		<string>Entry</string>
+		<string>exists</string>
+		<string>extended</string>
+		<string>factory</string>
+		<string>false</string>
+		<string>file</string>
+		<string>filter</string>
+		<string>filter_term</string>
+		<string>find</string>
+		<string>folder</string>
+		<string>format</string>
+		<string>from</string>
+		<string>FTP</string>
+		<string>generate</string>
+		<string>get</string>
+		<string>giving</string>
+		<string>GoLive</string>
+		<string>gremlins</string>
+		<string>grep</string>
+		<string>group</string>
+		<string>hard</string>
+		<string>history</string>
+		<string>Home</string>
+		<string>html</string>
+		<string>images</string>
+		<string>in</string>
+		<string>increment</string>
+		<string>info</string>
+		<string>insert</string>
+		<string>insertion</string>
+		<string>inside</string>
+		<string>item</string>
+		<string>items</string>
+		<string>level</string>
+		<string>line</string>
+		<string>lines</string>
+		<string>links</string>
+		<string>list</string>
+		<string>lower</string>
+		<string>make</string>
+		<string>mark</string>
+		<string>Match</string>
+		<string>move</string>
+		<string>movie</string>
+		<string>multifile_differences_window</string>
+		<string>my</string>
+		<string>normalize</string>
+		<string>numbers</string>
+		<string>on</string>
+		<string>open</string>
+		<string>optimize</string>
+		<string>Options</string>
+		<string>Output</string>
+		<string>Page</string>
+		<string>PageMill</string>
+		<string>pair</string>
+		<string>palette</string>
+		<string>paste</string>
+		<string>perl_reference_window</string>
+		<string>picture</string>
+		<string>plugin_info_window</string>
+		<string>point</string>
+		<string>preferences</string>
+		<string>preferences_window</string>
+		<string>prefix</string>
+		<string>Prefs</string>
+		<string>preview</string>
+		<string>print</string>
+		<string>process</string>
+		<string>Properties</string>
+		<string>property</string>
+		<string>QuickTime</string>
+		<string>quit</string>
+		<string>quote</string>
+		<string>quoted</string>
+		<string>quotes</string>
+		<string>recent</string>
+		<string>redo</string>
+		<string>remove</string>
+		<string>repeat</string>
+		<string>replace</string>
+		<string>result</string>
+		<string>results</string>
+		<string>returning</string>
+		<string>revert</string>
+		<string>rewrap</string>
+		<string>run</string>
+		<string>save</string>
+		<string>script</string>
+		<string>search</string>
+		<string>select</string>
+		<string>set</string>
+		<string>settings</string>
+		<string>shell</string>
+		<string>shift</string>
+		<string>showing</string>
+		<string>site</string>
+		<string>sort</string>
+		<string>source_control_form_window</string>
+		<string>straighten</string>
+		<string>String</string>
+		<string>strip</string>
+		<string>substitution</string>
+		<string>suffix</string>
+		<string>syntax</string>
+		<string>tag</string>
+		<string>tags</string>
+		<string>tell</string>
+		<string>text</string>
+		<string>text_object</string>
+		<string>to</string>
+		<string>tool</string>
+		<string>translate</string>
+		<string>true</string>
+		<string>undo</string>
+		<string>unix</string>
+		<string>up</string>
+		<string>update</string>
+		<string>upper</string>
+		<string>web</string>
+		<string>window</string>
+		<string>word</string>
+		<string>wrap</string>
+		<string>zap</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>ApSc</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>AppleScript</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.scpt.txt</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.applescript</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.as.txt</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.scpt.as</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Comment Pattern</key>
+		<string>(--.*$)|(\(\*(?s).*?(?-s)\*\))</string>
+		<key>String Pattern</key>
+		<string>"(\\.|[^"])*+"</string>
+		<key>Function Pattern</key>
+		<string>^on\s+(?P&lt;function_name&gt;\w+).*\r(?:.*\r)*?end\s+(?P=function_name)</string>
+		<key>Identifier and Keyword Character Class</key>
+		<string>\w</string>
+
+		<key>Close Block Comments</key>
+		<string>*)</string>
+		<key>Close Parameter Lists</key>
+		<string>)</string>
+		<key>Close Statement Blocks</key>
+		<string>end if</string>
+		<key>Close Strings 1</key>
+		<string>"</string>
+		<key>Close Strings 2</key>
+		<string>'</string>
+		<key>End-of-line Ends Strings 1</key>
+		<false/>
+		<key>End-of-line Ends Strings 2</key>
+		<false/>
+		<key>Escape Char in Strings 1</key>
+		<string>\</string>
+		<key>Escape Char in Strings 2</key>
+		<string>\</string>
+		<key>Identifier and Keyword Characters</key>
+		<string>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz^-_./</string>
+		<key>Open Block Comments</key>
+		<string>(*</string>
+		<key>Open Line Comments</key>
+		<string>--</string>
+		<key>Open Parameter Lists</key>
+		<string>(</string>
+		<key>Open Statement Blocks</key>
+		<string>if </string>
+		<key>Open Strings 1</key>
+		<string>"</string>
+		<key>Open Strings 2</key>
+		<string>'</string>
+		<key>Prefix for Functions</key>
+		<string>^on </string>
+		<key>Prefix for Procedures</key>
+		<string></string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

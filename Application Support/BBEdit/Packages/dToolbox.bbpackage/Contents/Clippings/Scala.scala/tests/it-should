@@ -1,0 +1,4 @@
+#INDENT#
+it should "#PLACEHOLDERSTART#description#PLACEHOLDEREND#" in {
+	#INSERTION#
+}

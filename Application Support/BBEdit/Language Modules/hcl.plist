@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+	"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<!--  Copyright (c) 2019 Iain Barnett. -->
+		
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>HCL</string>
+	<key>BBLMLanguageCode</key>
+	<string>HCL</string>
+	<key>BBLMPreferredFilenameExtension</key>
+	<string>tf</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+
+	<key>BBLMKeywordList</key>
+	<array>
+    <string>connection</string>
+    <string>egress</string>
+    <string>ingress</string>
+    <string>listener</string>
+    <string>provisioner</string>
+    <string>resource</string>
+	</array>
+
+	<key>BBLMPredefinedNameList</key>
+	<array>
+    <string>acl</string>
+    <string>allocated_storage</string>
+    <string>ami</string>
+    <string>associate_public_ip_address</string>
+    <string>availability_zone</string>
+    <string>availability_zones</string>
+    <string>backup_retention_period</string>
+    <string>backup_window</string>
+    <string>bucket</string>
+    <string>cidr</string>
+    <string>cidr_block</string>
+    <string>cidr_blocks</string>
+    <string>db_subnet_group_name</string>
+    <string>description</string>
+    <string>desired_capacity</string>
+    <string>destination_cidr_block</string>
+    <string>ebs_optimized</string>
+    <string>enable_dns_hostnames</string>
+    <string>enable_dns_support</string>
+    <string>engine</string>
+    <string>engine_version</string>
+    <string>final_snapshot_identifier</string>
+    <string>force_delete</string>
+    <string>from_port</string>
+    <string>gateway_id</string>
+    <string>health_check</string>
+    <string>health_check_grace_period</string>
+    <string>health_check_type</string>
+    <string>healthy_threshold</string>
+    <string>host</string>
+    <string>iam_instance_profile</string>
+    <string>inline</string>
+    <string>identifier</string>
+    <string>image_id</string>
+    <string>instance</string>
+    <string>instance_class</string>
+    <string>instance_id</string>
+    <string>instance_port</string>
+    <string>instance_protocol</string>
+    <string>instance_type</string>
+    <string>instances</string>
+    <string>internal</string>
+    <string>interval</string>
+    <string>iops</string>
+    <string>key_name</string>
+    <string>launch_configuration</string>
+    <string>lb_port</string>
+    <string>lb_protocol</string>
+    <string>load_balancers</string>
+    <string>maintenance_window</string>
+    <string>map_public_ip_on_launch</string>
+    <string>max_size</string>
+    <string>min_size</string>
+    <string>multi_az</string>
+    <string>name</string>
+    <string>name_prefix</string>
+    <string>owner_id</string>
+    <string>password</string>
+    <string>port</string>
+    <string>private_ip</string>
+    <string>private_key</string>
+    <string>protocol</string>
+    <string>provider</string>
+    <string>public_key</string>
+    <string>publicly_accessible</string>
+    <string>records</string>
+    <string>region</string>
+    <string>route</string>
+    <string>route_table_id</string>
+    <string>security_group_id</string>
+    <string>security_group_name</string>
+    <string>security_group_names</string>
+    <string>security_group_owner_id</string>
+    <string>security_groups</string>
+    <string>self</string>
+    <string>skip_final_snapshot</string>
+    <string>source_dest_check</string>
+    <string>source_security_group_id</string>
+    <string>ssl_certificate_id</string>
+    <string>subnet_id</string>
+    <string>subnet_ids</string>
+    <string>subnets</string>
+    <string>tags</string>
+    <string>target</string>
+    <string>timeout</string>
+    <string>to_port</string>
+    <string>ttl</string>
+    <string>type</string>
+    <string>unhealthy_threshold</string>
+    <string>user</string>
+    <string>user_data</string>
+    <string>username</string>
+    <string>vpc</string>
+    <string>vpc_id</string>
+    <string>vpc_security_group_ids</string>
+    <string>vpc_zone_identifier</string>
+    <string>zone_id</string>
+	</array>
+
+	<key>BBLMCommentLineDefault</key>   <string>#</string>
+	<key>Open Block Comments</key>      <string>/*</string>
+  <key>Close Block Comments</key>     <string>*/</string>
+  <key>Open Line Comments</key>       <string>#</string>
+
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string>A-Za-z0-9_\-</string>
+
+		<key>Comment Pattern</key>
+    <string><![CDATA[
+    (?x:
+      ((?:\#|//).*?$) (?# Line comment)
+        |
+      (?s:^/\*.+?^\*/) (?# Block comment)
+    )
+    ]]></string>
+    <key>String Pattern</key>
+    <string><![CDATA[
+    (?x:
+      ("(\\"|[^"\r]|\\\r)*") |  (?# Double-quote)
+      (?s:                      (?# Here-document)
+        <<-?(?P<delim>\w+)
+        .*?
+        (?P=delim)
+      )
+    )
+    ]]></string>
+
+    <key>Open Statement Blocks</key>    <string>{</string>
+    <key>Close Statement Blocks</key>   <string>}</string>
+
+	</dict> 
+</dict>
+</plist>

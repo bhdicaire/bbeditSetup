@@ -1,0 +1,144 @@
+html {
+	font : 100%/1.6 "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif
+}
+
+body {
+	background-color : #fff;
+	color : #333;
+	padding : 0 1.25em 1.25em;
+	width : 45.125em;
+	word-wrap : break-word
+}
+
+a {
+	color : #4183c4;
+	text-decoration : none
+}
+
+a,
+h2,
+h6 {
+	background-color : transparent
+}
+
+a :hover {
+	text-decoration : underline
+}
+
+blockquote,
+dl,
+ol,
+p,
+pre,
+ul {
+	margin : .9375rem 0
+}
+
+ul, ol {
+	padding-left : 1.875em
+}
+
+h1 {
+    border-bottom : .0625em solid #eee;
+    font-size : 2.25em;
+    line-height : 1.2;
+    padding-bottom : .3em
+}
+
+h2 {
+	border-bottom : .0625em solid #eee;
+	color : #000;
+	padding-bottom : .3em;
+    font-size : 1.75em;
+    line-height : 1.225em
+}
+
+h3 {
+	font-size : 1.5em
+}
+
+h4 {
+	font-size : 1.2em
+}
+
+h5 {
+	font-size : 1em
+}
+
+h6 {
+	color : #777;
+	font-size : 1em
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight : 700;
+	margin : 1em 0 .9375rem
+}
+
+h1 + p,
+h2 + p,
+h3 + p {
+	margin-top : .625em
+}
+
+pre {
+	background-color : #f8f8f8;
+    overflow : auto
+}
+
+pre,
+table tr,
+table tr :nth-child(2n) {
+	color : inherit
+}
+
+code {
+    border-radius : .1875rem;
+    font : .75em Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    margin : 0;
+    padding : .4em;
+    white-space : pre
+}
+
+pre code {
+	display : block;
+	font-size : .875em;
+	line-height : 1.4em;
+	margin : 0 .125rem;
+    padding : 1rem;
+	word-wrap : normal
+}
+
+table {
+    border-collapse : collapse;
+    display : table;
+    margin : 0 0 1em;
+    overflow : auto;
+    width : 100%;
+    word-break : normal
+}
+
+table tr {
+    background-color : #fff;
+    border-top : .0625em solid #ccc
+}
+
+table tr :nth-child(2n) {
+    background-color : #f8f8f8
+}
+
+table th,
+table td {
+    border : .0625em solid #ddd;
+    display : table-cell;
+    padding : .375em
+}
+
+table th {
+    font-weight : 700
+}

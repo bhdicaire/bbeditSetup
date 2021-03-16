@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	The BBEdit Perl 6 Codeless Language Module
+		https://github.com/briandfoy/Perl6_BBEdit_CLM
+
+	This work is licensed under the Artistic License 2.0
+	Copyright © 2016-2017, brian d foy <brian.d.foy@gmail.com>
+
+	More info about Codeless Language Modules
+			http://www.barebones.com/support/develop/clm.html
+	-->
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>CATCH</string>
+		<string>BEGIN</string>
+		<string>NEXT</string>
+		<string>FIRST</string>
+		<string>LAST</string>
+		<string>END</string>
+		<string>KEEP</string>
+		<string>UNDO</string>
+		<string>INIT</string>
+		<string>ENTER</string>
+		<string>LEAVE</string>
+		<string>PRE</string>
+		<string>POST</string>
+		<string>class</string>
+		<string>die</string>
+		<string>default</string>
+		<string>do</string>
+		<string>does</string>
+		<string>eager</string>
+		<string>else</string>
+		<string>elsif</string>
+		<string>export</string>
+		<string>fail</string>
+		<string>for</string>
+		<string>given</string>
+		<string>grammar</string>
+		<string>has</string>
+		<string>if</string>
+		<string>is</string>
+		<string>join</string>
+		<string>loop</string>
+		<string>MAIN</string>
+		<string>method</string>
+		<string>module</string>
+		<string>multi</string>
+		<string>my</string>
+		<string>of</string>
+		<string>open</string>
+		<string>our</string>
+		<string>quietly</string>
+		<string>return</string>
+		<string>role</string>
+		<string>rule</string>
+		<string>say</string>
+		<string>so</string>
+		<string>subset</string>
+		<string>put</string>
+		<string>sink</string>
+		<string>state</string>
+		<string>sub</string>
+		<string>times</string>
+		<string>token</string>
+		<string>try</string>
+		<string>unit</string>
+		<string>unless</string>
+		<string>when</string>
+		<string>where</string>
+		<string>while</string>
+		<string>use</string>
+	</array>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<string>True</string>
+		<string>False</string>
+		<string>Int</string>
+		<string>Str</string>
+		<string>:exists</string>
+		<string>:x</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>PRL6</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Perl 6</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.pm6</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.p6</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.pl6</string>
+		</dict>
+	</array>
+	<key>BBLMPreferredFilenameExtension</key>
+	<string>p6</string>
+	<key>Language Features</key>
+	<dict>
+		<key>Open Line Comments</key>       <string>#</string>
+		<key>Identifier and Keyword Character Class</key> <string>A-Za-z0-9_\?!</string>
+		<key>Open Statement Blocks</key>    <string>{</string>
+		<key>Close Statement Blocks</key>   <string>}</string>
+		<key>Escape Char in Strings 1</key>     <string>\</string>
+		<key>End-of-line Ends Strings 1</key>   <false/>
+		<key>Prefix for Functions</key>   <string>sub</string>
+		<key>Comment Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(?s: \# ` \(   .*?   \)          ) | (?# Inline comment, needs 「」 and other balanced)
+			(    \#        .*?             $ ) | (?# Line comment)
+			(?s: ^=begin\b .+? ^=end\b .*? $ )   (?# Block comment)
+		)
+		]]></string>
+		<key>String Pattern</key>
+		<!-- I've made \W a valid delimiter for quoting even though
+		that's not good enough. It's just good enough for me.
+		-->
+		<string><![CDATA[
+		(?x:
+			(  (Q|qq|q)  (:to /END/ ) .+? ^\s*END$                           ) | (?# Here doc - still broken )
+			(  Q  (:[a-z]+)* (?P<delimQ>\W)        .*?          (?P=delimQ)  ) | (?# Q//  )
+			( qq  (:[a-z]+)* (?P<delimqq>\W)       .*?          (?P=delimqq) ) | (?# qq// )
+			( qq  (:[a-z]+)* \{            (\\}|[^}\r]|\\\r)*         }      ) | (?# qq{} )
+			( qq  (:[a-z]+)* \[            (\\\]|[^\]\r]|\\\r)*       \]     ) | (?# qq[] )
+			( qq  (:[a-z]+)* \<            (\\}|[^>\r]|\\\r)*         \>     ) | (?# qq<> )
+			(  q  (:[a-z]+)* (?P<delimq>\W)        .*?          (?P=delimq)  ) | (?# q//  )
+			(  q  (:[a-z]+)* \{            (\\}|[^}\r]|\\\r)*         }      ) | (?# qq{} )
+			(                      "       (\\"|[^"\r]|\\\r)*         "      ) | (?# Double-quote)
+			(                      '       (\\'|[^'\r]|\\\r)*         '      ) | (?# Single-quote)
+			(                     <<              .*?         >>             ) | (?# word quoting)
+			(                      <              .*?         >              ) | (?# word quoting)
+			(                     「       (\\」|[^」\r]|\\\r)*         」    )    (?# word quoting)
+		)
+		]]></string>
+		<key>Function Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(?P<function>
+				(sub|multi sub|submethod|method|regex|token|rule)
+				\s+
+				(?P<function_name> [\w'-]+ )
+			)
+		)
+		]]>
+		</string>
+	</dict>
+</dict>
+</plist>

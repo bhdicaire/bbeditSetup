@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+	"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<!--
+	AppleScript language syntax
+	Copyright 2014 Andrew Carter
+-->
+
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>	
+	<key>BBLMLanguageDisplayName</key>
+	<string>AppleScript</string>
+	<key>BBLMLanguageCode</key>
+	<string>ApSc</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMCanSpellCheckCodeRuns</key>
+	<false/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.applescript</string>
+		</dict>
+	</array>
+	
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>about</string>
+		<string>above</string>
+		<string>after</string>
+		<string>against</string>
+		<string>and</string>
+		<string>apart from</string>
+		<string>around</string>
+		<string>as</string>
+		<string>aside from</string>
+		<string>at</string>
+		<string>back</string>
+		<string>before</string>
+		<string>beginning</string>
+		<string>behind</string>
+		<string>below</string>
+		<string>beneath</string>
+		<string>beside</string>
+		<string>between</string>
+		<string>but</string>
+		<string>by</string>
+		<string>considering</string>
+		<string>contain</string>
+		<string>contains</string>
+		<string>continue</string>
+		<string>copy</string>
+		<string>div</string>
+		<string>does</string>
+		<string>eighth</string>
+		<string>else</string>
+		<string>end</string>
+		<string>equal</string>
+		<string>equals</string>
+		<string>error</string>
+		<string>every</string>
+		<string>exit</string>
+		<string>false</string>
+		<string>fifth</string>
+		<string>first</string>
+		<string>for</string>
+		<string>fourth</string>
+		<string>from</string>
+		<string>front</string>
+		<string>get</string>
+		<string>given</string>
+		<string>global</string>
+		<string>if</string>
+		<string>ignoring</string>
+		<string>in</string>
+		<string>instead of</string>
+		<string>into</string>
+		<string>is</string>
+		<string>it</string>
+		<string>its</string>
+		<string>last</string>
+		<string>local</string>
+		<string>me</string>
+		<string>middle</string>
+		<string>mod</string>
+		<string>my</string>
+		<string>ninth</string>
+		<string>not</string>
+		<string>of</string>
+		<string>on</string>
+		<string>onto</string>
+		<string>or</string>
+		<string>out of</string>
+		<string>over</string>
+		<string>prop</string>
+		<string>property</string>
+		<string>put</string>
+		<string>ref</string>
+		<string>reference</string>
+		<string>repeat</string>
+		<string>return</string>
+		<string>returning</string>
+		<string>script</string>
+		<string>second</string>
+		<string>set</string>
+		<string>seventh</string>
+		<string>since</string>
+		<string>sixth</string>
+		<string>some</string>
+		<string>tell</string>
+		<string>tenth</string>
+		<string>that</string>
+		<string>the</string>
+		<string>then</string>
+		<string>third</string>
+		<string>through</string>
+		<string>thru</string>
+		<string>timeout</string>
+		<string>times</string>
+		<string>to</string>
+		<string>transaction</string>
+		<string>true</string>
+		<string>try</string>
+		<string>until</string>
+		<string>use</string>
+		<string>where</string>
+		<string>while</string>
+		<string>whose</string>
+		<string>with</string>
+		<string>without</string>
+	</array>
+	
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<string>alias</string>
+		<string>application</string>
+		<string>boolean</string>
+		<string>class</string>
+		<string>constant</string>
+		<string>container</string>
+		<string>date</string>
+		<string>error</string>
+		<string>file</string>
+		<string>integer</string>
+		<string>list</string>
+		<string>make</string>
+		<string>new</string>
+		<string>number</string>
+		<string>path</string>
+		<string>POSIX</string>
+		<string>real</string>
+		<string>record</string>
+		<string>reference</string>
+		<string>RGB color</string>
+		<string>script</string>
+		<string>shell</string>
+		<string>text</string>
+		<string>unit types</string>
+	</array>
+	
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string>A-Za-z0-9_</string>
+		<key>Open Block Comments</key>
+		<string>(*</string>
+		<key>Close Block Comments</key>
+		<string>*)</string>
+		<key>Open Line Comments</key>
+		<string>--</string>
+		<key>Prefix for Functions</key>
+		<string>on </string>
+		<key>Prefix for Procedures</key>
+		<string>on </string>
+		<key>Open Parameter Lists</key>
+		<string>(</string>
+		<key>Close Parameter Lists</key>
+		<string>)</string>
+
+		<key>String Pattern</key>
+		<string><![CDATA[
+			(?x:
+				("	(?s: \\. | [^"])*?	(?: " | $)) |
+				('	(?s: \\' | [^'])*?	(?: ' | $))
+			)]]>
+		</string>
+		
+		<key>Comment Pattern</key>
+		<string><![CDATA[
+				(?x:
+						(\-\-.*$)		 | (?# Line comment)
+						(\#.*$)          | (?# Line comment)
+						(?s:\(\*.*?\*\))   (?# Block comment)
+				)]]>
+		</string>
+		
+		<key>Skip Pattern</key>
+		<string><![CDATA[
+			(?x:
+					(?P>comment) |
+					(?P>string)
+			)]]>
+		</string>
+
+		<key>Function Pattern</key>
+		<string><![CDATA[
+			(?x:
+				(?P<function>
+					^on(?:(?>(?>\s+)))+
+					(?P<function_name>
+						(?P<identifier>([a-zA-Z_][a-zA-Z0-9_]*)+)
+					)
+					(?P<braces>
+						(?:.*\r)*?
+						end(?:(?>(?>\s+)))+(?P>identifier)
+					)
+				)
+			)]]>
+		</string>
+	</dict> 
+</dict>
+</plist>

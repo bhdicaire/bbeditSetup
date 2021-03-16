@@ -1,0 +1,7 @@
+del {
+	color : inherit;
+	   -moz-text-decoration-color : red;
+	-webkit-text-decoration-color : red;
+	text-decoration : line-through;
+	        text-decoration-color : red
+}

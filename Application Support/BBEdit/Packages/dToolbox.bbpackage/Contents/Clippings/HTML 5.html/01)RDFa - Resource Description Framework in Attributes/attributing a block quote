@@ -1,0 +1,6 @@
+#INDENT##BLOCK#<blockquote property="dcterms:bibliographicCitation dcterms:references" resource="<#source U.R.L.#>" typeof="http://purl.org/dc/dcmitype/Text" cite="<#source U.R.L.#>">
+	<footer>
+		From <cite><span property="dcterms:title"><a property="dcterms:isPartOf dcterms:source" href="<#source U.R.L.#>"> <span property="dcterms:creator" typeof="foaf:<#Organization|Person#>"><span property="foaf:name"><#name of creator#>"></span></span>’s <#title of publication#>"> (<time property="dcterms:date" datetime="<#I.S.O. date#>"><#long-form date#></time>)</a></cite>.
+	</footer>
+	<#content of blockquote#>
+</blockquote>

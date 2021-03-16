@@ -1,0 +1,6 @@
+#INDENT#
+class #SELSTART#ClassName#SELEND#(object):
+	
+	def __init__(self, <#*args#>):
+		#SELSTART#pass#SELEND#
+		

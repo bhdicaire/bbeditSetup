@@ -1,0 +1,4 @@
+// #PLACEHOLDERSTART#Function Description#PLACEHOLDEREND#.
+func #PLACEHOLDERSTART#Name#PLACEHOLDEREND#(<#* Parameters #>) <#* ReturnType #> {
+	#PLACEHOLDERSTART#Body#PLACEHOLDEREND#
+}

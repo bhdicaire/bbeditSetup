@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!-- Cisco IOS Language Module for BBEdit -->
+<!-- Version 1.1 -->
+<!-- 2011 Fabrizio La Rosa -->
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<!-- global commands -->
+		<string>ip</string>
+		<string>ipx</string>
+		<string>appletalk</string>
+		<string>ip</string>
+		<string>tcp</string>
+		<string>udp</string>
+		<string>icmp</string>
+		<string>pim</string>
+		<string>gre</string>
+		<string>multicast</string>
+		<string>version</string>
+		<string>set</string>
+		<string>service</string>
+		<string>hostname</string>
+		<string>host</string>
+		<string>banner</string>
+		<string>domain</string>
+		<string>enable</string>
+		<string>password</string>
+		<string>secret</string>
+		<string>username</string>
+		<string>privilege</string>
+		<string>boot</string>
+		<string>diagnostic</string>
+		<string>clock</string>
+		<string>timezone</string>
+		<string>summer-time</string>
+		<string>buffers</string>
+		<string>logging</string>
+		<string>audit</string>
+		<string>flow</string>
+		<string>flow-export</string>
+		<string>errdisable</string>
+		<string>recovery</string>
+		<string>detect</string>
+		<string>domain-name</string>
+		<string>name-server</string>
+		<string>ftp-server</string>
+		<string>snmp-server</string>
+		<string>default-gateway</string>
+		<string>arp</string>
+		<string>mls</string>
+		<string>crypto</string>
+		<string>server</string>
+		<string>ftp</string>
+		<string>http</string>
+		<string>ssh</string>
+		<string>ntp</string>
+		<string>cdp</string>
+		<string>kerberos</string>
+		<string>aaa</string>
+		<string>new-model</string>
+		<string>authentication</string>
+		<string>authorization</string>
+		<string>configuration</string>
+		<string>accounting</string>
+		<string>secure-server</string>
+		<string>radius-server</string>
+		<string>tacacs-server</string>
+		<string>mac</string>
+		<string>mac-address-table</string>
+		<string>dialer-list</string>
+		<string>nat</string>
+		<string>translation</string>
+		<string>dhcp</string>
+		<string>pool</string>
+		<string>lease</string>
+		<string>excluded-address</string>
+		<string>default-router</string>
+		<string>dns-server</string>
+		<string>hardware-address</string>
+		<string>bootfile</string>
+		<string>option</string>
+		<string>redundancy</string>
+		<string>auto-sync</string>
+		<string>main-cpu</string>
+		<string>environment-monitor</string>
+		<string>console</string>
+		<!-- interface names -->
+		<!-- mostly useless because we can't use a regex to specify the interface number at the end -->
+		<string>loopback</string>
+		<string>vlan</string>
+		<string>port-channel</string>
+		<string>bvi</string>
+		<string>tunnel</string>
+		<string>ethernet</string>
+		<string>fastethernet</string>
+		<string>gigabitethernet</string>
+		<string>dot11radio</string>
+		<string>atm</string>
+		<string>bridge</string>
+		<string>ppp</string>
+		<string>bri</string>
+		<string>dialer</string>
+		<string>serial</string>
+		<string>voice-card</string>
+		<string>voice-port</string>
+		<string>con</string>
+		<string>vty</string>
+		<!-- interface commands -->
+		<string>interface</string>
+		<string>line</string>
+		<string>controller</string>
+		<string>dial-peer</string>
+		<string>isdn</string>
+		<string>shutdown</string>
+		<string>address</string>
+		<string>secondary</string>
+		<string>mac-address</string>
+		<string>bridge-group</string>
+		<string>switchport</string>
+		<string>speed</string>
+		<string>duplex</string>
+		<string>full-duplex</string>
+		<string>mode</string>
+		<string>trunk</string>
+		<string>access</string>
+		<string>voice</string>
+		<string>dot1x</string>
+		<string>port-control</string>
+		<string>multi-hosts</string>
+		<string>max-req</string>
+		<string>timeout</string>
+		<string>encapsulation</string>
+		<string>spanning-tree</string>
+		<string>channel-group</string>
+		<string>ssid</string>
+		<string>keepalive</string>
+		<string>redirects</string>
+		<string>unreachables</string>
+		<string>directed-broadcast</string>
+		<string>broadcast-address</string>
+		<string>helper-address</string>
+		<string>fair-queue</string>
+		<string>route-cache</string>
+		<string>mroute-cache</string>
+		<string>storm-control</string>
+		<string>sparse-mode</string>
+		<string>bandwidth</string>
+		<string>mtu</string>
+		<string>standby</string>
+		<string>preempt</string>
+		<string>clockrate</string>
+		<string>frame-relay</string>
+		<string>exec-timeout</string>
+		<string>transport</string>
+		<string>login</string>
+		<!-- routing protocols -->
+		<string>route</string>
+		<string>router</string>
+		<string>bgp</string>
+		<string>egp</string>
+		<string>eigrp</string>
+		<string>igrp</string>
+		<string>is-is</string>
+		<string>isis</string>
+		<string>ospf</string>
+		<string>rip</string>
+		<string>multicast-routing</string>
+		<string>mobile</string>
+		<string>odr</string>
+		<string>static</string>
+		<string>mpls</string>
+		<string>network</string>
+		<string>timers</string>
+		<string>variance</string>
+		<string>distance</string>
+		<string>area</string>
+		<string>neighbor</string>
+		<string>router-id</string>
+		<string>auto-cost</string>
+		<string>log-adjacency-changes</string>
+		<string>classless</string>
+		<string>subnet-zero</string>
+		<string>auto-summary</string>
+		<string>default-metric</string>
+		<string>max-metric</string>
+		<string>maximum-paths</string>
+		<string>default-information</string>
+		<string>passive-interface</string>
+		<string>redistribute</string>
+		<string>distribute-list</string>
+		<string>prefix-list</string>
+		<string>traffic-share</string>
+		<string>table-map</string>
+		<string>aggregate-address</string>
+		<!-- access lists and qos -->
+		<string>access-list</string>
+		<string>class</string>
+		<string>class-map</string>
+		<string>policy-map</string>
+		<string>route-map</string>
+		<string>service-policy</string>
+		<string>map-class</string>
+		<string>map-list</string>
+		<string>voice-class</string>
+		<string>permit</string>
+		<string>deny</string>
+		<string>police</string>
+		<string>match</string>
+		<string>conform-action</string>
+		<string>exceed-action</string>
+		<string>allowed</string>
+		<string>trust</string>
+		<string>access-group</string>
+		<string>precedence</string>
+		<string>protocol</string>
+		<string>priority</string>
+		<string>dscp</string>
+		<string>cos</string>
+		<string>qos</string>
+		<string>traffic-shape</string>
+		<string>service-policy</string>
+		<string>rate-limit</string>
+	</array>
+ 	<key>BBLMLanguageCode</key>
+	<string>CIOS</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Cisco IOS</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.confg</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Comment Pattern</key>
+		<string>(?x:
+			(?&gt;	^ [\x20\t]* (?&gt; ! | remark ) .* $ )
+		)</string>
+		<key>String Pattern</key>
+		<string>(?x:
+			(?&gt;	^ [\x20\t]* description .* $ )
+		)</string>
+		<key>Function Pattern</key>
+		<string>(?x:
+			(?P&lt;function&gt;
+				(?P&lt;function_name&gt;
+					(?&gt; interface | controller | voice-port | dial-peer | line | ip \x20+ (access-list | dhcp \x20+ pool ) | router | (class | policy | route) -map )
+					(?&gt; \x20+ [\w\/\.\:\-]+ )+
+				)\x20*
+				(?&gt; \r [\x20\t]+ .+ )+
+			)
+		)</string>
+		<key>Skip Pattern</key>
+		<string>(?x:
+			(?&gt;
+				(?P&gt;comment) | (?P&gt;string)
+			)
+		)</string>
+		<key>Identifier and Keyword Character Class</key>
+		<string>0-9\-A-Z_a-z</string>
+	</dict>
+</dict>
+</plist>

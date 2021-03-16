@@ -1,0 +1,176 @@
+<?version xml="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+	BBEdit codeless language module for TaskPaper (<http://hogbaysoftware.com/products/taskpaper>) to-do list files.
+	Matthias Steffens <mat@extracts.de>, and Dennis Rande
+	Version 1.1, 03-Nov-2007
+
+	Based on templates and hints by Seth Dillingham, Macrobyte Resources, available at:
+	<http://www.truerwords.net/articles/bbedit/codeless_language_module.html>
+	
+	Released under a Creative Commons Attribution-ShareAlike License:
+	<http://www.creativecommons.org/licenses/by-sa/3.0/>
+	
+	Requires BBEdit 8.5 or higher (<http://www.barebones.com/products/bbedit/>). To install, copy here:
+	
+		~/Library/Application Support/BBEdit/Language Modules/
+	
+	and relaunch BBEdit. Alternatively, this language module can be used with TextWrangler 2.2 or higher
+	(<http://www.barebones.com/products/textwrangler/>). To install for use with TextWrangler, copy here:
+
+		~/Library/Application Support/TextWrangler/Language Modules/
+	
+	and relaunch TextWrangler.
+
+	To color TaskPaper project names as keywords, add their names to the BBLMKeywordList.
+
+	Version History:
+
+		Version 1.1 (03-Nov-2007):
+		  - added 'BBLMCanSpellCheckCodeRuns' property
+		  - improved regular expression for 'String Pattern' to account for tags with values (like "@tag(value)")
+		  - added more characters to the 'Identifier and Keyword Character Class' property
+		  Changes by Dennis Rande:
+		  - added several new keywords for project names
+		  - changed value of 'BBLMIsCaseSensitive' property from 'true' to 'false'
+		  - shortened value of 'BBLMLanguageDisplayName' property to 'TaskPaper'
+		  - added a few extra language suffixes
+		  - wrapped regular expressions as CDATA for improved legibility
+		  - improved syntax checking of TaskPaper notes
+
+		Version 1.0 (29-Oct-2007):
+		  - initial version
+-->
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true />
+	<key>BBLMIsCaseSensitive</key>
+	<false />
+	<key>BBLMCanSpellCheckCodeRuns</key>
+	<true />
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>Inbox:</string>
+		<string>Archive:</string>
+		<string>Miscellaneous:</string>
+		<string>Today:</string>
+		<string>Tonight:</string>
+		<string>Tomorrow:</string>
+		<string>Morning:</string>
+		<string>Afternoon:</string>
+		<string>Evening:</string>
+		<string>Soon:</string>
+		<string>Weekend:</string>
+		<string>Monday:</string>
+		<string>Tuesday:</string>
+		<string>Wednesday:</string>
+		<string>Thursday:</string>
+		<string>Friday:</string>
+		<string>Saturday:</string>
+		<string>Sunday:</string>
+		<string>Next Monday:</string>
+		<string>Next Tuesday:</string>
+		<string>Next Wednesday:</string>
+		<string>Next Thursday:</string>
+		<string>Next Friday:</string>
+		<string>Next Saturday:</string>
+		<string>Next Sunday:</string>
+		<string>Next Week:</string>
+		<string>Next Weekend:</string>
+		<string>Next Month:</string>
+		<string>Next Year:</string>
+		<string>January:</string>
+		<string>February:</string>
+		<string>March:</string>
+		<string>April:</string>
+		<string>May:</string>
+		<string>June:</string>
+		<string>July:</string>
+		<string>August:</string>
+		<string>September:</string>
+		<string>October:</string>
+		<string>November:</string>
+		<string>December:</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>Task</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>TaskPaper</string>
+	<key>BBLMScansFunctions</key>
+	<true />
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.taskpaper</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.todo</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.todos</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.todolist</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.task</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.tasks</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Comment Pattern</key>
+		<string><![CDATA[(?x:
+			^
+			[\t ]*
+			[^\s-].*?[^:\r\n]
+			$
+		)]]></string>
+	  
+		<key>Function Pattern</key>
+		<string><![CDATA[(?x:
+			(?P<function>
+				(?P<identifier>
+					^
+					(?P<function_name>
+						[\t ]*
+						\w[^\r\n]*
+					)
+					:
+					$
+				)
+				(?s) .*?
+			)
+			[\r\n]+
+			(?= (?P>identifier) | \Z )
+		)]]></string>
+	  
+		<key>String Pattern</key>
+		<string><![CDATA[(?x:
+			@[^\s()]+
+			( \( [^()\r\n]* \) )?
+		)]]></string>
+		
+		<key>Skip Pattern</key>
+		<string><![CDATA[(?x:
+			(?>
+				(?P>comment) | (?P>string)
+			)
+		)]]></string>
+		
+		<key>Identifier and Keyword Character Class</key>
+		<string><![CDATA[!$%&*+.,;/()<;=>?^~0-9A-Z_a-z ÄÅÁÀÂÃÇÉÈÊËÑÖØÓÒÔÕÜÚÙÛÍÌÎÏÆŒäåáàâãçéèêëñöøóòôõüúùûíìîïæœÿß@:-]]></string>
+	</dict>
+</dict>
+</plist>

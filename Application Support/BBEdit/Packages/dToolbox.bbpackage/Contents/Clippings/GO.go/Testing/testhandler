@@ -1,0 +1,29 @@
+func Test#SELECTIONORPLACEHOLDER MyHandler#(t *testing.T) {
+	// Create a request
+	params := url.Values{#PLACEHOLDERSTART#"param1": {"1"}, "param2": {"2"}#PLACEHOLDEREND#}
+	req, err := http.NewRequest("GET", "/#SELECTIONORPLACEHOLDER handler#", params)
+	if err != nil {
+		t.Fatal(err)
+	}
+	
+	// Set request headers
+	req.Header.Set("#PLACEHOLDERSTART#Header#PLACEHOLDEREND#", "#PLACEHOLDERSTART#value#PLACEHOLDEREND#")
+
+	// Record the response.
+	w := httptest.NewRecorder()
+	handler := http.HandlerFunc(#SELECTIONORPLACEHOLDER MyHandler#)
+
+	// Execute handler
+	handler.ServeHTTP(w, req)
+
+	// Check the status code
+	if status := w.Code; status != http.StatusOK {
+		t.Errorf("handler status code %v != %v", status, http.StatusOK)
+	}
+
+	// Check the response body
+	expected := `#PLACEHOLDERSTART#{"alive": true}#PLACEHOLDEREND#`
+	if w.Body.String() != expected {
+		t.Errorf("handler body %v != %v", w.Body.String(), expected)
+	}
+}

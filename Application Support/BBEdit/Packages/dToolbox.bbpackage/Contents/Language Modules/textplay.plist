@@ -1,0 +1,135 @@
+<?version xml="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>BBEditDocumentType</key>
+        <string>CodelessLanguageModule</string>
+    <key>BBLMLanguageDisplayName</key>
+        <string>Textplay</string>
+    <key>BBLMLanguageCode</key>
+        <string>txtp</string>   
+
+    <key>BBLMPreferredFilenameExtension</key>
+        <string>fountain</string>
+<!-- 
+    <key>BBLMSupportsTextCompletion</key>
+        <string>true</string>
+ -->
+    <key>BBLMCanSpellCheckCodeRuns</key>
+        <true />
+    <key>BBLMReferenceSearchURLTemplate</key>
+        <string>dict:///__SYMBOLNAME__</string>
+    <key>BBLMIsCaseSensitive</key>
+        <true />
+    <key>BBLMScansFunctions</key>
+        <true />
+    <key>BBLMFunctionScannerDoesFoldsToo</key>
+        <true/>
+
+    <key>BBLMColorsSyntax</key>
+        <true />
+
+    <key>BBLMKeywordList</key>
+    <array>
+        <string>CUT TO:</string>
+        <string>SMASH CUT TO:</string>
+        <string>CUT BACK TO:</string>
+        <string>MATCH CUT TO:</string>
+        <string>DISSOLVE TO:</string>
+        <string>CROSS DISSOLVE TO:</string>
+        <string>FADE UP:</string>
+        <string>FADE OUT.</string>
+        <string>FADE TO:</string>
+        <string>INT. </string>
+        <string>EXT. </string>
+        <string>EST. </string>
+        <string>INT/EXT </string>
+        <string>INT./EXT. </string>
+        <string>I/E </string>
+        <string>I./E. </string>
+    </array>
+    
+    <key>BBLMPredefinedNameList</key>
+    <array>
+        <string>TITLE</string>
+        <string>CREDIT</string>
+        <string>AUTHOR</string>
+        <string>SOURCE</string>
+        <string>DRAFT</string>
+        <string>DRAFT DATE</string>
+        <string>DATE</string>
+        <string>CONTACT</string>
+        <string>COPYRIGHT</string>
+        <string>NOTES</string>
+        <string>EDITOR</string>
+    </array>
+
+    <key>BBLMCommentLineDefault</key>
+    <string># </string>
+    <key>BBLMCommentPrefixDefault</key>
+    <string>/*</string>
+    <key>BBLMCommentSuffixDefault</key>
+    <string>*/</string>
+
+    <key>Language Features</key>
+    <dict>
+
+        <key>Identifier and Keyword Character Class</key>
+            <string><![CDATA[!$%&*+.,;/()<;=>?^~0-9A-Z_a-z'"‘’“” ÄÅÁÀÂÃÇÉÈÊËÑÖØÓÒÔÕÜÚÙÛÍÌÎÏÆŒäåáàâãçéèêëñöøóòôõüúùûíìîïæœÿß@:-]]></string>
+     
+
+        <key>Comment Pattern</key>
+        <string>
+            (?x-i:
+            
+            (?# boneyard comments)
+            (?s:/\*.*?\*/) |
+
+            (?# notes)
+            (?s:\[\[.*?\]\]) |
+             
+            (?# Section markers)
+            ^[\ \t]*\#.*$ |
+            
+            (?# Synopsis Markers)
+            ^[\ \t]*\=.*$            
+            )
+        </string>
+
+        <key>String Pattern</key>
+        <string>
+            <![CDATA[
+            (?x-i:
+            
+                (?# emphasis markers)
+                (?<!\\)\*+_*(?<!\\)\**[^<>\n\r]+?(?<!\\|\ )\**_*(?<!\\|\ )\*+
+            |   _+(?<!\\)\**_*[^<>\n]+?_*(?<!\\|\ )\**_+
+
+                (?# Centered Text)
+            |   ^[\ \t]?\>.*?\<$
+
+                (?# Any call-caps line - used strictly for coloring)
+            |   (?:\A|^[\t\ ]*\n)^([^#=\n/\[])[^a-z\n]+\n(?=[\ \t]*\n)
+            )
+            ]]>
+        </string>
+
+        <key>Function Pattern</key>
+        <string>
+            <![CDATA[(?x-i:
+            (?# beginning of file or empty line)
+            (\A|^\s*\n)
+            (?# the section marker)
+            (^\s*\#\ )
+            (?# the section title)
+            (?P<function_name>(.*))
+            (?# followed by anything...)
+            (?s:.+?)
+            (?# ...until the next section marker, or eof)
+            (?=\n\s*\#\ |\z)
+            )]]>
+        </string>
+
+    </dict>
+</dict>
+</plist>

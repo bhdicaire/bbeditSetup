@@ -1,0 +1,37 @@
+// #PLACEHOLDERSTART#Package Name#PLACEHOLDEREND#
+//
+// Copyright (C) #PLACEHOLDERSTART#Year#PLACEHOLDEREND# #PLACEHOLDERSTART#Name#PLACEHOLDEREND#
+//
+// All rights reserved. Use of this source code is governed
+// by the #PLACEHOLDERSTART#License#PLACEHOLDEREND#.
+
+package #PLACEHOLDERSTART#Package Name#PLACEHOLDEREND#
+
+//--------------------
+// IMPORTS
+//--------------------
+
+import (
+	"fmt"
+)
+
+//--------------------
+// #PLACEHOLDERSTART#Block Name#PLACEHOLDEREND#
+//--------------------
+
+// #PLACEHOLDERSTART#Public Interface Description#PLACEHOLDEREND#
+type #PLACEHOLDERSTART#Public Interface Name#PLACEHOLDEREND# interface {
+	// #PLACEHOLDERSTART#Method Description#PLACEHOLDEREND#
+	#PLACEHOLDERSTART#Method Name#PLACEHOLDEREND#(<#* Parameters #>) <#* ReturnType #>
+}
+
+// #PLACEHOLDERSTART#Private Implementation Description#PLACEHOLDEREND#
+type #PLACEHOLDERSTART#Private Implementation Name#PLACEHOLDEREND# struct {
+}
+
+// #PLACEHOLDERSTART#Method Name#PLACEHOLDEREND# implements #PLACEHOLDERSTART#Public Interface Name#PLACEHOLDEREND#.
+func (#PLACEHOLDERSTART#Receiver#PLACEHOLDEREND# #PLACEHOLDERSTART#Private Implementation Name#PLACEHOLDEREND#) #PLACEHOLDERSTART#Method Name#PLACEHOLDEREND#(<#* Parameters #>) <#* ReturnType #> {
+	#PLACEHOLDERSTART#Body#PLACEHOLDEREND#
+}
+
+// EOF
