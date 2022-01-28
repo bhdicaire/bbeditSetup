@@ -1,0 +1,3 @@
+A regular expression for matching against MAC 48 addresses (as defined by the IEEE 802 standard).
+
+^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$

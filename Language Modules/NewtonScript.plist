@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>and</string>
+		<string>begin</string>
+		<string>break</string>
+		<string>by</string>
+		<string>call</string>
+		<string>constant</string>
+		<string>deeply</string>
+		<string>div</string>
+		<string>do</string>
+		<string>else</string>
+		<string>end</string>
+		<string>exists</string>
+		<string>for</string>
+		<string>foreach</string>
+		<string>func</string>
+		<string>global</string>
+		<string>if</string>
+		<string>in</string>
+		<string>inherited</string>
+		<string>local</string>
+		<string>loop</string>
+		<string>mod</string>
+		<string>native</string>
+		<string>not</string>
+		<string>onexception</string>
+		<string>or</string>
+		<string>repeat</string>
+		<string>return</string>
+		<string>self</string>
+		<string>then</string>
+		<string>to</string>
+		<string>try</string>
+		<string>until</string>
+		<string>while</string>
+		<string>with</string>
+	</array>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<string>nil</string>
+		<string>true</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>newt</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>NewtonScript</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.ns</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.newtonscript</string>
+		</dict>
+	</array>
+	<key>BBLMCommentPrefixDefault</key>
+	<string>/*</string>
+	<key>BBLMCommentSuffixDefault</key>
+	<string>*/</string>
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string>A-Za-z0-9_</string>
+		<key>Comment Pattern</key>
+		<string>(//.*$)|(\/\*(?s).*?(?-s)\*\/)</string>
+		<key>String Pattern</key>
+		<string>"(\\.|[^"])*+"</string>
+		<key>Skip Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(?P>comment) |
+			(?P>string)
+		)]]></string>
+		<key>Open Statement Blocks</key>
+		<string>begin</string>
+		<key>Close Statement Blocks</key>
+		<string>end</string>
+
+		<key>Function Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(?P<function>
+				(?P<function_name>[A-Za-z][A-Za-z0-9_]*)
+				(?: (?> (?> \s+ ) | (?P>comment) ) )*
+				:=?
+				(?: (?> (?> \s+ ) | (?P>comment) ) )*
+				func
+				(?: (?> (?> \s+ ) | (?P>comment) ) )*
+				(\( | (?>\bnative\b (?>\s*) | (?P>comment) \())
+				(?: (?> (?> [^/)]+ ) | (?P>comment) ) )*
+				\)
+				(?s: .*? )
+				(?P<block>
+					(?> \b begin \b )
+						(?:
+							(?:
+								(?> [^"/a-z]+ ) |
+								(?> (?(?! \b (?: begin | end ) \b ) [a-z]+ [^"/a-z]* ) ) |
+								(?P>comment) |
+								(?P>string) |
+								(?P>block)
+							)
+						)*?
+					\b end \b
+				)
+			)
+		)]]></string>
+
+	</dict>
+</dict>
+</plist>

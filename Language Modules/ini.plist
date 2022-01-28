@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>.ini</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>INI File</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.cfg</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.ini</string>
+		</dict>
+	</array>
+	<key>BBLMSupportsTextCompletion</key>
+	<true/>
+	<key>Language Features</key>
+	<dict>
+		<key>Comment Pattern</key>
+		<string>(#|;).+$</string>
+		<key>Function Pattern</key>
+		<string>^[ \t]*(?P&lt;function&gt;\[(?P&lt;function_name&gt;[[:print:]]+?)\](?s:.*?)?)[[:space:]]*(?=(^[ \t]*\[|\z))</string>
+		<key>Identifier and Keyword Character Class</key>
+		<string>[:alnum:]</string>
+	</dict>
+	<key>com.barebones.DocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMCommentPrefixDefault</key>
+	<string># </string>
+</dict>
+</plist>

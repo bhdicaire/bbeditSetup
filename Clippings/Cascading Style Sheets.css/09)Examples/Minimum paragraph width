@@ -1,0 +1,6 @@
+article p::before { /* Push paragraphs bellow float objects if they cannot be at least 8em wide */
+	content : "";
+	display : block;
+	overflow : hidden;
+	width : 8em
+}

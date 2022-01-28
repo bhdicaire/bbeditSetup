@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+	BBEdit codeless language module for Microsoft SQL Server T-SQL.
+	Michael Baltaks  <mbaltaks (at) m a c (dot) c o m>
+	Version 1.0
+	2005-06-15
+
+	Requires either:
+	BBEdit 8.0 or higher. To install, copy here:
+	
+		~/Library/Application Support/BBEdit/Language Modules/
+
+	or:
+	TextWrangler 2.0 or higher. To install, copy here:
+	
+		~/Library/Application Support/TextWrangler/Language Modules/
+	
+	and relaunch BBEdit or TextWrangler.
+-->
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>add</string>
+		<string>all</string>
+		<string>alter</string>
+		<string>and</string>
+		<string>any</string>
+		<string>as</string>
+		<string>asc</string>
+		<string>authorization</string>
+		<string>avg</string>
+		<string>backup</string>
+		<string>begin</string>
+		<string>between</string>
+		<string>break</string>
+		<string>browse</string>
+		<string>bulk</string>
+		<string>by</string>
+		<string>cascade</string>
+		<string>case</string>
+		<string>check</string>
+		<string>checkpoint</string>
+		<string>close</string>
+		<string>clustered</string>
+		<string>coalesce</string>
+		<string>collate</string>
+		<string>column</string>
+		<string>commit</string>
+		<string>committed</string>
+		<string>compute</string>
+		<string>confirm</string>
+		<string>constraint</string>
+		<string>contains</string>
+		<string>containstable</string>
+		<string>continue</string>
+		<string>controlrow</string>
+		<string>convert</string>
+		<string>count</string>
+		<string>create</string>
+		<string>cross</string>
+		<string>current</string>
+		<string>current_date</string>
+		<string>current_time</string>
+		<string>current_timestamp</string>
+		<string>current_user</string>
+		<string>cursor</string>
+		<string>database</string>
+		<string>dbcc</string>
+		<string>deallocate</string>
+		<string>declare</string>
+		<string>default</string>
+		<string>delete</string>
+		<string>deny</string>
+		<string>desc</string>
+		<string>disk</string>
+		<string>distinct</string>
+		<string>distributed</string>
+		<string>double</string>
+		<string>drop</string>
+		<string>dummy</string>
+		<string>dump</string>
+		<string>else</string>
+		<string>end</string>
+		<string>errlvl</string>
+		<string>errorexit</string>
+		<string>escape</string>
+		<string>except</string>
+		<string>exec</string>
+		<string>execute</string>
+		<string>exists</string>
+		<string>exit</string>
+		<string>fetch</string>
+		<string>file</string>
+		<string>fillfactor</string>
+		<string>floppy</string>
+		<string>for</string>
+		<string>foreign</string>
+		<string>freetext</string>
+		<string>freetexttable</string>
+		<string>from</string>
+		<string>full</string>
+		<string>function</string>
+		<string>go</string>
+		<string>goto</string>
+		<string>grant</string>
+		<string>group</string>
+		<string>having</string>
+		<string>holdlock</string>
+		<string>identity</string>
+		<string>identity_insert</string>
+		<string>identitycol</string>
+		<string>if</string>
+		<string>in</string>
+		<string>index</string>
+		<string>inner</string>
+		<string>insert</string>
+		<string>intersect</string>
+		<string>into</string>
+		<string>is</string>
+		<string>isolation</string>
+		<string>join</string>
+		<string>key</string>
+		<string>kill</string>
+		<string>left</string>
+		<string>level</string>
+		<string>like</string>
+		<string>lineno</string>
+		<string>load</string>
+		<string>max</string>
+		<string>min</string>
+		<string>mirrorexit</string>
+		<string>national</string>
+		<string>nocheck</string>
+		<string>nonclustered</string>
+		<string>not</string>
+		<string>null</string>
+		<string>nullif</string>
+		<string>of</string>
+		<string>off</string>
+		<string>offsets</string>
+		<string>on</string>
+		<string>once</string>
+		<string>only</string>
+		<string>open</string>
+		<string>opendatasource</string>
+		<string>openquery</string>
+		<string>openrowset</string>
+		<string>openxml</string>
+		<string>option</string>
+		<string>or</string>
+		<string>order</string>
+		<string>outer</string>
+		<string>over</string>
+		<string>percent</string>
+		<string>perm</string>
+		<string>permanent</string>
+		<string>pipe</string>
+		<string>plan</string>
+		<string>precision</string>
+		<string>prepare</string>
+		<string>primary</string>
+		<string>print</string>
+		<string>privileges</string>
+		<string>proc</string>
+		<string>procedure</string>
+		<string>processexit</string>
+		<string>public</string>
+		<string>raiserror</string>
+		<string>read</string>
+		<string>readtext</string>
+		<string>reconfigure</string>
+		<string>references</string>
+		<string>repeatable</string>
+		<string>replication</string>
+		<string>restore</string>
+		<string>restrict</string>
+		<string>return</string>
+		<string>revoke</string>
+		<string>right</string>
+		<string>rollback</string>
+		<string>rowcount</string>
+		<string>rowguidcol</string>
+		<string>rule</string>
+		<string>save</string>
+		<string>schema</string>
+		<string>select</string>
+		<string>serializable</string>
+		<string>session_user</string>
+		<string>set</string>
+		<string>setuser</string>
+		<string>shutdown</string>
+		<string>some</string>
+		<string>statistics</string>
+		<string>sum</string>
+		<string>system_user</string>
+		<string>table</string>
+		<string>tape</string>
+		<string>temp</string>
+		<string>temporary</string>
+		<string>textsize</string>
+		<string>then</string>
+		<string>to</string>
+		<string>top</string>
+		<string>tran</string>
+		<string>transaction</string>
+		<string>trigger</string>
+		<string>truncate</string>
+		<string>tsequal</string>
+		<string>uncommitted</string>
+		<string>union</string>
+		<string>unique</string>
+		<string>update</string>
+		<string>updatetext</string>
+		<string>use</string>
+		<string>user</string>
+		<string>values</string>
+		<string>varying</string>
+		<string>view</string>
+		<string>waitfor</string>
+		<string>when</string>
+		<string>where</string>
+		<string>while</string>
+		<string>with</string>
+		<string>work</string>
+		<string>writetext</string>
+		<string>bigint</string>
+		<string>int</string>
+		<string>smallint</string>
+		<string>tinyint</string>
+		<string>datetime</string>
+		<string>smalldatetime</string>
+		<string>nvarchar</string>
+		<string>varchar</string>
+		<string>nchar</string>
+		<string>char</string>
+		<string>bit</string>
+		<string>decimal</string>
+		<string>float</string>
+		<string>money</string>
+		<string>ntext</string>
+		<string>text</string>
+		<string>numeric</string>
+		<string>real</string>
+		<string>smallmoney</string>
+		<string>timestamp</string>
+		<string>uniqueidentifier</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>TSQL</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>T-SQL</string>
+	<key>BBLMScansFunctions</key>
+	<false/>
+
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.sql</string>
+		</dict>
+	</array>
+
+	<key>Language Features</key>
+	<dict>
+		<key>Open Block Comments</key>
+		<string>/*</string>
+		<key>Close Block Comments</key>
+		<string>*/</string>
+		<key>Open Line Comments</key>
+		<string>--</string>
+		<key>Open Parameter Lists</key>
+		<string>(</string>
+		<key>Close Parameter Lists</key>
+		<string>)</string>
+		<key>Open Statement Blocks</key>
+		<string>begin</string>
+		<key>Close Statement Blocks</key>
+		<string>end</string>
+		<key>Open Strings 1</key>
+		<string>'</string>
+		<key>Close Strings 1</key>
+		<string>'</string>
+		<key>End-of-line Ends Strings 1</key>
+		<false/>
+		<key>Escape Char in Strings 1</key>
+		<string>\</string>
+		<key>Open Strings 2</key>
+		<string>"</string>
+		<key>Close Strings 2</key>
+		<string>"</string>
+		<key>End-of-line Ends Strings 2</key>
+		<false/>
+		<key>Escape Char in Strings 2</key>
+		<string>\</string>
+		<key>Identifier and Keyword Characters</key>
+		<string>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz.</string>
+		<key>Prefix for Functions</key>
+		<string></string>
+		<key>Prefix for Procedures</key>
+		<string></string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

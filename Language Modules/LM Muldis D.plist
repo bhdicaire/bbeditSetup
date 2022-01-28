@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>BBEditDocumentType</key>
+  <string>CodelessLanguageModule</string>
+  <key>BBLMLanguageDisplayName</key>
+  <string>Muldis D Plain Text</string>
+  <key>BBLMLanguageCode</key>
+  <string>MDPT</string>
+  <key>BBLMSuffixMap</key>
+  <array>
+    <dict>
+      <key>BBLMLanguageSuffix</key>
+      <string>.mdpt</string>
+    </dict>
+  </array>
+  <key>BBLMColorsSyntax</key>
+  <true/>
+  <key>BBLMScansFunctions</key>
+  <true/>
+  <key>BBLMIsCaseSensitive</key>
+  <true/>
+  <key>BBLMKeywordList</key>
+  <array>
+    <string>Muldis_D</string>
+    <string>Plain_Text</string>
+    <string>alias</string>
+    <string>and_provides_its_default</string>
+    <string>associative</string>
+    <string>binder</string>
+    <string>commutative</string>
+    <string>commutes</string>
+    <string>composes</string>
+    <string>constant</string>
+    <string>default</string>
+    <string>else</string>
+    <string>fail</string>
+    <string>False</string>
+    <string>floating</string>
+    <string>folded</string>
+    <string>foundation</string>
+    <string>foundational</string>
+    <string>from</string>
+    <string>function</string>
+    <string>given</string>
+    <string>idempotent</string>
+    <string>identity</string>
+    <string>if</string>
+    <string>implements</string>
+    <string>interface</string>
+    <string>is</string>
+    <string>negates</string>
+    <string>of</string>
+    <string>overrides</string>
+    <string>package</string>
+    <string>procedure</string>
+    <string>repeater</string>
+    <string>requires</string>
+    <string>requires_implements</string>
+    <string>script</string>
+    <string>selection</string>
+    <string>signature</string>
+    <string>then</string>
+    <string>to</string>
+    <string>topic</string>
+    <string>True</string>
+    <string>union</string>
+    <string>uses</string>
+    <string>var</string>
+    <string>via</string>
+    <string>virtual</string>
+    <string>when</string>
+    <string>where</string>
+  </array>
+  <key>Language Features</key>
+  <dict>
+    <key>Identifier and Keyword Character Class</key>
+    <string><![CDATA[a-zA-Z0-9_]]></string>
+
+    <key>Comment Pattern</key>
+    <string><![CDATA[(?xs:
+      (` [^`]* `)
+    )]]></string>
+
+    <key>String Pattern</key>
+    <string><![CDATA[(?xs:
+      (
+        (False | True)
+      | (' [^']* ')
+      | ((?<!\w) [-]? [0-9] [0-9A-Za-z_]* ([\./] [0-9] [0-9A-Za-z_]*)?)
+      )
+    )]]></string>
+
+    <key>Function Pattern</key>
+    <string><![CDATA[(?xs:
+      (?P<function_name>
+        (
+            [a-zA-Z_][a-zA-Z0-9_]*
+          | " [^"]* "
+        )
+        (
+          \s* :: \s*
+          (
+              [a-zA-Z_][a-zA-Z0-9_]*
+            | " [^"]* "
+          )
+        )*
+      )
+      \s* ::= \s*
+      (binder|alias|constant|selection|interface|function|procedure)
+    )]]></string>
+  </dict>
+</dict>
+</plist>

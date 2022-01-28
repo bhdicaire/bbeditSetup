@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Ogre Particle Script</string>
+	<key>BBLMLanguageCode</key>
+	<string>OgPt</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMScansFunctions</key>
+	<false/>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>particle_system</string>
+		<string>quota</string>
+		<string>material</string>
+		<string>particle_width</string>
+		<string>particle_height</string>
+		<string>cull_each</string>
+		<string>billboard_type</string>
+		<string>billboard_origin</string>
+		<string>billboard_rotation_type</string>
+		<string>common_direction</string>
+		<string>common_up_vector</string>
+		<string>renderer</string>
+		<string>sorted</string>
+		<string>local_space</string>
+		<string>point_rendering</string>
+		<string>accurate_facing</string>
+		<string>iteration_interval</string>
+		<string>nonvisible_update_timeout</string>
+		<string>emitter</string>
+		<string>angle</string>
+		<string>colour</string>
+		<string>colour_range_start</string>
+		<string>colour_range_end</string>
+		<string>direction</string>
+		<string>emission_rate</string>
+		<string>position</string>
+		<string>velocity</string>
+		<string>velocity_min</string>
+		<string>velocity_max</string>
+		<string>time_to_live</string>
+		<string>time_to_live_min</string>
+		<string>time_to_live_max</string>
+		<string>duration</string>
+		<string>duration_min</string>
+		<string>duration_max</string>
+		<string>repeat_delay</string>
+		<string>repeat_delay_min</string>
+		<string>repeat_delay_max</string>
+		<string>Point</string>
+		<string>Box</string>
+		<string>width</string>
+		<string>height</string>
+		<string>depth</string>
+		<string>Cylinder</string>
+		<string>Ellipsoid</string>
+		<string>HollowEllipsoid</string>
+		<string>inner_width</string>
+		<string>inner_height</string>
+		<string>inner_depth</string>
+		<string>Ring</string>
+		<string>inner_width</string>
+		<string>inner_height</string>
+		<string>name</string>
+		<string>emit_emitter</string>
+		<string>emit_emitter_quota</string>
+		<string>affector</string>
+		<string>LinearForce</string>
+		<string>force_vector</string>
+		<string>force_application</string>
+		<string>ColourFader</string>
+		<string>red</string>
+		<string>green</string>
+		<string>blue</string>
+		<string>alpha</string>
+		<string>ColourFader2</string>
+		<string>red1</string>
+		<string>green1</string>
+		<string>blue1</string>
+		<string>alpha1</string>
+		<string>red2</string>
+		<string>green2</string>
+		<string>blue2</string>
+		<string>alpha2</string>
+		<string>state_change</string>
+		<string>Scaler</string>
+		<string>rate</string>
+		<string>Rotator</string>
+		<string>rotation_speed_range_start</string>
+		<string>rotation_speed_range_end</string>
+		<string>rotation_range_start</string>
+		<string>rotation_range_end</string>
+		<string>ColourInterpolator</string>
+		<string>time0</string>
+		<string>colour0</string>
+		<string>time1</string>
+		<string>colour1</string>
+		<string>time2</string>
+		<string>colour2</string>
+		<string>time3</string>
+		<string>colour3</string>
+		<string>time4</string>
+		<string>colour4</string>
+		<string>time5</string>
+		<string>colour5</string>
+		<string>ColourImage</string>
+		<string>image</string>
+		<string>DeflectorPlane</string>
+		<string>plane_point</string>
+		<string>plane_normal</string>
+		<string>bounce</string>
+		<string>DirectionRandomiser</string>
+		<string>randomness</string>
+		<string>scope</string>
+		<string>keep_velocity</string>
+	</array>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.particle</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string>!$%&amp;*+.,;/()&lt;;=&gt;?^~0-9A-Z_a-z@:-</string>
+		<key>Open Block Comments</key>
+		<string>/*</string>
+		<key>Close Block Comments</key>
+		<string>*/</string>
+		<key>Open Line Comments</key>
+		<string>//</string>
+		<key>Open Statement Blocks</key>
+		<string>{</string>
+		<key>Close Statement Blocks</key>
+		<string>}</string>
+	</dict>
+</dict>
+</plist>

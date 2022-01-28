@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+	BBEdit codeless language module for Smarty template files.
+	Source: <http://smarty.php.net/manual/en/>
+	Jan Pieter Kunst  <jan_pieter@xs4all.nl>
+	Version 1.0.1
+	2004-09-05
+
+	Released under a Creative Commons Attribution-ShareAlike License:
+	<http://creativecommons.org/licenses/by-sa/2.0/>
+	
+	Requires BBEdit 8.0 or higher. To install, copy here:
+	
+		~/Library/Application Support/BBEdit/Language Modules/
+	
+	and relaunch BBEdit.
+-->
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>$smarty</string>
+		<string>above</string>
+		<string>advance</string>
+		<string>all_extra</string>
+		<string>alt</string>
+		<string>assign</string>
+		<string>autostatus</string>
+		<string>autostatuscap</string>
+		<string>background</string>
+		<string>basedir</string>
+		<string>bcc</string>
+		<string>below</string>
+		<string>bgbackground</string>
+		<string>bgcolor</string>
+		<string>border</string>
+		<string>caparray</string>
+		<string>capcolor</string>
+		<string>capicon</string>
+		<string>capitalize</string>
+		<string>caption</string>
+		<string>captionfont</string>
+		<string>captionsize</string>
+		<string>capture</string>
+		<string>cc</string>
+		<string>center</string>
+		<string>closecolor</string>
+		<string>closefont</string>
+		<string>closesize</string>
+		<string>closetext</string>
+		<string>cols</string>
+		<string>config_load</string>
+		<string>config</string>
+		<string>const</string>
+		<string>cookies</string>
+		<string>count_characters</string>
+		<string>count_paragraphs</string>
+		<string>count_sentences</string>
+		<string>count_words</string>
+		<string>counter</string>
+		<string>cycle</string>
+		<string>date_format</string>
+		<string>day_empty</string>
+		<string>day_extra</string>
+		<string>day_format</string>
+		<string>day_size</string>
+		<string>day_value_format</string>
+		<string>debug</string>
+		<string>default</string>
+		<string>delay</string>
+		<string>delimiter</string>
+		<string>direction</string>
+		<string>display_days</string>
+		<string>display_hours</string>
+		<string>display_meridian</string>
+		<string>display_minutes</string>
+		<string>display_months</string>
+		<string>display_seconds</string>
+		<string>display_years</string>
+		<string>else</string>
+		<string>elseif</string>
+		<string>encode</string>
+		<string>end_year</string>
+		<string>env</string>
+		<string>equation</string>
+		<string>escape</string>
+		<string>eval</string>
+		<string>extra</string>
+		<string>fetch</string>
+		<string>fgbackground</string>
+		<string>fgcolor</string>
+		<string>field_array</string>
+		<string>field_order</string>
+		<string>field_separator</string>
+		<string>file</string>
+		<string>fixx</string>
+		<string>fixy</string>
+		<string>followupto</string>
+		<string>foreach</string>
+		<string>foreachelse</string>
+		<string>format</string>
+		<string>frame</string>
+		<string>from</string>
+		<string>fullhtml</string>
+		<string>get</string>
+		<string>global</string>
+		<string>hauto</string>
+		<string>hdir</string>
+		<string>height</string>
+		<string>hour_extra</string>
+		<string>href</string>
+		<string>html_checkboxes</string>
+		<string>html_image</string>
+		<string>html_options</string>
+		<string>html_radios</string>
+		<string>html_select_date</string>
+		<string>html_select_time</string>
+		<string>html_table</string>
+		<string>if</string>
+		<string>inarray</string>
+		<string>include_php</string>
+		<string>include</string>
+		<string>indent_char</string>
+		<string>indent_first</string>
+		<string>indent</string>
+		<string>insert</string>
+		<string>item</string>
+		<string>key</string>
+		<string>labels</string>
+		<string>ldelim</string>
+		<string>left</string>
+		<string>literal</string>
+		<string>loop</string>
+		<string>lower</string>
+		<string>mailto</string>
+		<string>math</string>
+		<string>max</string>
+		<string>meridian_extra</string>
+		<string>minute_extra</string>
+		<string>minute_interval</string>
+		<string>month_empty</string>
+		<string>month_extra</string>
+		<string>month_format</string>
+		<string>month_size</string>
+		<string>month_value_format</string>
+		<string>name</string>
+		<string>newsgroups</string>
+		<string>nl2br</string>
+		<string>noclose</string>
+		<string>now</string>
+		<string>offsetx</string>
+		<string>offsety</string>
+		<string>once</string>
+		<string>options</string>
+		<string>output</string>
+		<string>padx</string>
+		<string>pady</string>
+		<string>php</string>
+		<string>popup_init</string>
+		<string>popup</string>
+		<string>post</string>
+		<string>prefix</string>
+		<string>print</string>
+		<string>rdelim</string>
+		<string>regex_replace</string>
+		<string>replace</string>
+		<string>request</string>
+		<string>reverse_years</string>
+		<string>right</string>
+		<string>scope</string>
+		<string>script</string>
+		<string>second_extra</string>
+		<string>second_interval</string>
+		<string>section</string>
+		<string>sectionelse</string>
+		<string>selected</string>
+		<string>separator</string>
+		<string>server</string>
+		<string>session</string>
+		<string>show</string>
+		<string>skip</string>
+		<string>snapx</string>
+		<string>snapy</string>
+		<string>spacify</string>
+		<string>start_year</string>
+		<string>start</string>
+		<string>status</string>
+		<string>step</string>
+		<string>sticky</string>
+		<string>string_format</string>
+		<string>strip_tags</string>
+		<string>strip</string>
+		<string>subject</string>
+		<string>table_attr</string>
+		<string>td_attr</string>
+		<string>template</string>
+		<string>text</string>
+		<string>textcolor</string>
+		<string>textfont</string>
+		<string>textformat</string>
+		<string>textsize</string>
+		<string>time</string>
+		<string>timeout</string>
+		<string>tr_attr</string>
+		<string>trailpad</string>
+		<string>trigger</string>
+		<string>truncate</string>
+		<string>upper</string>
+		<string>use_24_hours</string>
+		<string>value</string>
+		<string>values</string>
+		<string>var</string>
+		<string>vauto</string>
+		<string>vdir</string>
+		<string>version</string>
+		<string>width</string>
+		<string>wordwrap</string>
+		<string>wrap_char</string>
+		<string>wrap_cut</string>
+		<string>wrap</string>
+		<string>year_as_text</string>
+		<string>year_empty</string>
+		<string>year_extra</string>
+		<string>year_size</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>SMRT</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Smarty</string>
+	<key>BBLMScansFunctions</key>
+	<false/>
+	
+	<key>BBLMLSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.tpl</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<!--
+			The Close Block Comment is actually '*}', but because
+			the '}' is already used for 'Open String 1' (see below),
+			Smarty comments won't be coloured correctly if the Block
+			Comments are defined as '{*' and '*}'. Apart from the fact that
+			the '{' is in string colour instead of comment colour,
+			(because it is considered the closing quote for the preceding string)
+			comments are coloured correctly if the Open and Close Block Comments
+			are defined as '*'.
+			The use of '*' as a mathematical operator will now result in incorrect
+			syntax colouring, though. If that is a problem it is probably best
+			to remove the 'Block Comments' strings entirely.
+		-->
+		<key>Close Block Comments</key>
+		<string>*</string>
+		<key>Close Statement Blocks</key>
+		<string></string>
+		<!--
+			Defining 'Open Strings 1' and 'Close Strings 1' as '}' and '{'
+			respectively is a hack to allow visual separation of Smarty code
+			and HTML in the same file. Everything outside {} is considered
+			a string with this setting. At this time, Smarty code and HTML can't
+			be recognized at the same time in one file, and with this setting 
+			it is (I hope) doable to switch between HTML and Smarty as the language of
+			the document depending on which part you are working on.
+			The colouring of parts where '{}' are supposed to
+			be taken literally (between {literal} and {/literal} Smarty tags) does
+			not work correctly, though.
+		-->
+		<key>Close Strings 1</key>
+		<string>{</string>
+		<key>Close Strings 2</key>
+		<string></string>
+		<key>End-of-line Ends Strings 1</key>
+		<false/>
+		<key>End-of-line Ends Strings 2</key>
+		<false/>
+		<key>Escape Char in Strings 1</key>
+		<string>
+		</string>
+		<key>Escape Char in Strings 2</key>
+		<string>
+		</string>
+		<key>Identifier and Keyword Characters</key>
+		<string>$0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz</string>
+		<key>Open Block Comments</key>
+		<string>*</string>
+		<key>Open Line Comments</key>
+		<string>
+		</string>
+		<key>Open Statement Blocks</key>
+		<string></string>
+		<key>Open Strings 1</key>
+		<string>}</string>
+		<key>Open Strings 2</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

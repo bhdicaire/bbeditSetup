@@ -1,0 +1,1 @@
+﻿:focus {	border : 2px solid #8aade1;	-webkit-box-shadow : 0 0 3px #8aade1; /* Safari before v5 and Google Chrome */	   -moz-box-shadow : 0 0 3px #8aade1; /* Firefox */	     -o-box-shadow : 0 0 3px #8aade1; /* Opera */	        box-shadow : 0 0 3px #8aade1; /* CSS3 browsers */	outline : none /* disabling Safaris default behavior*/}

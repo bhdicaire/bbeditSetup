@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+    <key>BBEditDocumentType</key>
+    	<string>CodelessLanguageModule</string>
+    <key>BBLMLanguageDisplayName</key>
+	    <string>Avro IDL</string>
+    <key>BBLMLanguageCode</key>
+	    <string>AvDl</string>
+    <key>BBLMColorsSyntax</key>
+	    <true/>
+    <key>BBLMScansFunctions</key>
+	    <true/>
+    <key>BBLMFunctionScannerDoesFoldsToo</key>
+	    <false/>
+    <key>BBLMFiltersRunsForSpellChecking</key>
+	    <true/>
+    <key>BBLMIsCaseSensitive</key>
+	    <true/>
+    <key>BBLMSupportsTextCompletion</key>
+	    <true/>
+    <key>BBLMSuffixMap</key>
+		<array>
+			<dict>
+				<key>BBLMLanguageSuffix</key>
+				<string>.avdl</string>
+			</dict>
+		</array>
+    <key>BBLMPreferredFilenameExtension</key>
+	    <string>avdl</string>
+    <key>BBLMKeywordList</key>
+		<array>
+			<string>union</string>
+			<string>protocol</string>
+			<string>import</string>
+			<string>record</string>
+			<string>null</string>
+			<string>array</string>
+			<string>enum</string>
+			<string>fixed</string>
+			<string>int</string>
+			<string>long</string>
+			<string>string</string>
+			<string>boolean</string>
+			<string>float</string>
+			<string>double</string>
+			<string>null</string>
+			<string>bytes</string>
+			<string>decimal</string>
+			<string>date</string>
+			<string>time_ms</string>
+			<string>timestamp_ms</string>
+
+		</array>
+    <!-- Specify a comment-out string: -->
+    <!-- You must specify the character set for keywords and identifiers. Substitute your own: -->
+    <key>Language Features</key>
+		<dict>
+			<key>Identifier and Keyword Character Class</key>
+				<string>A-Za-z0-9_\?!</string>
+			<key>Open Block Comments</key>
+				<string>/*</string>
+			<key>Close Block Comments</key>
+				<string>*/</string>
+			<key>Open Line Comments</key>
+				<string>//</string>
+		  <key>Open Statement Blocks</key>
+			  <string>{</string>
+		  <key>Close Statement Blocks</key>
+			  <string>}</string>
+      		<key>Function Pattern</key>
+			  <string><![CDATA[
+				(?x:
+                    (?P<leadspace>^[ \t]*)         (?# space \t to avoid catching extra returns...)
+                    (?P<function>
+                        record\s*
+                        (?P<function_name>
+                            [a-zA-Z0-9_]+
+                        )
+                        \s?\{?               (?# Brace may be on same line)
+                        (\r(?P=leadspace)\{)?       (?# ... or on separate line)
+                        (?s:.+?)                    (?# body function...)
+                        (\r(?P=leadspace)\})        (?# For ease of writing assume function end brace always horz aligned to start of function)
+                    )
+                )
+                ]]>
+			  </string>
+
+		</dict>
+  </dict>
+</plist>
+

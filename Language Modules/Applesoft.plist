@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>END</string>
+		<string>FOR</string>
+		<string>NEXT</string>
+		<string>DATA</string>
+		<string>INPUT</string>
+		<string>DEL</string>
+		<string>DIM</string>
+		<string>READ</string>
+		<string>GR</string>
+		<string>TEXT</string>
+		<string>PR#</string>
+		<string>IN#</string>
+		<string>CALL</string>
+		<string>PLOT</string>
+		<string>HLIN</string>
+		<string>VLIN</string>
+		<string>HGR2</string>
+		<string>HGR</string>
+		<string>HCOLOR</string>
+		<string>HPLOT</string>
+		<string>DRAW</string>
+		<string>XDRAW</string>
+		<string>HTAB</string>
+		<string>HOME</string>
+		<string>ROT</string>
+		<string>SCALE</string>
+		<string>SHLOAD</string>
+		<string>TRACE</string>
+		<string>NOTRACE</string>
+		<string>NORMAL</string>
+		<string>INVERSE</string>
+		<string>FLASH</string>
+		<string>COLOR</string>
+		<string>POP</string>
+		<string>VTAB</string>
+		<string>HIMEM</string>
+		<string>LOMEM</string>
+		<string>ONERR</string>
+		<string>RESUME</string>
+		<string>RECALL</string>
+		<string>STORE</string>
+		<string>SPEED</string>
+		<string>LET</string>
+		<string>GOTO</string>
+		<string>RUN</string>
+		<string>IF</string>
+		<string>RESTORE</string>
+		<string>&amp;</string>
+		<string>?</string>
+		<string>GOSUB</string>
+		<string>RETURN</string>
+		<string>REM</string>
+		<string>STOP</string>
+		<string>ON</string>
+		<string>WAIT</string>
+		<string>LOAD</string>
+		<string>SAVE</string>
+		<string>DEF</string>
+		<string>POKE</string>
+		<string>PRINT</string>
+		<string>CONT</string>
+		<string>LIST</string>
+		<string>CLEAR</string>
+		<string>GET</string>
+		<string>NEW</string>
+		<string>TAB</string>
+		<string>TO</string>
+		<string>FN</string>
+		<string>SPC</string>
+		<string>THEN</string>
+		<string>AT</string>
+		<string>NOT</string>
+		<string>STEP</string>
+		<string>AND</string>
+		<string>OR</string>
+		<string>SGN</string>
+		<string>INT</string>
+		<string>ABS</string>
+		<string>USR</string>
+		<string>FRE</string>
+		<string>SCRN</string>
+		<string>PDL</string>
+		<string>POS</string>
+		<string>SQR</string>
+		<string>RND</string>
+		<string>LOG</string>
+		<string>EXP</string>
+		<string>COS</string>
+		<string>SIN</string>
+		<string>TAN</string>
+		<string>ATN</string>
+		<string>PEEK</string>
+		<string>LEN</string>
+		<string>STR$</string>
+		<string>VAL</string>
+		<string>ASC</string>
+		<string>CHR$</string>
+		<string>LEFT$</string>
+		<string>RIGHT$</string>
+		<string>MID$</string>
+		<string>MTR</string>
+		<string>BSAVE</string>
+		<string>VERIFY</string>
+		<string>BLOAD</string>
+		<string>DELETE</string>
+		<string>BYE</string>
+		<string>CAT</string>
+		<string>CATALOG</string>
+		<string>OPEN</string>
+		<string>WRITE</string>
+		<string>EXEC</string>
+		<string>CREATE</string>
+		<string>FRE</string>
+		<string>STORE</string>
+		<string>RESTORE</string>
+		<string>RENAME</string>
+		<string>BRUN</string>
+		<string>LOCK</string>
+		<string>CHAIN</string>
+		<string>FLUSH</string>
+		<string>READ</string>
+		<string>POSITION</string>
+		<string>PR#</string>
+		<string>PREFIX</string>
+		<string>CLOSE</string>
+		<string>APPEND</string>
+		<string>INIT</string>
+		<string>MON</string>
+		<string>NOMON</string>
+		<string>INT</string>
+		<string>FP</string>
+		<string>MAXFILES</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>AS][</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Applesoft BASIC</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.asb</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Characters</key>
+		<string>&amp;?$:_-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</string>
+		<key>Prefix for Functions</key>
+		<string>SUB^</string>
+		<key>Prefix for Procedures</key>
+		<string>RUN^</string>
+		<key>Open Parameter Lists</key>
+		<string></string>
+		<key>Close Parameter Lists</key>
+		<string></string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+		<key>Open Statement Blocks</key>
+		<string>{</string>
+		<key>Close Statement Blocks</key>
+		<string>}</string>
+		<key>Open Block Comments</key>
+		<string></string>
+		<key>Close Block Comments</key>
+		<string></string>
+		<key>Open Line Comments</key>
+		<string>REM</string>
+		<key>Open Strings 1</key>
+		<string>&quot;</string>
+		<key>Close Strings 1</key>
+		<string>&quot;</string>
+		<key>Escape Char in Strings 1</key>
+		<string></string>
+		<key>End-of-line Ends Strings 1</key>
+		<true/>
+		<key>Open Strings 2</key>
+		<string></string>
+		<key>Close Strings 2</key>
+		<string></string>
+		<key>Escape Char in Strings 2</key>
+		<string></string>
+		<key>End-of-line Ends Strings 2</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

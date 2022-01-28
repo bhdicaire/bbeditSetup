@@ -1,0 +1,7 @@
+#BLOCK##INDENT#
+#PlaceholderStart# #PlaceholderEnd# 
+  <#Super!#>
+  <#?Name houba hiouba2 houbana3 #>
+  <#subver *arg1 ?arg2#>#INSERTION# 
+
+<#?Commentaire important#>

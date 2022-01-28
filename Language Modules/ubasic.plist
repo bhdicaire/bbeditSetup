@@ -1,0 +1,163 @@
+<!-- uBasic Codeless Language Module for BBEdit 8 -->
+<!-- version 0.92 -->
+<!-- August, 2009 -->
+<!-- Created by John Bussjaeger -->
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMLanguageCode</key>
+	<string>uBAS</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>uBASIC</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.bas</string>
+			<key>BBLMCanResolveIncludeFiles</key>
+			<false/>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+
+		<key>Identifier and Keyword Characters</key>
+		<string>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz:@</string>
+
+		<key>Open Strings 1</key>
+		<string>"</string>
+		<key>Close Strings 1</key>
+		<string>"</string>
+
+		<key>Prefix for Functions</key>
+		<string>:</string>
+
+		<key>End-of-line Ends Strings 1</key>
+		<false/>
+
+		<key>Open Line Comments</key>
+		<string>rem</string>
+	</dict>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>let</string>
+		<string>if</string>
+		<string>then</string>
+		<string>else</string>
+		<string>for</string>
+		<string>to</string>
+		<string>next</string>
+		<string>goto</string>
+		<string>gosub</string>
+		<string>return</string>
+		<string>end</string>
+		<string>@title</string>
+		<string>@param</string>
+		<string>@default</string>
+		<string>print</string>
+		<string>not</string>
+		<string>and</string>
+		<string>or</string>
+		<string>endif</string>
+		<string>cls</string>
+		<string>@pause</string>
+
+
+		<string>af_led_off</string>
+		<string>af_led_on</string>
+		<string>amber_led_off</string>
+		<string>amber_led_on</string>
+		<string>auto_focus_bracketing</string>
+		<string>blue_led_off</string>
+		<string>blue_led_on</string>
+		<string>click</string>
+		<string>display</string>
+		<string>down</string>
+		<string>erase</string>
+		<string>exit_alt</string>
+		<string>flash</string>
+		<string>get_av</string>
+		<string>get_day_seconds</string>
+		<string>get_disk_size</string>
+		<string>get_dof</string>
+		<string>get_far_limit</string>
+		<string>get_focus</string>
+		<string>get_free_disk_space</string>
+		<string>get_hyp_dist</string>
+		<string>get_iso_real</string>
+		<string>get_iso</string>
+		<string>get_jpg_count</string>
+		<string>get_near_limit</string>
+		<string>get_prop</string>
+		<string>get_raw_count</string>
+		<string>get_raw_nr</string>
+		<string>get_tick_count</string>
+		<string>get_vbatt</string>
+		<string>get_zoom</string>
+		<string>green_led_off</string>
+		<string>green_led_on</string>
+		<string>is_key</string>
+		<string>is_key</string>
+		<string>iso</string>
+		<string>left</string>
+		<string>macro</string>
+		<string>md_detect_motion</string>
+		<string>md_detect_motion</string>
+		<string>md_get_cell_diff</string>
+		<string>md_get_cell_diff</string>
+		<string>menu</string>
+		<string>mf</string>
+		<string>press</string>
+		<string>print_screen</string>
+		<string>release</string>
+		<string>right</string>
+		<string>set_av_rel</string>
+		<string>set_av</string>
+		<string>set_backlight</string>
+		<string>set_focus</string>
+		<string>set_iso</string>
+		<string>set_led</string>
+		<string>set_led</string>
+		<string>set_nd_filter</string>
+		<string>set_prop</string>
+		<string>set_raw</string>
+		<string>set_tv_rel get_tv</string>
+		<string>set_tv</string>
+		<string>set_zoom_rel</string>
+		<string>set_zoom</string>
+		<string>shoot_full</string>
+		<string>shoot_half</string>
+		<string>shoot</string>
+		<string>shut_down</string>
+		<string>shut_down</string>
+		<string>sleep</string>
+		<string>timer_led_off</string>
+		<string>timer_led_on</string>
+		<string>timer</string>
+		<string>up</string>
+		<string>video</string>
+		<string>wait_click</string>
+		<string>wend</string>
+		<string>wheel_left</string>
+		<string>wheel_right</string>
+		<string>yellow_led_off</string>
+		<string>yellow_led_on</string>
+		<string>zoom_in</string>
+		<string>zoom_out</string>
+
+	</array>
+
+</dict>
+</plist>

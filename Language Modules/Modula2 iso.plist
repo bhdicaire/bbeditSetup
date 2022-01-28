@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>AND</string>
+		<string>ARRAY</string>
+		<string>BEGIN</string>
+		<string>BY</string>
+		<string>CASE</string>
+		<string>CONST</string>
+		<string>DEFINITION</string>
+		<string>DIV</string>
+		<string>DO</string>
+		<string>ELSE</string>
+		<string>ELSIF</string>
+		<string>EXCEPT</string>
+		<string>END</string>
+		<string>EXIT</string>
+		<string>EXPORT</string>
+		<string>FINALLY</string>
+		<string>FOR</string>
+		<string>FORWARD</string>
+		<string>FROM</string>
+		<string>IF</string>
+		<string>IMPLEMENTATION</string>
+		<string>IMPORT</string>
+		<string>IN</string>
+		<string>LOOP</string>
+		<string>MOD</string>
+		<string>MODULE</string>
+		<string>NOT</string>
+		<string>OF</string>
+		<string>OR</string>
+		<string>PACKEDSET</string>
+		<string>POINTER</string>
+		<string>PROCEDURE</string>
+		<string>QUALIFIED</string>
+		<string>RECORD</string>
+		<string>REM</string>
+		<string>REPEAT</string>
+		<string>RETRY</string>
+		<string>RETURN</string>
+		<string>SET</string>
+		<string>THEN</string>
+		<string>TO</string>
+		<string>TYPE</string>
+		<string>UNTIL</string>
+		<string>VAR</string>
+		<string>WHILE</string>
+		<string>WITH</string>
+	</array>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<string>NIL</string>
+		<string>TRUE</string>
+		<string>FALSE</string>
+		<string>INTERRUPTIBLE</string>
+		<string>UNINTERRUPTIBLE</string>
+		
+		<string>BITSET</string>
+		<string>BOOLEAN</string>
+		<string>CHAR</string>
+		<string>PROC</string>
+		<string>CARDINAL</string>
+		<string>INTEGER</string>
+		<string>LONGINT</string>
+		<string>REAL</string>
+		<string>LONGREAL</string>
+		<string>COMPLEX</string>
+		<string>LONGCOMPLEX</string>
+		<string>PROTECTION</string>
+
+		<string>ABS</string>
+		<string>CAP</string>
+		<string>CHR</string>
+		<string>CMPLX</string>
+		<string>DEC</string>
+		<string>EXCL</string>
+		<string>FLOAT</string>
+		<string>HALT</string>
+		<string>HIGH</string>
+		<string>INC</string>
+		<string>INCL</string>
+		<string>IM</string>
+		<string>INT</string>
+		<string>LENGTH</string>
+		<string>LFLOAT</string>
+		<string>MIN</string>
+		<string>MAX</string>
+		<string>ODD</string>
+		<string>ORD</string>
+		<string>RE</string>
+		<string>SIZE</string>
+		<string>TRUNC</string>
+		<string>VAL</string>
+
+		<string>NEW</string>
+		<string>DISPOSE</string>
+
+		<string>SYSTEM</string>
+		<string>ADDRESS</string>
+		<string>BYTE</string>
+		<string>LOC</string>
+		<string>WORD</string>
+		
+		<string>ADR</string>
+		<string>CAST</string>
+		<string>TSIZE</string>
+		<string>MAKEADR</string>
+		<string>ADDADR</string>
+		<string>SUBADR</string>
+		<string>DIFADR</string>
+		<string>ROTATE</string>
+		<string>SHIFT</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>M2IS</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Modula-2 (ISO)</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.Def</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.Mod</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Comment Pattern</key>
+		<string>(\(\*(?s).*?(?-s)\*\))</string>
+		<key>String Pattern</key>
+		<string>&quot;(\\.|[^&quot;])*+&quot;</string>
+		<key>Function Pattern</key>
+		<string></string>
+		<key>Identifier and Keyword Character Class</key>
+		<string>\w</string>
+		<key>Close Block Comments 1</key>
+		<string>*)</string>
+		<key>Close Parameter Lists</key>
+		<string>)</string>
+		<key>Close Statement Blocks</key>
+		<string>END</string>
+		<key>Close Strings 1</key>
+		<string>&quot;</string>
+		<key>Close Strings 2</key>
+		<string>&apos;</string>
+		<key>End-of-line Ends Strings 1</key>
+		<true/>
+		<key>End-of-line Ends Strings 2</key>
+		<true/>
+		<key>Escape Char in Strings 1</key>
+		<string></string>
+		<key>Escape Char in Strings 2</key>
+		<string></string>
+		<key>Identifier and Keyword Characters</key>
+		<string>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_</string>
+		<key>Open Block Comments 1</key>
+		<string>(*</string>
+		<key>Open Parameter Lists</key>
+		<string>(</string>
+		<key>Open Statement Blocks</key>
+		<string>BEGIN</string>
+		<key>Open Strings 1</key>
+		<string>&quot;</string>
+		<key>Open Strings 2</key>
+		<string>&apos;</string>
+		<key>Prefix for Functions</key>
+		<string>PROCEDURE</string>
+		<key>Prefix for Procedures</key>
+		<string>PROCEDURE</string>
+		<key>Terminator for Prototypes 1</key>
+		<string>;</string>
+		<key>Terminator for Prototypes 2</key>
+		<string>;</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- 
+	Syntax Coloring for AsciiDoc within BBEDit and TextWrangler
+	(C) 2013-2020 ProjectWizards GmbH, Germany. All rights reserved.
+	
+	INSTALLATION:
+	- Copy this file into ~/Library/Application Support/BBEdit/Language Module
+	- Restart BBEdit and set your document language to AsciiDoc
+	
+-->
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+    <string>CodelessLanguageModule</string>
+	<key>BBLMLanguageDisplayName</key>
+    <string>AsciiDoc</string>
+	<key>BBLMLanguageCode</key>
+    <string>ASCI</string>
+	<key>BBLMSuffixMap</key>
+    <array>
+        <dict>
+        	<key>BBLMLanguageSuffix</key>
+        	<string>adoc</string>
+		</dict>
+		<dict>
+        	<key>BBLMLanguageSuffix</key>
+            <string>asc</string>
+		</dict>
+		<dict>
+        	<key>BBLMLanguageSuffix</key>
+            <string>asciidoc</string>
+		</dict>
+    </array>
+	<key>BBLMSupportsTextCompletion</key>
+	<true/>
+    <key>BBLMCanSpellCheckCodeRuns</key>
+    <false/>
+    <key>BBLMColorsSyntax</key>
+    <true/>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+ 
+    <key>Language Features</key>
+    <dict>
+    	<key>Identifier and Keyword Character Class</key>
+		<string>A-Za-z0-9_-</string>
+
+		<key>Comment Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(^\/\/.*$) 							| (?# Line Comment)
+			(^\-\-\-.*$) 						| (?# I like HR shown as Comment)
+		)]]></string>
+
+    	<key>String Pattern</key>
+        <string><![CDATA[
+        (?x: 
+        	(^=.*) | (^\..*) 				| (?# Headlines + Section Headlines)
+        	(^\:\w.*\:) 					| (?# Colon Attributes)
+        	(\:!\w.*\:) 					| (?# Unset Boolean Attributes)
+			(^\b.*\:\:)						| (?# All Directives with a Double Colon)
+			(^\[\#\w.*$) 					| (?# Custom ID)
+			(\[\.\w*\]) 					| (?# Custom Formatting)
+        	(\{[a-zA-Z0-9-_]*\}) 			| (?# Variables in curly brackets) 
+        	(\[[a-zA-Z ,0-9-_]*\]) 			| (?# All in Brackets) 
+            (_(\\_|[^_\r]|\\\r)*_) 			| (?# Underline) 
+            (\*+(\\\*|[^\*+\r]|\\\r)*\*+)	| (?# Double Asterix)
+        	(icon\:)
+        )]]></string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,3 @@
+Together with the supplied replacement pattern it will higlight a specific line of any given file. Simply replace the number of lines that must be parsed first, and it will pick out the line you are interested in.
+
+(?# ) (?# Just change the number, example is 10, to the desired line number) (?# ) (?:(^.*[\n\z]){10}(^.*[\n\z])*)

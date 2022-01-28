@@ -1,0 +1,27 @@
+arr1 = [ 1, 2, 3 ]
+arr2 = [ "red", "yellow", "green" ]
+arr3 = [ [ 1, 2 ], [3, 4, 5] ]
+arr4 = [ "all", 'strings', """are the same""", '''type''']
+arr5 = [ [ 1, 2 ], ["a", "b", "c"] ]
+
+arr6 = [ 1, 2.0 ] # INVALID
+
+arr7 = [
+  1, 2, 3
+]
+
+arr8 = [
+  1,
+  2, # this is ok
+]
+
+table]
+Under that, and until the next table or EOF are the key/values of that table. Key/value pairs within tables are not guaranteed to be in any specific order.
+
+[table-1]
+key1 = "some string"
+key2 = 123
+
+[table-2]
+key1 = "another string"
+key2 = 456

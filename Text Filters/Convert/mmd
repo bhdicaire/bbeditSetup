@@ -1,0 +1,13 @@
+#!/bin/sh
+
+#
+# mmd --- MultiMarkdown convenience script
+#	<http://fletcherpenney.net/multimarkdown/>
+#	Fletcher T. Penney
+#
+# Pass arguments on to the binary to convert text to XHTML
+#
+
+# Be sure to include multimarkdown in our PATH
+/usr/local/bin/multimarkdown "$1"
+

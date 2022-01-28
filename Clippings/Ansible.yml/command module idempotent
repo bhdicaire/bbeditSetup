@@ -1,0 +1,14 @@
+# ------------------------------------------------------------
+# How to make the command module idempotent
+# ------------------------------------------------------------
+
+# Clasic
+- command: /usr/bin/create-database.sh
+
+# Only run the command task if the file specified exists
+- command: /usr/bin/create-database.sh remove=/path/to/database
+
+# Only run the command task if the file specified by the pattern does not exists
+- command: /usr/bin/create-database.sh creates=/path/to/database
+
+

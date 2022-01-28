@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>and</string>
+		<string>break</string>
+		<string>continue</string>
+		<string>do</string>
+		<string>elif</string>
+		<string>else</string>
+		<string>end</string>
+		<string>fail</string>
+		<string>false</string>
+		<string>fi</string>
+		<string>for</string>
+		<string>function</string>
+		<string>if</string>
+		<string>in</string>
+		<string>local</string>
+		<string>mod</string>
+		<string>not</string>
+		<string>od</string>
+		<string>or</string>
+		<string>rec</string>
+		<string>repeat</string>
+		<string>return</string>
+		<string>then</string>
+		<string>true</string>
+		<string>until</string>
+		<string>while</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>CGAP</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>GAP</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.gap</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.g</string>
+		</dict>
+		<dict>
+			<key>BBLMIsSourceKind</key>
+			<true/>
+			<key>BBLMLanguageSuffix</key>
+			<string>.gi</string>
+		</dict>
+		<dict>
+			<key>BBLMIsHeaderKind</key>
+			<true/>
+			<key>BBLMLanguageSuffix</key>
+			<string>.gd</string>
+		</dict>
+	</array>
+	<key>BBLMSupportsTextCompletion</key>
+	<false/>
+	<key>Language Features</key>
+	<dict>
+		<key>Open Line Comments</key>
+		<string>#</string>
+		<key>Comment Pattern</key>
+		<string>#.*$</string>
+		<key>Function Pattern</key>
+		<string><![CDATA[(?sx)
+			(?# Some leading whitespace)
+			^[ \t]*
+			(?# The command declaring/installing the function / variable)
+			(
+			   (Declare|Install)([A-Z][A-Za-z]+)|
+			   BindGlobal|BIND_GLOBAL
+			)
+			(?# The opening parenthesis, possibly surrounded by whitespace and followed by quotation mark)
+			\s*\(\s*"?
+			(?# Match the function name. Also handles \* etc. )
+			(?P<function_name>(?:[a-zA-Z_]|\\\S)(?:[a-zA-Z0-9_]|\\\S)*)
+		]]></string>
+		<key>Identifier and Keyword Character Class</key>
+		<string>[:alnum:]_</string>
+		<key>String Pattern</key>
+		<string><![CDATA[(?x:
+                ("""(?:\n|.)*?""")     | (?# Triple-double-quote)
+                ("(\\"|[^"\r]|\\\r)*") | (?# Double-quote)
+                ('(\\'|[^'\r]|\\\r)*')   (?# Single-quote)
+            )
+		]]></string>
+	</dict>
+	<key>BBLMCommentLineDefault</key>
+	<string># </string>
+	<key>com.barebones.DocumentType</key>
+	<string>CodelessLanguageModule</string>
+</dict>
+</plist>

@@ -1,0 +1,30 @@
+---
+
+
+# Scenario #1
+ - hosts: webservers
+  remote_user: root
+
+# Scenario #1
+  remote_user: yourname
+  become: yes
+
+# Scenario #2
+  remote_user: yourname
+  become: yes
+  become_method: su
+
+
+# Scenario #3
+
+  remote_user: yourname
+  tasks:
+    - service: name=nginx state=started
+      become: yes
+      become_method: sudo
+###################
+
+  tasks:
+    - name: test connection
+      ping:
+      remote_user: yourname

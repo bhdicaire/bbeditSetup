@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <!-- Codeless language module for FloScript. -->
+    <!-- FloScript is a configuration langiage for ioflo framework -->
+	<!-- Ioflo: https://github.com/ioflo/ioflo -->
+    <!-- Module Author: Rostyslav Golda,  tx_hv@ukr.net -->
+    <dict>
+        <key>BBEditDocumentType</key>
+        <string>CodelessLanguageModule</string>
+        <key>BBLMLanguageDisplayName</key>
+        <string>FloScript</string>
+        <key>BBLMLanguageCode</key>
+        <string>Flo</string>
+        <key>BBLMColorsSyntax</key>
+        <true />
+        <key>BBLMFileNamesToMatch</key>
+        <array>
+        	<string>*.flo</string>
+        </array>
+        <key>BBLMPreferredFilenameExtension</key>
+        <string>flo</string>
+        <key>BBLMColorsSyntax</key>                                               
+        <true/>                                                 
+        <key>BBLMIsCaseSensitive</key>
+        <true/>                                                       
+        <key>BBLMSuffixMap</key>
+        <array>
+                <dict>
+                        <key>BBLMLanguageSuffix</key>
+                        <string>.flo</string>
+                </dict>
+        </array>
+        <key>BBLMKeywordList</key>
+        <array>
+            <string>load</string>
+            <string>init</string>
+            <string>server</string>
+            <string>logger</string>
+            <string>log</string>
+            <string>loggee</string>
+            <string>first</string>
+            <string>over</string>
+            <string>under</string>
+            <string>next</string>
+            <string>done</string>
+            <string>timeout</string>
+            <string>repeat</string>
+            <string>native</string>
+            <string>benter</string>
+            <string>enter</string>
+            <string>recur</string>
+            <string>exit</string>
+            <string>precur</string>
+            <string>renter</string>
+            <string>rexit</string>
+            <string>print</string>
+            <string>put</string>
+            <string>inc</string>
+            <string>copy</string>
+            <string>set</string>
+            <string>aux</string>
+            <string>rear</string>
+            <string>raze</string>
+            <string>go</string>
+            <string>let</string>
+            <string>do</string>
+            <string>bid</string>
+            <string>ready</string>
+            <string>start</string>
+            <string>stop</string>
+            <string>run</string>
+            <string>abort</string>
+            <string>use</string>
+            <string>flo</string>
+            <string>give</string>
+            <string>take</string>
+        </array>
+        <key>BBLMPredefinedNameList</key>
+        <array>
+            <string>house</string>
+            <string>frame</string>
+            <string>framer</string>
+            <string>to</string>
+            <string>by</string>
+            <string>with</string>
+            <string>from</string>
+            <string>per</string>
+            <string>for</string>
+            <string>cum</string>
+            <string>qua</string>
+            <string>via</string>
+            <string>as</string>
+            <string>at</string>
+            <string>in</string>
+            <string>of</string>
+            <string>on</string>
+            <string>re</string>
+            <string>is</string>
+            <string>if</string>
+            <string>be</string>
+            <string>into</string>
+            <string>and</string>
+            <string>not</string>
+        </array>
+        <key>BBLMCommentLineDefault</key>
+        <string>#</string>
+        <key>Language Features</key>
+        <dict>
+                <key>Identifier and Keyword Character Class</key>
+            	<string>A-Za-z0-9_</string>
+                <key>Identifier and Keyword Characters</key>
+                <string>A-Za-z0-9_</string>
+                <key>Open Line Comments</key>
+                <string>#</string>
+                <key>Open Strings 1</key>
+                <string>"</string>
+                <key>Close Strings 1</key>
+                <string>"</string>
+                <key>Escape Char in Strings 1</key>
+                <string>\</string>
+                <key>End-of-line Ends Strings 1</key>
+                <false/>
+        </dict>
+    </dict>
+</plist>

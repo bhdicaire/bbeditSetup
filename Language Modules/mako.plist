@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+	"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+	BBEdit codeless language module for Mako Templates.
+	Jonathan Vanasco
+	Version 0.0.3
+	2018.01.27
+
+	Released under the MIT license
+		http://opensource.org/licenses/MIT
+
+	Requires BBEdit 8.0 or higher. To install, copy here and relaunch BBEdit.
+		~/Library/Application Support/BBEdit/Language Modules/
+
+	or
+
+	Requires TextWrangler 4.0 or higher. To install, copy here and relaunch TextWrangler.
+		~/Library/Application Support/Text Wrangler/Language Modules/
+
+-->
+
+<dict>
+	<!-- You must identify the plist as a CLM: -->
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+
+	<key>BBLMLanguageSuffix</key>
+	<string>.mako</string>
+
+	<!-- You must identify your language: -->
+	<key>BBLMLanguageCode</key>
+		<string>MAKO</string>
+	<key>BBLMLanguageDisplayName</key>
+		<string>Mako Templating Language</string>
+
+
+	<!-- Not required, but there’s not much point to
+	     a language module if it doesn’t color syntax: -->
+	<key>BBLMColorsSyntax</key>
+		<true/>
+
+	<key>BBLMScansFunctions</key>
+		<true/>
+
+	<!-- Specify some keywords. This isn’t required, either,
+             but it provides something to color: -->
+	<key>BBLMKeywordList</key>
+		<array>
+
+			<!-- control structures -->
+			<string>if</string>
+			<string>else</string>
+			<string>elif</string>
+			<string>endif</string>
+
+			<string>for</string>
+			<string>endfor</string>
+
+
+			<!-- tags -->
+			<string>page</string>
+			<string>include</string>
+			<string>def</string>
+			<string>block</string>
+			<string>namespace</string>
+			<string>inherit</string>
+			<string>nsname</string>
+			<string>call</string>
+			<string>doc</string>
+			<string>text</string>
+
+			<!-- used in tags -->
+			<string>name=</string>
+			<string>file=</string>
+
+			<!-- used in tags -->
+			<string>&lt;%</string>
+			<string>&gt;%</string>
+			<string>${</string>
+
+		</array>
+
+	<!-- Specify a comment-out string: -->
+	<key>BBLMCommentLineDefault</key>
+		<string>##</string>
+
+	<!-- You must specify the character set for
+             keywords and identifiers. Substitute your own:  -->
+
+	<key>Language Features</key>
+	<dict>
+		<key>Close Block Comments</key>
+		<string></string>
+		<key>Close Parameter Lists</key>
+		<string>)</string>
+		<key>Close Statement Blocks</key>
+		<string></string>
+		<key>Close Strings 1</key>
+		<string>'</string>
+		<key>Close Strings 2</key>
+		<string>"</string>
+		<key>End-of-line Ends Strings 1</key>
+		<false/>
+		<key>End-of-line Ends Strings 2</key>
+		<false/>
+		<key>Escape Char in Strings 1</key>
+		<string>\</string>
+		<key>Escape Char in Strings 2</key>
+		<string>\</string>
+		<key>Identifier and Keyword Characters</key>
+		<string>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz^-_./</string>
+		<key>Open Block Comments</key>
+		<string></string>
+		<key>Open Line Comments</key>
+		<string>##</string>
+		<key>Open Parameter Lists</key>
+		<string>(</string>
+		<key>Open Statement Blocks</key>
+		<string></string>
+		<key>Open Strings 1</key>
+		<string>'</string>
+		<key>Open Strings 2</key>
+		<string>"</string>
+		<key>Prefix for Functions</key>
+		<string></string>
+		<key>Prefix for Procedures</key>
+		<string></string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+
+
+<key>Function Pattern</key>
+<string><![CDATA[
+(?x:
+    (?P<function>
+        <%(def|block)\s+name=
+        ['"]
+			(?P<function_name>
+				[a-zA-Z0-9_]+
+			)
+			(?P<function_args>
+				\s?
+				\(
+			        [\w\s=\-,\*\\'"]*
+				\)\s*
+			)?
+		['"]\s*>
+		(?s:.+?)
+	    </%def>
+    )
+)
+]]>
+</string>
+
+	</dict>
+</dict>
+</plist>

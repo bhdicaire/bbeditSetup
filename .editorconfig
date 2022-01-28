@@ -1,0 +1,58 @@
+# See http://EditorConfig.org for more information about .editorconfig files
+# See https://github.com/RehanSaeed/EditorConfig for samples
+
+##########################################
+# Common Settings
+##########################################
+
+root = true
+
+# All Files
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+tab_width = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+##########################################
+# File Extension Settings
+##########################################
+
+
+# YAML Files
+[*.{yml,yaml}]
+indent_size = 2
+
+# Markdown Files
+[*.{md,mdx}]
+trim_trailing_whitespace = false
+
+# Web Files
+[*.{htm,html,js,jsm,ts,tsx,cjs,cts,ctsx,mjs,mts,mtsx,css,sass,scss,less,pcss,svg,vue}]
+indent_size = 2
+
+# Batch Files
+[*.{cmd,bat}]
+end_of_line = crlf
+
+# Bash Files
+[*.sh]
+end_of_line = lf
+
+# Makefiles
+[Makefile]
+indent_style = tab
+
+##########################################
+# BBEdit Extension
+##########################################
+
+make-backup-files = 0
+x-typographers-quotes = true
+x-show-invisibles = true
+x-show-spaces = true
+x-soft-wrap-text = true
+x-soft-wrap-mode = WindowWidth

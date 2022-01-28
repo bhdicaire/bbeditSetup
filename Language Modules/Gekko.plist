@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+	"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<!--  The smallest CLM that will color keywords.
+      Copyright (c) 2012 Bare Bones Software, Inc. -->
+
+<!--  This CLM colors Gekko code (http://t-t.dk/gekko/). Put it in 
+      ~/Library/Application Support/BBEdit/Language Modules/
+      or
+      ~/Library/Application Support/TextWrangler/Language Modules/ 
+      See further details at
+      https://www.barebones.com/support/develop/clm.html -->
+		
+<dict>
+	<!-- You must identify the plist as a CLM: -->
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	
+	<!-- You must identify your language: -->
+	<key>BBLMLanguageDisplayName</key>  <string>Gekko</string>
+	<key>BBLMLanguageCode</key>         <string>Gekk</string>
+	<key>BBLMSuffixMap</key>
+		<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>   <string>.gcm</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>   <string>.frm</string>
+		</dict>
+		</array>
+	
+	<!-- Not required, but there’s not much point to
+	     a language module if it doesn’t color syntax: -->
+	<key>BBLMColorsSyntax</key>         <true/>
+	
+	<!-- Specify a comment-out string: -->
+	<key>BBLMCommentLineDefault</key>   <string>// </string>
+	
+	<!-- You must specify the character set for
+             keywords and identifiers. Substitute your own:  -->
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string>A-Za-z0-9_!@#$%</string>
+		
+		<key>Open Block Comments</key>      <string>/*</string>
+		<key>Close Block Comments</key>     <string>*/</string>
+		<key>Open Line Comments</key>	<string>//</string>
+
+		<key>Open Strings 1</key>       <string>'</string>
+		<key>Close Strings 1</key>      <string>'</string>
+		
+		<key>Open Parameter Lists</key>     <string>&lt;</string>
+		<key>Close Parameter Lists</key>    <string>&gt;</string>
+	</dict> 
+
+	<!-- Specify some keywords. This isn’t required, either,
+             but it provides something to color: -->
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>INTERP_QA_LIN</string>
+		<string>PCHA</string>
+		<string>PCHA_TO_PCH</string>
+		<string>PCHMY</string>
+	</array>
+	
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<string>ABS</string>
+		<string>ACCEPT</string>
+		<string>ADDBANK</string>
+		<string>ADDFREQ</string>
+		<string>ANALYZE</string>
+		<string>APPEND</string>
+		<string>AVG</string>
+		<string>AVGC</string>
+		<string>AVGR</string>
+		<string>AVGT</string>
+		<string>BANKFILENAME</string>
+		<string>BANKNAME</string>
+		<string>BLOCK</string>
+		<string>CHECKOFF</string>
+		<string>CHOL</string>
+		<string>CLEAR</string>
+		<string>CLIP</string>
+		<string>CLONE</string>
+		<string>CLOSE</string>
+		<string>CLS</string>
+		<string>COLLAPSE</string>
+		<string>COLS</string>
+		<string>COMPARE</string>
+		<string>CONCAT</string>
+		<string>CONTAINS</string>
+		<string>COPY</string>
+		<string>COUNT</string>
+		<string>CREATE</string>
+		<string>CURRENTDATE</string>
+		<string>CURRENTDATETIME</string>
+		<string>CURRENTFREQ</string>
+		<string>CURRENTPEREND</string>
+		<string>CURRENTPERSTART</string>
+		<string>CURRENTTIME</string>
+		<string>CURRENTYEAR</string>
+		<string>CUT</string>
+		<string>DATA</string>
+		<string>DATE</string>
+		<string>DATES</string>
+		<string>DECOMP</string>
+		<string>DELETE</string>
+		<string>DET</string>
+		<string>DIAG</string>
+		<string>DIF</string>
+		<string>DIFF</string>
+		<string>DIFFY</string>
+		<string>DIFY</string>
+		<string>DISP</string>
+		<string>DIVIDE</string>
+		<string>DLOG</string>
+		<string>DLOGY</string>
+		<string>DOC</string>
+		<string>DOWNLOAD</string>
+		<string>EDIT</string>
+		<string>ELSE</string>
+		<string>END</string>
+		<string>ENDO</string>
+		<string>ENDSWITH</string>
+		<string>EXCEPT</string>
+		<string>EXIST</string>
+		<string>EXIT</string>
+		<string>EXO</string>
+		<string>EXP</string>
+		<string>EXPORT</string>
+		<string>EXTEND</string>
+		<string>FILTEREDPERIODS</string>
+		<string>FINDMISSINGDATA</string>
+		<string>FLATTEN</string>
+		<string>FOR</string>
+		<string>FORMAT</string>
+		<string>FROMSERIES</string>
+		<string>FUNCTION</string>
+		<string>GEKKOVERSION</string>
+		<string>GETBANK</string>
+		<string>GETDOMAINS</string>
+		<string>GETENDOEXO</string>
+		<string>GETFREQ</string>
+		<string>GETFULLNAME</string>
+		<string>GETINDEX</string>
+		<string>GETMONTH</string>
+		<string>GETNAME</string>
+		<string>GETNAMEANDFREQ</string>
+		<string>GETQUARTER</string>
+		<string>GETSUBPER</string>
+		<string>GETYEAR</string>
+		<string>GLOBAL</string>
+		<string>GOTO</string>
+		<string>HDG</string>
+		<string>HELP</string>
+		<string>HPFILTER</string>
+		<string>I</string>
+		<string>IF</string>
+		<string>IIF</string>
+		<string>IMPORT</string>
+		<string>INDEX</string>
+		<string>INI</string>
+		<string>INTERPOLATE</string>
+		<string>INTERSECT</string>
+		<string>INV</string>
+		<string>ISMISS</string>
+		<string>ISOPEN</string>
+		<string>ITERSHOW</string>
+		<string>LAG</string>
+		<string>LASPCHAIN</string>
+		<string>LASPFIXED</string>
+		<string>LEN</string>
+		<string>LENGTH</string>
+		<string>LIST</string>
+		<string>LOCAL</string>
+		<string>LOCK</string>
+		<string>LOG</string>
+		<string>LOWER</string>
+		<string>M</string>
+		<string>MAP</string>
+		<string>MATRIX</string>
+		<string>MAXC</string>
+		<string>MAXR</string>
+		<string>MEM</string>
+		<string>MENU</string>
+		<string>MINC</string>
+		<string>MINR</string>
+		<string>MISS</string>
+		<string>MODE</string>
+		<string>MODEL</string>
+		<string>MOVAVG</string>
+		<string>MOVSUM</string>
+		<string>MULPRT</string>
+		<string>MULTIPLY</string>
+		<string>NULL</string>
+		<string>OLS</string>
+		<string>ONES</string>
+		<string>OPEN</string>
+		<string>OPTION</string>
+		<string>PACK</string>
+		<string>PAUSE</string>
+		<string>PCH</string>
+		<string>PCHY</string>
+		<string>PERCENTILE</string>
+		<string>PIPE</string>
+		<string>PLOT</string>
+		<string>POP</string>
+		<string>POW</string>
+		<string>POWER</string>
+		<string>PREEXTEND</string>
+		<string>PREFIX</string>
+		<string>PREPEND</string>
+		<string>PROCEDURE</string>
+		<string>PRT</string>
+		<string>R_EXPORT</string>
+		<string>R_FILE</string>
+		<string>R_RUN</string>
+		<string>READ</string>
+		<string>READFILE</string>
+		<string>REBASE</string>
+		<string>REMOVE</string>
+		<string>REMOVEBANK</string>
+		<string>REMOVEFREQ</string>
+		<string>REMOVEINDEX</string>
+		<string>RENAME</string>
+		<string>REPLACE</string>
+		<string>REPLACEBANK</string>
+		<string>REPLACEFREQ</string>
+		<string>REPLACEINSIDE</string>
+		<string>RESET</string>
+		<string>RESTART</string>
+		<string>RETURN</string>
+		<string>RNORM</string>
+		<string>ROTATE</string>
+		<string>ROUND</string>
+		<string>ROWS</string>
+		<string>RSEED</string>
+		<string>RUN</string>
+		<string>RUNIF</string>
+		<string>SEQ</string>
+		<string>SERIES</string>
+		<string>SETBANK</string>
+		<string>SETDOMAINS</string>
+		<string>SETFREQ</string>
+		<string>SETNAME</string>
+		<string>SETNAMEPREFIX</string>
+		<string>SETNAMESUFFIX</string>
+		<string>SHEET</string>
+		<string>SIGN</string>
+		<string>SIM</string>
+		<string>SMOOTH</string>
+		<string>SORT</string>
+		<string>SPLICE</string>
+		<string>SQRT</string>
+		<string>STARTSWITH</string>
+		<string>STOP</string>
+		<string>STRING</string>
+		<string>STRINGS</string>
+		<string>STRIP</string>
+		<string>STRIPEND</string>
+		<string>STRIPSTART</string>
+		<string>SUBSTRING</string>
+		<string>SUFFIX</string>
+		<string>SUM</string>
+		<string>SUMC</string>
+		<string>SUMR</string>
+		<string>SUMT</string>
+		<string>SYS</string>
+		<string>T</string>
+		<string>TABLE</string>
+		<string>TARGET</string>
+		<string>TELL</string>
+		<string>TIME</string>
+		<string>TIMEFILTER</string>
+		<string>TIMELESS</string>
+		<string>TRACE</string>
+		<string>TRANSLATE</string>
+		<string>TRUNCATE</string>
+		<string>TYPE</string>
+		<string>UNFIX</string>
+		<string>UNION</string>
+		<string>UNIQUE</string>
+		<string>UNLOCK</string>
+		<string>UNPACK</string>
+		<string>UPPER</string>
+		<string>VAL</string>
+		<string>VALS</string>
+		<string>VAR</string>
+		<string>WRITE</string>
+		<string>WRITEFILE</string>
+		<string>X12A</string>
+		<string>XEDIT</string>
+		<string>ZEROES</string>
+		<string>ZEROS</string>
+	</array>
+</dict>
+</plist>
+
+
+
+
+

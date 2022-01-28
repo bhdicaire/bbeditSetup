@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+	Codeless language model for BBEdit for openHAB rules files (*.rules).
+
+	Created initially by Maarten Meijer, mjmeijer@eclipsophy.com
+	http://www.eclipsophy.com/
+
+	Place in .../Application Support/BBEdit/Language Modules/ in
+	either ~/Library or ~/Dropbox/Application Support/BBEdit
+
+	Licensed according to terms of the Eclipse Public License (EPL)
+	https://www.eclipse.org/legal/epl-v10.html
+
+	2015 01 19 - Version 1.0
+-->
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMCanSpellCheckCodeRuns</key>
+	<false/>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMCommentLineDefault</key>
+	<string>//</string>
+	<key>BBLMCommentPrefixDefault</key>
+	<string>/*</string>
+	<key>BBLMCommentSuffixDefault</key>
+	<string>*/</string>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>import</string>
+		<string>var</string>
+		<string>rule</string>
+		<string>when</string>
+		<string>then</string>
+		<string>end</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>HABr</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>openHAB rules</string>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+	</array>
+	<key>BBLMPreferredFilenameExtension</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>rules</string>
+		</dict>
+	</array>
+	<key>BBLMScansFunctions</key>
+	<false/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.rules</string>
+		</dict>
+	</array>
+	<key>BBLMSupportsTextCompletion</key>
+	<true/>
+	<key>Language Features</key>
+	<dict>
+		<key>Close Block Comments</key>
+		<string>*/</string>
+		<key>Close Strings 1</key>
+		<string>"</string>
+		<key>Comment Pattern</key>
+		<string>(?x: (?&gt; // .* $ ) | (?&gt; /\* (?s:.*?) (?: \*/ | \z ) ) )</string>
+		<key>End-of-line Ends Strings 1</key>
+		<false/>
+		<key>Identifier and Keyword Character Class</key>
+		<string>0-9A-Z_a-z</string>
+		<key>Open Block Comments</key>
+		<string>/*</string>
+		<key>Open Line Comments</key>
+		<string>//</string>
+		<key>Open Strings 1</key>
+		<string>"</string>
+		<key>String Pattern</key>
+		<string>(?x: ("(\\"|[^"\r]|\\\r)*") | ('(\\'|[^'\r]|\\\r)*') |(?s:&lt;&lt;-?(?P&lt;delim&gt;\w+).*?(?P=delim) ) )</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,6 @@
+#INDENT#
+category do
+  id '<##>'  # Must be unique and is used as title of the category
+
+  entry<#?#>
+end

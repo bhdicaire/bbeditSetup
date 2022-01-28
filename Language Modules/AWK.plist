@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+	"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<!--  Copyright (c) 2020 Iain Barnett -->
+		
+<dict>
+	<!-- You must identify the plist as a CLM: -->
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Awk</string>
+	<key>BBLMLanguageCode</key>
+	<string>Awk!</string>
+  <key>BBLMPreferredFilenameExtension</key>
+  <string>awk</string>
+	<key>BBLMSuffixMap</key>
+  <array>
+    <dict>
+      <key>BBLMLanguageSuffix</key>
+      <string>.awk</string>
+    </dict>
+    <dict>
+      <key>BBLMLanguageSuffix</key>
+      <string>.sh</string>
+    </dict>
+  </array>
+	<key>BBLMColorsSyntax</key><true/>
+
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>BEFORE</string>
+		<string>END</string>
+		<string>print</string>
+		<string>printf</string>
+		<string>next</string>
+		<string>exit</string>
+		<string>if</string>
+		<string>else</string>
+    <string>OFS</string><!-- The Output Field Separator Variable -->
+    <string>NF</string><!-- The Number of Fields Variable -->
+    <string>NR</string><!-- The Number of Records Variable -->
+    <string>RS</string><!-- The Record Separator Variable -->
+    <string>ORS</string><!-- The Output Record Separator Variable -->
+    <string>FILENAME</string><!-- The Current Filename Variable -->
+    <string>cos</string><!-- cosine	GAWK,AWK,NAWK -->
+    <string>exp</string><!-- Exponent	GAWK,AWK,NAWK -->
+    <string>int</string><!-- Integer	GAWK,AWK,NAWK -->
+    <string>log</string><!-- Logarithm	GAWK,AWK,NAWK -->
+    <string>sin</string><!-- Sine	GAWK,AWK,NAWK -->
+    <string>sqrt</string><!-- Square Root	GAWK,AWK,NAWK -->
+    <string>atan2</string><!-- Arctangent	GAWK,NAWK -->
+    <string>rand</string><!-- Random	GAWK,NAWK -->
+    <string>srand</string><!-- Seed Random	GAWK,NAWK -->
+    <string>index</string><!-- index(string,search) AWK, NAWK, GAWK -->
+    <string>length</string><!-- length(string) AWK, NAWK, GAWK -->
+    <string>split</string><!-- split(string,array,separator) AWK, NAWK, GAWK -->
+    <string>substr</string><!-- substr(string,position) AWK, NAWK, GAWK -->
+    <string>sub</string><!-- sub(regex,replacement) NAWK, GAWK -->
+    <string>gsub</string><!-- gsub(regex,replacement) NAWK, GAWK -->
+    <string>match</string><!-- match(string,regex) NAWK, GAWK -->
+    <string>tolower</string><!-- tolower(string) GAWK -->
+    <string>toupper</string><!-- toupper(string) GAWK -->
+    <string>asort</string><!-- asort(string,[d]) GAWK -->
+    <string>asorti</string><!-- asorti(string,[d]) GAWK -->
+    <string>gensub</string><!-- gensub(r,s,h [,t]) GAWK -->
+    <string>strtonum</string><!-- strtonum(string) GAWK -->
+    <string>getline</string><!-- getline	AWK, NAWK, GAWK -->
+    <string>system</string><!-- system(command) NAWK, GAWK -->
+    <string>close</string><!-- close(command) NAWK, GAWK -->
+    <string>systime</string><!-- systime() GAWK -->
+    <string>strftime</string><!-- strftime(string) GAWK -->
+    <string>while</string>
+    <string>do</string>
+    <string>for</string>
+  </array>
+
+	<key>BBLMCommentLineDefault</key>
+	<string>#</string>
+  <key>Open Line Comments</key>
+  <string>#</string>
+  <key>BBLMSupportsTextCompletion</key> <true/>
+	<key>Open Parameter Lists</key><string>(</string>
+	<key>Close Parameter Lists</key><string>)</string>
+	<key>Open Statement Blocks</key><string>{</string>
+	<key>Close Statement Blocks</key><string>}</string>
+
+
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string>A-Za-z0-9_</string>
+
+    <key>BBLMScansFunctions</key><true/>
+
+    <key>String Pattern</key>
+    <string>(?x:
+      (?:"(?:\\"|[^"\r]|\\\r)*") | (?# Double-quote)
+      (?:'(?:\\'|[^'\r]|\\\r)*') | (?# Single-quote)
+    )</string>
+
+    <key>Comment Pattern</key>
+    <string>\#.*?$</string>
+
+    <key>Skip Pattern</key>
+    <string><![CDATA[
+    (?x:
+        (?P>comment) |
+        (?P>string)
+    )]]></string>
+	</dict>
+</dict>
+</plist>

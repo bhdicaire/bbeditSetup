@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>DD</string>
+		<string>JCL</string>
+		<string>COMMAND</string>
+		<string>CNTL</string>
+		<string>DD</string>
+		<string>ENDCTL</string>
+		<string>ENDIF</string>
+		<string>ELSE</string>
+		<string>INCLUDE</string>
+		<string>JCLLIB</string>
+		<string>OUTPUT</string>
+		<string>PEND</string>
+		<string>PROC</string>
+		<string>SET</string>
+		<string>THEN</string>
+		<string>XMIT</string>
+		<string>JOBPARAM</string>
+		<string>MESSAGE</string>
+		<string>NETACCT</string>
+		<string>NOTIFY</string>
+		<string>OUTPUT</string>
+		<string>PRIORITY</string>
+		<string>ROUTE</string>
+		<string>SETUP</string>
+		<string>SIGNOFF</string>
+		<string>XEQ</string>
+		<string>EXEC</string>
+	</array>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<string>SYSIN</string>
+		<string>SYSOUT</string>
+		<string>SYSPRINT</string>
+		<string>SYSUT</string>
+		<string>JOBLIB</string>
+		<string>STEPLIB</string>
+		<string>JOBCAT</string>
+		<string>STEPCAT</string>
+		<string>SYSUDUMP</string>
+		<string>SYSABEND</string>
+		<string>SYSMDUMP</string>
+		<string>SYSCHK</string>
+		<string>SYSCKEOV</string>
+		<string>*</string>
+		<string>SYSUID</string>
+		<string>THEN</string>
+		<string>DUMMY</string>
+		<string>PGM</string>
+		<string>PARM</string>
+		<string>DISP</string>
+		<string>DSN</string>
+		<string>UNIT</string>
+		<string>SPACE</string>
+		<string>DCB</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>jcl</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>JCL</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.jcl</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Close Block Comments</key>
+		<string></string>
+		<key>Close Parameter Lists</key>
+		<string>)</string>
+		<key>Close Statement Blocks</key>
+		<string></string>
+		<key>Close Strings 1</key>
+		<string>'</string>
+		<key>Close Strings 2</key>
+		<string>"</string>
+		<key>End-of-line Ends Strings 1</key>
+		<true/>
+		<key>End-of-line Ends Strings 2</key>
+		<true/>
+		<key>Escape Char in Strings 1</key>
+		<string></string>
+		<key>Escape Char in Strings 2</key>
+		<string></string>
+		<key>Identifier and Keyword Characters</key>
+		<string>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$£.!?abcdefghijklmnopqrstuvwxyz</string>
+		<key>Open Block Comments</key>
+		<string></string>
+		<key>Open Line Comments</key>
+		<string>//*</string>
+		<key>Open Parameter Lists</key>
+		<string>(</string>
+		<key>Open Statement Blocks</key>
+		<string></string>
+		<key>Open Strings 1</key>
+		<string>'</string>
+		<key>Open Strings 2</key>
+		<string>"</string>
+		<key>Prefix for Functions</key>
+		<string></string>
+		<key>Prefix for Procedures</key>
+		<string></string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>-</string>
+		<string>*</string>
+		<string>/</string>
+		<string>#b</string>
+		<string>#d</string>
+		<string>#e</string>
+		<string>#f</string>
+		<string>#i</string>
+		<string>#o</string>
+		<string>#t</string>
+		<string>#x</string>
+		<string>+</string>
+		<string>&lt;</string>
+		<string>&lt;</string>
+		<string>&lt;=</string>
+		<string>=</string>
+		<string>=&gt;</string>
+		<string>&gt;</string>
+		<string>&gt;</string>
+		<string>&gt;=</string>
+		<string>abs</string>
+		<string>acos</string>
+		<string>and</string>
+		<string>angle</string>
+		<string>append</string>
+		<string>apply</string>
+		<string>asin</string>
+		<string>assoc</string>
+		<string>assq</string>
+		<string>assv</string>
+		<string>atan</string>
+		<string>begin</string>
+		<string>boolean?</string>
+		<string>caar</string>
+		<string>cadr</string>
+		<string>call-with-current-continuation</string>
+		<string>call-with-input-file</string>
+		<string>call-with-output-file</string>
+		<string>call-with-values</string>
+		<string>call/cc</string>
+		<string>car</string>
+		<string>case</string>
+		<string>catch</string>
+		<string>cdddar</string>
+		<string>cddddr</string>
+		<string>cdr</string>
+		<string>ceiling</string>
+		<string>char-&gt;integer</string>
+		<string>char-alphabetic?</string>
+		<string>char-ci&lt;?</string>
+		<string>char-ci&lt;=?</string>
+		<string>char-ci=?</string>
+		<string>char-ci&gt;?</string>
+		<string>char-ci&gt;=?</string>
+		<string>char-downcase</string>
+		<string>char-lower-case?</string>
+		<string>char-numeric?</string>
+		<string>char-ready?</string>
+		<string>char-upcase</string>
+		<string>char-upper-case?</string>
+		<string>char-whitespace?</string>
+		<string>char?</string>
+		<string>char&lt;?</string>
+		<string>char&lt;=?</string>
+		<string>char=?</string>
+		<string>char&gt;?</string>
+		<string>char&gt;=?</string>
+		<string>close-input-port</string>
+		<string>close-output-port</string>
+		<string>complex?</string>
+		<string>cond</string>
+		<string>cons</string>
+		<string>cos</string>
+		<string>current-input-port</string>
+		<string>current-output-port</string>
+		<string>define-syntax</string>
+		<string>define</string>
+		<string>delay</string>
+		<string>denominator</string>
+		<string>display</string>
+		<string>do</string>
+		<string>dynamic-wind</string>
+		<string>else</string>
+		<string>eof-object?</string>
+		<string>eq?</string>
+		<string>equal?</string>
+		<string>eqv?</string>
+		<string>eval</string>
+		<string>even?</string>
+		<string>exact</string>
+		<string>exact-&gt;inexact</string>
+		<string>exact?</string>
+		<string>exp</string>
+		<string>expt</string>
+		<string>floor</string>
+		<string>for-each</string>
+		<string>force</string>
+		<string>gcd</string>
+		<string>if</string>
+		<string>imag-part</string>
+		<string>inexact-&gt;exact</string>
+		<string>inexact?</string>
+		<string>input-port?</string>
+		<string>integer-&gt;char</string>
+		<string>integer?</string>
+		<string>interaction-environment</string>
+		<string>lambda</string>
+		<string>lcm</string>
+		<string>length</string>
+		<string>let-syntax</string>
+		<string>let</string>
+		<string>let*</string>
+		<string>letrec-syntax</string>
+		<string>letrec</string>
+		<string>list</string>
+		<string>list-&gt;string</string>
+		<string>list-&gt;vector</string>
+		<string>list-ref</string>
+		<string>list-tail</string>
+		<string>list?</string>
+		<string>load</string>
+		<string>log</string>
+		<string>make-polar</string>
+		<string>make-rectangular</string>
+		<string>make-string</string>
+		<string>make-vector</string>
+		<string>map</string>
+		<string>max</string>
+		<string>member</string>
+		<string>memq</string>
+		<string>memv</string>
+		<string>min</string>
+		<string>modulo</string>
+		<string>negative?</string>
+		<string>newline</string>
+		<string>not</string>
+		<string>null-environment</string>
+		<string>null?</string>
+		<string>number-&gt;string</string>
+		<string>number?</string>
+		<string>numerator</string>
+		<string>odd?</string>
+		<string>open-input-file</string>
+		<string>open-output-file</string>
+		<string>or</string>
+		<string>output-port?</string>
+		<string>pair</string>
+		<string>pair?</string>
+		<string>peek-char</string>
+		<string>port?</string>
+		<string>positive?</string>
+		<string>procedure?</string>
+		<string>promise</string>
+		<string>quasiquote</string>
+		<string>quote</string>
+		<string>quotient</string>
+		<string>rational?</string>
+		<string>rationalize</string>
+		<string>read-char</string>
+		<string>read</string>
+		<string>real-part</string>
+		<string>real?</string>
+		<string>remainder</string>
+		<string>reverse</string>
+		<string>round</string>
+		<string>scheme-report-environment</string>
+		<string>set-car!</string>
+		<string>set-cdr!</string>
+		<string>set!</string>
+		<string>sin</string>
+		<string>sqrt</string>
+		<string>string-&gt;list</string>
+		<string>string-&gt;number</string>
+		<string>string-&gt;symbol</string>
+		<string>string-append</string>
+		<string>string-ci&lt;?</string>
+		<string>string-ci&lt;=?</string>
+		<string>string-ci=?</string>
+		<string>string-ci&gt;?</string>
+		<string>string-ci&gt;=?</string>
+		<string>string-copy</string>
+		<string>string-fill!</string>
+		<string>string-length</string>
+		<string>string-ref</string>
+		<string>string-set!</string>
+		<string>string?</string>
+		<string>string&lt;?</string>
+		<string>string&lt;=?</string>
+		<string>string=?</string>
+		<string>string&gt;?</string>
+		<string>string&gt;=?</string>
+		<string>substring</string>
+		<string>summary</string>
+		<string>symbol-&gt;string</string>
+		<string>symbol</string>
+		<string>tan</string>
+		<string>transcript-off</string>
+		<string>transcript-on</string>
+		<string>truncate</string>
+		<string>unquote-splicing</string>
+		<string>unquote</string>
+		<string>valuesvector</string>
+		<string>vector-&gt;list</string>
+		<string>vector-fill!</string>
+		<string>vector-length</string>
+		<string>vector-ref</string>
+		<string>vector-set!</string>
+		<string>vector?</string>
+		<string>with-input-from-file</string>
+		<string>with-output-to-file</string>
+		<string>write-char</string>
+		<string>write</string>
+		<string>zero?</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>scm </string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Scheme</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.scm</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.ss</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Close Block Comments</key>
+		<string></string>
+		<key>Close Parameter Lists</key>
+		<string></string>
+		<key>Close Statement Blocks</key>
+		<string>)</string>
+		<key>Close Strings 1</key>
+		<string>"</string>
+		<key>Close Strings 2</key>
+		<string></string>
+		<key>End-of-line Ends Strings 1</key>
+		<false/>
+		<key>End-of-line Ends Strings 2</key>
+		<false/>
+		<key>Escape Char in Strings 1</key>
+		<string></string>
+		<key>Escape Char in Strings 2</key>
+		<string></string>
+		<key>Identifier and Keyword Characters</key>
+		<string>!$%&amp;*+-./:&lt;=&gt;?@^_~0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz</string>
+		<key>Open Block Comments</key>
+		<string></string>
+		<key>Open Line Comments</key>
+		<string>; </string>
+		<key>Open Parameter Lists</key>
+		<string></string>
+		<key>Open Statement Blocks</key>
+		<string>(</string>
+		<key>Open Strings 1</key>
+		<string>"</string>
+		<key>Open Strings 2</key>
+		<string></string>
+		<key>Prefix for Functions</key>
+		<string></string>
+		<key>Prefix for Procedures</key>
+		<string>lambda</string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

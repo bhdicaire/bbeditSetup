@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	
+<!--
+	OPL for SIBO (EPOC16) Language Module for BBEdit 8.5+ or TextWrangler 2.2+
+	Jean-Yves Rouffiac, 28 February 2014
+	
+	The keyword list is derived from various sources and may not be complete.
+	
+	OPL  = Open/Organiser Programming Language
+	SIBO = The Series 3, 3a, 3c, 3mx and Siena line of pocket computers from Psion
+	
+	Some string matching based on the Chipmunk Basic plist file by Jim DeVona
+-->
+
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>ABS</string>
+		<string>ACOS</string>
+		<string>ADDR</string>
+		<string>ADJUSTALLOC</string>
+		<string>ALERT</string>
+		<string>ALLOC</string>
+		<string>APP</string>
+		<string>APPEND</string>
+		<string>APPENDSPRITE</string>
+		<string>ASC</string>
+		<string>ASIN</string>
+		<string>AT</string>
+		<string>ATAN</string>
+		<string>BACK</string>
+		<string>BEEP</string>
+		<string>BREAK</string>
+		<string>BUSY</string>
+		<string>CACHE</string>
+		<string>CACHEHDR</string>
+		<string>CACHEREC</string>
+		<string>CACHETIDY</string>
+		<string>CALL</string>
+		<string>CHANGESPRITE</string>
+		<string>CHR$</string>
+		<string>CLOSE</string>
+		<string>CLOSESPRITE</string>
+		<string>CLS</string>
+		<string>CMD$</string>
+		<string>COMPRESS</string>
+		<string>CONTINUE</string>
+		<string>COPY</string>
+		<string>COS</string>
+		<string>COUNT</string>
+		<string>CREATE</string>
+		<string>CREATESPRITE</string>
+		<string>CURSOR</string>
+		<string>DATETOSECS</string>
+		<string>DATIM$</string>
+		<string>DAY</string>
+		<string>DAYNAME$</string>
+		<string>DAYS</string>
+		<string>DBUTTONS</string>
+		<string>DCHOICE</string>
+		<string>DDATE</string>
+		<string>DEDIT</string>
+		<string>DEFAULTWIN</string>
+		<string>DEG</string>
+		<string>DELETE</string>
+		<string>DFILE</string>
+		<string>DFLOAT</string>
+		<string>DIALOG</string>
+		<string>DIAMINIT</string>
+		<string>DIAMPOS</string>
+		<string>DINIT</string>
+		<string>DIR$</string>
+		<string>DLONG</string>
+		<string>DO</string>
+		<string>DOW</string>
+		<string>DPOSITION</string>
+		<string>DRAWSPRITE</string>
+		<string>DTEXT</string>
+		<string>DTIME</string>
+		<string>DXINPUT</string>
+		<string>EDIT</string>
+		<string>ELSE</string>
+		<string>ELSEIF</string>
+		<string>ENDA</string>
+		<string>ENDIF</string>
+		<string>ENDP</string>
+		<string>ENDV</string>
+		<string>ENDWH</string>
+		<string>ENTERSEND</string>
+		<string>ENTERSEND0</string>
+		<string>EOF</string>
+		<string>ERASE</string>
+		<string>ERR</string>
+		<string>ERR$</string>
+		<string>ESCAPE</string>
+		<string>EVAL</string>
+		<string>EXIST</string>
+		<string>EXP</string>
+		<string>EXT</string>
+		<string>FIND</string>
+		<string>FINDFIELD</string>
+		<string>FINDLIB</string>
+		<string>FIRST</string>
+		<string>FIX$</string>
+		<string>FLT</string>
+		<string>FONT</string>
+		<string>FREEALLOC</string>
+		<string>GAT</string>
+		<string>GBORDER</string>
+		<string>GBOX</string>
+		<string>GBUTTON</string>
+		<string>GCLOCK</string>
+		<string>GCLOSE</string>
+		<string>GCLS</string>
+		<string>GCOPY</string>
+		<string>GCREATE</string>
+		<string>GCREATEBIT</string>
+		<string>GDRAWOBJECT</string>
+		<string>GEN$</string>
+		<string>GET</string>
+		<string>GET$</string>
+		<string>GETCMD$</string>
+		<string>GETEVENT</string>
+		<string>GETLIBH</string>
+		<string>GFILL</string>
+		<string>GFONT</string>
+		<string>GGMODE</string>
+		<string>GGREY</string>
+		<string>GHEIGHT</string>
+		<string>GIDENTITY</string>
+		<string>GINFO</string>
+		<string>GINVERT</string>
+		<string>GIPRINT</string>
+		<string>GLINEBY</string>
+		<string>GLINETO</string>
+		<string>GLOADBIT</string>
+		<string>GLOADFONT</string>
+		<string>GLOBAL</string>
+		<string>GMOVE</string>
+		<string>GORDER</string>
+		<string>GORIGINX</string>
+		<string>GORIGINY</string>
+		<string>GOTO</string>
+		<string>GPATT</string>
+		<string>GPEEKLINE</string>
+		<string>GPOLY</string>
+		<string>GPRINT</string>
+		<string>GPRINTB</string>
+		<string>GPRINTCLIP</string>
+		<string>GRANK</string>
+		<string>GSAVEBIT</string>
+		<string>GSCROLL</string>
+		<string>GSETWIN</string>
+		<string>GSTYLE</string>
+		<string>GTMODE</string>
+		<string>GTWIDTH</string>
+		<string>GUNLOADFONT</string>
+		<string>GUPDATE</string>
+		<string>GUSE</string>
+		<string>GVISIBLE</string>
+		<string>GWIDTH</string>
+		<string>GX</string>
+		<string>GXBORDER</string>
+		<string>GXPRINT</string>
+		<string>GY</string>
+		<string>HEX$</string>
+		<string>HOUR</string>
+		<string>IABS</string>
+		<string>ICON</string>
+		<string>IF</string>
+		<string>INPUT</string>
+		<string>INT</string>
+		<string>INTF</string>
+		<string>IOA</string>
+		<string>IOC</string>
+		<string>IOCANCEL</string>
+		<string>IOCLOSE</string>
+		<string>IOOPEN</string>
+		<string>IOREAD</string>
+		<string>IOSEEK</string>
+		<string>IOSIGNAL</string>
+		<string>IOW</string>
+		<string>IOWAIT</string>
+		<string>IOWAITSTAT</string>
+		<string>IOWRITE</string>
+		<string>IOYIELD</string>
+		<string>KEY</string>
+		<string>KEY$</string>
+		<string>KEYA</string>
+		<string>KEYC</string>
+		<string>KMOD</string>
+		<string>LAST</string>
+		<string>LCLOSE</string>
+		<string>LEFT$</string>
+		<string>LEN</string>
+		<string>LENALLOC</string>
+		<string>LINKLIB</string>
+		<string>LN</string>
+		<string>LOADLIB</string>
+		<string>LOADM</string>
+		<string>LOC</string>
+		<string>LOCAL</string>
+		<string>LOCK</string>
+		<string>LOG</string>
+		<string>LOPEN</string>
+		<string>LOWER$</string>
+		<string>LPRINT</string>
+		<string>MAX</string>
+		<string>MCARD</string>
+		<string>MEAN</string>
+		<string>MENU</string>
+		<string>MID$</string>
+		<string>MIN</string>
+		<string>MINIT</string>
+		<string>MINUTE</string>
+		<string>MKDIR</string>
+		<string>MONTH</string>
+		<string>MONTH$</string>
+		<string>NEWOBJ</string>
+		<string>NEWOBJH</string>
+		<string>NEXT</string>
+		<string>NUM$</string>
+		<string>ODBINFO</string>
+		<string>OFF</string>
+		<string>ON</string>
+		<string>ONERR</string>
+		<string>OPEN</string>
+		<string>OPENR</string>
+		<string>OS</string>
+		<string>PARSE$</string>
+		<string>PATH</string>
+		<string>PAUSE</string>
+		<string>PEEK$</string>
+		<string>PEEKB</string>
+		<string>PEEKF</string>
+		<string>PEEKL</string>
+		<string>PEEKW</string>
+		<string>PI</string>
+		<string>POKE$</string>
+		<string>POKEB</string>
+		<string>POKEF</string>
+		<string>POKEL</string>
+		<string>POKEW</string>
+		<string>POS</string>
+		<string>POSITION</string>
+		<string>POSSPRITE</string>
+		<string>PRINT</string>
+		<string>PROC</string>
+		<string>RAD</string>
+		<string>RAISE</string>
+		<string>RANDOMIZE</string>
+		<string>REALLOC</string>
+		<string>RECSIZE</string>
+		<string>REM</string>
+		<string>RENAME</string>
+		<string>REPT$</string>
+		<string>RETURN</string>
+		<string>RIGHT$</string>
+		<string>RMDIR</string>
+		<string>RND</string>
+		<string>SCI$</string>
+		<string>SCREEN</string>
+		<string>SCREENINFO</string>
+		<string>SECOND</string>
+		<string>SECSTODATE</string>
+		<string>SEND</string>
+		<string>SETNAME</string>
+		<string>SETPATH</string>
+		<string>SIN</string>
+		<string>SPACE</string>
+		<string>SQR</string>
+		<string>STATUSWIN</string>
+		<string>STATWININFO</string>
+		<string>STD</string>
+		<string>STOP</string>
+		<string>STYLE</string>
+		<string>SUM</string>
+		<string>TAN</string>
+		<string>TESTEVENT</string>
+		<string>TRAP</string>
+		<string>TYPE</string>
+		<string>UADD</string>
+		<string>UNLOADLIB</string>
+		<string>UNLOADM</string>
+		<string>UNTIL</string>
+		<string>UPDATE</string>
+		<string>UPPER$</string>
+		<string>USE</string>
+		<string>USESPRITE</string>
+		<string>USR</string>
+		<string>USR$</string>
+		<string>USUB</string>
+		<string>VAL</string>
+		<string>VAR</string>
+		<string>VECTOR</string>
+		<string>WEEK</string>
+		<string>WHILE</string>
+		<string>YEAR</string>
+	</array>
+	<!--
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<string>PROC</string>
+		<string>ENDP</string>
+	</array>
+	-->
+	<key>BBLMLanguageCode</key>
+	<string>OPL</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Psion OPL16</string>
+	
+	<key>BBLMScansFunctions</key>
+	<true/>
+	
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.opl</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>		
+
+		<key>Function Pattern</key>
+		<string><![CDATA[(?P<function>\bPROC[ \t]+(?P<function_name>[a-zA-Z][a-zA-Z0-9_]*[%$]?)[ \t]*+:[\(.*?\)]?(?:.|\r)*?ENDP\b)]]></string>
+
+		
+		<key>Open Strings 1</key> 
+		<string>"</string> 
+		<key>Close Strings 1</key> 
+		<string>"</string>
+		
+		<key>Comment Pattern</key>
+		<string><![CDATA[(?:REM .*$)]]></string>
+		
+		<key>String Pattern</key>
+		<string><![CDATA["[^"\r]*"]]></string>
+
+
+		<key>Identifier and Keyword Character Class</key>
+		<string><![CDATA[a-zA-Z0-9_$%]]></string>
+
+		<!--
+		<key>Prefix for Functions</key> 
+		<string>PROC</string> 
+		<key>Prefix for Procedures</key> 
+		<string>PROC</string>
+		-->
+		<key>Open Parameter Lists</key> 
+		<string>(</string> 
+		<key>Close Parameter Lists</key> 
+		<string>)</string> 
+
+	</dict>
+</dict>
+</plist>

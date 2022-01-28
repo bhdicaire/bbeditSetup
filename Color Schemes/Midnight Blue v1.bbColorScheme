@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BackgroundColor</key>
+	<string>rgba(0.066667,0.137255,0.207843,1.000000)</string>
+	<key>HighlightInsertionPoint</key>
+	<true/>
+	<key>InsertionPointLineHighlightColor</key>
+	<string>rgba(0.160784,0.239216,0.313726,1.000000)</string>
+	<key>InvisibleOthersColor</key>
+	<string>rgba(1.000000,1.000000,1.000000,1.000000)</string>
+	<key>InvisibleSpacesColor</key>
+	<string>rgba(1.000000,1.000000,1.000000,1.000000)</string>
+	<key>PrimaryHighlightColor</key>
+	<string>rgba(0.149463,0.348869,0.521160,1.000000)</string>
+	<key>SecondaryHighlightColor</key>
+	<string>rgba(0.364115,0.364105,0.364111,1.000000)</string>
+	<key>SpellingColor</key>
+	<string>rgba(1.000000,0.000000,0.000000,1.000000)</string>
+	<key>UseCustomHighlightColor</key>
+	<true/>
+	<key>com.barebones.bblm.Pyth.decorator</key>
+	<string>rgba(0.501961,0.000000,0.501961,1.000000)</string>
+	<key>com.barebones.bblm.code</key>
+	<string>rgba(1.000000,1.000000,1.000000,1.000000)</string>
+	<key>com.barebones.bblm.comment</key>
+	<string>rgba(0.250980,0.588235,0.749020,1.000000)</string>
+	<key>com.barebones.bblm.html.anchor</key>
+	<string>rgba(0.666666667,0.0,0.0,1.0)</string>
+	<key>com.barebones.bblm.html.attribute-name</key>
+	<string>rgba(0.941176,0.501961,0.278431,1.000000)</string>
+	<key>com.barebones.bblm.html.attribute-value</key>
+	<string>rgba(0.482353,0.760784,0.184314,1.000000)</string>
+	<key>com.barebones.bblm.html.image</key>
+	<string>rgba(0.250980,0.588235,0.749020,1.000000)</string>
+	<key>com.barebones.bblm.indexed-symbol</key>
+	<string>rgba(0.862745,0.847059,0.172549,1.000000)</string>
+	<key>com.barebones.bblm.keyword</key>
+	<string>rgba(0.552941,0.690196,0.827451,1.000000)</string>
+	<key>com.barebones.bblm.number</key>
+	<string>rgba(0.482353,0.760784,0.184314,1.000000)</string>
+	<key>com.barebones.bblm.predefined-symbol</key>
+	<string>rgba(1.000000,0.000000,1.000000,1.000000)</string>
+	<key>com.barebones.bblm.sgml-tag</key>
+	<string>rgba(1.000000,1.000000,1.000000,1.000000)</string>
+	<key>com.barebones.bblm.string</key>
+	<string>rgba(0.941176,0.501961,0.278431,1.000000)</string>
+	<key>com.barebones.bblm.xml-pi</key>
+	<string>rgba(0.2,0.4,0.6,1.0)</string>
+</dict>
+</plist>

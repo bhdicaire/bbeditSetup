@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>meyer</string>
+	</array>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>PDFHilite</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>PDFHilite</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleSignature</key>
+	<string>BBLM</string>
+	<key>CFBundleVersion</key>
+	<string>1.1</string>
+	<key>CFPlugInDynamicRegisterFunction</key>
+	<string></string>
+	<key>CFPlugInDynamicRegistration</key>
+	<string>NO</string>
+	<key>com.barebones.bblminfo</key>
+	<array>
+		<dict>
+			<key>BBLMCanGuessLanguage</key>
+			<true/>
+			<key>BBLMColorsSyntax</key>
+			<true/>
+			<key>BBLMDroppedFilePathStyle</key>
+			<string>POSIX</string>
+			<key>BBLMIsCaseSensitive</key>
+			<true/>
+			<key>BBLMLanguageCode</key>
+			<string>APLG</string>
+			<key>BBLMLanguageDisplayName</key>
+			<string>Appligent PDFHilite</string>
+			<key>BBLMMainFunctionName</key>
+			<string>PDFHilite</string>
+			<key>BBLMScansFunctions</key>
+			<false/>
+			<key>BBLMSuffixMap</key>
+			<array>
+				<dict>
+					<key>BBLMLanguageSuffix</key>
+					<string>.pdf</string>
+				</dict>
+				<dict>
+					<key>BBLMLanguageSuffix</key>
+					<string>.fdf</string>
+				</dict>
+			</array>
+			<key>BBLMUseHTMLFileSearchRules</key>
+			<false/>
+		</dict>
+	</array>
+</dict>
+</plist>

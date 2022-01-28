@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+	"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<!--
+BBEdit codeless language module for the [Pug](https://pugjs.org/) template engine.
+
+Note for USAnians: 'colour' = 'color' (I'm a Brit)
+
+Oh, and tabs FTW: https://editorConfig.org
+-->
+
+
+<plist version="1.0">
+<dict>
+<!-- \\\\ KEYS FOR ALL MODULES -->
+
+	<!-- //// IDENTIFICATION -->
+	<!-- You must identify the plist as a CLM: -->
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+    <key>com.barebones.DocumentType</key>
+    <string>CodelessLanguageModule</string>
+	<!-- You must identify your language: -->
+	<key>BBLMLanguageDisplayName</key>
+	<string>Pug</string>
+	<key>BBLMLanguageCode</key>
+	<string>Pug</string> <!-- Should this be four characters? -->
+
+
+	<!-- //// FILE MAPPING -->
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.pug</string>
+			<key>BBLMLanguageSuffix</key>
+			<string>.jade</string>
+		</dict>
+	</array>
+
+
+	<!-- //// SERVICES -->
+	<!-- Offer completions from the spelling dictionary within strings and comments? -->
+	<key>BBLMSupportsTextCompletion</key>
+	<true/>
+	<!-- Spell-check words that are neither keywords, nor within comments or strings? -->
+	<key>BBLMCanSpellCheckCodeRuns</key>
+	<true/>
+	<!-- URL that will return documentation for a selected symbol	  -->
+	<key>BBLMReferenceSearchURLTemplate</key>
+	<string>https://github.com/pugjs/pug?#__SYMBOLNAME__</string>
+	<!-- Take case into account when it matches strings? -->
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<!-- Put function names into the function navigation pop-up? -->
+	<!-- (must be <true/> for the function pattern to be used)	 -->
+	<key>BBLMScansFunctions</key>
+	<true/>
+
+
+	<!-- //// CONTROLLING SYNTAX COLOURING -->
+	<!-- Not required, but there’s not much point to a language module if it doesn’t colour syntax: -->
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<!-- Specify some keywords. This isn’t required, either, but it provides something to colour: -->
+	<key>BBLMKeywordList</key>
+	<!-- List order follows Pug documentation -->
+	<array>
+		<!-- Case -->
+		<string>case</string>
+		<string>when</string>
+		<string>default</string>
+		<string>break</string>
+
+		<!-- Code -->
+		<string>for</string>
+
+		<!-- Conditionals -->
+		<string>var</string>
+		<string>if</string>
+		<string>else</string>
+		<string>unless</string>
+
+		<!-- Doctype -->
+		<string>doctype</string>
+
+		<!-- Filters -->
+		<string>:markdown</string>
+		<string>:sass</string>
+		<string>:less</string>
+		<string>:coffee-script</string>
+
+		<!-- Includes -->
+		<string>include</string>
+
+		<!-- Inheritance -->
+		<string>block</string>
+		<string>extends</string>
+		<string>append</string>
+		<string>prepend</string>
+
+		<!-- Iteration -->
+		<string>each</string>
+		<string>while</string>
+
+		<!-- Mixins -->
+		<string>mixin</string>
+		<string>&amp;attributes</string>
+		<string>in</string>
+
+		<!-- Legacy -->
+        <string>!!!</string>
+        <string>yield</string>
+
+		<!-- Others -->
+		<string>function</string>
+		<string>console</string>
+
+
+	</array>
+	<!-- Words to colour as “predefined names”. BBEdit identifies words the same way as it does for the BBLMKeywordList. -->
+	<key>BBLMPredefinedNameList</key>
+	<!-- List order follows Mozilla documentation -->
+	<array>
+	<!-- HTML Elements -->
+	<!-- Main root -->
+		<string>html</string>
+
+	<!-- Document metadata -->
+		<string>base</string>
+		<string>head</string>
+		<string>link</string>
+		<string>meta</string>
+		<string>style</string>
+		<string>title</string>
+
+	<!-- Sectioning root -->
+		<string>body</string>
+
+	<!-- Content sectioning -->
+		<string>address</string>
+		<string>article</string>
+		<string>aside</string>
+		<string>footer</string>
+		<string>header</string>
+		<string>h1</string>
+		<string>h2</string>
+		<string>h3</string>
+		<string>h4</string>
+		<string>h5</string>
+		<string>h6</string>
+		<string>hgroup</string>
+		<string>main</string>
+		<string>nav</string>
+		<string>section</string>
+
+	<!-- Text content -->
+		<string>blockquote</string>
+		<string>dd</string>
+		<string>div</string>
+		<string>dl</string>
+		<string>dt</string>
+		<string>figcaption</string>
+		<string>figure</string>
+		<string>hr</string>
+		<string>li</string>
+		<string>main</string>
+		<string>ol</string>
+		<string>p</string>
+		<string>pre</string>
+		<string>ul</string>
+
+	<!-- Inline text semantics -->
+		<string>a</string>
+		<string>abbr</string>
+		<string>b</string>
+		<string>bdi</string>
+		<string>bdo</string>
+		<string>br</string>
+		<string>cite</string>
+		<string>code</string>
+		<string>data</string>
+		<string>dfn</string>
+		<string>em</string>
+		<string>i</string>
+		<string>kbd</string>
+		<string>mark</string>
+		<string>q</string>
+		<string>rb</string>
+		<string>rp</string>
+		<string>rt</string>
+		<string>rtc</string>
+		<string>ruby</string>
+		<string>s</string>
+		<string>samp</string>
+		<string>small</string>
+		<string>span</string>
+		<string>strong</string>
+		<string>sub</string>
+		<string>sup</string>
+		<string>time</string>
+		<string>u</string>
+		<string>var</string>
+		<string>wbr</string>
+
+	<!-- Image and multimedia -->
+		<string>area</string>
+		<string>audio</string>
+		<string>img</string>
+		<string>map</string>
+		<string>track</string>
+		<string>video</string>
+
+	<!-- Embedded content -->
+		<string>embed</string>
+		<string>iframe</string>
+		<string>object</string>
+		<string>param</string>
+		<string>picture</string>
+		<string>source</string>
+
+	<!-- Scripting -->
+		<string>canvas</string>
+		<string>noscript</string>
+		<string>script</string>
+
+	<!-- Demarcating edits -->
+		<string>del</string>
+		<string>ins</string>
+
+	<!-- Table content -->
+		<string>caption</string>
+		<string>col</string>
+		<string>colgroup</string>
+		<string>table</string>
+		<string>tbody</string>
+		<string>td</string>
+		<string>tfoot</string>
+		<string>th</string>
+		<string>thead</string>
+		<string>tr</string>
+
+	<!-- Forms -->
+		<string>button</string>
+		<string>datalist</string>
+		<string>fieldset</string>
+		<string>form</string>
+		<string>input</string>
+		<string>label</string>
+		<string>legend</string>
+		<string>meter</string>
+		<string>optgroup</string>
+		<string>option</string>
+		<string>output</string>
+		<string>progress</string>
+		<string>select</string>
+		<string>textarea</string>
+
+	<!-- Interactive elements -->
+		<string>details</string>
+		<string>dialog</string>
+		<string>menu</string>
+		<string>summary</string>
+
+	<!-- Web Components -->
+		<string>slot</string>
+		<string>template</string>
+
+		<!-- Obsolete and deprecated elements -->
+		<!-- <string>acronym</string> -->
+		<!-- <string>applet</string> -->
+		<!-- <string>basefont</string> -->
+		<!-- <string>bgsound</string> -->
+		<!-- <string>big</string> -->
+		<!-- <string>blink</string> -->
+		<!-- <string>center</string> -->
+		<!-- <string>command</string> -->
+		<!-- <string>content</string> -->
+		<!-- <string>dir</string> -->
+		<!-- <string>element</string> -->
+		<!-- <string>font</string> -->
+		<!-- <string>frame</string> -->
+		<!-- <string>frameset</string> -->
+		<!-- <string>image</string> -->
+		<!-- <string>isindex</string> -->
+		<!-- <string>keygen</string> -->
+		<!-- <string>listing</string> -->
+		<!-- <string>marquee</string> -->
+		<!-- <string>menuitem</string> -->
+		<!-- <string>multicol</string> -->
+		<!-- <string>nextid</string> -->
+		<!-- <string>nobr</string> -->
+		<!-- <string>noembed</string> -->
+		<!-- <string>noframes</string> -->
+		<!-- <string>plaintext</string> -->
+		<!-- <string>shadow</string> -->
+		<!-- <string>spacer</string> -->
+		<!-- <string>strike</string> -->
+		<!-- <string>tt</string> -->
+		<!-- <string>xmp</string> -->
+
+	<!-- /HTML Elements -->
+	</array>
+
+
+	<!-- //// UN/COMMENT TOKENS -->
+	<!-- These tokens support BBEdit’s un/comment menu command (cmd-/)
+		and are separate to comment pattern matching (see under Language Features, below)	 -->
+	<!-- Specify a comment-out string: -->
+	<key>BBLMCommentLineDefault</key>
+	<string>//</string>
+	<!-- Prefix/Suffix support for Pug block comments? -->
+	<key>BBLMCommentPrefixDefault</key>
+	<string>//\n</string>
+	<key>BBLMCommentSuffixDefault</key>
+	<string>\n</string>
+
+
+<!-- \\\\ LANGUAGE FEATURES -->
+	<!-- //// IDENTIFYING KEYWORD STRINGS -->
+	<!-- You must specify the character set for keywords and identifiers. Substitute your own:	-->
+	<key>Language Features</key>
+		<dict>
+			<key>Identifier and Keyword Character Class</key>
+			<string><![CDATA[a-zA-Z0-9-_!]]></string>
+
+		<!-- //// REGULAR-EXPRESSION PATTERNS -->
+			<!-- We use regular-expression patterns because string-like elements expect a closing token, which Pug syntax does not use.	 -->
+
+			<!-- //// STRING-LIKE ELEMENTS -->
+
+			<!-- Comments: one pattern to identify all types of comment -->
+			<key>Comment Pattern</key>
+			<string><![CDATA[
+				(?x:											(?# 'x' ignores whitespace in the following pattern and allows inline comments )
+					(?>											(?# Starts the match pattern, matching only once )
+						(?P<indentCom>^[ \t]*)					(?# Captures the indent )
+						\/\/.*$									(?# Matches the entire first line of the comment pattern )
+						(?:										(?# Starts a new cluster for a sub-pattern match )
+							\n(?P=indentCom)[ \t]+(?:.+)		(?# Matches additional lines at the same or greater indent, plus following text )
+						)*										(?# Closes the cluster and makes it optional )
+					) |											(?# Let's also match HTML-style comments because Pug also allows those )
+					(?>\<\!--\s*(?s:.*?)--\>)					(?# but we don’t capture the indent because HTML comments can be inline )
+				)
+			]]></string>
+
+			<!-- Strings: one pattern to recognize every style of string -->
+			<key>String Pattern</key>
+			<string><![CDATA[
+				(?x:											(?# 'x' ignores whitespace in the following pattern and allows inline comments )
+					(".+?") |									(?# basic string, double quote )
+					('.+?') |									(?# basic string, single quote )
+					(\#\{.+?\}) |								(?# string interpolation, escaped )
+					(\!\{.+?\}) |								(?# string interpolation, unescaped )
+					(\#\[.+?\])									(?# tag interpolation )
+				)
+			]]></string>
+
+			<!-- //// STRUCTURAL ELEMENTS -->
+
+			<!-- Functions -->
+			<!-- (check: BBLMScansFunctions must be <true/> for this to be used) -->
+			<key>Function Pattern</key>
+			<string><![CDATA[
+				(?x:											(?# 'x' ignores whitespace in the following pattern and allows inline comments )
+					(?P<indentFunc>^[ \t]*)						(?# Captures the indent )
+					(?P<function>								(?# Pug blocks are defined as 'block <string>' )
+						((?:block(?:[ ]+ (?:append|prepend))?)	(?# 'block' can be followed by these optional keywords )
+						| (?:append|prepend))					(?# 'block' is optional, the keywords can be used alone )
+						[ \t]+									(?#	 )
+						(?P<function_name>						(?# Capture the block name into the function name )
+							[a-zA-Z0-9_-]+						(?# Character class for the block name )
+						)										(?#	 )
+						[ \t]*$									(?# account for trailing spaces )
+						(?:										(?# Starts a new cluster for a sub-pattern match )
+							\n(?P=indentFunc)[ \t]+(?:.+)			(?# Matches additional lines at the same or greater indent, plus following text )
+						)*										(?# Closes the cluster and makes it optional )
+					)
+				)
+			]]></string>
+
+
+			<!-- Skip -->
+			<!-- The Skip Pattern turns off function matching in sections of the text, such as comments and strings -->
+			<key>Skip Pattern</key>
+			<string><![CDATA[
+				(?x:											(?# 'x' ignores whitespace in the following pattern and allows inline comments )
+					(?P>string) |								(?# skips function matching in strings matching the string pattern )
+					(?P>comment)								(?# skips function matching in comments matching the comment pattern )
+				)
+			]]></string>
+		</dict>
+</dict>
+</plist>
+

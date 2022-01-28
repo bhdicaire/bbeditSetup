@@ -1,0 +1,9 @@
+    - name: houba
+      include: roles/common/tasks/inner.yml wp_user="{{ macSoftwareGIT.0 }}"
+
+    - name: Loop PoC
+      include: roles/common/tasks/inner.yml outer_item={{item}}
+      with_items:
+        - 1
+        - 2
+        - 3

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+        "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<plist version="1.0">
+    <!--
+      BBEdit codeless language module for Java properties files.
+      Matthew Montgomery
+      Version 0.4
+
+      Released under a Creative Commons Attribution-ShareAlike License:
+      <http://creativecommons.org/licenses/by-sa/2.0/>
+
+      Requires BBEdit 8.5 or later. To install, copy here:
+
+        ~/Library/Application Support/BBEdit/Language Modules/
+
+      and relaunch BBEdit.
+    -->
+    <dict>
+        <key>BBEditDocumentType</key>
+        <string>CodelessLanguageModule</string>
+
+        <key>BBLMLanguageDisplayName</key>
+        <string>Java Properties</string>
+
+        <key>BBLMLanguageCode</key>
+        <string>prop</string>
+
+        <key>BBLMColorsSyntax</key>
+        <true/>
+
+        <key>BBLMScansFunctions</key>
+        <true/>
+
+        <key>BBLMIsCaseSensitive</key>
+        <true/>
+
+        <key>BBLMKeywordList</key>
+        <array>
+            <string/>
+        </array>
+
+        <key>BBLMSuffixMap</key>
+        <array>
+            <dict>
+                <key>BBLMLanguageSuffix</key>
+                <string>.properties</string>
+            </dict>
+        </array>
+
+        <key>BBLMCanSpellCheckCodeRuns</key>
+        <true/>
+
+        <key>Language Features</key>
+        <dict>
+            <!--
+                Matches any line beginning with zero or more whitespace followed by an # or ! to the end of the line
+            -->
+            <key>Comment Pattern</key>
+            <string><![CDATA[
+                (?x:
+                    (^[\s]*?[#!].*$)
+                )
+            ]]></string>
+
+            <!--
+                Matches everything to the right of a non-escaped = or : up to the first newline not preceded by \
+            -->
+            <key>String Pattern</key>
+            <string><![CDATA[
+                (?x:
+                    ((?<=(?<!\\)[=:])(?s:.+?(?<!\\)\r))
+                )
+            ]]></string>
+
+            <!--
+                Matches everything to the left of a non-escaped = or : not including whitespace or comment characters
+            -->
+            <key>Function Pattern</key>
+            <string><![CDATA[
+                (?x:
+                    (?P<function>
+                        (?P<function_name>
+                            ([^!#\s]+?(?=[\s]*?(?<!\\)[=:]))
+                        )
+                        (?s:.+?(?<!\\)\r)
+                    )
+                )
+            ]]></string>
+
+            <key>Skip Pattern</key>
+            <string><![CDATA[
+                (?x:
+                    (?P>comment) |
+                    (?P>string)
+                )
+            ]]></string>
+        </dict>
+    </dict>
+</plist>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+        <string>ADC</string>
+        <string>AND</string>
+        <string>ASL</string>
+        <string>BCC</string>
+        <string>BCS</string>
+        <string>BEQ</string>
+        <string>BIT</string>
+        <string>BMI</string>
+        <string>BNE</string>
+        <string>BPL</string>
+        <string>BRA</string>
+        <string>BRK</string>
+        <string>BVC</string>
+        <string>BVS</string>
+        <string>CLC</string>
+        <string>CLD</string>
+        <string>CLI</string>
+        <string>CLV</string>
+        <string>CMP</string>
+        <string>CPX</string>
+        <string>CPY</string>
+        <string>DEC</string>
+        <string>DEX</string>
+        <string>DEY</string>
+        <string>EOR</string>
+        <string>INC</string>
+        <string>INX</string>
+        <string>INY</string>
+        <string>JMP</string>
+        <string>JSR</string>
+        <string>LDA</string>
+        <string>LDX</string>
+        <string>LDY</string>
+        <string>LSR</string>
+        <string>NOP</string>
+        <string>ORA</string>
+        <string>PHA</string>
+        <string>PHP</string>
+        <string>PHX</string>
+        <string>PHY</string>
+        <string>PLA</string>
+        <string>PLP</string>
+        <string>PLX</string>
+        <string>PLY</string>
+        <string>ROL</string>
+        <string>ROR</string>
+        <string>RTI</string>
+        <string>RTS</string>
+        <string>SBC</string>
+        <string>SEC</string>
+        <string>SED</string>
+        <string>SEI</string>
+        <string>STA</string>
+        <string>STX</string>
+        <string>STY</string>
+        <string>STZ</string>
+        <string>TAX</string>
+        <string>TAY</string>
+        <string>TRB</string>
+        <string>TSB</string>
+        <string>TSX</string>
+        <string>TXA</string>
+        <string>TXS</string>
+        <string>TYA</string>
+    </array>
+	<key>BBLMLanguageCode</key>
+	<string>6502</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>65C02 Assembler</string>
+	<key>BBLMScansFunctions</key>
+	<false/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.6502</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.65C02</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Characters</key>
+		<string>;#~%*&lt;&gt;_.ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</string>
+		<key>Prefix for Functions</key>
+		<string></string>
+		<key>Prefix for Procedures</key>
+		<string></string>
+		<key>Open Parameter Lists</key>
+		<string></string>
+		<key>Close Parameter Lists</key>
+		<string></string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+		<key>Open Statement Blocks</key>
+		<string>{</string>
+		<key>Close Statement Blocks</key>
+		<string>}</string>
+		<key>Open Block Comments</key>
+		<string></string>
+		<key>Close Block Comments</key>
+		<string></string>
+		<key>Open Line Comments</key>
+		<string>;</string>
+		<key>Open Strings 1</key>
+		<string>&quot;</string>
+		<key>Close Strings 1</key>
+		<string>&quot;</string>
+		<key>Escape Char in Strings 1</key>
+		<string></string>
+		<key>End-of-line Ends Strings 1</key>
+		<true/>
+		<key>Open Strings 2</key>
+		<string></string>
+		<key>Close Strings 2</key>
+		<string></string>
+		<key>Escape Char in Strings 2</key>
+		<string></string>
+		<key>End-of-line Ends Strings 2</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
+<plist version="0.2"> 
+
+<!--
+	BBEdit codeless language module for Mikrotik RouterOS (<http://mikrotik.com/>) export/setup files.
+	Filip Stokkeland <flips -at- Luminated.no>
+	Version 0.2, 05-Jun-2019
+
+	Based loosely on template from created by Seth Dillingham, Macrobyte Resources,
+	Seth: <http://www.truerwords.net/> or <seth@macrobyte.net>
+	
+	Released under a Creative Commons Attribution-ShareAlike License:
+	<http://www.creativecommons.org/licenses/by-sa/3.0/>
+	
+	Version History:
+		Version 0.2 (05-Jun-2019):
+		  - Updated keyword categories
+		Version 0.1 (23-Feb-2019):
+		  - Initial version
+-->
+
+<dict> 
+	<key>BBEditDocumentType</key> 
+	<string>CodelessLanguageModule</string> 
+	<key>BBLMColorsSyntax</key> 
+	<true/> 
+	<key>BBLMIsCaseSensitive</key> 
+	<false/> 
+
+  <key>BBLMKeywords</key>
+    <array>
+      <dict>
+        <key>RunKind</key>
+        <string>com.barebones.bblm.variable</string>
+        <key>Keywords</key>
+        <array>
+          <string>yes</string>
+          <string>no</string>
+          <string>/certificate</string>
+          <string>/file</string>
+          <string>/interface</string>
+          <string>/ipv6</string>
+          <string>/ip</string>
+          <string>/mpls</string>
+          <string>/ping</string>
+          <string>/routing</string>
+          <string>/system</string>
+          <string>/tool</string>
+          <string>/foobar</string>
+          <string>nozoo</string>
+        </array>
+      </dict>
+      <dict>
+        <key>RunKind</key>
+        <string>com.barebones.bblm.keyword</string>
+        <key>Keywords</key>
+        <array>
+          <string>Neighbor</string>
+          <string>aaa</string>
+          <string>accept-filter</string>
+          <string>access-list</string>
+          <string>access</string>
+          <string>accounting</string>
+          <string>action</string>
+          <string>address-list</string>
+          <string>address</string>
+          <string>add</string>
+          <string>advertise-filter</string>
+          <string>advertisements</string>
+          <string>aggregate</string>
+          <string>alert</string>
+          <string>align</string>
+          <string>area</string>
+          <string>arp</string>
+          <string>bandwidth-server</string>
+          <string>bandwidth-test</string>
+          <string>bfd</string>
+          <string>bgp-vpls</string>
+          <string>bgp</string>
+          <string>binding</string>
+          <string>bonding</string>
+          <string>bridge</string>
+          <string>cache-contents</string>
+          <string>cache</string>
+          <string>cisco-bgp-vpls</string>
+          <string>client</string>
+          <string>config</string>
+          <string>connect-list</string>
+          <string>connections</string>
+          <string>connection</string>
+          <string>cookie</string>
+          <string>cpu</string>
+          <string>detail</string>
+          <string>dhcp-client</string>
+          <string>dhcp-relay</string>
+          <string>dhcp-server</string>
+          <string>direct</string>
+          <string>disable</string>
+          <string>discovery</string>
+          <string>dns-update</string>
+          <string>e-mail</string>
+          <string>edit</string>
+          <string>enable</string>
+          <string>eoip</string>
+          <string>ethernet</string>
+          <string>export</string>
+          <string>fdb</string>
+          <string>fetch</string>
+          <string>filter</string>
+          <string>find</string>
+          <string>firewall</string>
+          <string>firmware</string>
+          <string>flush</string>
+          <string>get</string>
+          <string>gps</string>
+          <string>graphing</string>
+          <string>gre6</string>
+          <string>gre</string>
+          <string>group</string>
+          <string>host</string>
+          <string>hotspot</string>
+          <string>identity</string>
+          <string>inbox</string>
+          <string>info</string>
+          <string>inserts</string>
+          <string>installed-sa</string>
+          <string>instance</string>
+          <string>interfaces</string>
+          <string>interface</string>
+          <string>ip-binding</string>
+          <string>ip-scan</string>
+          <string>ipip</string>
+          <string>ipsec</string>
+          <string>ip</string>
+          <string>irq</string>
+          <string>keys</string>
+          <string>key</string>
+          <string>l2tp-client</string>
+          <string>l2tp-server</string>
+          <string>latency-distribution</string>
+          <string>layer7-protocol</string>
+          <string>lcd</string>
+          <string>ldp</string>
+          <string>lease</string>
+          <string>leds</string>
+          <string>logging</string>
+          <string>lookup</string>
+          <string>lsa</string>
+          <string>mac-server</string>
+          <string>mac-winbox</string>
+          <string>mangle</string>
+          <string>manual-sa</string>
+          <string>manual-tx-power-table</string>
+          <string>mesh</string>
+          <string>mirror</string>
+          <string>mme</string>
+          <string>mode-cfg</string>
+          <string>monitor</string>
+          <string>nat</string>
+          <string>nbma-neighbor</string>
+          <string>nd</string>
+          <string>neighbor</string>
+          <string>netwatch</string>
+          <string>network</string>
+          <string>note</string>
+          <string>nstreme-dual</string>
+          <string>nstreme</string>
+          <string>ntp</string>
+          <string>option</string>
+          <string>originators</string>
+          <string>ospf-router</string>
+          <string>ospf</string>
+          <string>ovpn-client</string>
+          <string>ovpn-server</string>
+          <string>packet-generator</string>
+          <string>packet-template</string>
+          <string>packet</string>
+          <string>path-state</string>
+          <string>pci</string>
+          <string>peer</string>
+          <string>policy</string>
+          <string>pool</string>
+          <string>port</string>
+          <string>ppp-client</string>
+          <string>pppoe-client</string>
+          <string>pppoe-server</string>
+          <string>ppp</string>
+          <string>pptp-client</string>
+          <string>pptp-server</string>
+          <string>prefix-list</string>
+          <string>prefix</string>
+          <string>print</string>
+          <string>profile</string>
+          <string>proposal</string>
+          <string>protocol</string>
+          <string>proxy</string>
+          <string>queue</string>
+          <string>range</string>
+          <string>raw</string>
+          <string>registration-table</string>
+          <string>remote-peers</string>
+          <string>remove</string>
+          <string>resource</string>
+          <string>resv-state</string>
+          <string>rip</string>
+          <string>routerboard</string>
+          <string>route</string>
+          <string>run</string>
+          <string>scan</string>
+          <string>scep</string>
+          <string>scheduler</string>
+          <string>script</string>
+          <string>security-profiles</string>
+          <string>send</string>
+          <string>server</string>
+          <string>service</string>
+          <string>settings</string>
+          <string>set</string>
+          <string>sham-link</string>
+          <string>shares</string>
+          <string>share</string>
+          <string>smb</string>
+          <string>sms</string>
+          <string>snapshot</string>
+          <string>sniffer</string>
+          <string>socks</string>
+          <string>sstp-client</string>
+          <string>sstp-server</string>
+          <string>statistics</string>
+          <string>stats</string>
+          <string>status</string>
+          <string>switch</string>
+          <string>target</string>
+          <string>tracking</string>
+          <string>traffic-eng</string>
+          <string>traffic-flow</string>
+          <string>traffic-generator</string>
+          <string>traffic-monitor</string>
+          <string>tunnel-path</string>
+          <string>type</string>
+          <string>uncounted</string>
+          <string>upgrade</string>
+          <string>upnp</string>
+          <string>ups</string>
+          <string>usb</string>
+          <string>used</string>
+          <string>users</string>
+          <string>user</string>
+          <string>virtual-link</string>
+          <string>vlan</string>
+          <string>vpls</string>
+          <string>vpnv4-route</string>
+          <string>vrf</string>
+          <string>vrrp</string>
+          <string>walled-garden</string>
+          <string>watchdog</string>
+          <string>wds</string>
+          <string>web-access</string>
+          <string>wireless</string>
+        </array>
+      </dict>
+      <dict>
+        <key>RunKind</key>
+        <string>com.barebones.bblm.predefined-symbol</string>
+        <key>Keywords</key>
+        <array>
+          <string>:beep</string>
+          <string>:delay</string>
+          <string>:environment</string>
+          <string>:error</string>
+          <string>:find</string>
+          <string>:len</string>
+          <string>:log</string>
+          <string>:parse</string>
+          <string>:pick</string>
+          <string>:put</string>
+          <string>:resolve</string>
+          <string>:return</string>
+          <string>:set</string>
+          <string>:terminal</string>
+          <string>:time</string>
+          <string>:toarray</string>
+          <string>:tobool</string>
+          <string>:toid</string>
+          <string>:toip6</string>
+          <string>:toip</string>
+          <string>:tonum</string>
+          <string>:tostr</string>
+          <string>:totime</string>
+          <string>:typeof</string>
+          <string>established</string>
+          <string>related</string>
+          <string>untracked</string>
+          <string>invalid</string>
+        </array>
+      </dict>
+    </array>
+
+
+  <key>BBLMLanguageCode</key> 
+  <string>MTik</string> 
+  <key>BBLMLanguageDisplayName</key> 
+  <string>RouterOS</string> 
+  <key>BBLMScansFunctions</key> 
+  <true/> 
+  <key>BBLMSuffixMap</key> 
+  <array> 
+    <dict> 
+      <key>BBLMLanguageSuffix</key> 
+      <string>.rsc</string> 
+    </dict> 
+  </array>
+
+
+  <key>Language Features</key>
+  <dict>
+    <key>Open Statement Blocks</key>      <string>{</string>
+    <key>Close Statement Blocks</key>     <string>}</string>
+    <key>Identifier and Keyword Character Class</key>
+    <string>A-Za-z0-9:_/</string>
+    <key>Comment Pattern</key>
+    <string><![CDATA[
+    (?x:
+      (?>  \#       .*          $     )
+    )
+    ]]></string>
+    <key>String Pattern</key>
+    <string><![CDATA[
+    (?x:
+      (?>  =                 .*?   (\s|$)  ) |
+      (?>  (="|=\\\r\s*?")   .*?  "(\s|$)  ) |
+      (?>  =\\\r\s*?         .*?   (\s|$)  ) |
+      (?>  =\\\n\s*.+?             (\s|$)  )
+    )
+    ]]></string>
+  </dict>
+</dict> 
+</plist>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>TextTransform</string>
+	<key>TextTransformComponents</key>
+	<array>
+		<dict>
+			<key>ComponentArguments</key>
+			<dict>
+				<key>CaseSensitive</key>
+				<true/>
+				<key>MatchWords</key>
+				<true/>
+				<key>ReplaceString</key>
+				<string>DATA:</string>
+				<key>SearchString</key>
+				<string>Data:</string>
+				<key>UseGrep</key>
+				<false/>
+			</dict>
+			<key>ComponentName</key>
+			<string>ReplaceAll</string>
+		</dict>
+		<dict>
+			<key>ComponentArguments</key>
+			<dict>
+				<key>CaseSensitive</key>
+				<true/>
+				<key>MatchWords</key>
+				<true/>
+				<key>ReplaceString</key>
+				<string>TITLE:</string>
+				<key>SearchString</key>
+				<string>Title:</string>
+				<key>UseGrep</key>
+				<false/>
+			</dict>
+			<key>ComponentName</key>
+			<string>ReplaceAll</string>
+		</dict>
+	</array>
+	<key>TextTransformOptions</key>
+	<dict>
+		<key>SaveMode</key>
+		<string>ask </string>
+		<key>SearchInvisibles</key>
+		<false/>
+		<key>SearchRecursive</key>
+		<true/>
+		<key>SkipShielded</key>
+		<false/>
+		<key>TextFilesOnly</key>
+		<true/>
+	</dict>
+	<key>TextTransformSources</key>
+	<array>
+		<dict>
+			<key>SourceNodeData</key>
+			<string>file://localhost/Users/ewancarr/Dropbox/Work/1%20CURRENT/Paper%20-%20Job%20insecurity%20and%20LMP/analysis%20in%20Mplus/ESS%202010/untitled%20text%2038.inp</string>
+			<key>SourceNodeType</key>
+			<string>OpenDocument</string>
+		</dict>
+	</array>
+	<key>com.barebones.DocumentType</key>
+	<string>TextTransform</string>
+</dict>
+</plist>

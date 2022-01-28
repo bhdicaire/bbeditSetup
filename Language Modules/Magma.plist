@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+	TextWrangler codeless language module for Magma files.
+	Don Taylor
+	2010-07-09
+	
+	To install, copy here:
+	
+		~/Library/Application Support/TextWrangler/Language Modules/
+	
+	and relaunch TextWrangler.
+-->
+<dict>
+    <key>BBEditDocumentType</key>
+    <string>CodelessLanguageModule</string>
+    <key>BBLMColorsSyntax</key>
+      <true/>
+    <key>BBLMIsCaseSensitive</key>
+       <true/>
+    <key>BBLMKeywordList</key>
+    <array>
+    <!-- Magma keyword-->
+      <string>assigned</string>
+      <string>break</string>
+      <string>by</string>
+      <string>case</string>
+      <string>catch</string>
+      <string>continue</string>
+      <string>declare</string>
+      <string>default</string>
+      <string>delete</string>
+      <string>do</string>
+      <string>elif</string>
+      <string>else</string>
+      <string>end</string>
+      <string>eval</string>
+      <string>exists</string>
+      <string>exit</string>
+      <string>for</string>
+      <string>forall</string>
+      <string>fprintf</string>
+      <string>if</string>
+      <string>local</string>
+      <string>not</string>
+      <string>print</string>
+      <string>printf</string>
+      <string>quit</string>
+      <string>random</string>
+      <string>read</string>
+      <string>readi</string>
+      <string>repeat</string>
+      <string>restore</string>
+      <string>save</string>
+      <string>select</string>
+      <string>then</string>
+      <string>time</string>
+      <string>to</string>
+      <string>try</string>
+      <string>until</string>
+      <string>vprint</string>
+      <string>vprintf</string>
+      <string>vtime</string>
+      <string>when</string>
+      <string>where</string>
+      <string>while</string>
+      <!-- directive -->
+      <string>forward</string>
+      <string>freeze</string>
+      <string>iload</string>
+      <string>import</string>
+      <string>load</string>
+      <!-- error checks -->
+      <string>assert</string>
+      <string>error</string>
+      <string>require</string>
+      <string>requirege</string>
+      <string>requirerange</string>
+      <!-- relations -->
+      <string>adj</string>
+      <string>and</string>
+      <string>cat</string>
+      <string>clear</string>
+      <string>cmpeq</string>
+      <string>cmpne</string>
+      <string>diff</string>
+      <string>div</string>
+      <string>eq</string>
+      <string>ge</string>
+      <string>gt</string>
+      <string>in</string>
+      <string>is</string>
+      <string>join</string>
+      <string>le</string>
+      <string>lt</string>
+      <string>meet</string>
+      <string>mod</string>
+      <string>ne</string>
+      <string>notadj</string>
+      <string>notin</string>
+      <string>notsubset</string>
+      <string>or</string>
+      <string>sdiff</string>
+      <string>subset</string>
+      <string>xor</string>
+      <string>true</string>
+      <string>false</string>
+      <!-- functions -->
+      <string>function</string>
+      <string>intrinsic</string>
+      <string>procedure</string>
+      <string>return</string>
+      <!-- constructors -->
+      <string>car</string>
+      <string>comp</string>
+      <string>cop</string>
+      <string>elt</string>
+      <string>ext</string>
+      <string>frac</string>
+      <string>func</string>
+      <string>hom</string>
+      <string>ideal</string>
+      <string>iso</string>
+      <string>lideal</string>
+      <string>loc</string>
+      <string>map</string>
+      <string>ncl</string>
+      <string>pmap</string>
+      <string>proc</string>
+      <string>quo</string>
+      <string>rec</string>
+      <string>recformat</string>
+      <string>rep</string>
+      <string>rideal</string>
+      <string>sub</string>
+      <!-- other constructors (semi-reserved) -->
+      <string>AbelianGroup</string> 
+      <string>AdditiveCode</string>
+      <string>AffineAlgebra</string>
+      <string>Algebra</string>
+      <string>AssociativeAlgebra</string>
+      <string>Character</string>
+      <string>CliffordAlgebra</string>
+      <string>Design</string>
+      <string>Digraph</string>
+      <string>ExtensionField</string>
+      <string>FPAlgebra</string>
+      <string>FiniteAffinePlane</string>
+      <string>FiniteProjectivePlane</string>
+      <string>Graph</string>
+      <string>Group</string>
+      <string>GroupAlgebra</string>
+      <string>IncidenceStructure</string>
+      <string>LieAlgebra</string>
+      <string>LinearCode</string>
+      <string>LinearSpace</string>
+      <string>MatrixAlgebra</string>
+      <string>MatrixGroup</string>
+      <string>MatrixRing</string>
+      <string>Monoid</string>
+      <string>MultiDigraph</string>
+      <string>MultiGraph</string>
+      <string>NearLinearSpace</string>
+      <string>Network</string>
+      <string>PartialMap</string>
+      <string>PermutationGroup</string>
+      <string>PolycyclicGroup</string>
+      <string>QuaternionAlgebra</string>
+      <string>Semigroup</string>
+      <string>ZModule</string>
+    </array>
+    <key>BBLMLanguageCode</key>
+    <string>Magm</string>
+    <key>BBLMLanguageDisplayName</key>
+    <string>Magma File</string>
+    <key>BBLMScansFunctions</key>
+      <true/>
+
+    <key>BBLMSuffixMap</key>
+    <array>
+      <dict>
+        <key>BBLMLanguageSuffix</key>
+        <string>.m</string>
+      </dict>
+      <dict>
+	<key>BBLMLanguageSuffix</key>
+	<string>.lm</string>
+      </dict>
+    </array>
+
+	<key>Language Features</key>
+	<dict>
+		<key>Comment Pattern</key>
+		<string><![CDATA[(?x:
+			(?> // .* $ ) |
+			(?> /\* (?s: .*? ) (?> \*/ ) | \z)
+		)]]></string>
+
+		<key>String Pattern</key>
+		<string><![CDATA[(?x:
+			(?P<quote>(")).*?((?P=quote)|\z)
+		)]]></string>
+
+		<key>Skip Pattern</key>
+		<string><![CDATA[(?x:
+			(?>
+               (?P>comment) | (?P>string)
+			)
+		)]]></string>
+
+		<key>Function Pattern</key>
+		<string><![CDATA[(?xs:
+			(?P<function>
+               (?:
+                  ^
+                  [ \t]*
+               )
+               (?P<function_name>
+                 (\w+ (?= \s* := \s* (procedure\b|function\b))) 
+               )
+               (?P<function_body>
+               .*?
+               (^[ \t]*(end\b))
+               (?= 
+                   \s*
+                   (procedure\b|function\b|\z)
+               )
+               )
+             )
+         )]]></string>
+
+        <key>Identifier and Keyword Character Class</key>
+        <string><![CDATA[0-9A-Z_a-z]]></string>
+
+    </dict>
+</dict>
+</plist>

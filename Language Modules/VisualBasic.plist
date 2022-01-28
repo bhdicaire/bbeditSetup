@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Copyright</key>
+	<string>Copyright 2011, Guido Pinkas</string>
+	<key>Author</key>
+	<string>Guido Pinkas</string>
+	<key>Version</key>
+	<string>0.2</string>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMLanguageCode</key>
+	<string>VB</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Visual Basic</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSupportsTextCompletion</key>
+	<true/>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+	</array>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>AddHandler</string>
+		<string>AddressOf</string>
+		<string>Alias</string>
+		<string>And</string>
+		<string>AndAlso</string>
+		<string>As</string>
+		<string>Boolean</string>
+		<string>ByRef</string>
+		<string>Byte</string>
+		<string>ByVal</string>
+		<string>Call</string>
+		<string>Case</string>
+		<string>Catch</string>
+		<string>CBool</string>
+		<string>CByte</string>
+		<string>CChar</string>
+		<string>CDate</string>
+		<string>CDec</string>
+		<string>CDbl</string>
+		<string>Char</string>
+		<string>CInt</string>
+		<string>Class</string>
+		<string>CLng</string>
+		<string>CObj</string>
+		<string>Const</string>
+		<string>Continue</string>
+		<string>CSByte</string>
+		<string>CShort</string>
+		<string>CSng</string>
+		<string>CStr</string>
+		<string>CType</string>
+		<string>CUInt</string>
+		<string>CULng</string>
+		<string>CUShort</string>
+		<string>Date</string>
+		<string>Decimal</string>
+		<string>Declare</string>
+		<string>Default</string>
+		<string>Delegate</string>
+		<string>Dim</string>
+		<string>DirectCast</string>
+		<string>Do</string>
+		<string>Double</string>
+		<string>Each</string>
+		<string>Else</string>
+		<string>ElseIf</string>
+		<string>End</string>
+		<string>EndIf</string>
+		<string>Enum</string>
+		<string>Erase</string>
+		<string>Error</string>
+		<string>Event</string>
+		<string>Exit</string>
+		<string>False</string>
+		<string>Finally</string>
+		<string>For</string>
+		<string>Friend</string>
+		<string>Function</string>
+		<string>Get</string>
+		<string>GetType</string>
+		<string>Global</string>
+		<string>GoSub</string>
+		<string>GoTo</string>
+		<string>Handles</string>
+		<string>If</string>
+		<string>Implements</string>
+		<string>Imports</string>
+		<string>In</string>
+		<string>Inherits</string>
+		<string>Integer</string>
+		<string>Interface</string>
+		<string>Is</string>
+		<string>IsNot</string>
+		<string>Let</string>
+		<string>Lib</string>
+		<string>Like</string>
+		<string>Long</string>
+		<string>Loop</string>
+		<string>Me</string>
+		<string>Mod</string>
+		<string>Module</string>
+		<string>MustInherit</string>
+		<string>MustOverride</string>
+		<string>MyBase</string>
+		<string>MyClass</string>
+		<string>Namespace</string>
+		<string>Narrowing</string>
+		<string>New</string>
+		<string>Next</string>
+		<string>Not</string>
+		<string>Nothing</string>
+		<string>NotInheritable</string>
+		<string>NotOverridable</string>
+		<string>Object</string>
+		<string>Of</string>
+		<string>On</string>
+		<string>Operator</string>
+		<string>Option</string>
+		<string>Optional</string>
+		<string>Or</string>
+		<string>OrElse</string>
+		<string>Overloads</string>
+		<string>Overridable</string>
+		<string>Overrides</string>
+		<string>ParamArray</string>
+		<string>Partial</string>
+		<string>Private</string>
+		<string>Property</string>
+		<string>Protected</string>
+		<string>Public</string>
+		<string>RaiseEvent</string>
+		<string>ReadOnly</string>
+		<string>ReDim</string>
+		<string>REM</string>
+		<string>RemoveHandler</string>
+		<string>Resume</string>
+		<string>Return</string>
+		<string>SByte</string>
+		<string>Select</string>
+		<string>Set</string>
+		<string>Shadows</string>
+		<string>Shared</string>
+		<string>Short</string>
+		<string>Single</string>
+		<string>Static</string>
+		<string>Step</string>
+		<string>Stop</string>
+		<string>String</string>
+		<string>Structure</string>
+		<string>Sub</string>
+		<string>SyncLock</string>
+		<string>Then</string>
+		<string>Throw</string>
+		<string>To</string>
+		<string>True</string>
+		<string>Try</string>
+		<string>TryCast</string>
+		<string>TypeOf</string>
+		<string>Variant</string>
+		<string>Wend</string>
+		<string>UInteger</string>
+		<string>ULong</string>
+		<string>UShort</string>
+		<string>Using</string>
+		<string>When</string>
+		<string>While</string>
+		<string>Widening</string>
+		<string>With</string>
+		<string>WithEvents</string>
+		<string>WriteOnly</string>
+		<string>Xor</string>
+		<string>#Const</string>
+		<string>#Else</string>
+		<string>#ElseIf</string>
+		<string>#End</string>
+		<string>#If</string>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Close Block Comments</key>
+		<string></string>
+		<key>Close Parameter Lists</key>
+		<string>)</string>
+		<key>Close Statement Blocks</key>
+		<string>end</string>
+		<key>Close Strings 1</key>
+		<string>&apos;</string>
+		<key>Close Strings 2</key>
+		<string>&quot;</string>
+		<key>End-of-line Ends Strings 1</key>
+		<true/>
+		<key>End-of-line Ends Strings 2</key>
+		<true/>
+		<key>Escape Char in Strings 1</key>
+		<string>\</string>
+		<key>Escape Char in Strings 2</key>
+		<string></string>
+		<key>Identifier and Keyword Characters</key>
+		<string>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz</string>
+		<key>Open Block Comments</key>
+		<string></string>
+		<key>Open Line Comments</key>
+		<string>'</string>
+		<key>Open Parameter Lists</key>
+		<string>(</string>
+		<key>Open Statement Blocks</key>
+		<string>begin</string>
+		<key>Open Strings 1</key>
+		<string>&apos;</string>
+		<key>Open Strings 2</key>
+		<string>&quot;</string>
+		<key>Prefix for Functions</key>
+		<string>function</string>
+		<key>Prefix for Procedures</key>
+		<string>sub</string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

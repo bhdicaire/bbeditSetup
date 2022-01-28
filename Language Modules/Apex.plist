@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+	"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<!--  The smallest CLM that will color keywords.
+      Copyright (c) 2012 Bare Bones Software, Inc. -->
+		
+<dict>
+	<!-- You must identify the plist as a CLM: -->
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	
+	<!-- You must identify your language: -->
+	<key>BBLMLanguageDisplayName</key>  <string>Apex</string>
+	<key>BBLMLanguageCode</key>         <string>apex</string>
+	
+	<!-- Not required, but there’s not much point to
+	     a language module if it doesn’t color syntax: -->
+	<key>BBLMColorsSyntax</key>         <true/>
+	
+	<!-- Specify some keywords. This isn’t required, either,
+             but it provides something to color: -->
+	<key>BBLMKeywordList</key>
+	<array>
+        <string>abstract</string>
+        <string>activate</string>
+        <string>and</string>
+        <string>any</string>
+        <string>array</string>
+        <string>as</string>
+        <string>asc</string>
+        <string>autonomous</string>
+        <string>begin</string>
+        <string>bigdecimal</string>
+        <string>blob</string>
+        <string>break</string>
+        <string>bulk</string>
+        <string>by</string>
+        <string>byte</string>
+        <string>case</string>
+        <string>cast</string>
+        <string>catch</string>
+        <string>char</string>
+		<string>class</string>
+        <string>collect</string>
+        <string>commit</string>
+        <string>const</string>
+        <string>continue</string>
+        <string>convertcurrency</string>
+        <string>decimal</string>
+		<string>def</string>
+        <string>default</string>
+        <string>delete</string>
+        <string>desc</string>
+		<string>do</string>
+		<string>else</string>
+		<string>elsif</string>
+		<string>end</string>
+        <string>enum</string>
+        <string>exception</string>
+        <string>exit</string>
+        <string>export</string>
+        <string>extends</string>
+        <string>false</string>
+        <string>final</string>
+        <string>finally</string>
+        <string>float</string>
+		<string>for</string>
+        <string>from</string>
+        <string>future</string>
+        <string>global</string>
+        <string>goto</string>
+        <string>group</string>
+        <string>having</string>
+        <string>hint</string>
+		<string>if</string>
+        <string>implements</string>
+        <string>import</string>
+        <string>inner</string>
+        <string>insert</string>
+        <string>instanceof</string>
+        <string>int</string>
+        <string>interface</string>
+        <string>into</string>
+        <string>join</string>
+        <string>last_90_days</string>
+        <string>last_month</string>
+        <string>last_n_days</string>
+        <string>last_week</string>
+        <string>like</string>
+        <string>limit</string>
+        <string>list</string>
+        <string>long</string>
+        <string>loop</string>
+        <string>map</string>
+        <string>merge</string>
+        <string>new</string>
+		<string>newMap</string>
+        <string>next_90_days</string>
+        <string>next_month</string>
+        <string>next_n_days</string>
+        <string>next_week</string>
+        <string>not</string>
+        <string>null</string>
+        <string>nulls</string>
+        <string>number</string>
+        <string>object</string>
+        <string>of</string>
+		<string>oldMap</string>
+        <string>on</string>
+        <string>or</string>
+        <string>outer</string>
+        <string>override</string>
+        <string>package</string>
+        <string>parallel</string>
+        <string>pragma</string>
+        <string>private</string>
+        <string>protected</string>
+        <string>public</string>
+        <string>retrieve</string>
+		<string>return</string>
+        <string>returning</string>
+        <string>rollback</string>
+        <string>savepoint</string>
+        <string>search</string>
+        <string>select</string>
+        <string>set</string>
+        <string>short</string>
+        <string>sort</string>
+        <string>stat</string>
+        <string>static</string>
+        <string>super</string>
+        <string>switch</string>
+        <string>synchronized</string>
+        <string>system</string>
+        <string>testmethod</string>
+        <string>then</string>
+        <string>this_month</string>
+        <string>this_week</string>
+        <string>this</string>
+        <string>throw</string>
+        <string>today</string>
+        <string>tolabel</string>
+        <string>tomorrow</string>
+        <string>transaction</string>
+        <string>trigger</string>
+        <string>true</string>
+        <string>try</string>
+        <string>type</string>
+        <string>undelete</string>
+        <string>update</string>
+        <string>upsert</string>
+        <string>using</string>
+        <string>virtual</string>
+        <string>webservice</string>
+        <string>when</string>
+        <string>where</string>
+        <string>while</string>
+        <string>yesterday</string>		
+	</array>
+	<key>BBLMPredefinedNameList</key>
+    <array>
+		<string>Account</string>
+		<string>AccountId</string>		
+		<string>AccountContactRole</string>
+		<string>AccountContactRoleId</string>
+		<string>AccountPartner</string>
+		<string>AccountPartnerId</string>
+        <string>after</string>
+        <string>before</string>
+		<string>Campaign</string>
+		<string>CampaignId</string>
+		<string>Case</string>
+		<string>Contact</string>
+        <string>count</string>
+        <string>excludes</string>
+        <string>first</string>
+        <string>includes</string>
+		<string>Integer</string>
+        <string>last</string>
+		<string>Lead</string>
+		<string>Opportunity</string>
+		<string>OpportunityContactRole</string>
+		<string>OpportunityLineItem</string>
+		<string>LeadId</string>
+		<string>OpportunityId</string>
+		<string>OpportunityContactRoleId</string>
+		<string>OpportunityLineItemId</string>
+        <string>order</string>
+		<string>Order</string>
+        <string>Order</string>
+		<string>PageReference</string>
+        <string>PartnerId</string>
+		<string>Pricebook2Id</string>
+		<string>PricebookEntryId</string>
+        <string>sharing</string>
+		<string>String</string>
+        <string>Task</string>
+        <string>Territory</string>
+        <string>Topic</string>
+		<string>User</string>
+		<string>UserId</string>
+        <string>with</string>
+    </array>
+
+    <!-- This part labels any custom object of field as a predefined name based
+         on the fact that it ends with an __c. Thanks to BBEdit support
+         for the help with this bit. -->
+	<key>BBLMKeywordPatterns</key>
+	<array>
+		<dict>
+			<key>RunKind</key>
+			<string>com.barebones.bblm.variable</string>
+			<key>Pattern</key>
+			<string>[a-z0-9_-]*__(c|pc|r)</string>
+		</dict>
+
+	</array>
+
+        <key>BBLMCommentLineDefault</key>   <string>//</string>
+        <key>BBLMCommentPrefixDefault</key> <string>/*</string>
+        <key>BBLMCommentSuffixDefault</key> <string>*/</string>
+	
+	<!-- You must specify the character set for
+             keywords and identifiers. Substitute your own:  -->
+	<key>Language Features</key>
+	<dict>
+	<!-- Specify a comment-out string: -->
+        
+        <key>Open Block Comments</key>      <string>/*</string>
+        <key>Close Block Comments</key>     <string>*/</string>
+        <key>Open Line Comments</key>       <string>//</string>
+            
+        <key>Open Strings 1</key>               <string>'</string>
+        <key>Close Strings 1</key>              <string>'</string>
+        <key>Open Strings 2</key>               <string>"</string>
+        <key>Close Strings 2</key>              <string>"</string>
+        <key>Escape Char in Strings 1</key>     <string>\</string>
+        <key>End-of-line Ends Strings 1</key>   <true/>
+    
+        <key>Open Statement Blocks</key>    <string>{</string>
+        <key>Close Statement Blocks</key>   <string>}</string>
+		<key>Identifier and Keyword Character Class</key>
+		<string>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_</string>
+	</dict> 
+	
+	<key>BBLMSuffixMap</key>
+    <array>
+     <dict>
+        <key>BBLMLanguageSuffix</key>       <string>.cls</string>
+     </dict>
+     <dict>
+        <key>BBLMLanguageSuffix</key>       <string>.trigger</string>
+     </dict>
+    </array>
+
+<key>Skip Pattern</key>
+<string><![CDATA[
+(?x:
+    (?P>comment) |
+    (?P>string)
+)]]></string>
+
+	
+</dict>
+</plist>

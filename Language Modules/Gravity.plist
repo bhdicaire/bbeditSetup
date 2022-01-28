@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMLanguageCode</key>
+	<string>GRAV</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Gravity</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<!-- keywords -->
+		<string>if</string>
+		<string>in</string>
+		<string>or</string>
+		<string>is</string>
+		<string>for</string>
+		<string>var</string>
+		<string>and</string>
+		<string>not</string>
+		<string>func</string>
+		<string>else</string>
+		<string>true</string>
+		<string>enum</string>
+		<string>case</string>
+		<string>null</string>
+		<string>file</string>
+		<string>lazy</string>
+		<string>self</string>
+		<string>super</string>
+		<string>false</string>
+		<string>break</string>
+		<string>while</string>
+		<string>class</string>
+		<string>const</string>
+		<string>event</string>
+		<string>_func</string>
+		<string>_args</string>
+		<string>struct</string>
+		<string>repeat</string>
+		<string>switch</string>
+		<string>return</string>
+		<string>public</string>
+		<string>static</string>
+		<string>extern</string>
+		<string>import</string>
+		<string>module</string>
+		<string>default</string>
+		<string>private</string>
+		<string>continue</string>
+		<string>internal</string>
+		<string>undefined</string>
+		<string>#unittest</string>
+	</array>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<!-- core library -->
+		<string>Int</string>
+		<string>Float</string>
+		<string>Bool</string>
+		<string>String</string>
+		<string>Object</string>
+		<string>Class</string>
+		<string>Null</string>
+		<string>Function</string>
+		<string>Fiber</string>
+		<string>Instance</string>
+		<string>Closure</string>
+		<string>List</string>
+		<string>Map</string>
+		<string>Range</string>
+		<string>Upvalue</string>
+		<string>System</string>
+		<string>print</string>
+		<string>put</string>
+		<string>nanotime</string>
+		<string>bind</string>
+		<string>unbind</string>
+		<string>name</string>
+		<string>count</string>
+		<string>length</string>
+		<string>push</string>
+		<string>pop</string>
+		<string>keys</string>
+		<string>remove</string>
+		<string>contains</string>
+		<string>round</string>
+		<string>floor</string>
+		<string>ceil</string>
+		<string>create</string>
+		<string>try</string>
+		<string>yield</string>
+		<string>status</string>
+		<string>abort</string>
+		<string>gcenabled</string>
+		<string>gcminthreshold</string>
+		<string>gcthreshold</string>
+		<string>gcratio</string>
+	</array>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.gravity</string>
+		</dict>
+	</array>
+	<key>BBLMPreferredFilenameExtension</key>
+	<string>gravity</string>
+	<key>BBLMSupportsTextCompletion</key>
+	<true/>
+	<key>BBLMCanSpellCheckCodeRuns</key>
+	<false/>
+	<key>BBLMCommentLineDefault</key>
+	<string>//</string>
+	<key>BBLMCommentPrefixDefault</key>
+	<string>/*</string>
+	<key>BBLMCommentSuffixDefault</key>
+	<string>*/</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string>A-Za-z_0-9</string>
+		<key>Comment Pattern</key>
+		<string><![CDATA[(?x:
+			(?>  //  [^\r]*              \r)    (?# single line comment)
+		  | (?>  /\* (                          (?# multiline comment)
+		  					[^/*] 
+		  			  	|	/(?=[^*])	(?# a "/" not followed by "*")
+		  			  	|	\*(?=[^/])	(?# a "*" not followed by "/")
+		  				|	\r
+		  				|	(?R)		(?# recursive match to handle nested comments)
+		  			 )*? 
+		  		 \*/)
+		)]]></string>
+		<key>String Pattern</key>
+		<string><![CDATA[(?x:
+			(?>	"	(
+						[^"\r\\]	(?# match anything potential ending quote, new line, or start of escape sequence)
+					|	\\.			(?# match any escape sequence pair)
+					)*?
+				"
+			)
+		)]]></string>
+		<key>Function Pattern</key>
+		<string><![CDATA[(?x:
+			(?>
+				(?P<function>
+					(^|\s)
+					(func|class|enum|struct|extension) (?# we have to match all the names in one go to bind function_name, so we have to match the name and then all possible following stuff separately)
+					\s+
+					(?P<function_name>
+						[A-Za-z_][A-Za-z_0-9]*
+					)
+					(
+						\s* = \s* .*	(?# typealias existing type)
+					|
+						[^{]*
+						(?P<block>							(?# body)
+							{									(?# literal lbrace)
+								(?>
+									(?> [^{}]+ )
+								  | (?P>block)					(?# recursion!)
+								)*
+							}									(?# literal rbrace)
+						)
+					)
+				)
+			)
+		)]]></string>
+		<key>Skip Pattern</key>
+		<string><![CDATA[(?x:
+			(?P>string) |
+			(?P>comment)
+		)]]></string>
+	</dict>
+</dict>
+</plist>

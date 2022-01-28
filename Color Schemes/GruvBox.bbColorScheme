@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>ColorScheme</string>
+	<key>BackgroundColor</key>
+	<string>hsla(0.889, 0.000, 0.125, 1.000)</string>
+	<key>ColorSchemeFormatVersion</key>
+	<integer>3</integer>
+	<key>DifferenceHighlightColor</key>
+	<string>hsla(0.60, 0.28, 0.25, 1.00)</string>
+	<key>HighlightInsertionPoint</key>
+	<true/>
+	<key>InsertionPointLineHighlightColor</key>
+	<string>hsla(0.087, 0.050, 0.158, 1.000)</string>
+	<key>InvisibleOthersColor</key>
+	<string>hsla(0.60, 0.27, 0.36, 1.00)</string>
+	<key>InvisibleSpacesColor</key>
+	<string>hsla(0.60, 0.27, 0.36, 1.00)</string>
+	<key>PrimaryHighlightColor</key>
+	<string>hsla(0.61, 0.30, 0.46, 0.80)</string>
+	<key>SecondaryHighlightColor</key>
+	<string>hsla(0.00, 0.00, 0.37, 0.90)</string>
+	<key>SpellingColor</key>
+	<string>hsla(0.17, 0.25, 0.40, 1.00)</string>
+	<key>UseCustomHighlightColor</key>
+	<true/>
+	<key>com.barebones.bblm.JavaScript.regexp</key>
+	<string>hsla(0.07, 0.75, 0.99, 1.00)</string>
+	<key>com.barebones.bblm.Pyth.decorator</key>
+	<string>hsla(0.60, 0.18, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.Pyth.triple-string</key>
+	<string>hsla(0.60, 0.20, 0.54, 1.00)</string>
+	<key>com.barebones.bblm.TeX.math-string</key>
+	<string>hsla(0.72, 0.46, 0.97, 1.00)</string>
+	<key>com.barebones.bblm.TeX.param-content</key>
+	<string>hsla(0.43, 0.36, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.TeX.verbatim</key>
+	<string>hsla(0.60, 0.20, 0.54, 1.00)</string>
+	<key>com.barebones.bblm.code</key>
+	<string>hsla(0.108, 0.252, 0.870, 1.000)</string>
+	<key>com.barebones.bblm.comment</key>
+	<string>hsla(0.086, 0.204, 0.571, 1.000)</string>
+	<key>com.barebones.bblm.css.color-spec</key>
+	<string>hsla(0.952, 0.507, 0.841, 1.000)</string>
+	<key>com.barebones.bblm.css.custom-property</key>
+	<string>hsla(0.107, 0.905, 0.929, 1.000)</string>
+	<key>com.barebones.bblm.css.property</key>
+	<string>hsla(0.319, 0.435, 0.698, 1.000)</string>
+	<key>com.barebones.bblm.css.vendor-property</key>
+	<string>hsla(0.451, 0.368, 0.567, 1.000)</string>
+	<key>com.barebones.bblm.file-include</key>
+	<string>hsla(0.112, 0.890, 0.929, 1.000)</string>
+	<key>com.barebones.bblm.grep.charclass</key>
+	<string>hsla(0.72, 0.46, 0.97, 1.00)</string>
+	<key>com.barebones.bblm.grep.escape-sequence</key>
+	<string>hsla(0.07, 0.75, 0.99, 1.00)</string>
+	<key>com.barebones.bblm.grep.metachar</key>
+	<string>hsla(0.72, 0.46, 0.97, 1.00)</string>
+	<key>com.barebones.bblm.grep.metasequence</key>
+	<string>hsla(0.46, 0.34, 0.91, 1.00)</string>
+	<key>com.barebones.bblm.grep.posix-name</key>
+	<string>hsla(0.72, 0.46, 0.97, 1.00)</string>
+	<key>com.barebones.bblm.grep.repeat</key>
+	<string>hsla(0.07, 0.75, 0.99, 1.00)</string>
+	<key>com.barebones.bblm.grep.repeat-data</key>
+	<string>hsla(0.07, 0.75, 0.99, 1.00)</string>
+	<key>com.barebones.bblm.heredoc-string</key>
+	<string>hsla(0.60, 0.20, 0.54, 1.00)</string>
+	<key>com.barebones.bblm.html.anchor</key>
+	<string>hsla(0.064, 0.958, 1.000, 1.000)</string>
+	<key>com.barebones.bblm.html.attribute-name</key>
+	<string>hsla(0.107, 0.904, 0.929, 1.000)</string>
+	<key>com.barebones.bblm.html.attribute-value</key>
+	<string>hsla(0.187, 0.822, 0.664, 1.000)</string>
+	<key>com.barebones.bblm.html.image</key>
+	<string>hsla(0.064, 0.958, 1.000, 1.000)</string>
+	<key>com.barebones.bblm.indexed-symbol</key>
+	<string>hsla(0.27, 0.54, 0.85, 1.00)</string>
+	<key>com.barebones.bblm.keyword</key>
+	<string>hsla(0.436, 0.206, 0.647, 1.000)</string>
+	<key>com.barebones.bblm.keyword-argument-name</key>
+	<string>hsla(0.43, 0.36, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.markdown.Emph</key>
+	<string>hsla(0.60, 0.18, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.markdown.HorizontalRule</key>
+	<string>hsla(0.60, 0.20, 0.54, 1.00)</string>
+	<key>com.barebones.bblm.markdown.ImageAltText</key>
+	<string>hsla(0.43, 0.36, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.markdown.ImageId</key>
+	<string>hsla(0.43, 0.36, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.markdown.InlineCode</key>
+	<string>hsla(0.60, 0.20, 0.54, 1.00)</string>
+	<key>com.barebones.bblm.markdown.InlineLinkText</key>
+	<string>hsla(0.60, 0.67, 0.98, 1.00)</string>
+	<key>com.barebones.bblm.markdown.Keyword</key>
+	<string>hsla(0.60, 0.18, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.markdown.LinkDefId</key>
+	<string>hsla(0.43, 0.36, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.markdown.LinkDefTitle</key>
+	<string>hsla(0.04, 0.66, 0.99, 1.00)</string>
+	<key>com.barebones.bblm.markdown.LinkDefUrl</key>
+	<string>hsla(0.60, 0.67, 0.98, 1.00)</string>
+	<key>com.barebones.bblm.markdown.ListItemMarker</key>
+	<string>hsla(0.43, 0.36, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.markdown.Pre</key>
+	<string>hsla(0.60, 0.20, 0.54, 1.00)</string>
+	<key>com.barebones.bblm.markdown.QuoteMarker</key>
+	<string>hsla(0.34, 0.66, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.markdown.QuotedContent</key>
+	<string>white</string>
+	<key>com.barebones.bblm.number</key>
+	<string>hsla(0.955, 0.366, 0.827, 1.000)</string>
+	<key>com.barebones.bblm.perl.generic-string</key>
+	<string>hsla(0.04, 0.66, 0.99, 1.00)</string>
+	<key>com.barebones.bblm.perl.outer-pod</key>
+	<string>hsla(0.60, 0.20, 0.54, 1.00)</string>
+	<key>com.barebones.bblm.perl.pre-generic-string</key>
+	<string>hsla(0.04, 0.66, 0.99, 1.00)</string>
+	<key>com.barebones.bblm.predefined-symbol</key>
+	<string>hsla(0.451, 0.247, 0.667, 1.000)</string>
+	<key>com.barebones.bblm.preprocessor</key>
+	<string>hsla(0.019, 0.794, 0.984, 1.000)</string>
+	<key>com.barebones.bblm.ruby.regexp</key>
+	<string>hsla(0.07, 0.75, 0.99, 1.00)</string>
+	<key>com.barebones.bblm.ruby.symbol</key>
+	<string>hsla(0.27, 0.54, 0.85, 1.00)</string>
+	<key>com.barebones.bblm.sgml-cdata</key>
+	<string>hsla(0.60, 0.20, 0.54, 1.00)</string>
+	<key>com.barebones.bblm.sgml-decl</key>
+	<string>hsla(0.60, 0.18, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.sgml-entity</key>
+	<string>hsla(0.43, 0.36, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.sgml-tag</key>
+	<string>hsla(0.064, 0.958, 1.000, 1.000)</string>
+	<key>com.barebones.bblm.string</key>
+	<string>hsla(0.111, 0.847, 0.843, 1.000)</string>
+	<key>com.barebones.bblm.swift.triple-string</key>
+	<string>white</string>
+	<key>com.barebones.bblm.syntax-error</key>
+	<string>hsla(1.00, 0.85, 0.85, 1.00)</string>
+	<key>com.barebones.bblm.variable</key>
+	<string>hsla(0.106, 0.252, 0.884, 1.000)</string>
+	<key>com.barebones.bblm.verilog-hdl.comment-1</key>
+	<string>hsla(0.60, 0.20, 0.54, 1.00)</string>
+	<key>com.barebones.bblm.verilog-hdl.comment-2</key>
+	<string>hsla(0.60, 0.20, 0.54, 1.00)</string>
+	<key>com.barebones.bblm.verilog-hdl.comment-3</key>
+	<string>hsla(0.60, 0.18, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.verilog-hdl.input-type</key>
+	<string>hsla(0.72, 0.46, 0.97, 1.00)</string>
+	<key>com.barebones.bblm.verilog-hdl.output-type</key>
+	<string>white</string>
+	<key>com.barebones.bblm.verilog-hdl.register-type</key>
+	<string>hsla(0.54, 0.46, 0.46, 1.00)</string>
+	<key>com.barebones.bblm.verilog-hdl.wire-type</key>
+	<string>hsla(0.60, 0.67, 0.98, 1.00)</string>
+	<key>com.barebones.bblm.vhdl.comment-1</key>
+	<string>hsla(0.60, 0.20, 0.54, 1.00)</string>
+	<key>com.barebones.bblm.vhdl.comment-2</key>
+	<string>hsla(0.60, 0.20, 0.54, 1.00)</string>
+	<key>com.barebones.bblm.vhdl.comment-3</key>
+	<string>hsla(0.60, 0.18, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.xml-empty</key>
+	<string>hsla(0.43, 0.36, 0.72, 1.00)</string>
+	<key>com.barebones.bblm.xml-pi</key>
+	<string>hsla(0.07, 0.75, 0.99, 1.00)</string>
+</dict>
+</plist>

@@ -1,0 +1,8 @@
+#INDENT##BLOCK#<figure resource="<#U.R.L.#>" typeof="http://purl.org/dc/dcmitype/StillImage">
+	<figcaption>
+		<cite><span property="dcterms:title"><a property="dcterms:source" href="<#U.R.L. for original#>"><#title of image#></a></span> by <a property="cc:attributionURL" href="<#U.R.L. for creator#>"><span property="cc:attributionName dcterms:creator dcterms:rightsHolder" typeof="foaf:Person"><span property="foaf:name"> <#creator’s name#></span></span></a></cite> used under the <a rel="license" href="<#U.R.L. for licence#>"><#title of licence#></a>.
+	</figcaption>
+	<object role="img" type="<#image/jpeg|image/png|image/svg+xml#>" typemustmatch="typemustmatch" data="<#U.R.L.#>" height="<#unitless height#>" width="<#unitless width#>">
+		<#alternative content#>
+	</object>
+</figure>

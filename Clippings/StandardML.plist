@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>abstype</string>
+		<string>and</string>
+		<string>andalso</string>
+		<string>as</string>
+		<string>case</string>
+		<string>type</string>
+		<string>datatype</string>
+		<string>do</string>
+		<string>else</string>
+		<string>end</string>
+		<string>eqtype</string>
+		<string>exception</string>
+		<string>fn</string>
+		<string>fun</string>
+		<string>functor</string>
+		<string>handle</string>
+		<string>include</string>
+		<string>infix</string>
+		<string>infixr</string>
+		<string>local</string>
+		<string>nonfix</string>
+		<string>op</string>
+		<string>open</string>
+		<string>orelse</string>
+		<string>raise</string>
+		<string>rec</string>
+		<string>sharing</string>
+		<string>sig</string>
+		<string>signature</string>
+		<string>struct</string>
+		<string>structure</string>
+		<string>val</string>
+		<string>while</string>
+		<string>with</string>
+		<string>withtype</string>
+		<string>of</string>
+		<string>let</string>
+		<string>in</string>
+		<string>if</string>
+		<string>then</string>
+		<string>else</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>SML </string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Standard ML</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMIsSourceKind</key>
+			<true/>
+			<key>BBLMLanguageSuffix</key>
+			<string>.ML</string>
+		</dict>
+		<dict>
+			<key>BBLMIsSourceKind</key>
+			<true/>
+			<key>BBLMLanguageSuffix</key>
+			<string>.sml</string>
+		</dict>
+		<dict>
+			<key>BBLMIsSourceKind</key>
+			<true/>
+			<key>BBLMLanguageSuffix</key>
+			<string>.sig</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Close Block Comments</key>
+		<string>*)</string>
+		<key>Close Parameter Lists</key>
+		<string>)</string>
+		<key>Close Statement Blocks</key>
+		<string>end</string>
+		<key>Close Strings 1</key>
+		<string>"</string>
+		<key>End-of-line Ends Strings 1</key>
+		<true/>
+		<key>End-of-line Ends Strings 2</key>
+		<true/>
+		<key>Escape Char in Strings 1</key>
+		<string>\</string>
+		<key>Escape Char in Strings 2</key>
+		<string></string>
+		<key>Identifier and Keyword Characters</key>
+		<string>01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_'</string>
+		<key>Open Block Comments</key>
+		<string>(*</string>
+		<key>Open Line Comments</key>
+		<string></string>
+		<key>Open Parameter Lists</key>
+		<string>(</string>
+		<key>Open Stament Blocks</key>
+		<string>let</string>
+		<key>Open Strings 1</key>
+		<string>"</string>
+		<key>Prefix for Functions</key>
+		<string>fun</string>
+		<key>Prefix for Procedures</key>
+		<string></string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

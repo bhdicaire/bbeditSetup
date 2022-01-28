@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+	BBEdit codeless language module for MacPorts Portfiles
+	Ryan Wilcox  <http://www.wilcoxd.com/>
+	Version 1.0
+	August 21, 2006
+
+	Released under a Creative Commons Attribution License:
+	<http://creativecommons.org/licenses/by/2.0/>
+	
+	Requires BBEdit 8.0 or higher. To install, copy here:
+	
+		~/Library/Application Support/BBEdit/Language Modules/
+	
+	and relaunch BBEdit.
+	
+	Version History:
+		1.0: Initial Release
+-->
+
+
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>PortSystem</string>
+		<string>PortGroup</string>
+		<string>name</string>
+		<string>description</string>
+		<string>version</string>
+		<string>destroot.destdir</string>
+		<string>destroot.cmd</string>
+		<string>destroot.type</string>
+		<string>destroot.pre_args</string>
+		<string>destroot.args</string>
+		<string>destroot.target</string>
+		<string>port</string>
+		<string>PortGroup</string>
+		<string>portindex</string>
+		<string>categories</string>
+		<string>maintainers</string>
+		<string>master_sites</string>
+		<string>platforms</string>
+		<string>checksums</string>
+		<string>depends_lib</string>
+		<string>depends_lib-delete</string>
+		<string>depends_lib-append</string>
+		<string>post-configure</string>
+		<string>configure</string>
+		<string>configure.pre_args</string>
+		<string>prefix</string>
+		<string>binpath</string>
+		<string>libpath</string>
+		<string>portpath</string>
+		<string>filesdir</string>
+		<string>workdir</string>
+		<string>workpath</string>
+		<string>worksrcpath</string>
+		<string>destroot</string>
+		<string>distpath</string>
+		<string>os_arch</string>
+		<string>os_version</string>
+		<string>configure.env</string>
+		<string>configure.args</string>
+		<string>variant</string>
+		<string>PortSystem</string>
+		<string>revision</string>
+		<string>extract.suffix</string>
+		<string>extract.only</string>
+		<string>extract.cmd</string>
+		<string>extract.pre_args</string>
+		<string>extract.args</string>
+		<string>extract.post_args</string>
+		<string>use_automake</string>
+		<string>use_configure</string>
+		<string>automake.env</string>
+		<string>automake.args</string>
+		<string>automake.dir</string>
+		<string>use_autoconf</string>
+		<string>autoconf.env</string>
+		<string>autoconf.args</string>
+		<string>autoconf.dir</string>
+		<string>distfiles</string>
+		<string>use_zip</string>
+		<string>use_bzip2</string>
+		<string>patch_sites</string>
+		<string>patchfiles</string>
+		<string>patchfiles-delete</string>
+		<string>distfiles</string>
+		<string>long_description</string>
+		<string>homepage</string>
+		<string>configure</string>
+		<string>build.args</string>
+		<string>build.cmd</string>
+		<string>build.type</string>
+		<string>build.pre_args</string>
+		<string>build.target</string>
+		<string>distname</string>
+		<string>worksrcdir</string>
+		<string>worksrcpath</string>
+		<string>test.run</string>
+		<string>test.cmd</string>
+		<string>test.target</string>
+		<string>test.dir</string>
+		<string>startupitem.create</string>
+		<string>startupitem.name</string>
+		<string>startupitem.init</string>
+		<string>startupitem.start</string>
+		<string>startupitem.stop</string>
+		<string>startupitem.restart</string>
+		<string>startupitem.requires</string>
+		<string>depends_fetch</string>
+		<string>depends_extract</string>
+		<string>depends_lib</string>
+		<string>depends_build</string>
+		<string>depends_run</string>
+		<string>adduser</string>
+		<string>addgroup</string>
+		<string>file</string>
+		<string>reinplace</string>
+		<string>system</string>
+		<string>Pre-</string>
+		<string>Post-</string>
+		<string>default_variants</string>
+		<string>platform_variants</string>
+		
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>MPpf</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Portfile</string>
+	<key>BBLMScansFunctions</key>
+	<false/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>Portfile</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Close Block Comments</key>
+		<string>}</string>
+		<key>Close Parameter Lists</key>
+		<string></string>
+		<key>Close Statement Blocks</key>
+		<string></string>
+		<key>Close Strings 1</key>
+		<string>"</string>
+		<key>Close Strings 2</key>
+		<string>'</string>
+		<key>End-of-line Ends Strings 1</key>
+		<true/>
+		<key>End-of-line Ends Strings 2</key>
+		<true/>
+		<key>Escape Char in Strings 1</key>
+		<string></string>
+		<key>Escape Char in Strings 2</key>
+		<string></string>
+		<key>Identifier and Keyword Characters</key>
+		<string>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz^-_./</string>
+		<key>Open Block Comments</key>
+		<string></string>
+		<key>Open Line Comments</key>
+		<string>#</string>
+		<key>Open Parameter Lists</key>
+		<string></string>
+		<key>Open Statement Blocks</key>
+		<string>{</string>
+		<key>Open Strings 1</key>
+		<string>"</string>
+		<key>Open Strings 2</key>
+		<string>'</string>
+		<key>Prefix for Functions</key>
+		<string></string>
+		<key>Prefix for Procedures</key>
+		<string></string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

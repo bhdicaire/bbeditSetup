@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBLMLanguageCode</key>
+	<string>YARA</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Yara</string>
+	<key>BBLMPreferredFilenameExtension</key>
+	<string>yara</string>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.yara</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.yar</string>
+		</dict>
+	</array>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSupportsTextCompletion</key>
+	<true/>
+	<key>BBLMCanSpellCheckCodeRuns</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+		<array>
+		<string>rule</string>
+		<string>meta</string>
+		<string>strings</string>
+		<string>condition</string>
+	</array>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<string>import</string>
+		<string>include</string>
+		<string>filesize</string>
+		<string>nocase</string>
+		<string>wide</string>
+		<string>ascii</string>
+		<string>xor</string>
+		<string>fullword</string>
+		<string>private</string>
+		<string>global</string>
+		<string>at</string>
+		<string>in</string>
+		<string>them</string>
+		<string>any</string>
+		<string>all</string>
+		<string>for</string>
+		<string>of</string>
+		<string>not</string>
+		<string>and</string>
+		<string>or</string>
+		<string>entrypoint</string>
+		<string>int8</string>
+		<string>int16</string>
+		<string>int32</string>
+		<string>uint8</string>
+		<string>uint16</string>
+		<string>uint32</string>
+		<string>int8be</string>
+		<string>int16be</string>
+		<string>int32be</string>
+		<string>uint8be</string>
+		<string>uint16be</string>
+		<string>uint32be</string>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string>A-Za-z0-9_</string>
+		<key>Comment Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(//.+?$) |
+			(?s:/\*.+?([\s]+)?\*/)
+		)
+		]]></string>
+		<key>String Pattern</key>
+		<string><![CDATA[
+		(?x:
+			((?<=\=)\s*"(\\"|[^"\r]|\\\r)*") |
+			((?<=import)\s*"(\\"|[^"\r]|\\\r)+") |
+			((?<=include)\s*"(\\"|[^"\r]|\\\r)+") |
+			((?<=\=)\s*/(\\/|[^/\r]|\\\r)+/)
+		)
+		]]></string>
+		<key>Prefix for Functions</key>
+		<string>rule</string>
+		<key>Prefix for Procedures</key>
+		<string>rule</string>
+		<key>Open Parameter Lists</key>
+		<string>(</string>
+		<key>Close Parameter Lists</key>
+		<string>)</string>
+		<key>Open Statement Blocks</key>
+		<string>{</string>
+		<key>Close Statement Blocks</key>
+		<string>}</string>
+	</dict>
+</dict>
+</plist>

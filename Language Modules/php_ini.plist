@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+	BBEdit codeless language module for the php.ini file.
+	Based on php.ini for PHP 5.0.3.
+	Jan Pieter Kunst  <jan_pieter@xs4all.nl>
+	Version 1.0
+	2005-02-15
+
+	Released under a Creative Commons Attribution-ShareAlike License:
+	<http://creativecommons.org/licenses/by-sa/2.0/>
+	
+	Requires BBEdit 8.0 or higher. To install, copy here:
+	
+		~/Library/Application Support/BBEdit/Language Modules/
+	
+	and relaunch BBEdit.
+-->
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>allow_call_time_pass_reference</string>
+		<string>allow_url_fopen</string>
+		<string>always_populate_raw_post_data</string>
+		<string>arg_separator.input</string>
+		<string>arg_separator.output</string>
+		<string>asp_tags</string>
+		<string>assert.active</string>
+		<string>assert.bail</string>
+		<string>assert.callback</string>
+		<string>assert.quiet_eval</string>
+		<string>assert.warning</string>
+		<string>auto_append_file</string>
+		<string>auto_detect_line_endings</string>
+		<string>auto_prepend_file</string>
+		<string>bcmath.scale</string>
+		<string>browscap</string>
+		<string>cgi.force_redirect</string>
+		<string>cgi.nph</string>
+		<string>cgi.redirect_status_env</string>
+		<string>cgi.rfc2616_headers</string>
+		<string>com.allow_dcom</string>
+		<string>com.autoregister_casesensitive</string>
+		<string>com.autoregister_typelib</string>
+		<string>com.autoregister_verbose</string>
+		<string>com.typelib_file</string>
+		<string>dbx.colnames_case</string>
+		<string>default_charset</string>
+		<string>default_mimetype</string>
+		<string>default_socket_timeout</string>
+		<string>define_syslog_variables</string>
+		<string>disable_classes</string>
+		<string>disable_functions</string>
+		<string>display_errors</string>
+		<string>display_startup_errors</string>
+		<string>doc_root</string>
+		<string>docref_ext</string>
+		<string>docref_root</string>
+		<string>E_ALL</string>
+		<string>E_COMPILE_ERROR</string>
+		<string>E_COMPILE_WARNING</string>
+		<string>E_CORE_ERROR</string>
+		<string>E_CORE_WARNING</string>
+		<string>E_ERROR</string>
+		<string>E_NOTICE</string>
+		<string>E_PARSE</string>
+		<string>E_STRICT</string>
+		<string>E_USER_ERROR</string>
+		<string>E_USER_NOTICE</string>
+		<string>E_USER_WARNING</string>
+		<string>E_WARNING</string>
+		<string>enable_dl</string>
+		<string>engine</string>
+		<string>error_append_string</string>
+		<string>error_log</string>
+		<string>error_log</string>
+		<string>error_prepend_string</string>
+		<string>error_reporting</string>
+		<string>exif.decode_jis_intel</string>
+		<string>exif.decode_jis_motorola</string>
+		<string>exif.decode_unicode_intel</string>
+		<string>exif.decode_unicode_motorola</string>
+		<string>exif.encode_jis</string>
+		<string>exif.encode_unicode</string>
+		<string>expose_php</string>
+		<string>extension</string>
+		<string>extension_dir</string>
+		<string>False</string>
+		<string>fastcgi.impersonate</string>
+		<string>fbsql.allow_persistent</string>
+		<string>fbsql.autocommit</string>
+		<string>fbsql.batchSize</string>
+		<string>fbsql.default_database</string>
+		<string>fbsql.default_database_password</string>
+		<string>fbsql.default_host</string>
+		<string>fbsql.default_password</string>
+		<string>fbsql.default_user</string>
+		<string>fbsql.generate_warnings</string>
+		<string>fbsql.max_connections</string>
+		<string>fbsql.max_links</string>
+		<string>fbsql.max_persistent</string>
+		<string>fbsql.max_results</string>
+		<string>file_uploads</string>
+		<string>from</string>
+		<string>highlight.bg</string>
+		<string>highlight.comment</string>
+		<string>highlight.default</string>
+		<string>highlight.html</string>
+		<string>highlight.keyword</string>
+		<string>highlight.string</string>
+		<string>html_errors</string>
+		<string>ifx.allow_persistent</string>
+		<string>ifx.blobinfile</string>
+		<string>ifx.byteasvarchar</string>
+		<string>ifx.charasvarchar</string>
+		<string>ifx.default_host</string>
+		<string>ifx.default_password</string>
+		<string>ifx.default_user</string>
+		<string>ifx.max_links</string>
+		<string>ifx.max_persistent</string>
+		<string>ifx.nullformat</string>
+		<string>ifx.textasvarchar</string>
+		<string>ignore_repeated_errors</string>
+		<string>ignore_repeated_source</string>
+		<string>implicit_flush</string>
+		<string>include_path</string>
+		<string>ingres.allow_persistent</string>
+		<string>ingres.default_database</string>
+		<string>ingres.default_password</string>
+		<string>ingres.default_user</string>
+		<string>ingres.max_links</string>
+		<string>ingres.max_persistent</string>
+		<string>log_errors</string>
+		<string>log_errors_max_len</string>
+		<string>magic_quotes_gpc</string>
+		<string>magic_quotes_runtime</string>
+		<string>magic_quotes_sybase</string>
+		<string>mail.force_extra_parameters</string>
+		<string>max_execution_time</string>
+		<string>max_input_time</string>
+		<string>mbstring</string>
+		<string>mbstring.detect_order</string>
+		<string>mbstring.encoding_translation</string>
+		<string>mbstring.func_overload</string>
+		<string>mbstring.http_input</string>
+		<string>mbstring.http_output</string>
+		<string>mbstring.internal_encoding</string>
+		<string>mbstring.substitute_character</string>
+		<string>memory_limit</string>
+		<string>msql.allow_persistent</string>
+		<string>msql.max_links</string>
+		<string>msql.max_persistent</string>
+		<string>mssql.allow_persistent</string>
+		<string>mssql.batchsize</string>
+		<string>mssql.compatability_mode</string>
+		<string>mssql.connect_timeout</string>
+		<string>mssql.datetimeconvert</string>
+		<string>mssql.max_links</string>
+		<string>mssql.max_persistent</string>
+		<string>mssql.max_procs</string>
+		<string>mssql.min_error_severity</string>
+		<string>mssql.min_message_severity</string>
+		<string>mssql.secure_connection</string>
+		<string>mssql.textlimit</string>
+		<string>mssql.textsize</string>
+		<string>mssql.timeout</string>
+		<string>mysql.allow_persistent</string>
+		<string>mysql.connect_timeout</string>
+		<string>mysql.default_host</string>
+		<string>mysql.default_password</string>
+		<string>mysql.default_port</string>
+		<string>mysql.default_socket</string>
+		<string>mysql.default_user</string>
+		<string>mysql.max_links</string>
+		<string>mysql.max_persistent</string>
+		<string>mysql.trace_mode</string>
+		<string>mysqli.default_host</string>
+		<string>mysqli.default_password</string>
+		<string>mysqli.default_port</string>
+		<string>mysqli.default_socket</string>
+		<string>mysqli.default_user</string>
+		<string>mysqli.max_links</string>
+		<string>mysqli.reconnect</string>
+		<string>No</string>
+		<string>None</string>
+		<string>odbc.allow_persistent</string>
+		<string>odbc.check_persistent</string>
+		<string>odbc.default_db</string>
+		<string>odbc.default_pw</string>
+		<string>odbc.default_user</string>
+		<string>odbc.defaultbinmode</string>
+		<string>odbc.defaultlrl</string>
+		<string>odbc.max_links</string>
+		<string>odbc.max_persistent</string>
+		<string>Off</string>
+		<string>On</string>
+		<string>open_basedir</string>
+		<string>output_buffering</string>
+		<string>output_handler</string>
+		<string>pfpro.defaulthost</string>
+		<string>pfpro.defaultport</string>
+		<string>pfpro.defaulttimeout</string>
+		<string>pfpro.proxyaddress</string>
+		<string>pfpro.proxylogon</string>
+		<string>pfpro.proxypassword</string>
+		<string>pfpro.proxyport</string>
+		<string>pgsql.allow_persistent</string>
+		<string>pgsql.auto_reset_persistent</string>
+		<string>pgsql.ignore_notice</string>
+		<string>pgsql.log_notice</string>
+		<string>pgsql.max_links</string>
+		<string>pgsql.max_persistent</string>
+		<string>PHPSESSID</string>
+		<string>post_max_size</string>
+		<string>precision</string>
+		<string>register_argc_argv</string>
+		<string>register_globals</string>
+		<string>register_long_arrays</string>
+		<string>report_memleaks</string>
+		<string>safe_mode</string>
+		<string>safe_mode_allowed_env_vars</string>
+		<string>safe_mode_exec_dir</string>
+		<string>safe_mode_gid</string>
+		<string>safe_mode_include_dir</string>
+		<string>safe_mode_protected_env_vars</string>
+		<string>sendmail_from</string>
+		<string>sendmail_path</string>
+		<string>serialize_precision</string>
+		<string>session.auto_start</string>
+		<string>session.bug_compat_42</string>
+		<string>session.bug_compat_warn</string>
+		<string>session.cache_expire</string>
+		<string>session.cache_limiter</string>
+		<string>session.cookie_domain</string>
+		<string>session.cookie_lifetime</string>
+		<string>session.cookie_path</string>
+		<string>session.entropy_file</string>
+		<string>session.entropy_file</string>
+		<string>session.entropy_length</string>
+		<string>session.entropy_length</string>
+		<string>session.gc_divisor</string>
+		<string>session.gc_maxlifetime</string>
+		<string>session.gc_probability</string>
+		<string>session.hash_bits_per_character</string>
+		<string>session.hash_function</string>
+		<string>session.name</string>
+		<string>session.referer_check</string>
+		<string>session.save_handler</string>
+		<string>session.save_path</string>
+		<string>session.serialize_handler</string>
+		<string>session.use_cookies</string>
+		<string>session.use_only_cookies</string>
+		<string>session.use_trans_sid</string>
+		<string>short_open_tag</string>
+		<string>SMTP</string>
+		<string>smtp_port</string>
+		<string>soap.wsdl_cache_dir</string>
+		<string>soap.wsdl_cache_enabled</string>
+		<string>soap.wsdl_cache_ttl</string>
+		<string>sockets.use_system_read</string>
+		<string>sql.safe_mode</string>
+		<string>sybase.allow_persistent</string>
+		<string>sybase.compatability_mode</string>
+		<string>sybase.interface_file</string>
+		<string>sybase.max_links</string>
+		<string>sybase.max_persistent</string>
+		<string>sybase.min_error_severity</string>
+		<string>sybase.min_message_severity</string>
+		<string>sybct.allow_persistent</string>
+		<string>sybct.max_links</string>
+		<string>sybct.max_persistent</string>
+		<string>sybct.min_client_severity</string>
+		<string>sybct.min_server_severity</string>
+		<string>syslog</string>
+		<string>tidy.default_config</string>
+		<string>tidy.clean_output</string>
+		<string>track_errors</string>
+		<string>True</string>
+		<string>unserialize_callback_func</string>
+		<string>upload_max_filesize</string>
+		<string>upload_tmp_dir</string>
+		<string>url_rewriter.tags</string>
+		<string>user_agent</string>
+		<string>user_dir</string>
+		<string>variables_order</string>
+		<string>y2k_compliance</string>
+		<string>Yes</string>
+		<string>zend.ze1_compatibility_mode</string>
+		<string>zlib.output_compression</string>
+		<string>zlib.output_handler</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>INI </string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>PHP .ini</string>
+	<key>BBLMScansFunctions</key>
+	<false/>
+
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.ini</string>
+		</dict>
+	</array>
+
+	<key>Language Features</key>
+	<dict>
+		<key>Close Block Comments</key>
+		<string></string>
+		<key>Close Parameter Lists</key>
+		<string></string>
+		<key>Close Statement Blocks</key>
+		<string></string>
+		<key>Close Strings 1</key>
+		<string>'</string>
+		<key>Close Strings 2</key>
+		<string>"</string>
+		<key>End-of-line Ends Strings 1</key>
+		<false/>
+		<key>End-of-line Ends Strings 2</key>
+		<false/>
+		<key>Escape Char in Strings 1</key>
+		<string>\</string>
+		<key>Escape Char in Strings 2</key>
+		<string>\</string>
+		<key>Identifier and Keyword Characters</key>
+		<string>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz.</string>
+		<key>Open Block Comments</key>
+		<string></string>
+		<key>Open Line Comments</key>
+		<string>;</string>
+		<key>Open Parameter Lists</key>
+		<string></string>
+		<key>Open Statement Blocks</key>
+		<string></string>
+		<key>Open Strings 1</key>
+		<string>'</string>
+		<key>Open Strings 2</key>
+		<string>"</string>
+		<key>Prefix for Functions</key>
+		<string></string>
+		<key>Prefix for Procedures</key>
+		<string></string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

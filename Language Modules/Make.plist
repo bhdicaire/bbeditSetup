@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMCommentLineDefault</key>
+	<string># </string>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.mk</string>
+		</dict>
+	</array>
+	<key>BBLMFileNamesToMatch</key>
+	<array>
+		<string>Makefile</string>
+		<string>Makefile.*</string>
+	</array>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMKeywords</key>
+	<array>
+		<dict>
+			<key>RunKind</key>
+			<string>com.barebones.bblm.keyword</string>
+			<key>Keywords</key>
+			<array>
+				<string>define</string>
+				<string>else</string>
+				<string>endef</string>
+				<string>endif</string>
+				<string>export</string>
+				<string>ifdef</string>
+				<string>ifeq</string>
+				<string>ifndef</string>
+				<string>ifneq</string>
+				<string>load</string>
+				<string>override</string>
+				<string>private</string>
+				<string>undefine</string>
+				<string>unexport</string>
+				<string>vpath</string>
+			</array>
+		</dict>
+		<dict>
+			<key>RunKind</key>
+			<string>com.barebones.bblm.file-include</string>
+			<key>Keywords</key>
+			<array>
+				<string>-include</string>
+				<string>include</string>
+				<string>sinclude</string>
+			</array>
+		</dict>
+		<dict>
+			<key>RunKind</key>
+			<string>com.barebones.bblm.predefined-symbol</string>
+			<key>Keywords</key>
+			<array>
+				<string>abspath</string>
+				<string>addprefix</string>
+				<string>addsuffix</string>
+				<string>and</string>
+				<string>basename</string>
+				<string>call</string>
+				<string>dir</string>
+				<string>error</string>
+				<string>eval</string>
+				<string>file</string>
+				<string>filter-out</string>
+				<string>filter</string>
+				<string>findstring</string>
+				<string>firstword</string>
+				<string>flavor</string>
+				<string>foreach</string>
+				<string>guile</string>
+				<string>if</string>
+				<string>info</string>
+				<string>join</string>
+				<string>lastword</string>
+				<string>notdir</string>
+				<string>or</string>
+				<string>origin</string>
+				<string>patsubst</string>
+				<string>realpath</string>
+				<string>shell</string>
+				<string>sort</string>
+				<string>strip</string>
+				<string>subst</string>
+				<string>suffix</string>
+				<string>value</string>
+				<string>warning</string>
+				<string>wildcard</string>
+				<string>word</string>
+				<string>wordlist</string>
+				<string>words</string>
+			</array>
+		</dict>
+		<dict>
+			<key>RunKind</key>
+			<string>com.barebones.bblm.variable</string>
+			<key>Keywords</key>
+			<array>
+				<string>.DEFAULT_GOAL</string>
+				<string>.DEFAULT</string>
+				<string>.DELETE_ON_ERROR</string>
+				<string>.EXPORT_ALL_VARIABLES</string>
+				<string>.EXTRA_PREREQS</string>
+				<string>.FEATURES</string>
+				<string>.IGNORE</string>
+				<string>.INCLUDE_DIRS</string>
+				<string>.INTERMEDIATE</string>
+				<string>.LIBPATTERNS</string>
+				<string>.LOADED</string>
+				<string>.LOW_RESOLUTION_TIME</string>
+				<string>.NOTPARALLEL</string>
+				<string>.ONESHELL</string>
+				<string>.PHONY</string>
+				<string>.POSIX</string>
+				<string>.PRECIOUS</string>
+				<string>.RECIPEPREFIX</string>
+				<string>.SECONDARY</string>
+				<string>.SECONDEXPANSION</string>
+				<string>.SHELLFLAGS</string>
+				<string>.SHELLSTATUS</string>
+				<string>.SILENT</string>
+				<string>.SUFFIXES</string>
+				<string>.VARIABLES</string>
+				<string>CURDIR</string>
+				<string>DESTDIR</string>
+				<string>GNUMAKEFLAGS</string>
+				<string>GPATH</string>
+				<string>MAKE_HOST</string>
+				<string>MAKE_RESTARTS</string>
+				<string>MAKE_TERMERR</string>
+				<string>MAKE_TERMOUT</string>
+				<string>MAKE_VERSION</string>
+				<string>MAKE</string>
+				<string>MAKECMDGOALS</string>
+				<string>MAKEFILE_LIST</string>
+				<string>MAKEFILES</string>
+				<string>MAKEFLAGS</string>
+				<string>MAKELEVEL</string>
+				<string>MAKEOVERRIDES</string>
+				<string>MAKESHELL</string>
+				<string>MFLAGS</string>
+				<string>SHELL</string>
+				<string>SUFFIXES</string>
+				<string>VPATH</string>
+			</array>
+		</dict>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>Make</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Make</string>
+	<key>BBLMReferenceSearchURLTemplate</key>
+	<string>http://www.google.com/search?q=__SYMBOLNAME__+Make+site:www.gnu.org</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSupportsTextCompletion</key>
+	<true/>
+	<key>Language Features</key>
+	<dict>
+		<key>Comment Pattern</key>
+		<string>#.*$</string>
+		<key>Function Pattern</key>
+		<string>^(?P&lt;function&gt;(?P&lt;function_name&gt;[\S]+?):.*$(\r[ \t]+.*)*)</string>
+		<key>Number Pattern</key><!-- appropriating for .PHONY -->
+		<string>^\.PHONY:[^\\\r]*(\\\r[^\\\r]*)*</string>
+		<key>String Pattern</key>
+		<string>(?x:
+			(?&gt;	"	(?s: \\. | [^"] )*?		(?: " | $)	)	|
+			(?&gt;	'	(?s: \\. | [^'] )*?		(?: ' | $)	)	|
+			(?&gt;	`	(?s: \\. | [^`] )*?		(?: ` | $)	)
+		)</string>
+		<key>Skip Pattern</key>
+		<string>(?x:
+			(?P&gt;comment)	|
+			(?P&gt;number)	|
+			(?P&gt;string)
+		)</string>
+		<key>Identifier and Keyword Character Class</key>
+		<string>[:alnum:]_\.\-\\/:;,</string>
+	</dict>
+	<key>com.barebones.DocumentType</key>
+	<string>CodelessLanguageModule</string>
+</dict>
+</plist>

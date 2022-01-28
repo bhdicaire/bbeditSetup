@@ -1,0 +1,625 @@
+#! /usr/bin/perl -w
+
+# entable
+# line up columns of data
+
+
+($me) = ($0 =~ m|/?([^/]+)$|);
+$me =~ s/.pl$//;                   # ignore .pl extension if there is one
+$me =~ s/_?v?[\d.]*$//;            # and version numbers too
+
+$debug = 0;        # debugging flag, should be '0' for everyone except the developer
+
+# use warnings FATAL => 'all';
+
+################################################################################
+# version
+$ver = <<EOM;
+  v1.1  (09/27/05) - Minor updates to the help documentation; adjusted help
+                     so that "-h" gives condensed help, and "-help" gives full
+                     help; also fixed a bug with decimal alignments
+  v1.2  (09/28/05) - Documentation fix for "\\" option; slight improvements
+                     for using "-h" and "-help" within BBEdit/TW windows; also
+                     now resets to the default settings within each START/END
+                     block instead of retaining settings throughout a document
+                     across blocks
+  v1.3  (11/26/06) - Minor documentation fix, slightly improved comment
+                     handling, and bugfix with documentation display at command
+                     line
+EOM
+
+
+################################################################################
+# history
+$hist = <<EOM;
+  v0.1  (07/23/05) - Initial release
+  v0.2  (08/12/05) - Rewritten, added many new features
+  v0.21 (09/18/05) - Fixed several minor bugs
+  v1.0  (09/20/05) - Initial public release
+$ver
+EOM
+
+################################################################################
+# usage
+$cusage = <<EOM;
+\U$me\E by Bryan Harris, bryan\@harrisfam.net
+  <http://www.harrisfam.net/entable/>
+$ver
+Usage:  $me [-s <opts>] [-t <opts>] [-r] [-f] [[alignment tokens]]
+        [-h|-help|-hist] [list of files]
+Defaults:  $me auto -d ' ' -tab 4 -D ' ' -p2:3:0 OFF tsflag0 -ext .entable [l]
+
+Enter "$me -help" for full help text.
+EOM
+
+$usage = <<EOM;
+$cusage
+\u$me was designed as a BBEdit filter for straightening the columns of a loop
+parameters table, however it can also be used on any file, and also from the
+command line.  It simply takes the selected rows (or some files or data from a
+pipe) and lines up columns that are whitespace delimited using spaces or tabs. 
+
+If any row starts with:  [// or #][ ]$me <opts>
+  ... then $me processes the options as provided.
+  
+  Valid options are:
+  
+  auto     autodetect settings based on the first two columns and the padding
+           around them (this is the default mode)
+  
+  -s[ ]<num1>[[ :]<num2>[[ :]<num3>]], e.g. -s3:4 or // $me -s 3 4
+           Adjust spacing between columns (<num#>s are optional) --
+             <num1> = number of spaces you want between columns
+             <num2> = minimum number of spaces between columns 1 & 2
+             <num3> = minimum number of spaces between before column 1
+
+  -t[ ][<num1>[[ :]<num2>[[ :]<num3>[[ :]<num4>]]]], e.g. -t3:4 or // -t 3 4
+           Use tabs between fields instead of spaces (<num#>s are optional) --
+             <num1> = number of spaces a tab character represents (should match
+                      what's being used in BBEdit, default=4)
+             <num2> = minimum number of tabs inserted between fields
+             <num3> = minimum number of tabs inserted between fields 1 and 2
+             <num4> = minimum number of tabs inserted before field 1
+
+  -ts      Same as -t, except that output columns are separated by multiple tabs
+
+  tsflag#  Set whether tabs (tsflag1) or spaces (tsflag0) are used to fill in
+           the extra space when using -D '\t'
+
+  -f       $me writes data out to files, instead of printing the result to
+           STDOUT; by default, if there's only one file, it prints it to
+           STDOUT, otherwise it writes files out to <basename>.$me
+           
+  -r       $me overwrites the original files with the entabled versions
+
+  -ext     Sets extension for outfiles, e.g. -ext ".out"
+  
+  start    \u$me processes all lines by default; by providing this option,
+  end      \u$me only processes lines between "start" and "end" tags; note,
+           multiple sets of start-end blocks are supported, and settings revert
+           to the defaults as provided in the config. file and on the command
+           line for each new start-end block
+
+  IN...    Sets the default input field separator:
+             INTAB      Input columns separated by a single tab
+             INTABS     Input columns separated by one or more tabs
+             INCOMMA    Input columns separated by a comma
+             INWS       Input columns separated by whitespace
+           
+  OUT...   Sets the default output field separator (see -s, -t above):
+             OUTTAB, -t     Output columns will be separated by a single tab
+                            and padded by spaces
+             OUTTABS, -ts   Output columns will be separated by multiple tabs
+                            and only padded by spaces when necessary
+           
+  \\        If a line ends with "\\" then the subsequent line is processed as
+           commands also, useful for putting column alignment tokens on their
+           own row (see [...] below); note, only one continuation line per
+           $me statement is supported
+           
+  [...]    Read as a list of column alignment tokens, which are used in order
+           for aligning columns:
+           
+           "l"          left align
+           "r"          right align
+           "c" or "e"   center column
+           "." or "d"   align column on decimals
+           "n"          leave subsequent data on the line as is
+           
+           e.g.
+             // $me -s 3 \\
+             // [l    .           c       r    n]
+             15     32.0       spring    ABA   This is left alone
+             1       5.2         is     ABDO   ... and this as well
+             8920    0.85235    here       E   --
+           
+           If there are not enough alignment tokens, the last token is used for
+           all remaining columns (unless it is the "n" token).
+           
+  PRE      Pre-pad the field with zeros out to the max number of digits seen in
+           the data set; other options are POST, BOTH, and OFF (default)
+           
+  SAVE     "SAVE" or "SAVESETTINGS" takes the current settings and uses them as
+           defaults on this computer saving them to ~/.$me-cfg; "CLEAR" or
+           "CLEARSETTINGS" removes the cfg file
+
+  -h       Show condensed help
+  -help    Show full help
+  -hist    Show version history
+
+The default settings are represented by this string:
+
+  ENTABLE auto -d ' ' -tab 4 -D ' ' -p2:3:0 OFF tsflag0 -ext .entable [l]
+
+To run within BBEdit, simply select the rows you want to entable, and run the
+filter, or run it with nothing selected to process the entire document.
+
+** If by running this you just erased something in BBEdit, select EDIT:UNDO. **
+EOM
+
+################################################################################
+# set program defaults
+
+	$nines = 1-1/1e10;  # used for roundups
+	
+	$homedir	= $ENV{HOME} . "/";			# home directory
+	$cfgfile	= $homedir . ".$me-cfg";	# default configuration file
+	$cfgstring	= '';						# default configuration file contents
+	$cc			= '';						# default text to be rewritten as is to the output
+	
+	$fflag = 0;         # force writing to files even when only one file is provided
+	
+	$ext = ".$me";      # default extension
+
+################################################################################
+# process command-line args
+$clpf = 1;  # command-line processing flag, i.e. some args may be files
+@files = process_commands(@ARGV);
+undef $clpf;
+#if (!-t STDIN) { unshift @files, "-"; }
+
+# print usage if no files were provided
+if ($cc and !@files) { print $cc; exit(0); }
+
+################################################################################
+# loop through files
+$n = 1;
+foreach $file (@files) {
+
+	# we need to reset the defaults for each file, since some files set certain
+	# options that aren't assumed to apply to the rest of the files
+
+	############################################################################
+	# defaults
+	resetSettings1();
+	resetSettings2();
+	@lines  = ();		# original lines
+	$outtxt = '';       # output text
+	############################################################################
+	#DEBUG
+	if ($debug) {
+		print "BEFORE:  ";
+		print buildCFGstring();
+		print "Files: ", join(", ", @files), "\n";
+	}
+	
+	############################################################################
+	# read in all lines from this file
+	$/ = "\n";
+	open(FILE, $file) or die "$me:  Couldn't open $file:  $!.  Exiting...\n";
+	@lines = <FILE>;
+	close(FILE) or die "$me:  Couldn't close $file:  $!.  Exiting...\n";
+
+	# if there are no lines, print usage and exit
+	if ((!@lines || join('',@lines) =~ /^\s*$/) && @files == 1) { print $usage; exit(0); }
+	
+	# while there are unprocessed lines, @lines
+	while (@lines && ($_ = shift @lines)) {
+
+		$cte = '';
+
+		# handle entable commands
+		if (/^\s*(#|\/\/)?\s*$me/) {
+			if (/\\$/i) {
+				$cte = shift @lines;  # command to entable -- gets entabled, but also gets processed with the commands
+			}
+			$cc = $_;                 # copy of command -- pure copy for writing back to output
+			process_commands($_ . $cte);
+			# handle start/end tags
+			if (s/start//gi) {
+				$eflag = 0;
+				$outtxt .= join('', @buffer); 
+				@buffer = ();
+			}
+			
+			if ($cte =~ /[ \t]/) { push @buffer, $cte; }
+			else { $cc .= $cte; }
+			
+			if (s/end//gi) {
+				$eflag = 1;
+				if (@buffer) { $outtxt .= entable(@buffer); @buffer = (); }
+				resetSettings1();
+				resetSettings2();
+			}
+			$outtxt .= $cc;
+		}
+		else { push @buffer, $_; }
+		
+	}
+
+	if (@buffer) {
+		if ($eflag == -1 || $eflag == 0) { $outtxt .= entable(@buffer); }
+		else { $outtxt .= join('', @buffer); }
+	}
+
+	# write out $outtxt either to file, or back to STDOUT
+	if (@files == 1 && !$fflag) { print $outtxt; }
+	else {
+		$outfile = $file . $ext;
+		open(OFILE, ">$outfile") or die "$me:  Couldn't open $outfile:  $!.  Exiting...\n";
+		print OFILE $outtxt;
+		close(OFILE) or die "$me:  Couldn't close $outfile:  $!.  Exiting...\n";
+		print $n++, ".  $file --> $outfile\n";
+	}
+
+	############################################################################
+	if ($debug) {
+		print "AFTER:  ";
+		print buildCFGstring();
+		print "Files: ", join(", ", @files), "\n";
+	}
+	############################################################################
+
+}
+
+exit(0);
+
+
+################################################################################
+# Subroutines
+################################################################################
+
+
+	############################################################################
+	# this routine resets entable to its default spacings
+
+	sub resetSettings1 {
+
+		# defaults
+		@align  = ('l');    # column alignment token list
+		
+		$automode = 1;      # default auto mode is ON
+		$indelim = ' ';     # default input file delimiters:  INCOMMA, INTAB, INWHITESPACE (INWS)
+		$outdelim = ' ';    # default output file delimiters, what goes between columns:  OUTTAB or TAB (-t), OUTSPACES or SPACES (-s)
+		$fieldsuf = '';     # default field suffix, what goes before the space padding (usually commas, -c, fall into this category)
+		$zpad = 'OFF';      # default zero padding
+		
+		$pad0 = 0;          # padding before the first field
+		$pad1 = 3;			# padding for first field
+		$padr = $padrd = 2;	# padding for rest of fields
+		$tab  = 4;			# number of spaces for tabs to represent
+		$mtabd = 1;			# min tabs between fields default
+		$eflag = -1;        # entable flag: -1=flag not used, 0=entabling lines on, 1=entabling lines off
+		$tsflag = 0;        # multi-tabs flag
+	}
+
+	############################################################################
+	# this routine resets entable's variables and re-reads configs and command line args
+	# (separated from resetSettings1 for the benefit of the "CLEAR" option below)
+
+	sub resetSettings2 {
+
+		@buffer = ();       # lines buffer (helps when you don't know whether start/end tags are coming or not)
+		@pre    = ();       # pre-decimal max field length
+		@post   = ();       # post-decimal max field length, including decimal
+		@mfl    = ();       # max field length overall
+		
+		############################################################################
+		# read in settings from configuration file, if it exists
+		if (!$cfgstring && -e $cfgfile) {
+			open(FILE, $cfgfile) or die "$me:  Couldn't read $cfgfile:  $!.  Exiting...\n";
+			undef $/;
+			$cfgstring = <FILE>;
+			close(FILE) or die "$me:  Couldn't close $cfgfile:  $!.  Exiting...\n";
+		}
+		process_commands($cfgstring);
+		############################################################################
+		# process command-line args
+		$clpf = 1;  # command-line processing flag, i.e. some args may be files
+		@ARGV && process_commands(@ARGV);
+		undef $clpf;
+		#if (!-t STDIN) { unshift @files, "-"; }
+	}
+
+
+	############################################################################
+	# this routine processes commonds, either from the command line or an embedded entable command
+
+	sub process_commands {
+	
+		@tfiles = ();
+	
+		foreach (@_) {
+			s/\n/ /g;
+			# preprocess what came in
+			if ($clpf && -e $_) { push @tfiles, $_; }
+			elsif ($_) {
+				#s/ /  /gm;      # put spaces around each item for /\sblah\s/ searches
+				$_ .= ' ';     # ease gathering alignment tokens on older perls
+				
+				# strip out calling string
+				s/^\s*(#|\/\/)?\s*$me//gi && ($automode = 0);
+				
+				# handle help and history
+				s/-hist\s+//g && ($cc .= "\n".$hist);
+				s/-h\s+//g && ($cc .= "\n".$cusage);
+				s/-help\s+//g && ($cc .= "\n".$usage);
+
+				# handle debug mode
+				s/-DEBUG\s+//g && $debug++;
+
+				# handle settings clearing
+				if (s/clear(settings?)?\s+//gi) {
+					unlink $cfgfile;
+					resetSettings1();
+				}
+
+				# handle file commands
+				s/-f\s+//g && $fflag++;
+				s/-r\s+//g && ($ext = '');
+				while (s/-ext\s+(\S+)\s+//i) { $ext = $1; }
+				
+				# handle auto mode
+				if (s/auto\s+//gi) { $automode = 1; }
+				
+				# handle input delimiters
+				while (s/-d\s*'([^']*)'\s+//) { $indelim = $1; }
+				while (s/incommas?\s+//i) { $indelim = ','; }
+				while (s/intabs\s+//i) { $indelim = qr/ *\t[ \t]*/; }
+				while (s/intab\s+//i) { $indelim = qr/ *\t */; }
+				while (s/in(whitespace|ws)\s+//i) { $indelim = ' '; }
+
+				# handle tab default
+				while (s/-tab\s*(\d+)\s+//) { $tab = $1 || $tab; }
+				
+				# handle output delimiters
+				while (s/-D\s*'([^']*)'\s+//) { $outdelim = $1; }
+				while (s/(out)?(commas?|-c)\s+//i) { $fieldsuf = ","; }
+				while (s/(out)?(tab|-t)\s*(\d*)[:\s]*(\d*)[:\s]*(\d*)[:\s]*(\d*)\s+//i) {
+					$outdelim = "\t";
+					$tsflag = 0;
+					$tab  = $3 || $tab;
+					$padr = $4 || $mtabd;
+					$pad1 = $5 || $padr;
+					$pad0 = $6 || 0;
+				}
+				while (s/(out)?(tabs|-ts)\s*(\d*)[:\s]*(\d*)[:\s]*(\d*)[:\s]*(\d*)\s+//i) {
+					$outdelim = "\t";
+					$tsflag++;
+					$tab  = $3 || $tab;
+					$padr = $4 || $mtabd;
+					$pad1 = $5 || $padr;
+					$pad0 = $6 || 0;
+				}
+				while (s/(out)?(spaces?|-s)\s*(\d*)[:\s]*(\d*)[:\s]*(\d*)\s+//i) {
+					$outdelim = ' ';
+					$padr = $3 || $padrd;
+					$pad1 = $4 || $padr;
+					$pad0 = $5 || 0;
+				}
+				while (s/-p\s*(\d*)[:\s]*(\d*)[:\s]*(\d*)\s+//i) {
+					$padr = $1 || $padr;
+					$pad1 = $2 || $pad1;
+					$pad0 = $3 || $pad0;
+				}
+
+				while (s/tsflag(\d+)\s+//i) { $tsflag = $1 || 0; }
+
+				# handle column alignment
+				if (s/\[([lrd.cen\s]+)\]\s+//i) { @align = split('\s*', $1); }
+				
+				# handle zero padding
+				while (s/(pre|post|both|off)\s+//i) { $zpad = "\U$1"; }
+		
+				# handle settings writing
+				if (s/save(settings?)?\s+//gi) {
+					$newCFGstring = buildCFGstring();
+
+					# only write a new one if it has changed, or if the config file doesn't exist
+					if ($newCFGstring ne $cfgstring || !-e $cfgfile) {
+						open(FILE, "> $cfgfile") or die "$me:  Couldn't write to $cfgfile:  $!.  Exiting...\n";
+						print FILE $newCFGstring;
+						close(FILE) or die "$me:  Couldn't close $cfgfile:  $!.  Exiting...\n";
+						$cfgstring = $newCFGstring;
+					}
+				}
+				
+			}
+		}
+		
+		return @tfiles;
+
+	}
+	
+	############################################################################
+
+	sub buildCFGstring {
+	
+		my $tmpam;
+		if ($automode) { $tmpam = " auto"; }
+		else { $tmpam = ''; }
+
+		return
+			"// ENTABLE$tmpam -d '$indelim' -tab $tab -D '$outdelim' -p$padr:$pad1:$pad0 $zpad tsflag$tsflag -ext $ext [" .
+			join("", @align) .
+			"]\n";
+	}
+
+	############################################################################
+
+	# this routine takes an array of lines and builds a table based on the
+	# current preferences; returns a string of lines that can be printed or saved
+
+	sub entable {
+
+		# set tabling defaults (pre, post, etc)
+		@slines = @mfl = @pre = @post = ();
+		$ttxt = '';
+
+		if ($automode) {
+			$_ = $_[0];
+			($f1,$f2,$f3) = m/^(\s*)\S+(\s*)\S*(\s*)/;
+			$padstr0 = $f1 || '';
+			$pad1 = length($f2) || $padrd;
+			$padr = length($f3) || $padrd;
+			if ($f3 =~ /\t$/) { $outdelim = "\t"; $padstr0 = ''; }
+			elsif ($f2 =~ /,$/) { $indelim = ','; $outdelim = ','; }
+			else { $indelim = ' '; $outdelim = ' '; }
+		}
+		else {
+			$padstr0 = $outdelim x $pad0;
+		}
+		
+		$padstr1 = $outdelim x $pad1;
+		$padstr  = $outdelim x $padr;
+
+		# look for n/a alignment field
+		$fts = -1;  # number of fields to split
+		if (grep { /n/ } @align) { $fts = 0; until ($fts == @align or $align[$fts] eq 'n') { $fts++; } }
+
+		# preprocess lines
+		foreach (@_) {
+
+			chomp;
+
+			# pre-strip padding before first column
+			s/^$indelim+//g;
+
+			# ... and spaces at the end of the line
+			s/ +$//g;
+			
+			# split fields, but not comments!
+			if (m!^\s*(//|#)\s*[^\]]!) {
+				@fields = ($_);
+			}
+			else {
+				# split all those not subject to n/a
+				if ($fts == -1) {
+					if ($indelim eq ' ') { @fields = split(' ', $_); }
+					else { @fields = split($indelim, $_); }
+				}
+				else {
+					if ($indelim eq ' ') { @fields = split(' ', $_, $fts+1); }
+					else { @fields = split($indelim, $_, $fts+1); }
+				}
+	
+				# loop over fields, populating @pre and @post arrays
+				foreach $i (0..$#fields) {
+					$fields[$i] =~ m#^([^.]*)(\.?.*)#;
+					$tfl = length($fields[$i]);
+					if (!defined($pre[$i]) || length($1) > $pre[$i]) { $pre[$i] = length($1); }
+					if (!defined($post[$i]) || length($2) > $post[$i]) { $post[$i] = length($2); }
+					if (!defined($mfl[$i]) || $tfl > $mfl[$i]) { $mfl[$i] = $tfl; }
+				}
+			}
+			
+			push @slines, [ @fields ];
+		}
+
+		# loop over lines
+		foreach $line (@slines) {
+
+			@outfields = ();
+			# loop over field with field index, $fi
+			foreach $fi (0..$#{$line}) {
+
+				# for this field, $_ ...
+				$_ = ${$line}[$fi];
+				
+				# is this the last field?
+				if ($fi == $#{$line}) { $lastf=1; }
+				else { $lastf = 0; }
+
+				# how many pre-zeroes do we need to add?  Add them!
+				m#^([^.]*)(\.?.*)#;
+				defined($tpre  = $1) or $tpre  = '';
+				defined($tpost = $2) or $tpost = '';
+				if ($zpad eq 'BOTH' or $zpad eq 'PRE') {
+					$tmp = "0" x ($pre[$fi] - length($tpre));
+					$_ = $tmp . $_;
+					$tpre = $tmp . $tpre;
+				}
+
+				# how many post-zeroes do we need to add?  Add them!
+				if ($zpad eq 'BOTH' or $zpad eq 'POST') {
+					if ($post[$fi]) {
+						$tmp = "." x (!length($tpost)) . "0" x ($post[$fi] - length($tpost) - !length($tpost));
+						$_ .= $tmp;
+						$tpost .= $tmp;
+						if (length($_) > $mfl[$fi]) { $mfl[$fi] = length($_); }
+					}
+				}
+				
+				# add field suffix (usually empty)
+				$_ .= $fieldsuf if !$lastf;
+				
+				# how many one-wide spaces are left?
+				$thispad = $mfl[$fi] + length($fieldsuf) - length($_);
+
+				# get this column's alignment
+				$talign = $align[$fi] || $align[-1];
+
+				#####################################
+				# align N/A
+				if ($talign =~ /n/) {}
+				#####################################
+				# align LEFT
+				elsif ($talign =~ /l/ && !$lastf) {
+					if ($tsflag and $outdelim eq "\t") { $_ .= $outdelim x (int(($pre[$fi]+$post[$fi])/$tab) - int(length($_)/$tab)); }
+					elsif ($outdelim eq ' ' or $outdelim eq "\t") { $_ .= ' ' x $thispad; }
+					else  { $_ .= $outdelim . ' ' x ($thispad - length($outdelim)); }
+				}
+				#####################################
+				# align RIGHT
+				elsif ($talign =~ /r/) {
+					if ($tsflag and $outdelim eq "\t") { $_ = $outdelim x int($thispad/$tab) . ' ' x ($thispad - $tab * int($thispad/$tab)) . $_; }
+					elsif ($outdelim eq ' ' or $outdelim eq "\t") { $_ = ' ' x $thispad . $_; }
+					else  { $_ = ' ' x ($thispad - length($outdelim)) . $_; }
+				}
+				#####################################
+				# align DECIMAL
+				elsif ($talign =~ /[.d]/) {
+					$sonl = $pre[$fi] - length($tpre);    # spaces needed on left
+					$sonr = $post[$fi] - length($tpost);  # spaces needed on right
+					if ($tsflag and $outdelim eq "\t") { $_ = $outdelim x int($sonl/$tab) . ' ' x ($sonl - $tab * int($sonl/$tab)) . $_ . $outdelim x int($sonr/$tab); }
+					elsif ($outdelim eq ' ' or $outdelim eq "\t") { $_ = ' ' x $sonl . $_ . ' ' x $sonr; }
+					else { $_ = ' ' x $sonl . $_ . $outdelim . ' ' x ($sonr - length($outdelim)); }
+				}
+				#####################################
+				# align CENTER
+				elsif ($talign =~ /[ce]/) {
+					$sonl = int($thispad/2+$nines);           # spaces needed on left
+					$sonr = int($thispad/2);    # spaces needed on right
+					if ($tsflag and $outdelim eq "\t") { $_ = $outdelim x int($sonl/$tab) . ' ' x ($sonl - $tab * int($sonl/$tab)) . $_ . $outdelim x (int($mfl[$fi]/$tab) - int(($sonl+length($_))/$tab)); }
+					elsif ($outdelim eq ' ' or $outdelim eq "\t") { $_ = ' ' x int($thispad/2+$nines) . $_ . ' ' x int($thispad/2); }
+					else { $_ = ' ' x int($thispad/2+$nines) . $_ . $outdelim . ' ' x (int($thispad/2) - length($outdelim)); }
+				}
+				#####################################
+				
+				push @outfields, $_;
+				
+			}	
+#			$ttxt .= shift(@outfields) . $padstr1 . join($padstr, @outfields) . "\n";
+			if (@outfields) {
+				$ttxt .= $padstr0;
+				$ttxt .= shift(@outfields);
+				$ttxt .= $padstr1;
+				$ttxt .= join($padstr, @outfields);
+			}
+			$ttxt .= "\n";
+		}
+		
+		return $ttxt;
+
+	}
+

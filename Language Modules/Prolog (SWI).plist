@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMLanguageCode</key>
+	<string>SWIP</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Prolog (SWI)</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>append</string>
+		<string>assert</string>
+		<string>asserta</string>
+		<string>assertz</string>
+		<string>consult</string>
+		<string>delete</string>
+		<string>dynamic</string>
+		<string>fail</string>
+		<string>false</string>
+		<string>flatten</string>
+		<string>ground</string>
+		<string>halt</string>
+		<string>initialization</string>
+		<string>is_list</string>
+		<string>length</string>
+		<string>listing</string>
+		<string>make</string>
+		<string>maplist</string>
+		<string>member</string>
+		<string>nl</string>
+		<string>nonvar</string>
+		<string>nth0</string>
+		<string>nth1</string>
+		<string>prefix</string>
+		<string>read</string>
+		<string>repeat</string>
+		<string>retract</string>
+		<string>retractall</string>
+		<string>reverse</string>
+		<string>select</string>
+		<string>sort</string>
+		<string>true</string>
+		<string>var</string>
+		<string>write</string>
+		<string>writeln</string>
+	</array>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+	</array>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.pl</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.pro</string>
+		</dict>
+	</array>
+	<key>BBLMPreferredFilenameExtension</key>
+	<string>pl</string>
+	<key>BBLMSupportsTextCompletion</key>
+	<true/>
+	<key>BBLMCanSpellCheckCodeRuns</key>
+	<false/>
+	<key>BBLMCommentLineDefault</key>
+	<string>%</string>
+	<key>BBLMCommentPrefixDefault</key>
+	<string>/*</string>
+	<key>BBLMCommentSuffixDefault</key>
+	<string>*/</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string>A-Za-z0-9_</string>
+		<key>Comment Pattern</key>
+		<string><![CDATA[
+			(?x:
+				(%.*$) |                    (?# line comment)
+				(?s:/\*.*?\*/)              (?# block comment)
+			)
+		]]></string>
+		<key>String Pattern</key>
+		<string><![CDATA[
+			(?x:
+				('(\\'|[^'\r]|\\\r)*') |    (?# single-quoted string)
+				("(\\"|[^"\r]|\\\r)*")      (?# double-quoted string)
+			)
+		]]></string>
+		<key>Function Pattern</key>
+		<string><![CDATA[
+			(?x:
+				(?P<leadspace>^\s*)         (?# whitespace at the beginning of a line)
+				(?P<function>
+					(?P<function_name>
+						[a-z][a-zA-Z0-9_]*  (?# followed by a function name)
+					)
+					(?P<function_body>
+						[^.]*[.]$           (?# followed by anything followed by a period)
+					)
+				)
+			)
+		]]></string>
+		<key>Skip Pattern</key>
+		<string><![CDATA[
+			(?x:
+				(?P>string) |               (?# skip strings when function matching)
+				(?P>comment)                (?# skip comments when function matching)
+			)
+		]]></string>
+	</dict>
+</dict>
+</plist>

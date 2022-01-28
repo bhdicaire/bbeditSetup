@@ -1,0 +1,1 @@
+XML tag pair matching with sub-groups for tag name and content of tags.<([a-z]+)([^<]+)*(?:>(.*)|\s+\/>)

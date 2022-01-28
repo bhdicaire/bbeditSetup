@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<!-- 
+https://github.com/erikrose/rust-bbedit-plugin
+ -->
+
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMCommentLineDefault</key>
+	<string>// </string>
+	<key>BBLMCommentPrefixDefault</key>
+	<string>/* </string>
+	<key>BBLMCommentSuffixDefault</key>
+	<string> */</string>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<!-- http://static.rust-lang.org/doc/master/rust.html#keywords -->
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>as</string>
+		<string>break</string>
+		<string>do</string>
+		<string>else</string>
+		<string>enum</string>
+		<string>extern</string>
+		<string>false</string>
+		<string>fn</string>
+		<string>for</string>
+		<string>if</string>
+		<string>impl</string>
+		<string>in</string>
+		<string>let</string>
+		<string>loop</string>
+		<string>match</string>
+		<string>mod</string>
+		<string>mut</string>
+		<string>priv</string>
+		<string>pub</string>
+		<string>ref</string>
+		<string>return</string>
+		<string>self</string>
+		<string>static</string>
+		<string>struct</string>
+		<string>super</string>
+		<string>true</string>
+		<string>trait</string>
+		<string>type</string>
+		<string>unsafe</string>
+		<string>use</string>
+		<string>while</string>
+	</array>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<string>assert</string>
+		<string>bool</string>
+		<string>char</string>
+		<string>debug</string>
+		<string>env</string>
+		<string>error</string>
+		<string>externfn</string>
+		<string>f32</string>
+		<string>f64</string>
+		<string>fail</string>
+		<string>float</string>
+		<string>fmt</string>
+		<string>i16</string>
+		<string>i32</string>
+		<string>i64</string>
+		<string>i8</string>
+		<string>include</string>
+		<string>include_bin</string>
+		<string>include_str</string>
+		<string>info</string>
+		<string>int</string>
+		<string>proto</string>
+		<string>str</string>
+		<string>stringify</string>
+		<string>u16</string>
+		<string>u32</string>
+		<string>u64</string>
+		<string>u8</string>
+		<string>uint</string>
+		<string>vec</string>
+		<string>warn</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>rust</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Rust</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.rs</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.rc</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Skip Pattern</key>
+		<string></string>
+		<key>Identifier and Keyword Character Class</key>
+		<string>0-9A-Z_a-z</string>
+		<key>Prefix for Functions</key>
+		<string>fn</string>
+		<key>Open Parameter Lists</key>
+		<string>(</string>
+		<key>Close Parameter Lists</key>
+		<string>)</string>
+		<key>Open Statement Blocks</key>
+		<string>{</string>
+		<key>Close Statement Blocks</key>
+		<string>}</string>
+		<key>Open Block Comments</key>
+		<string>/*</string>
+		<key>Close Block Comments</key>
+		<string>*/</string>
+		<key>Open Line Comments</key>
+		<string>//</string>
+		<key>Open Strings 1</key>
+		<string>"</string>
+		<key>Close Strings 1</key>
+		<string>"</string>
+		<key>Escape Char in Strings 1</key>
+		<string>\</string>
+		<key>End-of-line Ends Strings 1</key>
+		<false/>
+	</dict>
+</dict>
+</plist>

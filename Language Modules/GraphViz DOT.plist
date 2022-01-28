@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+	BBEdit codeless language module for Graphviz dot files.
+	Olivier Gutknecht  <http://people.no-distance.net/ol/>
+	Version 1.0
+	18 Oct 2004
+
+	Released under CC0 1.0 Universal (CC0 1.0) - Public Domain Dedication:
+	<https://creativecommons.org/publicdomain/zero/1.0/>
+	
+	Requires BBEdit 8.0 or higher. To install, copy here:
+	
+		~/Library/Application Support/BBEdit/Language Modules/
+	
+	and relaunch BBEdit.
+-->
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>strict</string>
+		<string>graph</string>
+		<string>subgraph</string>
+		<string>digraph</string>
+		<string>node</string>
+		<string>edge</string>
+		<string>rankdir</string>
+
+		<string>Damping</string>
+		<string>URL</string>
+		<string>arrowhead</string>
+		<string>arrowsize</string>
+		<string>arrowtail</string>
+		<string>bb</string>
+		<string>bgcolor</string>
+		<string>bottomlabel</string>
+		<string>center</string>
+		<string>clusterrank</string>
+		<string>color</string>
+		<string>comment</string>
+		<string>compound</string>
+		<string>concentrate</string>
+		<string>constraint</string>
+		<string>decorate</string>
+		<string>defaultdist</string>
+		<string>dim</string>
+		<string>dir</string>
+		<string>distortion</string>
+		<string>dpi</string>
+		<string>epsilon</string>
+		<string>fillcolor</string>
+		<string>fixedsize</string>
+		<string>fontcolor</string>
+		<string>fontname</string>
+		<string>fontpath</string>
+		<string>fontsize</string>
+		<string>group</string>
+		<string>headURL</string>
+		<string>headclip</string>
+		<string>headhref</string>
+		<string>headlabel</string>
+		<string>headport</string>
+		<string>headtarget</string>
+		<string>headtooltip</string>
+		<string>height</string>
+		<string>href</string>
+		<string>label</string>
+		<string>labelangle</string>
+		<string>labeldistance</string>
+		<string>labelfloat</string>
+		<string>labelfontcolor</string>
+		<string>labelfontname</string>
+		<string>labelfontsize</string>
+		<string>labeljust</string>
+		<string>labelloc</string>
+		<string>layer</string>
+		<string>layers</string>
+		<string>layersep</string>
+		<string>len</string>
+		<string>lhead</string>
+		<string>lp</string>
+		<string>ltail</string>
+		<string>margin</string>
+		<string>maxiter</string>
+		<string>mclimit</string>
+		<string>mindist</string>
+		<string>minlen</string>
+		<string>mode</string>
+		<string>model</string>
+		<string>nodesep</string>
+		<string>nojustify</string>
+		<string>normalize</string>
+		<string>nslimit ,</string>
+		<string>nslimit1</string>
+		<string>ordering</string>
+		<string>orientation</string>
+		<string>orientation</string>
+		<string>outputorder</string>
+		<string>overlap</string>
+		<string>pack</string>
+		<string>packmode</string>
+		<string>page</string>
+		<string>pagedir</string>
+		<string>pencolor</string>
+		<string>peripheries</string>
+		<string>pin</string>
+		<string>pos</string>
+		<string>quantum</string>
+		<string>rank</string>
+		<string>rankdir</string>
+		<string>ranksep</string>
+		<string>ratio</string>
+		<string>rects</string>
+		<string>regular</string>
+		<string>remincross</string>
+		<string>resolution</string>
+		<string>root</string>
+		<string>rotate</string>
+		<string>samehead</string>
+		<string>sametail</string>
+		<string>samplepoints</string>
+		<string>searchsize</string>
+		<string>sep</string>
+		<string>shape</string>
+		<string>shapefile</string>
+		<string>showboxes</string>
+		<string>sides</string>
+		<string>size</string>
+		<string>skew</string>
+		<string>splines</string>
+		<string>start</string>
+		<string>style</string>
+		<string>stylesheet</string>
+		<string>tailURL</string>
+		<string>tailclip</string>
+		<string>tailhref</string>
+		<string>taillabel</string>
+		<string>tailport</string>
+		<string>tailtarget</string>
+		<string>tailtooltip</string>
+		<string>target</string>
+		<string>tooltip</string>
+		<string>toplabel</string>
+		<string>truecolor</string>
+		<string>vertices</string>
+		<string>viewport</string>
+		<string>voro_margin</string>
+		<string>weight</string>
+		<string>width</string>
+		<string>z</string>
+		<string>arrowType</string>
+		<string>clusterMode</string>
+		<string>color</string>
+		<string>colorList</string>
+		<string>dirType</string>
+		<string>escString</string>
+		<string>layerList</string>
+		<string>layerRange</string>
+		<string>lblString</string>
+		<string>outputMode</string>
+		<string>packMode</string>
+		<string>pagedir</string>
+		<string>point</string>
+		<string>pointf</string>
+		<string>pointfList</string>
+		<string>portPos</string>
+		<string>rankType</string>
+		<string>rankdir</string>
+		<string>rect</string>
+		<string>shape</string>
+		<string>splineType</string>
+		<string>startType</string>
+		<string>style</string>
+		<string>viewPort</string>
+		
+		<string>box</string>
+		<string>crow</string>
+		<string>dimaond</string>
+		<string>dot</string>
+		<string>inv</string>
+		<string>none</string>
+		<string>normal</string>
+		<string>tee</string>
+		<string>vee</string>
+		<string>o</string>
+		<string>r</string>
+		<string>l</string>
+		
+		<string>box</string>
+		<string>polygon</string>
+		<string>ellipse</string>
+		<string>circle</string>
+		<string>point</string>
+		<string>egg</string>
+		<string>triangle</string>
+		<string>plaintext</string>
+		<string>diamond</string>
+		<string>trapezium</string>
+		<string>parallelogram</string>
+		<string>house</string>
+		<string>pentagon</string>
+		<string>hexagon</string>
+		<string>septagon</string>
+		<string>octagon</string>
+		<string>doublecircle</string>
+		<string>doubleoctagon</string>
+		<string>tripleoctagon</string>
+		<string>invtriangle</string>
+		<string>invtrapezium</string>
+		<string>invhouse</string>
+		<string>Mdiamond</string>
+		<string>Msquare</string>
+		<string>Mcircle</string>
+		<string>rect</string>
+		<string>rectangle</string>
+		<string>none</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>dot</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Dot Graphviz File</string>
+	<key>BBLMScansFunctions</key>
+	<false/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.dot</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Close Block Comments</key>
+		<string>*/</string>
+		<key>Close Parameter Lists</key>
+		<string>]</string>
+		<key>Close Statement Blocks</key>
+		<string>}</string>
+		<key>Close Strings 1</key>
+		<string>'</string>
+		<key>Close Strings 2</key>
+		<string>"</string>
+		<key>End-of-line Ends Strings 1</key>
+		<true/>
+		<key>End-of-line Ends Strings 2</key>
+		<true/>
+		<key>Escape Char in Strings 1</key>
+		<string>\</string>
+		<key>Escape Char in Strings 2</key>
+		<string>\</string>
+		<key>Identifier and Keyword Characters</key>
+		<string>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz</string>
+		<key>Open Block Comments</key>
+		<string>/*</string>
+		<key>Open Line Comments</key>
+		<string>//</string>
+		<key>Open Parameter Lists</key>
+		<string>[</string>
+		<key>Open Statement Blocks</key>
+		<string>{</string>
+		<key>Open Strings 1</key>
+		<string>'</string>
+		<key>Open Strings 2</key>
+		<string>"</string>
+		<key>Prefix for Functions</key>
+		<string></string>
+		<key>Prefix for Procedures</key>
+		<string></string>
+		<key>Terminator for Prototypes 1</key>
+		<string>;</string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

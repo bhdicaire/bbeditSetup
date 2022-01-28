@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+	"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<!--  Z80 Assembler BBEdit Codeless Language Module -->
+		
+<dict>
+	<!-- You must identify the plist as a CLM: -->
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	
+	<!-- You must identify your language: -->
+	<key>BBLMLanguageDisplayName</key>
+		<string>Z80 Assembler</string>
+	<key>BBLMLanguageCode</key>
+		<string>Z80A</string>
+	
+	<!-- Not required, but there’s not much point to
+	     a language module if it doesn’t color syntax: -->
+	<key>BBLMColorsSyntax</key>
+		<true/>
+	
+	<key>BBLMIsCaseSensitive</key>
+		<false/>
+
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.zasm</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.asm</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.ss</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.lis</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.lst</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.opt</string>
+		</dict>
+	</array>
+
+	<!-- Specify some keywords. This isn’t required, either,
+             but it provides something to color: -->
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>A</string>
+		<string>adc</string>
+		<string>add</string>
+		<string>AF</string>
+		<string>AF'</string>
+		<string>and</string>
+		<string>B</string>
+		<string>BC</string>
+		<string>bit</string>
+		<string>C</string>
+		<string>call</string>
+		<string>ccf</string>
+		<string>cp</string>
+		<string>cpd</string>
+		<string>cpdr</string>
+		<string>cpir</string>
+		<string>cpi</string>
+		<string>cpl</string>
+		<string>D</string>
+		<string>daa</string>
+		<string>DE</string>
+		<string>dec</string>
+		<string>di</string>
+		<string>djnz</string>
+		<string>E</string>
+		<string>ei</string>
+		<string>ex</string>
+		<string>exx</string>
+		<string>H</string>
+		<string>halt</string>
+		<string>HL</string>
+		<string>I</string>
+		<string>im</string>
+		<string>im0</string>
+		<string>im1</string>
+		<string>im2</string>
+		<string>in</string>
+		<string>in0</string>
+		<string>inc</string>
+		<string>ind</string>
+		<string>indr</string>
+		<string>ini</string>
+		<string>inir</string>
+		<string>IX</string>
+		<string>IY</string>
+		<string>jp</string>
+		<string>jr</string>
+		<string>L</string>
+		<string>ld</string>
+		<string>ldd</string>
+		<string>lddr</string>
+		<string>ldi</string>
+		<string>ldir</string>
+		<string>neg</string>
+		<string>nop</string>
+		<string>M</string>
+		<string>mlt</string>
+		<string>NC</string>
+		<string>NZ</string>
+		<string>or</string>
+		<string>otdm</string>
+		<string>otdmr</string>
+		<string>otdr</string>
+		<string>otim</string>
+		<string>otimr</string>
+		<string>otir</string>
+		<string>out</string>
+		<string>out0</string>
+		<string>outd</string>
+		<string>outi</string>
+		<string>P</string>
+		<string>PC</string>
+		<string>PE</string>
+		<string>PO</string>
+		<string>pop</string>
+		<string>push</string>
+		<string>R</string>
+		<string>res</string>
+		<string>ret</string>
+		<string>reti</string>
+		<string>retn</string>
+		<string>rl</string>
+		<string>rla</string>
+		<string>rlc</string>
+		<string>rlca</string>
+		<string>rld</string>
+		<string>rr</string>
+		<string>rra</string>
+		<string>rrc</string>
+		<string>rrca</string>
+		<string>rrd</string>
+		<string>rst</string>
+		<string>sbc</string>
+		<string>scf</string>
+		<string>set</string>
+		<string>sla</string>
+		<string>slp</string>
+		<string>SP</string>
+		<string>sra</string>
+		<string>srl</string>
+		<string>sub</string>
+		<string>tst</string>
+		<string>tstio</string>
+		<string>xor</string>
+		<string>Z</string>
+		<!-- Pre-processor Directives -->
+		<string>#defcont</string>
+		<string>#define</string>
+		<string>#else</string>
+		<string>#end</string>
+		<string>#endif</string>
+		<string>#if</string>
+		<string>#ifdef</string>
+		<string>#ifndef</string>
+		<string>#include</string>
+		<string>#target</string>
+		<string>=</string>
+		<string>defb</string>
+		<string>defm</string>
+		<string>defs</string>
+		<string>defw</string>
+		<string>equ</string>
+		<string>org</string>
+	</array>
+	
+	<!-- Specify a comment-out string: -->
+	<key>BBLMCommentLineDefault</key>
+		<string>;</string>
+	
+	<!-- You must specify the character set for
+             keywords and identifiers. Substitute your own:  -->
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string>#%@&lt;&gt;_.A-Za-z0-9</string>
+		<key>Prefix for Functions</key>
+		<string></string>
+		<key>Prefix for Procedures</key>
+		<string></string>
+		<key>Open Parameter Lists</key>
+		<string></string>
+		<key>Close Parameter Lists</key>
+		<string></string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+		<key>Open Statement Blocks</key>
+		<string>{</string>
+		<key>Close Statement Blocks</key>
+		<string>}</string>
+		<key>Open Block Comments</key>
+		<string></string>
+		<key>Close Block Comments</key>
+		<string></string>
+		<key>Open Line Comments</key>
+		<string>;</string>
+		<key>Open Strings 1</key>
+		<string>&quot;</string>
+		<key>Close Strings 1</key>
+		<string>&quot;</string>
+		<key>Escape Char in Strings 1</key>
+		<string></string>
+		<key>End-of-line Ends Strings 1</key>
+		<true/>
+		<key>Open Strings 2</key>
+		<string></string>
+		<key>Close Strings 2</key>
+		<string></string>
+		<key>Escape Char in Strings 2</key>
+		<string></string>
+		<key>End-of-line Ends Strings 2</key>
+		<true/>
+	</dict> 
+</dict>
+</plist>

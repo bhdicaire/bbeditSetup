@@ -1,0 +1,95 @@
+---
+# ------------------------------------------------------------
+# Backup current environment AND packages configurations
+# Modified by: Benoît H. Dicaire
+# https://GitHub.com/bhdicaire/macSetup
+# ------------------------------------------------------------
+
+   - name: Setup marker 
+     file: path="~/.macSetup-Backup" state=touch owner="{{ localUser }}"
+
+   - include_vars: 
+      dir: "{{ playbookPath }}/roles/{{ item }}/vars"
+     with_items:
+      - common
+      - deployDev
+      - deployMac
+      - deployServer
+
+# ------------------------------------------------------------
+# Define specific environment variables
+# ------------------------------------------------------------
+
+#   - name: Generate target path
+#     set_fact:
+#      fullSecretBackupPath: "{{ secretBackupPath + secretConfigurationItems.0.dest }}"
+#   - set_fact:
+#      fullBackupDotFilesPath : "{{ backupPath + dotFilesItems.0.dest }}"
+
+
+   - name: Identify BashRC components
+     shell: "find ~ -maxdepth 1 -name '.bashrc_*'| grep -v original"
+     register: bashRCComponents
+     
+   - debug: 
+      var: bashRCComponents.stdout_lines
+
+# ------------------------------------------------------------
+# Update my local backup
+# ------------------------------------------------------------
+
+   - include: "{{ playbookPath }}/roles/common/tasks/createDirectory.yml"
+     vars:
+       wp_user: "tom"
+       dFrameworkCreateDirectory: "{{ item }}"
+       dFrameworkSSH_keys:
+         - "houba"
+         - "youppi"
+     with_items:
+       - "{{ spotlightPath}}"
+       - "{{ gitPath }}"
+       - "{{ macSetupLocalGIT }}"
+       - "{{ dotFilesLocalGIT }}"
+       - "{{ toolsPath }}"
+       - "{{ backupPath }}"
+       - "{{ secretBackupPath }}"
+       - "{{ backupPath + dotFilesItems.0.dest }}"
+       - "{{ secretBackupPath + secretConfigurationItems.0.dest }}"
+
+   - name: MacSetup — Copy current configuration files
+     include: "{{ playbookPath }}/roles/common/tasks/copyFiles.yml"
+     vars:
+       dFramework: "{{ item }}"
+     with_items:
+       - "{{ secretConfigurationItems }}"
+       - "{{ systemRelatedItems }}"
+       - "{{ dotFilesItems }}"
+
+
+#     synchronize:
+#       src: "{{ item.src }}{{ item.suffix }}"
+#       dest: "{{ item.dest }}"
+#       compress: no
+#       rsync_opts:
+#         - "-aW"
+#         - "--relative"
+#         - "--ignore-missing-args"
+#     with_items:
+#       - "{{ secretConfigurationItems }}"
+#       - "{{ systemRelatedItems }}"
+#       - "{{ dotFilesItems }}"
+
+
+
+
+ # ------------------------------------------------------------
+   - name: Remove marker 
+     file: path="~/.macSetup-Backup" state=absent owner="{{ localUser }}" 
+
+# ---------------------------------------------------------------------------------------
+# RSync options:
+#
+#  -a is for archive, which preserves ownership & permissions
+#  -W is for copying whole files only, without delta-xfer algorithm to reduce CPU load
+# --noCompress on local host, bandwith is not an issue
+# ---------------------------------------------------------------------------------------

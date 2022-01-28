@@ -1,0 +1,3 @@
+Matches URLs. Does not support URLs that contain IP addresses for simplicity. See IP address pearl for that regular expression, which you can include as an alternative to the server section of this regular expression.
+
+(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BackgroundColor</key>
+	<string>hsla(0.752, 0.132, 0.130, 1.000)</string>
+	<key>EditingWindowGuideContrast</key>
+	<string>4</string>
+	<key>HighlightInsertionPoint</key>
+	<string>1</string>
+	<key>InsertionPointLineHighlightColor</key>
+	<string>hsla(0.745, 0.136, 0.097, 1.000)</string>
+	<key>NumericConstantColor</key>
+	<string>hsla(0.434, 0.514, 0.597, 1.000)</string>
+	<key>PrimaryHighlightColor</key>
+	<string>hsla(0.606, 0.778, 0.365, 1.000)</string>
+	<key>SecondaryHighlightColor</key>
+	<string>hsla(0.604, 0.708, 0.233, 1.000)</string>
+	<key>UseCustomHighlightColor</key>
+	<string>1</string>
+	<key>com.barebones.bblm.code</key>
+	<string>hsla(0.744, 0.070, 0.786, 1.000)</string>
+	<key>com.barebones.bblm.comment</key>
+	<string>hsla(0.744, 0.137, 0.366, 1.000)</string>
+	<key>com.barebones.bblm.html.anchor</key>
+	<string>hsla(0.985, 0.873, 0.904, 1.000)</string>
+	<key>com.barebones.bblm.html.attribute-name</key>
+	<string>hsla(0.663, 0.591, 0.676, 1.000)</string>
+	<key>com.barebones.bblm.html.attribute-value</key>
+	<string>hsla(0.160, 0.454, 0.727, 1.000)</string>
+	<key>com.barebones.bblm.html.image</key>
+	<string>hsla(0.500, 1.000, 0.468, 1.000)</string>
+	<key>com.barebones.bblm.indexed-symbol</key>
+	<string>hsla(0.890, 1.000, 0.600, 1.000)</string>
+	<key>com.barebones.bblm.keyword</key>
+	<string>hsla(0.652, 0.507, 0.794, 1.000)</string>
+	<key>com.barebones.bblm.sgml-tag</key>
+	<string>hsla(0.604, 0.472, 0.811, 1.000)</string>
+	<key>com.barebones.bblm.string</key>
+	<string>hsla(0.160, 0.454, 0.727, 1.000)</string>
+	<key>com.barebones.bblm.xml-pi</key>
+	<string>hsla(0.338, 0.609, 0.652, 1.000)</string>
+</dict>
+</plist>

@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" 
+"http://www.apple.com/DTDs/PropertyList-1.1.dtd"> 
+<plist version="2.0"> 
+
+<!-- 2014.02.05 -->
+<!-- Authors: Ed deHaan and Scott Gerlach -->
+
+<!-- latest version available at  https://sourceforge.net/projects/textwranglersasplugin/  -->
+
+<!-- Originally made by Ed deHaan   version 1.1 	9/21/11 "http://www.gsb.stanford.edu/users/edehaan"
+    Permission granted for free usage and co-authorship - 2014.02.05
+	INSTALLATION: 	
+	1) Save this to a text file with the extension .plist
+	2) Move the file to Users>YOURACCOUNT>Library>Application Support>BBedit>Language Modules
+	3) Restart BBEdit - this should now be one of you available language modules			
+	
+	NOTE FOR OSX Lion: 	
+	Lion has hidden parts of the library as a default.  If you cannot seem to find the library, click the Go menu in the finder and hold down the Option key.  It should appear.
+	
+	MODIFICATIONS:	You can add other words to the "colored words" list just by mimicking the code in the first array below.
+					
+					
+		#################################################
+		#################################################
+		
+		Modified by Scott Gerlach @ Dartmouth College      2013.01.30
+				http://bioinformatics.dartmouth.edu/			
+			
+		Added many, many more keywords:
+				Original file as found: 		  17 total keywords
+				Gerlach's additions: 			339 total keywords
+				
+				Repaired BBLMLanguageSuffix to be *.sas
+				Repaired comment blocking section
+				Added % character to active keyword recognition
+					
+-->
+
+<dict>
+	<key>BBEditDocumentType</key> 
+	<string>CodelessLanguageModule</string> 
+	<key>BBLMColorsSyntax</key> <true/> 
+	<key>BBLMIsCaseSensitive</key> <false/> 
+
+	<key>BBLMKeywordList</key>
+	<array> 
+<string>_automatic_</string>
+<string>_all_</string>
+<string>_character_</string>
+<string>_n_</string>
+<string>_null_</string>
+<string>%do</string>
+<string>%else</string>
+<string>%end</string>
+<string>%if</string>
+<string>%input</string>
+<string>%label</string>
+<string>%let</string>
+<string>%local</string>
+<string>%put</string>
+<string>%then</string>
+<string>%to</string>
+<string>%until</string>
+<string>%while</string>
+<string>%window</string>
+<string>abort</string>
+<string>aceclus</string>
+<string>after</string>
+<string>alpha</string>
+<string>and</string>
+<string>anova</string>
+<string>append</string>
+<string>array</string>
+<string>as</string>
+<string>attrib</string>
+<string>block</string>
+<string>bquote</string>
+<string>break</string>
+<string>by</string>
+<string>calender</string>
+<string>calis</string>
+<string>call</string>
+<string>cancorr</string>
+<string>candisc</string>
+<string>cards</string>
+<string>cards4</string>
+<string>catalog</string>
+<string>catmod</string>
+<string>center</string>
+<string>chart</string>
+<string>cimport</string>
+<string>class</string>
+<string>clb</string>
+<string>cli</string>
+<string>clm</string>
+<string>close</string>
+<string>cluster</string>
+<string>column</string>
+<string>compare</string>
+<string>contents</string>
+<string>cookd</string>
+<string>copy</string>
+<string>corr</string>
+<string>corresp</string>
+<string>cport</string>
+<string>create</string>
+<string>data</string>
+<string>datalines</string>
+<string>datasets</string>
+<string>define</string>
+<string>delete</string>
+<string>dffits</string>
+<string>dim</string>
+<string>discrim</string>
+<string>display</string>
+<string>do</string>
+<string>drop</string>
+<string>else</string>
+<string>elseif</string>
+<string>end</string>
+<string>endsas</string>
+<string>eof</string>
+<string>error</string>
+<string>eval</string>
+<string>factor</string>
+<string>fastclus</string>
+<string>file</string>
+<string>filename</string>
+<string>first.</string>
+<string>firstobs</string>
+<string>fmtlib</string>
+<string>fmtsearch</string>
+<string>footer</string>
+<string>footnote</string>
+<string>footnote1</string>
+<string>footnote2</string>
+<string>footnote3</string>
+<string>footnote4</string>
+<string>footnote5</string>
+<string>footnote6</string>
+<string>footnote7</string>
+<string>footnote8</string>
+<string>footnote9</string>
+<string>format</string>
+<string>formchar</string>
+<string>forms</string>
+<string>freq</string>
+<string>from</string>
+<string>genmod</string>
+<string>glm</string>
+<string>glmmod</string>
+<string>global</string>
+<string>go</string>
+<string>goto</string>
+<string>gplot</string>
+<string>group</string>
+<string>h</string>
+<string>hbar</string>
+<string>heading</string>
+<string>headline</string>
+<string>headskip</string>
+<string>html</string>
+<string>i</string>
+<string>id</string>
+<string>if</string>
+<string>in</string>
+<string>inbreed</string>
+<string>include</string>
+<string>infile</string>
+<string>informat</string>
+<string>input</string>
+<string>int</string>
+<string>intervals</string>
+<string>intnx</string>
+<string>into</string>
+<string>keep</string>
+<string>keydef</string>
+<string>label</string>
+<string>lag</string>
+<string>last.</string>
+<string>lastobs</string>
+<string>lattice</string>
+<string>lcl</string>
+<string>lclm</string>
+<string>left</string>
+<string>length</string>
+<string>lengthn</string>
+<string>let</string>
+<string>libname</string>
+<string>library</string>
+<string>lifereg</string>
+<string>lifetest</string>
+<string>line</string>
+<string>link</string>
+<string>list</string>
+<string>listing</string>
+<string>local</string>
+<string>logistic</string>
+<string>lostcard</string>
+<string>lowcase</string>
+<string>lrecl</string>
+<string>ls</string>
+<string>lsmeans</string>
+<string>macro</string>
+<string>max</string>
+<string>maxdec</string>
+<string>mds</string>
+<string>mdy</string>
+<string>mean</string>
+<string>means</string>
+<string>median</string>
+<string>mend</string>
+<string>merge</string>
+<string>method</string>
+<string>min</string>
+<string>missing</string>
+<string>missover</string>
+<string>mixed</string>
+<string>mlogic</string>
+<string>modeclus</string>
+<string>model</string>
+<string>mprint</string>
+<string>msglevel</string>
+<string>mtrace</string>
+<string>multtest</string>
+<string>n</string>
+<string>nested</string>
+<string>new</string>
+<string>nlin</string>
+<string>nmiss</string>
+<string>nobs</string>
+<string>nocum</string>
+<string>noint</string>
+<string>nomlogic</string>
+<string>nomprint</string>
+<string>nomtrace</string>
+<string>nonumber</string>
+<string>noobs</string>
+<string>noovp</string>
+<string>noprint</string>
+<string>nosymbolgen</string>
+<string>not</string>
+<string>note</string>
+<string>npar1way</string>
+<string>null</string>
+<string>obs</string>
+<string>ods</string>
+<string>off</string>
+<string>on</string>
+<string>option</string>
+<string>options</string>
+<string>or</string>
+<string>order</string>
+<string>orthoreg</string>
+<string>otherwise</string>
+<string>out</string>
+<string>output</string>
+<string>outsurv</string>
+<string>over</string>
+<string>p</string>
+<string>pad</string>
+<string>pageby</string>
+<string>pcorr1</string>
+<string>pcorr2</string>
+<string>phreg</string>
+<string>pie</string>
+<string>plan</string>
+<string>plot</string>
+<string>plots</string>
+<string>pmenu</string>
+<string>predicted</string>
+<string>press</string>
+<string>princomp</string>
+<string>prinqual</string>
+<string>print</string>
+<string>printto</string>
+<string>proc</string>
+<string>propcase</string>
+<string>ps</string>
+<string>put</string>
+<string>r</string>
+<string>rank</string>
+<string>ranks</string>
+<string>ranuni</string>
+<string>reg</string>
+<string>rename</string>
+<string>repeated</string>
+<string>report</string>
+<string>residual</string>
+<string>restrict</string>
+<string>retain</string>
+<string>return</string>
+<string>round</string>
+<string>rsreg</string>
+<string>rstudent</string>
+<string>run</string>
+<string>same</string>
+<string>sampsize</string>
+<string>scan</string>
+<string>score</string>
+<string>select</string>
+<string>selection</string>
+<string>set</string>
+<string>skip</string>
+<string>sle</string>
+<string>sls</string>
+<string>sort</string>
+<string>source2</string>
+<string>spedis</string>
+<string>spell</string>
+<string>split</string>
+<string>sql</string>
+<string>srs</string>
+<string>ss1</string>
+<string>ss2</string>
+<string>standard</string>
+<string>star</string>
+<string>stata</string>
+<string>stdi</string>
+<string>stdp</string>
+<string>stdr</string>
+<string>stepdisc</string>
+<string>stop</string>
+<string>str</string>
+<string>strata</string>
+<string>student</string>
+<string>substr</string>
+<string>sum</string>
+<string>sumby</string>
+<string>summary</string>
+<string>surveyselect</string>
+<string>symbolgen</string>
+<string>symget</string>
+<string>symput</string>
+<string>symputx</string>
+<string>syscall</string>
+<string>sysexec</string>
+<string>sysrput</string>
+<string>table</string>
+<string>tables</string>
+<string>tabulate</string>
+<string>template</string>
+<string>test</string>
+<string>then</string>
+<string>time</string>
+<string>timeplot</string>
+<string>title</string>
+<string>title1</string>
+<string>title2</string>
+<string>title3</string>
+<string>title4</string>
+<string>title5</string>
+<string>title6</string>
+<string>title7</string>
+<string>title8</string>
+<string>title9</string>
+<string>to</string>
+<string>toascii</string>
+<string>trace</string>
+<string>transpose</string>
+<string>transreg</string>
+<string>tree</string>
+<string>trim</string>
+<string>ttest</string>
+<string>ucl</string>
+<string>uclm</string>
+<string>uniform</string>
+<string>univariate</string>
+<string>until</string>
+<string>upcase</string>
+<string>update</string>
+<string>v5tov6</string>
+<string>value</string>
+<string>var</string>
+<string>varclus</string>
+<string>varvarcomp</string>
+<string>vbar</string>
+<string>when</string>
+<string>where</string>
+<string>while</string>
+<string>width</string>
+<string>window</string>
+<string>work</string>
+<string>xpx</string>
+<string>yrdif</string>
+	</array> 
+
+	<key>BBLMLanguageCode</key> 
+	<string>SASL</string> 
+	<key>BBLMLanguageDisplayName</key> 
+	<string>SAS</string> 
+	<key>BBLMScansFunctions</key> <true/> 
+
+	<key>BBLMSuffixMap</key> 
+	<array>
+		<dict> <key>BBLMLanguageSuffix</key> 
+			<string>.sas</string>
+		</dict> 
+	</array>
+
+	<key>BBLMCanSpellCheckCodeRuns</key><true/> 
+
+	<key>Language Features</key> 
+	<dict>
+		<key>Close Block Comments</key> 
+		<string>;</string> 
+		<key>Close Parameter Lists</key> 
+		<string></string>
+		<key>Close Statement Blocks</key> 
+		<string></string> 
+		<key>Close Strings 1</key> 
+		<string>'</string>
+		<key>Close Strings 2</key> 
+		<string>"</string> 
+		<key>End-of-line Ends Strings 1</key>
+		<string>;</string>
+		<key>End-of-line Ends Strings 2</key> <false/> 
+		<key>Escape Char in Strings 1</key> 
+		<string></string> 
+		<key>Escape Char in Strings 2</key> 
+		<string></string> 
+		<key>Identifier and Keyword Characters</key> 
+		<string>123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz.%</string> 
+		<key>Open Block Comments</key> 
+		<string>*</string> 
+		<key>Open Line Comments</key> 
+		<string></string> 
+		<key>Open Parameter Lists</key> 
+		<string></string> 
+		<key>Open Statement Blocks</key> 
+		<string></string> 
+		<key>Open Strings 1</key> 
+		<string>'</string> 
+		<key>Open Strings 2</key> 
+		<string>"</string> 
+		<key>Prefix for Functions</key> 
+		<string></string> 
+		<key>Prefix for Procedures</key> 
+		<string></string> 
+		<key>Terminator for Prototypes 1</key> 
+		<string></string> 
+		<key>Terminator for Prototypes 2</key> 
+		<string></string>
+	</dict> 
+</dict>
+</plist>

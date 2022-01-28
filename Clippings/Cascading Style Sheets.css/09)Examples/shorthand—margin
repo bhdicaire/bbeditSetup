@@ -1,0 +1,4 @@
+﻿margin : <#all#>
+margin : <#top/bottom#> <#right/left#>
+margin : <#top#> <#right/left#> <#bottom#>
+margin : <#top#> <#right#> <#bottom#> <#left#>

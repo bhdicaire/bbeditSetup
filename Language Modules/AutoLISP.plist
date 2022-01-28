@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>-</string>
+		<string>*</string>
+		<string>/</string>
+		<string>+</string>
+		<string>&lt;</string>
+		<string>&lt;=</string>
+		<string>=</string>
+		<string>/=</string>
+		<string>&gt;</string>
+		<string>&gt;=</string>
+		<string>~</string>
+		<string>1+</string>
+		<string>1-</string>
+		<string>abs</string>
+		<string>acad_colordlg</string>
+		<string>acad_strlsort</string>
+		<string>action_tile</string>
+		<string>add_list</string>
+		<string>ads</string>
+		<string>alert</string>
+		<string>alloc</string>
+		<string>and</string>
+		<string>angle</string>
+		<string>angtof</string>
+		<string>angtos</string>
+		<string>append</string>
+		<string>apply</string>
+		<string>arx</string>
+		<string>arxload</string>
+		<string>arxunload</string>
+		<string>ascii</string>
+		<string>assoc</string>
+		<string>atan</string>
+		<string>atof</string>
+		<string>atoi</string>
+		<string>atom</string>
+		<string>atoms-family</string>
+		<string>autoarxload</string>
+		<string>autoload</string>
+		<string>autoxload</string>
+		<string>boole</string>
+		<string>boundp</string>
+		<string>car</string>
+		<string>cdr</string>
+		<string>chr</string>
+		<string>client_data_tile</string>
+		<string>close</string>
+		<string>command</string>
+		<string>cond</string>
+		<string>cons</string>
+		<string>cos</string>
+		<string>cvunit</string>
+		<string>defun</string>
+		<string>dictadd</string>
+		<string>dictnext</string>
+		<string>dictremove</string>
+		<string>dictrename</string>
+		<string>dictsearch</string>
+		<string>dimx_tile</string>
+		<string>dimy_tile</string>
+		<string>distance</string>
+		<string>distof</string>
+		<string>done_dialog</string>
+		<string>end_image</string>
+		<string>end_list</string>
+		<string>entdel</string>
+		<string>entget</string>
+		<string>entlast</string>
+		<string>entmake</string>
+		<string>entmakex</string>
+		<string>entmod</string>
+		<string>entnext</string>
+		<string>entsel</string>
+		<string>entupd</string>
+		<string>eq</string>
+		<string>equal</string>
+		<string>*error*</string>
+		<string>eval</string>
+		<string>exit</string>
+		<string>exp</string>
+		<string>expand</string>
+		<string>expt</string>
+		<string>fill_image</string>
+		<string>findfile</string>
+		<string>fix</string>
+		<string>float</string>
+		<string>foreach</string>
+		<string>gc</string>
+		<string>gcd</string>
+		<string>get_attr</string>
+		<string>get_tile</string>
+		<string>getangle</string>
+		<string>getcfg</string>
+		<string>getcname</string>
+		<string>getcorner</string>
+		<string>getdist</string>
+		<string>getenv</string>
+		<string>getfiled</string>
+		<string>getint</string>
+		<string>getkword</string>
+		<string>getorient</string>
+		<string>getpoint</string>
+		<string>getreal</string>
+		<string>getstring</string>
+		<string>getvar</string>
+		<string>graphscr</string>
+		<string>grclear</string>
+		<string>grdraw</string>
+		<string>grread</string>
+		<string>grtext</string>
+		<string>grvecs</string>
+		<string>handent</string>
+		<string>help</string>
+		<string>if</string>
+		<string>initget</string>
+		<string>inters</string>
+		<string>itoa</string>
+		<string>lambda</string>
+		<string>last</string>
+		<string>length</string>
+		<string>list</string>
+		<string>listp</string>
+		<string>load_dialog</string>
+		<string>load</string>
+		<string>log</string>
+		<string>logand</string>
+		<string>logior</string>
+		<string>lsh</string>
+		<string>mapcar</string>
+		<string>max</string>
+		<string>mem</string>
+		<string>member</string>
+		<string>menucmd</string>
+		<string>menugroup</string>
+		<string>min</string>
+		<string>minusp</string>
+		<string>mode_tile</string>
+		<string>namedobjdict</string>
+		<string>nentsel</string>
+		<string>nentselp</string>
+		<string>new_dialog</string>
+		<string>nil</string>
+		<string>not</string>
+		<string>nth</string>
+		<string>null</string>
+		<string>numberp</string>
+		<string>open</string>
+		<string>or</string>
+		<string>osnap</string>
+		<string>polar</string>
+		<string>prin1</string>
+		<string>princ</string>
+		<string>print</string>
+		<string>progn</string>
+		<string>prompt</string>
+		<string>quit</string>
+		<string>quote</string>
+		<string>read</string>
+		<string>read-char</string>
+		<string>read-line</string>
+		<string>redraw</string>
+		<string>regapp</string>
+		<string>rem</string>
+		<string>repeat</string>
+		<string>reverse</string>
+		<string>rtos</string>
+		<string>set</string>
+		<string>set_tile</string>
+		<string>setcfg</string>
+		<string>setfunhelp</string>
+		<string>setq</string>
+		<string>setvar</string>
+		<string>sin</string>
+		<string>setview</string>
+		<string>slide_image</string>
+		<string>snvalid</string>
+		<string>sqrt</string>
+		<string>ssadd</string>
+		<string>ssdel</string>
+		<string>ssget</string>
+		<string>ssgetfirst</string>
+		<string>sslength</string>
+		<string>ssmemb</string>
+		<string>ssname</string>
+		<string>ssnamex</string>
+		<string>sssetfirst</string>
+		<string>startapp</string>
+		<string>start_dialog</string>
+		<string>start_image</string>
+		<string>start_list</string>
+		<string>strcase</string>
+		<string>strcat</string>
+		<string>strlen</string>
+		<string>subst</string>
+		<string>substr</string>
+		<string>T</string>
+		<string>tablet</string>
+		<string>tblnext</string>
+		<string>tblobjname</string>
+		<string>tblsearch</string>
+		<string>term_dialog</string>
+		<string>terpri</string>
+		<string>textbox</string>
+		<string>textpage</string>
+		<string>textscr</string>
+		<string>trace</string>
+		<string>trans</string>
+		<string>type</string>
+		<string>unload_dialog</string>
+		<string>untrace</string>
+		<string>vector_image</string>
+		<string>ver</string>
+		<string>vports</string>
+		<string>wcmatch</string>
+		<string>while</string>
+		<string>write-char</string>
+		<string>write-line</string>
+		<string>xdroom</string>
+		<string>xdsize</string>
+		<string>xload</string>
+		<string>xunload</string>
+		<string>zerop</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>lsp </string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>AutoLISP</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.lsp</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Close Block Comments</key>
+		<string>|;</string>
+		<key>Close Parameter Lists</key>
+		<string></string>
+		<key>Close Statement Blocks</key>
+		<string>)</string>
+		<key>Close Strings 1</key>
+		<string>"</string>
+		<key>Close Strings 2</key>
+		<string></string>
+		<key>End-of-line Ends Strings 1</key>
+		<false/>
+		<key>End-of-line Ends Strings 2</key>
+		<false/>
+		<key>Escape Char in Strings 1</key>
+		<string></string>
+		<key>Escape Char in Strings 2</key>
+		<string></string>
+		<key>Identifier and Keyword Characters</key>
+		<string>!$%&amp;*+-./:&lt;=&gt;?@^_~0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz</string>
+		<key>Open Block Comments</key>
+		<string>;|</string>
+		<key>Open Line Comments</key>
+		<string>; </string>
+		<key>Open Parameter Lists</key>
+		<string></string>
+		<key>Open Statement Blocks</key>
+		<string>(</string>
+		<key>Open Strings 1</key>
+		<string>"</string>
+		<key>Open Strings 2</key>
+		<string></string>
+		<key>Prefix for Functions</key>
+		<string></string>
+		<key>Prefix for Procedures</key>
+		<string>lambda</string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

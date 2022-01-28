@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   TXL Codeless Language Module for BBEdit/TextWrangler
+   Andy Maloney <asmaloney@gmail.com>
+-->
+<plist version="1.0">
+<dict>
+   <key>BBEditDocumentType</key>
+   <string>CodelessLanguageModule</string>
+
+   <key>BBLMLanguageCode</key>
+   <string>TXL&#160;</string>
+
+   <key>BBLMLanguageDisplayName</key>
+   <string>TXL</string>
+
+   <key>BBLMSuffixMap</key>
+   <array>
+      <dict>
+         <key>BBLMLanguageSuffix</key>
+         <string>.txl</string>
+      </dict>
+      <dict>
+         <key>BBLMLanguageSuffix</key>
+         <string>.grm</string>
+      </dict>
+   </array>
+
+   <key>BBLMColorsSyntax</key>
+   <true/>
+
+   <key>BBLMScansFunctions</key>
+   <true/>
+
+   <key>BBLMKeywordList</key>
+   <array>
+      <string>all</string>
+      <string>assert</string>
+      <string>attr</string>
+      <string>by</string>
+      <string>comments</string>
+      <string>compounds</string>
+      <string>construct</string>
+      <string>deconstruct</string>
+      <string>define</string>
+      <string>each</string>
+      <string>end</string>
+      <string>export</string>
+      <string>external</string>
+      <string>function</string>
+      <string>import</string>
+      <string>include</string>
+      <string>keys</string>
+      <string>list</string>
+      <string>match</string>
+      <string>not</string>
+      <string>opt</string>
+      <string>push</string>
+      <string>pop</string>
+      <string>redefine</string>
+      <string>repeat</string>
+      <string>replace</string>
+      <string>rule</string>
+      <string>see</string>
+      <string>skipping</string>
+      <string>tokens</string>
+      <string>where</string>
+   </array>
+
+   <key>BBLMPredefinedNameList</key>
+   <array>
+      <string>#pragma</string>
+      <string>#endif</string>
+      <string>#else</string>
+      <string>#define</string>
+      <string>#undef</string>
+      <string>#undefine</string>
+      <string>#ifn</string>
+      <string>#elifn</string>
+      <string>#elifdef</string>
+      <string>#elifndef</string>
+      <string>#ifndef</string>
+      <string>#ifdef</string>
+      <string>#if</string>
+      <string>#end</string>
+   </array>
+
+   <key>Language Features</key>
+   <dict>
+      <key>Comment Pattern</key>
+      <string><![CDATA[
+         (?x:
+            (?s:\s*%([\(\{]).*?[\)\}]%) | (?# Block comments)
+            (\s*%.*?$)                    (?# Line comments)
+         )
+      ]]></string>
+
+      <key>String Pattern</key>
+      <string><![CDATA[
+         (?x:
+            ("(\\"|[^"\r]|\\\r)*") | (?# Double-quote)
+            ('[^\s\[\]]*)            (?# Single-quote)
+         )
+      ]]></string>
+
+      <key>Identifier and Keyword Character Class</key>
+      <string>A-Za-z0-9_#</string>
+
+      <key>Function Pattern</key>
+      <string><![CDATA[
+         (?x:
+            (?P<function> (?P<type>(rule|function|define))\s+
+               (?P<function_name> [a-zA-Z0-9_]+)
+               (?s:.+?)
+               \s*end\s+(?P=type)
+            )
+         )
+      ]]></string>
+   </dict>
+</dict>
+</plist>

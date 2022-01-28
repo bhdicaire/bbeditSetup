@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<!--
+	Sinclair QL SuperBASIC Language Module for BBEdit 8.5+ or TextWrangler 2.2+
+	Jean-Yves Rouffiac, 03 March 2014, www.shimeril.com/public
+
+	v2.0.2 2021-08-04
+
+	The keyword list is derived from various sources and may not be correct/complete - if you find any errors or omissions, please contact "Sparrowhawk" on the QL forums at:
+
+		http://www.qlforum.co.uk
+
+	This file contains keywords for SuperBASIC, Toolkit 2 and the Pointer/Hotkey system by default
+
+	Other toolkits and emulator-specific keywords are also available but are disabled by default out as users are unlikely to have more than
+	a few toolkits installed at any one time
+
+	To enable a toolkit, simply remove the leading XML comment line and training XML comment line from the section you want to enable
+
+	WARNING: if you uncomment sections, you may get namespace clashes (keywords being redefined) - if BBEdit/TextWrangler does not colour-code
+	your SuperBASIC, seek out duplicates and comment all but one set out
+
+INSTALLATION
+    NEWER VERSIONS OF BBEdit
+    1. Open BBEDit
+    2. Click on The BBedit app menu > Folders > Language Modules
+    3. Copy this file into that folder
+
+
+    OLDER VERSIONS OF BBEDIT:
+	A. non-Mac App Store versions:
+		Copy this file into either
+		~/Library/Application Support/TextWrangler/Language Modules/     for TextWrangler, or
+		~/Library/Application Support/BBEdit/Language Modules/           for BBEdit
+
+	B. Mac App Store versions (thanks to Mr_Navigator from qlforum.co.uk):
+		Due to sandboxing restrictions, the MAS versions of BBEdit and TextWrangler have to hold their configurations within the app package.
+		- Copy the plist in Finder
+		- Go to the Applications folder and right click on the TextWrangler or BBEdit app
+		- Select Show Package Contents
+		- Navigate to contents -> Language Modules
+		- Paste the plist file into this folder (i.e. Applications/TextWrangler.app/Contents/Language\ Modules/)
+
+
+	CREDITS: I got the list of Keywords from various sources including:
+		Dilwyn Jone's superb QL site: http://www.dilwyn.me.uk/
+		Marcos Cruz's VIM file: http://programandala.net/en.program.superbasic_vim_syntax_file
+		Various books, eg the QL manual, the Jan Jones SuperBASIC book (QUANTA reprint) etc
+
+	BBEdit and TextWrangler cannot currently identify QL files based on the underscore (e.g. myprog_bas)
+	You can do one of three things:
+	    1. temporarily add .sbas or .bas to the end of the file
+	    2. Add the following instruction as the FIRST line of your code:
+
+                    10  REMark -*- mode: SuperBASIC -*-
+
+			(Thanks to Patrick at bareBones for the tip)
+
+        3. Add this block to the END of your code:
+                   100  REMark Local Variables:
+                   110  REMark mode: SuperBASIC
+                   120  REMark End:
+
+        Obviously change the line numbers to suit your program
+
+-->
+
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<!-- SuperBASIC -->
+		<string>ABS</string>
+		<string>ACOS</string>
+		<string>ACOT</string>
+		<string>ADATE</string>
+		<string>AND</string>
+		<string>ARC</string>
+		<string>ARC_R</string>
+		<string>ASIN</string>
+		<string>AT</string>
+		<string>ATAN</string>
+		<string>AUTO</string>
+		<string>BAUD</string>
+		<string>BEEP</string>
+		<string>BEEPING</string>
+		<string>BLOCK</string>
+		<string>BORDER</string>
+		<string>CALL</string>
+		<string>CHR$</string>
+		<string>CIRCLE</string>
+		<string>CIRCLE_R</string>
+		<string>CLEAR</string>
+		<string>CLOSE</string>
+		<string>CLS</string>
+		<string>CODE</string>
+		<string>CONTINUE</string>
+		<string>COPY</string>
+		<string>COPY_N</string>
+		<string>COS</string>
+		<string>COT</string>
+		<string>CSIZE</string>
+		<string>CURSOR</string>
+		<string>DATA</string>
+		<string>DATE</string>
+		<string>DATE$</string>
+		<string>DAY$</string>
+		<string>DEFine</string>
+		<string>PROCedure</string>
+		<string>DEG</string>
+		<string>DELETE</string>
+		<string>DIM</string>
+		<string>DIMN</string>
+		<string>DIR</string>
+		<string>DIV</string>
+		<string>DLINE</string>
+		<string>EDIT</string>
+		<string>EOF</string>
+		<string>EOR</string>
+		<string>END</string>
+		<string>ERLIN</string>
+		<string>ERRNUM</string>
+		<string>ERR_NC</string>
+		<string>ERR_NJ</string>
+		<string>ERR_NF</string>
+		<string>ERR_OM</string>
+		<string>ERR_OR</string>
+		<string>ERR_BO</string>
+		<string>ERR_NO</string>
+		<string>ERR_EX</string>
+		<string>ERR_IU</string>
+		<string>ERR_EF</string>
+		<string>ERR_DF</string>
+		<string>ERR_BN</string>
+		<string>ERR_TE</string>
+		<string>ERR_FF</string>
+		<string>ERR_BP</string>
+		<string>ERR_FE</string>
+		<string>ERR_XP</string>
+		<string>ERR_OV</string>
+		<string>ERR_NI</string>
+		<string>ERR_RO</string>
+		<string>ERR_BL</string>
+		<string>ERROR</string>
+		<string>EXEC</string>
+		<string>EXEC_W</string>
+		<string>EXIT</string>
+		<string>EXP</string>
+		<string>FILL</string>
+		<string>FILL$</string>
+		<string>FOR</string>
+		<string>FuNction</string>
+		<string>FORMAT</string>
+		<string>GOSUB</string>
+		<string>GOTO</string>
+		<string>IF</string>
+		<string>THEN</string>
+		<string>ELSE</string>
+		<string>INK</string>
+		<string>INKEY$</string>
+		<string>INPUT</string>
+		<string>INSTR</string>
+		<string>INT</string>
+		<string>KEYROW</string>
+		<string>LBYTES</string>
+		<string>LEN</string>
+		<string>LET</string>
+		<string>LINE</string>
+		<string>LINE_R</string>
+		<string>LIST</string>
+		<string>LOAD</string>
+		<string>LN</string>
+		<string>LOCal</string>
+		<string>LRUN</string>
+		<string>MERGE</string>
+		<string>MOD</string>
+		<string>MODE</string>
+		<string>MOVE</string>
+		<string>MRUN</string>
+		<string>NET</string>
+		<string>NEW</string>
+		<string>NEXT</string>
+		<string>NOT</string>
+		<string>ON</string>
+		<string>OPEN</string>
+		<string>OPEN_IN</string>
+		<string>OPEN_NEW</string>
+		<string>OR</string>
+		<string>OVER</string>
+		<string>PAN</string>
+		<string>PAPER</string>
+		<string>PAUSE</string>
+		<string>PEEK</string>
+		<string>PEEK_W</string>
+		<string>PEEK_L</string>
+		<string>PENUP</string>
+		<string>PENDOWN</string>
+		<string>POINT</string>
+		<string>POINT_R</string>
+		<string>POKE</string>
+		<string>POKE_W</string>
+		<string>POKE_L</string>
+		<string>PRINT</string>
+		<string>RAD</string>
+		<string>RENDOMISE</string>
+		<string>RCOL</string>
+		<string>READ</string>
+		<string>REMark</string>
+		<string>REMAINDER</string>
+		<string>RENUM</string>
+		<string>REPeat</string>
+		<string>RESPR</string>
+		<string>RESTORE</string>
+		<string>RETurn</string>
+		<string>RETRY</string>
+		<string>RND</string>
+		<string>RUN</string>
+		<string>SAVE</string>
+		<string>SBYTES</string>
+		<string>SEXEC</string>
+		<string>SCALE</string>
+		<string>SCROLL</string>
+		<string>SDATE</string>
+		<string>SELect</string>
+		<string>SIN</string>
+		<string>SQRT</string>
+		<string>STEP</string>
+		<string>STOP</string>
+		<string>STRIP</string>
+		<string>TAN</string>
+		<string>TO</string>
+		<string>TRA</string>
+		<string>TURN</string>
+		<string>TURNTO</string>
+		<string>UNDER</string>
+		<string>VER$</string>
+		<string>WIDTH</string>
+		<string>WINDOW</string>
+		<string>WHEN</string>
+		<string>WDIR</string>
+		<string>WDEL</string>
+
+
+		<!-- SMSQ/E and SBASIC keywords -->
+		<string>COLOUR_NATIVE</string>
+		<string>COLOUR_PAL</string>
+		<string>COLOUR_QL</string>
+		<string>COLOUR_24</string>
+		<string>BGCOLOUR_QL</string>
+		<string>BGCOLOUR_24</string>
+		<string>BGIMAGE</string>
+		<string>CHAR_DEF</string>
+		<string>CHK_HEAP</string>
+		<string>DAY%</string>
+		<string>MONTH%</string>
+		<string>YEAR%</string>
+		<string>DEV_NEXT$</string>
+		<string>DEV_USEN</string>
+		<string>DISP_BLANK</string>
+		<string>DISP_COLOUR</string>
+		<string>DISP_INVERSE</string>
+		<string>DISP_RATE</string>
+		<string>DISP_SIZE</string>
+		<string>DISP_TYPE</string>
+		<string>DMEDIUM_NAME$</string>
+		<string>DMEDIUM_DRIVE$</string>
+		<string>DMEDIUM_RDONLY</string>
+		<string>DMEDIUM_REMOVE</string>
+		<string>DMEDIUM_DENSITY</string>
+		<string>DMEDIUM_FORMAT</string>
+		<string>DMEDIUM_TYPE</string>
+		<string>DMEDIUM_TOTAL</string>
+		<string>DMEDIUM_FREE</string>
+		<string>ET</string>
+		<string>HGET</string>
+		<string>HPUT</string>
+		<string>LGET</string>
+		<string>LPUT</string>
+		<string>INSTR_CASE</string>
+		<string>MACHINE</string>
+		<string>MOUSE_SPEED</string>
+		<string>MOUSE_STUFF</string>
+		<string>OUTLN</string>
+		<string>PALETTE_8</string>
+		<string>PALETTE_QL</string>
+		<string>PAR_BUFF</string>
+		<string>PAR_CLEAR</string>
+		<string>PAR_ABORT</string>
+		<string>PAR_PULSE</string>
+		<string>PAR_WAIT</string>
+		<string>PEEK$</string>
+		<string>POKE$</string>
+		<string>PROCESSOR</string>
+		<string>PRT_BUFF</string>
+		<string>PRT_CLEAR</string>
+		<string>PRT_ABORT</string>
+		<string>PRT_USE$</string>
+		<string>RESET</string>
+		<string>SCR_XLIM</string>
+		<string>SCR_YLIM</string>
+		<string>SCR_BASE</string>
+		<string>SCR_LLEN</string>
+		<string>SEND_EVENT</string>
+		<string>SER_BUFF</string>
+		<string>SER_CDEOF</string>
+		<string>SER_CLEAR</string>
+		<string>SER_ABORT</string>
+		<string>SER_FLOW</string>
+		<string>SER_SETPORT</string>
+		<string>SCR_GETPORT$</string>
+		<string>SER_PAUSE</string>
+		<string>SER_ROOM</string>
+		<string>UPUT</string>
+		<string>WAIT_EVENT</string>
+		<string>WGET</string>
+		<string>WPUT</string>
+		<string>WIN_DRIVE</string>
+		<string>WIN_DRIVE$</string>
+		<string>WIN_FORMAT</string>
+		<string>WIN_WRMV</string>
+		<string>WIN_SLUG</string>
+		<string>WIN_START</string>
+		<string>WIN_STOPW</string>
+		<string>WIN_WP</string>
+
+
+		<!-- TK2 Keywords -->
+		<string>AJOB</string>
+		<string>ALARM</string>
+		<string>ALCHP</string>
+		<string>ALTKEY</string>
+		<string>BGET</string>
+		<string>BIN</string>
+		<string>BIN$</string>
+		<string>BPUT</string>
+		<string>CALL</string>
+		<string>CDEC$</string>
+		<string>CHAR_USE</string>
+		<string>CHAR_INC</string>
+		<string>CLCHP</string>
+		<string>CLEAR</string>
+		<string>CLOCK</string>
+		<string>CLOSE</string>
+		<string>CONTINUE</string>
+		<string>COPY_O</string>
+		<string>COPY_H</string>
+		<string>COPY_N</string>
+		<string>CURSEN</string>
+		<string>CURDIS</string>
+		<string>DATA_USE</string>
+		<string>DATAD$</string>
+		<string>DDOWN</string>
+		<string>DEL_DEFB</string>
+		<string>DELETE</string>
+		<string>DEST_USE</string>
+		<string>DESTD$</string>
+		<string>DIR</string>
+		<string>DLIST</string>
+		<string>DO</string>
+		<string>DNEXT</string>
+		<string>DUP</string>
+		<string>ED</string>
+		<string>ERR_DF</string>
+		<string>ET</string>
+		<string>EX</string>
+		<string>EXEC</string>
+		<string>EXEC_W</string>
+		<string>EXTRAS</string>
+		<string>EW</string>
+		<string>FDAT</string>
+		<string>FDEC$</string>
+		<string>FEXP$</string>
+		<string>FLEN</string>
+		<string>FLUSH</string>
+		<string>FNAME$</string>
+		<string>FOP_DIR</string>
+		<string>FOP_IN</string>
+		<string>FOP_NEW</string>
+		<string>FOP_OVER</string>
+		<string>FOPEN</string>
+		<string>FPOS</string>
+		<string>FREE_MEM</string>
+		<string>FSERVE</string>
+		<string>FTEST</string>
+		<string>FTYP</string>
+		<string>FUPDT</string>
+		<string>FXTRA</string>
+		<string>GET</string>
+		<string>HEX</string>
+		<string>HEX$</string>
+		<string>IDEC$</string>
+		<string>JOB$</string>
+		<string>JOBS</string>
+		<string>LBYTES</string>
+		<string>LOAD</string>
+		<string>LRESPR</string>
+		<string>LRUN</string>
+		<string>MERGE</string>
+		<string>MRUN</string>
+		<string>NEW</string>
+		<string>NFS_USE</string>
+		<string>NXJOB</string>
+		<string>OJOB</string>
+		<string>OPEN</string>
+		<string>OPEN_DIR</string>
+		<string>OPEN_IN</string>
+		<string>OPEN_NEW</string>
+		<string>OPEN_OVER</string>
+		<string>PARNAM$</string>
+		<string>PARSTR$</string>
+		<string>PARTYP</string>
+		<string>PARUSE</string>
+		<string>PJOB</string>
+		<string>PRINT_USING</string>
+		<string>PROG_USE</string>
+		<string>PROGD$</string>
+		<string>PUT</string>
+		<string>RECHP</string>
+		<string>RENAME</string>
+		<string>RETRY</string>
+		<string>RJOB</string>
+		<string>RUN</string>
+		<string>SAVE</string>
+		<string>SAVE_O</string>
+		<string>SBYTES</string>
+		<string>SBYTES_O</string>
+		<string>SEXEC_O</string>
+		<string>SPJOB</string>
+		<string>SPL</string>
+		<string>SPL_USE</string>
+		<string>SPLF</string>
+		<string>STAT</string>
+		<string>STOP</string>
+		<string>TK2_EXT</string>
+		<string>TRUNCATE</string>
+		<string>VIEW</string>
+		<string>WCOPY</string>
+		<string>WDEL</string>
+		<string>WDIR</string>
+		<string>WMON</string>
+		<string>WREN</string>
+		<string>WSTAT</string>
+		<string>WTV</string>
+
+
+		<!-- Pointer Environment and Hotkey System -->
+
+		<!-- PTR_GEN -->
+		<string>CKEYON</string>
+		<string>CKEYOFF</string>
+
+		<!-- WMAN v2.00 + -->
+		<string>WM_PAPER</string>
+		<string>WM_INK</string>
+		<string>WM_STRIP</string>
+		<string>WM_BLOCK</string>
+		<string>WM_BORDER</string>
+		<string>WM_MOVEMODE</string>
+		<string>SP_RESET</string>
+		<string>SP_GET</string>
+		<string>SP_SET</string>
+		<string>SP_JOBPAL</string>
+		<string>SP_JOBOWNPAL</string>
+		<string>SP_GETCOUNT</string>
+
+		<!-- HOT_REXT Hotkey system II -->
+		<string>ERT</string>
+		<string>EXEP</string>
+		<string>HOT_CHP</string>
+		<string>HOT_CHP1</string>
+		<string>HOT_CMD</string>
+		<string>HOT_DO</string>
+		<string>HOT_GO</string>
+		<string>HOT_KEY</string>
+		<string>HOT_LIST</string>
+		<string>HOT_LOAD</string>
+		<string>HOT_LOAD1</string>
+		<string>HOT_NAME$</string>
+		<string>HOT_OFF</string>
+		<string>HOT_PICK</string>
+		<string>HOT_REMV</string>
+		<string>HOT_RES</string>
+		<string>HOT_RES1</string>
+		<string>HOT_SET</string>
+		<string>HOT_STOP</string>
+		<string>HOT_STUFF</string>
+		<string>HOT_THING</string>
+		<string>HOT_THING1</string>
+		<string>HOT_TYPE</string>
+		<string>HOT_WAKE</string>
+		<string>TH_FIX</string>
+
+		<!-- QPAC2 button frame keywords -->
+		<!--
+		<string>BT_EXEC</string>
+		<string>BT_HOTKEY</string>
+		<string>BT_SLEEP</string>
+		<string>BT_WAKE</string>
+		-->
+
+		<!-- Menu extension QMENU keyword -->
+		<!--
+		<string>BUTTON_SELECT</string>
+		<string>BUTTON_WAIT</string>
+		<string>CHAR_SELECT$</string>
+		<string>DIR_SELECT$</string>
+		<string>EXT_SELECT$</string>
+		<string>FILE_ERROR</string>
+		<string>FILE_SELECT$</string>
+		<string>GET_DEFAULT$</string>
+		<string>ITEM_SELECT</string>
+		<string>LIST_SELECT</string>
+		<string>READ_STRING$</string>
+		<string>REPORT_ERROR</string>
+		<string>SCRAP_CLEAR</string>
+		<string>SCRAP_CNT</string>
+		<string>SCRAP_GET</string>
+		<string>SCRAP_GET$</string>
+		<string>SCRAP_LEN</string>
+		<string>SCRAP_PUT</string>
+		<string>SCRAP_TYPE</string>
+		<string>VIEW_FILE</string>
+		-->
+
+
+		<!-- disk interface commands (from various interfaces -->
+		<!--
+		<string>AUTO_DIS</string>
+		<string>AUTO_TK2F1</string>
+		<string>AUTO_TK2F2</string>
+		<string>CACHE_OFF</string>
+		<string>CACHE_ON</string>
+		<string>DEV_LIST</string>
+		<string>DEV_NEXT</string>
+		<string>DEV_USE</string>
+		<string>DEV_USE$</string>
+		<string>FBKDT</string>
+		<string>FLP_DENSITY</string>
+		<string>FLP_JIGGLE</string>
+		<string>FLP_SEC</string>
+		<string>FLP_START</string>
+		<string>FLP_STEP</string>
+		<string>FLP_TRACK</string>
+		<string>FLP_USE</string>
+		<string>FMAKE_DIR</string>
+		<string>FVERS</string>
+		<string>MAKE_DIR</string>
+		<string>PAR_USE</string>
+		<string>PROT_DATE</string>
+		<string>PRT_ABT</string>
+		<string>PRT_USE</string>
+		<string>RAM_USE</string>
+		<string>RES_128</string>
+		<string>RES_SIZE</string>
+		<string>SCR2DIS</string>
+		<string>SCR2EN</string>
+		<string>SDP_DEV</string>
+		<string>SDP_KEY</string>
+		<string>SDP_SET</string>
+		<string>SDUMP</string>
+		<string>SER_USE</string>
+		<string>SET_FBKDT</string>
+		<string>SET_FUPDT</string>
+		<string>SET_FVERS</string>
+		<string>SLUG</string>
+		<string>WIN_EXT</string>
+		<string>WIN2</string>
+		<string>WIN_USE</string>
+		-->
+
+
+		<!-- Turbo Tookit keywords -->
+		<!--
+		<string>TURBO_DUMMY$</string>
+		<string>TURBO_DUMMY%</string>
+		<string>TURBO_DUMMYF</string>
+		<string>TURBO_DUMMYP</string>
+		<string>ALLOCATION</string>
+		<string>BASIC_B%</string>
+		<string>BASIC_F</string>
+		<string>BASIC_INDEX%</string>
+		<string>BASIC_L</string>
+		<string>BASIC_NAME$</string>
+		<string>BASIC_POINTER</string>
+		<string>BASIC_TYPE%</string>
+		<string>BASIC_W%</string>
+		<string>CHANNEL_ID</string>
+		<string>COMPILED</string>
+		<string>DATASPACE</string>
+		<string>DEVICE_SPACE</string>
+		<string>DEVICE_STATUS</string>
+		<string>EDIT$</string>
+		<string>EDIT%</string>
+		<string>EDITF</string>
+		<string>ERLIN%</string>
+		<string>ERNUM%</string>
+		<string>FLOAT$</string>
+		<string>FREE_MEMORY</string>
+		<string>FWINDOW%</string>
+		<string>GET$</string>
+		<string>GET%</string>
+		<string>GETF</string>
+		<string>INPUT$</string>
+		<string>INTEGER$</string>
+		<string>LONGINTEGER</string>
+		<string>LONGINTEGER$</string>
+		<string>OPTION_CMD$</string>
+		<string>PC_FREEMEM</string>
+		<string>PEEK$</string>
+		<string>PEEK_F</string>
+		<string>POKE$</string>
+		<string>POSITION</string>
+		<string>SEARCH_MEMORY</string>
+		<string>STRING$</string>
+		<string>STRING%</string>
+		<string>STRINGF</string>
+		<string>SYS_VARS</string>
+		<string>TURBO_P</string>
+		<string>CATNAP</string>
+		<string>CHARGE</string>
+		<string>COMMAND_LINE</string>
+		<string>CONNECT</string>
+		<string>CURSOR_OFF</string>
+		<string>CURSOR_ON</string>
+		<string>DATA_AREA</string>
+		<string>DEALLOCATE</string>
+		<string>DEBUG</string>
+		<string>DEBUG_LEVEL</string>
+		<string>DEFAULT_DEVICE</string>
+		<string>END_CMD</string>
+		<string>EXECUTE</string>
+		<string>EXECUTE_A</string>
+		<string>EXECUTE_W</string>
+		<string>EXTERNAL</string>
+		<string>GLOBAL</string>
+		<string>GetHEAD</string>
+		<string>IMPLICIT$</string>
+		<string>IMPLICIT%</string>
+		<string>LINK_LOAD</string>
+		<string>LINK_LOAD_A</string>
+		<string>LINK_LOAD_W</string>
+		<string>LIST_TASKS</string>
+		<string>MANIFEST</string>
+		<string>MOVE_MEMORY</string>
+		<string>POKE_F</string>
+		<string>REFERENCE</string>
+		<string>RELEASE_TASK</string>
+		<string>REMOVE_TASK</string>
+		<string>SET_CHANNEL</string>
+		<string>SET_FONT</string>
+		<string>SET_POSITION</string>
+		<string>SET_PRIORITY</string>
+		<string>SNOOZE</string>
+		<string>SUSPEND_TASK</string>
+		<string>SetHEAD</string>
+		<string>TURBO_buffersz</string>
+		<string>TURBO_diags</string>
+		<string>TURBO_list</string>
+		<string>TURBO_locstr</string>
+		<string>TURBO_model</string>
+		<string>TURBO_objdat</string>
+		<string>TURBO_objfil</string>
+		<string>TURBO_objstk</string>
+		<string>TURBO_optim</string>
+		<string>TURBO_ref</string>
+		<string>TURBO_repfil</string>
+		<string>TURBO_sound</string>
+		<string>TURBO_struct</string>
+		<string>TURBO_taskn</string>
+		<string>TURBO_windo</string>
+		<string>TYPE_IN</string>
+		<string>END_WHEN</string>
+		<string>RETRY_HERE</string>
+		<string>TURBO_F</string>
+		<string>TURBO_V</string>
+		<string>WHEN_ERROR</string>
+		-->
+
+
+		<!-- Mega Toolkit -->
+		<!--
+		<string>ACCESS</string>
+		<string>ANDL</string>
+		<string>AREG</string>
+		<string>BASIC</string>
+		<string>BASLIN%</string>
+		<string>BAUD%</string>
+		<string>BORDER_C</string>
+		<string>BORDER_W</string>
+		<string>BOX</string>
+		<string>BPEEK</string>
+		<string>BPEEK_$</string>
+		<string>BPEEK_F</string>
+		<string>BPEEK_L</string>
+		<string>BPEEK_W</string>
+		<string>BPOKE</string>
+		<string>BPOKE_$</string>
+		<string>BPOKE_F</string>
+		<string>BPOKE_L</string>
+		<string>BPOKE_W</string>
+		<string>BTAG</string>
+		<string>CAPS%</string>
+		<string>CAPS_OFF</string>
+		<string>CAPS_ON</string>
+		<string>CATTR</string>
+		<string>CHAN_ID</string>
+		<string>CHAR_H</string>
+		<string>CHAR_SIZE</string>
+		<string>CHAR_W</string>
+		<string>CHAR_X</string>
+		<string>CHAR_Y</string>
+		<string>CHBAS</string>
+		<string>CLEARBUFF</string>
+		<string>CLOSED</string>
+		<string>COLOUR</string>
+		<string>CPEEK</string>
+		<string>CPEEK_F</string>
+		<string>CPEEK_L</string>
+		<string>CPEEK_W</string>
+		<string>CURMOV</string>
+		<string>CURSOR_ON%</string>
+		<string>DEFINED</string>
+		<string>DEXT</string>
+		<string>DEXT</string>
+		<string>DIR_LIST</string>
+		<string>DIR_SET</string>
+		<string>DREG</string>
+		<string>ENDED</string>
+		<string>0</string>
+		<string>FILE_LEN</string>
+		<string>FILL%</string>
+		<string>FIND_WOTSIT</string>
+		<string>FLOAT</string>
+		<string>FONT1</string>
+		<string>FONT2</string>
+		<string>FONT_USE</string>
+		<string>FRAME</string>
+		<string>FREECHAN</string>
+		<string>FREESEC</string>
+		<string>FREEZE</string>
+		<string>FREE_K</string>
+		<string>FROZEN</string>
+		<string>GETKEY$</string>
+		<string>GETKEY%</string>
+		<string>GET_$</string>
+		<string>GET_B</string>
+		<string>GET_DATA</string>
+		<string>GET_F</string>
+		<string>GET_L</string>
+		<string>GET_POS</string>
+		<string>GET_TYPE</string>
+		<string>GET_W</string>
+		<string>GRAB</string>
+		<string>GRABLEN</string>
+		<string>GRABOWNER</string>
+		<string>GRAB_WOTSIT</string>
+		<string>GRA_X</string>
+		<string>GRA_Y</string>
+		<string>HERE</string>
+		<string>INK%</string>
+		<string>INTEGER</string>
+		<string>INVERT</string>
+		<string>IPCINF</string>
+		<string>ISBASIC</string>
+		<string>ISGRAB</string>
+		<string>ISJOB</string>
+		<string>ISROM</string>
+		<string>JOBID</string>
+		<string>JOBKEY%</string>
+		<string>JOBTAG</string>
+		<string>JOB_BASE</string>
+		<string>KEYDOWN</string>
+		<string>KEYPRESS</string>
+		<string>KEYSET</string>
+		<string>KILL_WOTSIT</string>
+		<string>LINENUM%</string>
+		<string>LINKIN</string>
+		<string>LIST_WOTSITS</string>
+		<string>LNUM</string>
+		<string>LOAD_STATUS</string>
+		<string>MED_NAME$</string>
+		<string>MEGA_EXT</string>
+		<string>MOVE_POS</string>
+		<string>MSCROLL</string>
+		<string>MYID</string>
+		<string>MegaVER$</string>
+		<string>NAND</string>
+		<string>NETNUM%</string>
+		<string>NOR</string>
+		<string>NO_TK2</string>
+		<string>NXOR</string>
+		<string>OPENTYPE</string>
+		<string>OPEN_DATA</string>
+		<string>OPEN_PROG</string>
+		<string>ORG_X</string>
+		<string>ORG_Y</string>
+		<string>ORL</string>
+		<string>PAPER%</string>
+		<string>PEEK_$</string>
+		<string>PEEK_F</string>
+		<string>PEND</string>
+		<string>PIXMOV</string>
+		<string>POKE_$</string>
+		<string>POKE_F</string>
+		<string>POS_X</string>
+		<string>POS_Y</string>
+		<string>PRIORITY</string>
+		<string>PUT_$</string>
+		<string>PUT_B</string>
+		<string>PUT_F</string>
+		<string>PUT_L</string>
+		<string>PUT_W</string>
+		<string>QDOS$</string>
+		<string>QFREE</string>
+		<string>QIN</string>
+		<string>QIN$</string>
+		<string>QPTR$</string>
+		<string>QSIZE</string>
+		<string>QUSED</string>
+		<string>RAMSIZE</string>
+		<string>RELEASE</string>
+		<string>RJOBS</string>
+		<string>ROM_INIT</string>
+		<string>ROM_NAME$</string>
+		<string>ROTATE</string>
+		<string>R_HEAD</string>
+		<string>R_HEAD$</string>
+		<string>SAVE_STATUS</string>
+		<string>SCRADDR</string>
+		<string>SETQ</string>
+		<string>SET_DATA</string>
+		<string>SET_JOBKEY</string>
+		<string>SET_POS</string>
+		<string>SET_TYPE</string>
+		<string>SHIFT</string>
+		<string>SIZE_X</string>
+		<string>SIZE_Y</string>
+		<string>SLOAD</string>
+		<string>SLOADQ</string>
+		<string>SMODE%</string>
+		<string>SPAC$</string>
+		<string>SPEEK</string>
+		<string>SPEEK_L</string>
+		<string>SPEEK_W</string>
+		<string>SPOKE</string>
+		<string>SPOKE_L</string>
+		<string>SPOKE_W</string>
+		<string>SSAVE</string>
+		<string>STIPPLE</string>
+		<string>STRIP%</string>
+		<string>SUSPENDED</string>
+		<string>SYSTEM</string>
+		<string>S_HEAD</string>
+		<string>S_HEAD$</string>
+		<string>THAW</string>
+		<string>TIME</string>
+		<string>TPEEK</string>
+		<string>TPEEK_$</string>
+		<string>TPEEK_F</string>
+		<string>TPEEK_L</string>
+		<string>TPEEK_W</string>
+		<string>TPOKE</string>
+		<string>TPOKE_$</string>
+		<string>TPOKE_F</string>
+		<string>TPOKE_L</string>
+		<string>TPOKE_W</string>
+		<string>TRAP1</string>
+		<string>TRAP2</string>
+		<string>TRAP3</string>
+		<string>TRAP4</string>
+		<string>TRAPC</string>
+		<string>1</string>
+		<string>TTAG</string>
+		<string>TURTLE</string>
+		<string>UNFLASH</string>
+		<string>UNTRAP</string>
+		<string>VDU</string>
+		<string>VTYPE</string>
+		<string>WAIT</string>
+		<string>WINDO</string>
+		<string>WINDO_C</string>
+		<string>WINS</string>
+		<string>WIN_DEF</string>
+		<string>WIN_MOD</string>
+		<string>WMAN$</string>
+		<string>XORL</string>
+		<string>_1</string>
+		<string>_2</string>
+		<string>_3</string>
+		<string>_4</string>
+		<string>_5</string>
+		<string>_6</string>
+		<string>_7</string>
+		<string>_8</string>
+		<string>_CLONE</string>
+		<string>_CLOSE</string>
+		<string>_D</string>
+		<string>_D$</string>
+		<string>_DATA</string>
+		<string>_DELETE</string>
+		<string>_DIR$</string>
+		<string>_ERROR</string>
+		<string>_FORMAT</string>
+		<string>_LBYTES</string>
+		<string>_P$</string>
+		<string>_PROG</string>
+		<string>_SBYTES</string>
+		<string>_SCALE</string>
+		-->
+
+		<!-- Display toolkit keywords -->
+		<!--
+		<string>ADDRESS</string>
+		<string>BYTES</string>
+		<string>DMODE</string>
+		<string>FLIM_H</string>
+		<string>FLIM_W</string>
+		<string>FLIM_X</string>
+		<string>FLIM_Y</string>
+		<string>GD2</string>
+		<string>MOVEMEM</string>
+		<string>OS_VER$</string>
+		<string>PTRVER$</string>
+		<string>PTR_ENV</string>
+		<string>SYS_VAR</string>
+		<string>WIN_MAN</string>
+		<string>WMAVER$</string>
+		-->
+
+		<!-- DIY toolkit -->
+		<!--
+		<string>MINIMUM</string>
+		<string>MINIMUM%</string>
+		<string>MAXIMUM</string>
+		<string>MAXIMUM%</string>
+		-->
+
+		<!-- SMSQ keywords not covered in the SBASIC section above -->
+		<string>DEVTYPE</string>
+		<string>EPROM_LOAD</string>
+		<string>IO_PRIORITY</string>
+		<string>JOB_NAME</string>
+		<string>KBD_TABLE</string>
+		<string>LANG_USE</string>
+		<string>LANGUAGE</string>
+		<string>LANGUAGE$</string>
+		<string>QLOAD</string>
+		<string>QLRUN</string>
+		<string>QMERGE</string>
+		<string>QMRUN</string>
+		<string>QSAVE</string>
+		<string>QSAVE_O</string>
+		<string>QUIT</string>
+		<string>SBASIC</string>
+
+		<!-- QPC2 keywords -->
+		<!--
+		<string>CD_ALLTIME</string>
+		<string>CD_HOUR</string>
+		<string>CD_HSG2RED</string>
+		<string>CD_ISCLOSED</string>
+		<string>CD_ISINSERTED</string>
+		<string>CD_ISPLAYING</string>
+		<string>CD_LENGTH</string>
+		<string>CD_MINUTE</string>
+		<string>CD_PLAY</string>
+		<string>CD_RED2HSG</string>
+		<string>CD_SECOND</string>
+		<string>CD_TRACK</string>
+		<string>CD_TRACKLENGTH</string>
+		<string>CD_TRACKSTART</string>
+		<string>CD_TRACKTIME</string>
+		<string>DOS_DRIVE$</string>
+		<string>PAR_DEFAULTPRINTER$</string>
+		<string>PAR_GETFILTER</string>
+		<string>PAR_GETPRINTER$</string>
+		<string>PAR_PRINTERCOUNT</string>
+		<string>PAR_PRINTERNAME$</string>
+		<string>QPC_CMDLINE$</string>
+		<string>QPC_HOSTOS</string>
+		<string>QPC_NETNAME$</string>
+		<string>QPC_QLSCREMU$</string>
+		<string>CD_CLOSE</string>
+		<string>CD_EJECT</string>
+		<string>CD_FIRSTTRACK</string>
+		<string>CD_INIT</string>
+		<string>CD_LASTTRACK</string>
+		<string>CD_RESUME</string>
+		<string>CD_STOP</string>
+		<string>DOS_DRIVE</string>
+		<string>DOS_USE</string>
+		<string>PAR_SETFILTER</string>
+		<string>PAR_SETPRINTER</string>
+		<string>QPC_EXEC</string>
+		<string>QPC_EXIT</string>
+		<string>QPC_MAXIMIZE</string>
+		<string>QPC_MINIMIZE</string>
+		<string>QPC_MSSPEED</string>
+		<string>QPC_RESTORE</string>
+		<string>QPC_SYNCSCRAP</string>
+		<string>QPC_VER$</string>
+		<string>QPC_WINDOWTITLE</string>
+		-->
+
+		<!-- Atari QL emulator keywords -->
+		<!--
+		<string>PEEKS</string>
+		<string>PEEKS_W</string>
+		<string>PEEKS_L</string>
+		<string>PEEKS$</string>
+		<string>POKES</string>
+		<string>POKES_W</string>
+		<string>POKES_L</string>
+		<string>POKES$</string>
+		<string>PROT_MEM</string>
+		-->
+
+		<!-- uQLx emulator -->
+		<!--
+		<string>Kill_UQLX</string>
+		<string>UQLX_RELEASE$</string>
+		<string>getXenv$</string>
+		<string>Fork_UQLX</string>
+		<string>getXargC</string>
+		<string>getXarg$</string>
+		<string>getXres</string>
+		<string>getYres</string>
+		-->
+
+	</array>
+
+	<key>BBLMLanguageCode</key>
+	<string>QLSB</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>SuperBASIC</string>
+
+	<key>BBLMScansFunctions</key>
+	<true/>
+
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.bas</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>_bas</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.sbas</string>
+		</dict>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>_sbas</string>
+		</dict>
+	</array>
+
+	<key>Language Features</key>
+	<dict>
+
+		<key>Function Pattern</key>
+		<string><![CDATA[(?P<function>\bDEFine +(PROCedure|FuNction)[ \t]+(?P<function_name>[a-zA-Z][a-zA-Z0-9_]*[%$]?)[ \t]*[\(.*?\)]?(?:.|\r)*?(END DEFine)\b)]]></string>
+
+		<key>Open Strings 1</key>
+		<string>"</string>
+		<key>Close Strings 1</key>
+		<string>"</string>
+
+		<key>Comment Pattern</key>
+		<string><![CDATA[(?:REMark .*$)]]></string>
+
+		<key>String Pattern</key>
+		<string><![CDATA["[^"\r]*"]]></string>
+
+
+		<key>Identifier and Keyword Character Class</key>
+		<string><![CDATA[a-zA-Z0-9_$%]]></string>
+
+		<!--
+		<key>Prefix for Functions</key>
+		<string>PROC</string>
+		<key>Prefix for Procedures</key>
+		<string>PROC</string>
+		-->
+		<key>Open Parameter Lists</key>
+		<string>(</string>
+		<key>Close Parameter Lists</key>
+		<string>)</string>
+
+	</dict>
+</dict>
+</plist>

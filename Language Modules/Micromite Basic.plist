@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>END</string>
+		<string>FOR</string>
+		<string>NEXT</string>
+		<string>DATA</string>
+		<string>INPUT</string>
+		<string>DIM</string>
+		<string>READ</string>
+		<string>TEXT</string>
+		<string>CALL</string>
+		<string>TRACE</string>
+		<string>COLOR</string>
+		<string>ONERR</string>
+		<string>LET</string>
+		<string>GOTO</string>
+		<string>RUN</string>
+		<string>IF</string>
+		<string>RESTORE</string>
+		<string>&amp;</string>
+		<string>?</string>
+		<string>GOSUB</string>
+		<string>RETURN</string>
+		<string>REM</string>
+		<string>ON</string>
+		<string>SAVE</string>
+		<string>POKE</string>
+		<string>PRINT</string>
+		<string>LIST</string>
+		<string>CLEAR</string>
+		<string>NEW</string>
+		<string>TAB</string>
+		<string>TO</string>
+		<string>SPC</string>
+		<string>THEN</string>
+		<string>NOT</string>
+		<string>STEP</string>
+		<string>AND</string>
+		<string>OR</string>
+		<string>SGN</string>
+		<string>INT</string>
+		<string>ABS</string>
+		<string>POS</string>
+		<string>SQR</string>
+		<string>RND</string>
+		<string>LOG</string>
+		<string>EXP</string>
+		<string>COS</string>
+		<string>SIN</string>
+		<string>TAN</string>
+		<string>ATN</string>
+		<string>PEEK</string>
+		<string>LEN</string>
+		<string>STR$</string>
+		<string>CHR$</string>
+		<string>LEFT$</string>
+		<string>RIGHT$</string>
+		<string>MID$</string>
+		<string>DELETE</string>
+		<string>OPEN</string>
+		<string>WRITE</string>
+		<string>RESTORE</string>
+		<string>LOCK</string>
+		<string>READ</string>
+		<string>POSITION</string>
+		<string>CLOSE</string>
+		<string>INIT</string>
+		<string>INT</string>
+		<string>PULSIN</string>
+		<string>RAD</string>
+		<string>RGB</string>
+		<string>RIGHT$</string>
+		<string>SPACES</string>
+		<string>STRING$</string>
+		<string>IRETURN</string>
+		<string>TEMPR</string>
+		<string>TROFF</string>
+		<string>TRON</string>
+		<string>WHILE</string>
+		<string>WEND</string>
+		<string>MOD</string>
+		<string>BOX</string>
+		<string>CIRCLE</string>
+		<string>CLS</string>
+		<string>COLOUR</string>
+		<string>CSUB</string>
+		<string>CFUNCTION</string>
+		<string>CONST</string>
+		<string>CONTINUE</string>
+		<string>CPU</string>
+		<string>SLEEP</string>
+		<string>RESTART</string>
+		<string>DATE$</string>
+		<string>DEFINE</string>
+		<string>FONT</string>
+		<string>INTEGER</string>
+		<string>FLOAT</string>
+		<string>STRING</string>
+		<string>LENGTH</string>
+		<string>SUB</string>
+		<string>DO</string>
+		<string>LOOP</string>
+		<string>UNTIL</string>
+		<string>EDIT</string>
+		<string>ELSE</string>
+		<string>ELSEIF</string>
+		<string>ENDIF</string>
+		<string>FUNCTION</string>
+		<string>ERASE</string>
+		<string>ERROR</string>
+		<string>EXIT</string>
+		<string>IR</string>
+		<string>SEND</string>
+		<string>KEYPAD</string>
+		<string>LIBRARY</string>
+		<string>LINE</string>
+		<string>LOCAL</string>
+		<string>LOOP</string>
+		<string>MEMORY</string>
+		<string>TIME$</string>
+		<string>TIMER</string>
+		<string>VAR</string>
+		<string>WATCHDOG</string>
+		<string>XMODEM</string>
+		<string>RECEIVE</string>
+		<string>ACOS</string>
+		<string>ASIN</string>
+		<string>BIN$</string>
+		<string>CINT</string>
+		<string>DATE$</string>
+		<string>DEG</string>
+		<string>DISTANCE</string>
+		<string>EOF</string>
+		<string>FIX</string>
+		<string>HEX$</string>
+		<string>INKEY$</string>
+		<string>INPUT$</string>
+		<string>INSTR</string>
+		<string>LOF</string>
+		<string>LCASE$</string>
+		<string>OCT$</string>
+		<string>GUI</string>
+		<string>BITMAP</string>
+		<string>CALIBRATE</string>
+		<string>RESET</string>
+		<string>LCD</string>
+		<string>LCDPANEL</string>
+		<string>TEST</string>
+		<string>HUMID</string>
+		<string>CMD</string>
+		<string>ABORT</string>
+		<string>IGNORE</string>
+		<string>SKIP</string>
+		<string>KEY</string>
+		<string>OPTION</string>
+		<string>AUTORUN</string>
+		<string>BASE</string>
+		<string>BAUDRATE</string>
+		<string>BREAK</string>
+		<string>CASE</string>
+		<string>UPPER</string>
+		<string>LOWER</string>
+		<string>TITLE</string>
+		<string>CLOCKTRIM</string>
+		<string>COLOURCODE</string>
+		<string>OFF</string>
+		<string>CONSOLE</string>
+		<string>AUTOSAVE</string>
+		<string>XOR</string>
+		<string>ECHO</string>
+		<string>NOECHO</string>
+		<string>INVERT</string>
+		<string>AUTO</string>
+		<string>DEFAULT</string>
+		<string>DISPLAY</string>
+		<string>EXPLICIT</string>
+		<string>IL9341</string>
+		<string>D/C</string>
+		<string>CS</string>
+		<string>DISABLE</string>
+		<string>PIN</string>
+		<string>TOUCH</string>
+		<string>T_IRQ</string>
+		<string>T_CS</string>
+		<string>PAUSE</string>
+		<string>PIXEL</string>
+		<string>PORT</string>
+		<string>PWM</string>
+		<string>RANDOMIZE</string>
+		<string>RBOX</string>
+		<string>RTC</string>
+		<string>GETTIME</string>
+		<string>SETRES</string>
+		<string>GETRES</string>
+		<string>SELECT</string>
+		<string>SERVO</string>
+		<string>SETPIN</string>
+		<string>SETTICK</string>
+		<string>START</string>
+		<string>BYTE</string>
+		<string>WORD</string>
+		<string>VARADDR</string>
+		<string>CFUNADDR</string>
+		<string>VARTBL</string>
+		<string>PROGMEM</string>
+		<string>AS</string>
+		<string>NOINVERT</string>
+		<string>DEFINEFONT</string>
+		<string>PULSE</string>
+		<string>SETTIME</string>
+		<string>ALL</string>
+		<string>SETREG</string>
+		<string>GETREG</string>
+		<string>STOP</string>
+		<string>ASC</string>
+		<string>LOC</string>
+		<string>SPACE$</string>
+		<string>UCASE$</string>
+		<string>VAL</string>
+		<string>I2C</string>
+		<string>PU</string>
+		<string>COM1</string>
+		<string>COM2</string>
+		<string>SLAVE</string>
+		<string>SPI</string>
+	</array>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<string>MM.DEVICES</string>
+		<string>MM.ERRNO</string>
+		<string>MM.ERRMSG$</string>
+		<string>MM.HRES</string>
+		<string>MM.VRES</string>
+		<string>MM.FONTHEIGHT</string>
+		<string>MM.FONTWIDTH</string>
+		<string>MM.I2C</string>
+		<string>MM.ONEWIRE</string>
+		<string>MM.WATCHDOG</string>
+		<string>MM.VER</string>
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>MBAS</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>MicroMite BASIC</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.mmb</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Characters</key>
+		<string>&amp;?$:'._-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</string>
+		<key>Prefix for Functions</key>
+		<string></string>
+		<key>Prefix for Procedures</key>
+		<string></string>
+		<key>Open Parameter Lists</key>
+		<string></string>
+		<key>Close Parameter Lists</key>
+		<string></string>
+		<key>Terminator for Prototypes 1</key>
+		<string></string>
+		<key>Terminator for Prototypes 2</key>
+		<string></string>
+		<key>Open Block Comments</key>
+		<string></string>
+		<key>Close Block Comments</key>
+		<string></string>
+		<key>Open Line Comments</key>
+		<string></string>
+		<key>Open Strings 1</key>
+		<string></string>
+		<key>Close Strings 1</key>
+		<string></string>
+		<key>Escape Char in Strings 1</key>
+		<string></string>
+		<key>End-of-line Ends Strings 1</key>
+		<true/>
+		<key>Open Strings 2</key>
+		<string></string>
+		<key>Close Strings 2</key>
+		<string></string>
+		<key>Escape Char in Strings 2</key>
+		<string></string>
+		<key>End-of-line Ends Strings 2</key>
+		<true/>
+	<key>String Pattern</key>
+    <string><![CDATA[(?x: (?# this just turns on extended syntax, which allows whitespace and comments)
+    ("(\\"|[^"\r]|\\\r)*")  (?# Double-quote)
+	)]]></string>
+	<key>Number Pattern</key>
+    <string><![CDATA[(?x: (?# this just turns on extended syntax, which allows whitespace and comments)
+       (?<![\d\w.]) (?# must not be preceded by a digit or word char or period)
+	(?: (?# non-capturing group for alternation)
+	(?# version 1: hex notation like 0x0123456789abcdef)
+	(?:&H[[:xdigit:]]+) (?# the number written in hex form)
+	|
+	(?:\&B[01]+) (?# the number written in binary form)
+	|
+	(?:\&O[0-7]+) (?# the number written in octal form)
+	|
+	(?: (?# version 2: all other numbers, including whole numbers, decimals and exponentials)
+	[-+]? (?# optional plus or minus sign is included as part of the number)
+	(?: (?# non-capturing group for alternation)
+	\d+\.\d+ (?# version 2a: digits followed by a decimal followed by digits)
+	|
+	\d+ (?# version 2b: just digits)
+	)
+	(?: (?# optional exponent notation)
+	[eE][-+]? (?# with optional pos/neg)
+	\d+ (?# numeric portion of the exponent)
+	)?
+	)
+	)
+	(?=\b) (?# required word boundary after number. Here a decimal is fine.)
+	)]]></string>
+	<key>Comment Pattern</key>
+    <string><![CDATA[(?x: (?# this just turns on extended syntax, which allows whitespace and comments)
+	('.*$)
+	|
+	(REM.*$)	
+	)]]></string>
+	<key>Function Pattern</key>
+	<string><![CDATA[
+		(?ix:(?P<function>(^function|^sub)\s+(?P<function_name>[a-zA-Z0-9_]+).+\n(?s).+?\n(end\s(function|sub))$))
+		]]></string>
+	<key>Skip Pattern</key>
+	<string><![CDATA[(?x:
+			(?>
+				(?P>comment) | (?P>string)
+			)
+	)]]></string>
+	</dict>
+</dict>
+</plist>

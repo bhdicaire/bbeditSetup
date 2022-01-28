@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+	"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<!-- 
+		Apache Thrift IDL
+		Copyright (c) 2015 Andrew Carter
+-->
+		
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	
+	<key>BBLMLanguageDisplayName</key>
+	<string>Thrift</string>
+	
+	<key>BBLMLanguageCode</key>
+	<string>Trft</string>
+	
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.thrift</string>
+		</dict>
+	</array>
+	
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	
+	<key>BBLMKeywords</key>
+	<array>
+		<dict>
+			<key>RunKind</key>
+			<string>com.barebones.bblm.keyword</string>
+			
+			<key>Keywords</key>
+			<array>
+				<string>namespace</string>
+				<string>include</string>
+				<string>cpp_include</string>
+				<string>const</string>
+				<string>typedef</string>
+				<string>enum</string>
+				<string>senum</string>
+				<string>struct</string>
+				<string>union</string>
+				<string>exception</string>
+				<string>service</string>
+				<string>required</string>
+				<string>optional</string>
+				<string>xsd_optional</string>
+				<string>xsd_attrs</string>
+				<string>oneway</string>
+				<string>void</string>
+				<string>throws</string>
+			</array>
+		</dict>
+		<dict>
+			<key>RunKind</key>
+			<string>com.barebones.bblm.predefined-symbol</string>
+			
+			<key>Keywords</key>
+			<array>
+				<string>bool</string>
+				<string>byte</string>
+				<string>i16</string>
+				<string>i32</string>
+				<string>i64</string>
+				<string>double</string>
+				<string>string</string>
+				<string>binary</string>
+				<string>slist</string>
+				<string>map</string>
+				<string>set</string>
+				<string>list</string>
+				<string>cpp_type</string>
+			</array>
+		</dict>
+	</array>
+	
+	<key>BBLMCommentLineDefault</key>
+	<string>//</string>
+
+	<key>BBLMCommentPrefixDefault</key>
+	<string>/*</string>
+	
+	<key>BBLMCommentSuffixDefault</key>
+	<string>*/</string>
+	
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string>A-Za-z0-9_\-\.</string>
+		<key>Open Block Comments</key>
+		<string>/*</string>
+		<key>Close Block Comments</key>
+		<string>*/</string>
+		<key>Open Line Comments</key>
+		<string>//</string>
+		<key>Open Statement Blocks</key>
+		<string>{</string>
+		<key>Close Statement Blocks</key>
+		<string>}</string>
+
+		<key>Comment Pattern</key>
+		<string><![CDATA[
+				(?x:
+						(//.*$)				 | (?# // Line comment)
+						(?s:/\*.*?\*/)	     | (?# Block comment)
+						(\#.*$)				   (?# # Line comment)
+				)]]>
+		</string>
+	</dict> 
+</dict>
+</plist>

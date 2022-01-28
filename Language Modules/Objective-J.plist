@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+	About:
+		The following is a codeless language module (CLM) for objective-J and Cappuccino written to work with BBEdit 10.1. It may work with earlier versions and/or TextWrangler as well.
+		
+		The setting define syntax highlighting for objective-J files with the .j file extension. Object-J language keywords, Cappuccino classes, and many Cappuccino functions are recognized. In addition, a regular expression identifies methods declarations so as to include them in the function pop-up.
+		
+	Installation:
+		Place a copy of this file in /Users/<your username>/Library/Application Support/BBEdit/Language Modules/
+		
+		In 10.7 (and presumably later versions of OS X) the user's Library folder is hidden by default in the Finder. One can access the folder using the 'Go to Folder…' command located in Finder's Go menu or executing the following in Terminal:
+		
+		open -a Finder ~/Library
+		
+	Issues:
+		Please report questions or problems to: https://github.com/knutecht/Obj-J-Colors-for-BBEdit
+			
+	By:
+		Kyle Utecht
+		
+-->
+
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key> <string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key> <true/>
+	<key>BBLMIsCaseSensitive</key> <true/>
+	<key>BBLMKeywordList</key>
+		<array>
+			<string>@import</string>
+			<string>@implementation</string>
+			<string>@end</string>
+			<string>@accessors</string>
+			<string>@selector</string>
+			<string>if</string>
+			<string>else</string>
+			<string>while</string>
+			<string>for</string>
+			<string>do</string>
+			<string>break</string>
+			<string>var</string>
+		</array> 
+	<key>BBLMPredefinedNameList</key>
+		<array>			
+			<!-- General stuff -->
+			<string>void</string>
+			<string>nil</string>
+			<string>id</string>
+			<string>int</string>
+			<string>float</string>
+			<string>True</string>
+			<string>False</string>
+			<string>YES</string>
+			<string>NO</string>
+			<string>IBAction</string>
+			<string>IBOutlet</string>
+			<string>Foundation</string>
+			<string>AppKit</string>
+			<string>self</string>
+			<string>super</string>
+			<string>CPLog</string>
+			
+			<!-- Appkit classes -->
+			<string>CPAccordionView</string>
+			<string>CPAccordionViewItem</string>
+			<string>CPAlert</string>
+			<string>CPAnimation</string>
+			<string>CPApplication</string>
+			<string>CPBezierPath</string>
+			<string>CPBrowser</string>
+			<string>CPButton</string>
+			<string>CPCib</string>
+			<string>CPClipView</string>
+			<string>CPCollectionView</string>
+			<string>CPColor</string>
+			<string>CPColorPanel</string>
+			<string>CPColorPicker</string>
+			<string>CPColorWell</string>
+			<string>CPControl</string>
+			<string>CPCookie</string>
+			<string>CPDocument</string>
+			<string>CPDocumentController</string>
+			<string>CPEvent</string>
+			<string>CPFlashMovie</string>
+			<string>CPFlashView</string>
+			<string>CPFont</string>
+			<string>CPFontManager</string>
+			<string>CPGraphicsContext</string>
+			<string>CPImage</string>
+			<string>CPImageView</string>
+			<string>CPMenu</string>
+			<string>CPMenuItem</string>
+			<string>CPOutlineView</string>
+			<string>CPPanel</string>
+			<string>CPPasteboard</string>
+			<string>CPPopUpButton</string>
+			<string>CPProgressIndicator</string>
+			<string>CPResponder</string>
+			<string>CPScroller</string>
+			<string>CPScrollView</string>
+			<string>CPSearchField</string>
+			<string>CPSecureTextField</string>
+			<string>CPSegmentedControl</string>
+			<string>CPShadowView</string>
+			<string>CPSlider</string>
+			<string>CPSplitView</string>
+			<string>CPTableView</string>
+			<string>CPTabViewItem</string>
+			<string>CPTextField</string>
+			<string>CPTheme</string>
+			<string>CPThemeBlend</string>
+			<string>CPToolbar</string>
+			<string>CPToolbarItem</string>
+			<string>CPView</string>
+			<string>CPWebView</string>
+			<string>CPWindow</string>
+			<string>CPWindowController</string>
+			
+			<!-- Appkit functions -->
+			<string>CGInsetFromString</string>
+			<string>CGPointFromEvent</string>
+			<string>CGPointFromString</string>
+			<string>CGRectContainsRect</string>
+			<string>CGRectDivide</string>
+			<string>CGRectFromString</string>
+			<string>CGRectIntegral</string>
+			<string>CGRectIntersection</string>
+			<string>CGRectIntersectsRect</string>
+			<string>CGRectStandardize</string>
+			<string>CGRectUnion</string>
+			<string>CGSizeFromString</string>
+			<string>CPDivideRect</string>
+			<string>CPPointCreateCopy</string>
+			<string>CPPointEqualToPoint</string>
+			<string>CPPointFromEvent</string>
+			<string>CPPointFromString</string>
+			<string>CPPointMake</string>
+			<string>CPPointMakeZero</string>
+			<string>CPRectContainsPoint</string>
+			<string>CPRectContainsRect</string>
+			<string>CPRectCreateCopy</string>
+			<string>CPRectEqualToRect</string>
+			<string>CPRectFromString</string>
+			<string>CPRectGetHeight</string>
+			<string>CPRectGetMaxX</string>
+			<string>CPRectGetMaxY</string>
+			<string>CPRectGetMidX</string>
+			<string>CPRectGetMidY</string>
+			<string>CPRectGetMinX</string>
+			<string>CPRectGetMinY</string>
+			<string>CPRectGetWidth</string>
+			<string>CPRectInset</string>
+			<string>CPRectIntegral</string>
+			<string>CPRectIntersection</string>
+			<string>CPRectIntersectsRect</string>
+			<string>CPRectIsEmpty</string>
+			<string>CPRectIsNull</string>
+			<string>CPRectMake</string>
+			<string>CPRectMakeZero</string>
+			<string>CPRectOffset</string>
+			<string>CPRectStandardize</string>
+			<string>CPRectUnion</string>
+			<string>CPSizeCreateCopy</string>
+			<string>CPSizeEqualToSize</string>
+			<string>CPSizeFromString</string>
+			<string>CPSizeMake</string>
+			<string>CPSizeMakeZero</string>
+			<string>CPStringFromCGInset</string>
+			<string>CPStringFromPoint</string>
+			<string>CPStringFromRect</string>
+			<string>CPStringFromSize</string>
+			
+			<!-- CoreGraphics functions -->
+			<string>CGBitmapGraphicsContextCreate</string>
+			<string>CGContextAddArc</string>
+			<string>CGContextAddArcToPoint</string>
+			<string>CGContextAddCurveToPoint</string>
+			<string>CGContextAddEllipseInRect</string>
+			<string>CGContextAddLines</string>
+			<string>CGContextAddLineToPoint</string>
+			<string>CGContextAddPath</string>
+			<string>CGContextAddQuadCurveToPoint</string>
+			<string>CGContextAddRect</string>
+			<string>CGContextAddRects</string>
+			<string>CGContextBeginPath</string>
+			<string>CGContextClosePath</string>
+			<string>CGContextConcatCTM</string>
+			<string>CGContextEOFillPath</string>
+			<string>CGContextFillEllipseInRect</string>
+			<string>CGContextFillPath</string>
+			<string>CGContextFillRect</string>
+			<string>CGContextFillRects</string>
+			<string>CGContextFillRoundedRectangleInRect</string>
+			<string>CGContextGetCTM</string>
+			<string>CGContextMoveToPoint</string>
+			<string>CGContextRelease</string>
+			<string>CGContextRestoreGState</string>
+			<string>CGContextRetain</string>
+			<string>CGContextRotateCTM</string>
+			<string>CGContextSaveGState</string>
+			<string>CGContextScaleCTM</string>
+			<string>CGContextSetAlpha</string>
+			<string>CGContextSetBlendMode</string>
+			<string>CGContextSetFillColor</string>
+			<string>CGContextSetLineCap</string>
+			<string>CGContextSetLineJoin</string>
+			<string>CGContextSetLineWidth</string>
+			<string>CGContextSetMiterLimit</string>
+			<string>CGContextSetShadow</string>
+			<string>CGContextSetShadowWithColor</string>
+			<string>CGContextSetStrokeColor</string>
+			<string>CGContextStrokeEllipseInRect</string>
+			<string>CGContextStrokeLineSegments</string>
+			<string>CGContextStrokePath</string>
+			<string>CGContextStrokeRect</string>
+			<string>CGContextStrokeRectWithWidth</string>
+			<string>CGContextStrokeRoundedRectangleInRect</string>
+			<string>CGContextTranslateCTM</string>
+			<string>CGGStateCreate</string>
+			<string>CGGStateCreateCopy</string>
+			<string>CGPathAddArc</string>
+			<string>CGPathAddArcToPoint</string>
+			<string>CGPathAddCurveToPoint</string>
+			<string>CGPathAddLines</string>
+			<string>CGPathAddLineToPoint</string>
+			<string>CGPathAddPath</string>
+			<string>CGPathAddQuadCurveToPoint</string>
+			<string>CGPathAddRect</string>
+			<string>CGPathAddRects</string>
+			<string>CGPathCloseSubpath</string>
+			<string>CGPathCreateCopy</string>
+			<string>CGPathCreateMutable</string>
+			<string>CGPathCreateMutableCopy</string>
+			<string>CGPathEqualToPath</string>
+			<string>CGPathGetCurrentPoint</string>
+			<string>CGPathIsEmpty</string>
+			<string>CGPathMoveToPoint</string>
+			<string>CGPathRelease</string>
+			<string>CGPathRetain</string>
+			<string>CGPathWithEllipseInRect</string>
+			<string>CGPathWithRoundedRectangleInRect</string>
+			
+			<!-- Foundation classes -->
+			<string>CPArray</string>
+			<string>CPAttributedString</string>
+			<string>CPBundle</string>
+			<string>CPCoder</string>
+			<string>CPComparisonPredicate</string>
+			<string>CPCompoundPredicate</string>
+			<string>CPCountedSet</string>
+			<string>CPData</string>
+			<string>CPDate</string>
+			<string>CPDecimalNumber</string>
+			<string>CPDecimalNumberHandler</string>
+			<string>CPDictionary</string>
+			<string>CPEnumerator</string>
+			<string>CPException</string>
+			<string>CPExpression</string>
+			<string>CPFormatter</string>
+			<string>CPIndexSet</string>
+			<string>CPInvocation</string>
+			<string>CPJSONPConnection</string>
+			<string>CPKeyedArchiver</string>
+			<string>CPKeyedUnarchiver</string>
+			<string>CPNotification</string>
+			<string>CPNotificationCenter</string>
+			<string>CPNull</string>
+			<string>CPNumber</string>
+			<string>CPObject</string>
+			<string>CPPredicate</string>
+			<string>CPRunLoop</string>
+			<string>CPSortDescriptor</string>
+			<string>CPString</string>
+			<string>CPTimer</string>
+			<string>CPUndoManager</string>
+			<string>CPURLConnection</string>
+			<string>CPURLRequest</string>
+			<string>CPURLResponse</string>
+			<string>CPUserDefaults</string>
+			<string>CPValue</string>
+			
+			<!-- Foundation functions -->
+			<string>CPCopyRange</string>
+			<string>CPDecimalAdd</string>
+			<string>CPDecimalCompact</string>
+			<string>CPDecimalCompare</string>
+			<string>CPDecimalCopy</string>
+			<string>CPDecimalDivide</string>
+			<string>CPDecimalIsNotANumber</string>
+			<string>CPDecimalIsOne</string>
+			<string>CPDecimalIsZero</string>
+			<string>CPDecimalMakeNaN</string>
+			<string>CPDecimalMakeOne</string>
+			<string>CPDecimalMakeWithParts</string>
+			<string>CPDecimalMakeWithString</string>
+			<string>CPDecimalMakeZero</string>
+			<string>CPDecimalMultiply</string>
+			<string>CPDecimalMultiplyByPowerOf10</string>
+			<string>CPDecimalNormalize</string>
+			<string>CPDecimalPower</string>
+			<string>CPDecimalRound</string>
+			<string>CPDecimalString</string>
+			<string>CPDecimalSubtract</string>
+			<string>CPEmptyRange</string>
+			<string>CPEqualRanges</string>
+			<string>CPIntersectionRange</string>
+			<string>CPLocationInRange</string>
+			<string>CPMakeRange</string>
+			<string>CPMakeRangeCopy</string>
+			<string>CPMaxRange</string>
+			<string>CPRangeFromString</string>
+			<string>CPRangeInRange</string>
+			<string>CPStringFromRange</string>
+			<string>CPUnionRange</string>
+			
+			<!-- 'all' classes (may be duplicates but some are unique) -->			
+			<string>CAAnimation</string>
+			<string>CABasicAnimation</string>
+			<string>CAFlashLayer</string>
+			<string>CALayer</string>
+			<string>CAMediaTimingFunction</string>
+			<string>CAPropertyAnimation</string>
+			<string>CPAccordionView</string>
+			<string>CPAccordionViewItem</string>
+			<string>CPAlert</string>
+			<string>CPAnimation</string>
+			<string>CPApplication</string>
+			<string>CPArray</string>
+			<string>CPArrayController</string>
+			<string>CPAttributedString</string>
+			<string>CPBasePlatform</string>
+			<string>CPBasePlatformString</string>
+			<string>CPBezierPath</string>
+			<string>CPBinder</string>
+			<string>CPBox</string>
+			<string>CPBrowser</string>
+			<string>CPBundle</string>
+			<string>CPButton</string>
+			<string>CPButtonBar</string>
+			<string>CPCharacterSet</string>
+			<string>CPCheckBox</string>
+			<string>CPCib</string>
+			<string>CPCibBindingConnector</string>
+			<string>CPCibConnector</string>
+			<string>CPCibControlConnector</string>
+			<string>CPCibOutletConnector</string>
+			<string>CPClipView</string>
+			<string>CPCoder</string>
+			<string>CPCollectionView</string>
+			<string>CPCollectionViewItem</string>
+			<string>CPColor</string>
+			<string>CPColorPanel</string>
+			<string>CPColorPicker</string>
+			<string>CPColorWell</string>
+			<string>CPColorWheelColorPicker</string>
+			<string>CPComparisonPredicate</string>
+			<string>CPCompoundPredicate</string>
+			<string>CPControl</string>
+			<string>CPController</string>
+			<string>CPControllerSelectionProxy</string>
+			<string>CPCookie</string>
+			<string>CPCountedSet</string>
+			<string>CPCursor</string>
+			<string>CPData</string>
+			<string>CPDate</string>
+			<string>CPDecimalNumber</string>
+			<string>CPDecimalNumberHandler</string>
+			<string>CPDictionary</string>
+			<string>CPDisclosureButton</string>
+			<string>CPDocument</string>
+			<string>CPDocumentController</string>
+			<string>CPDOMWindowLayer</string>
+			<string>CPDraggingInfo</string>
+			<string>CPDragServer</string>
+			<string>CPEnumerator</string>
+			<string>CPEvent</string>
+			<string>CPException</string>
+			<string>CPExpression</string>
+			<string>CPExpression_aggregate</string>
+			<string>CPExpression_constant</string>
+			<string>CPExpression_function</string>
+			<string>CPExpression_keypath</string>
+			<string>CPExpression_self</string>
+			<string>CPExpression_set</string>
+			<string>CPExpression_subquery</string>
+			<string>CPExpression_variable</string>
+			<string>CPFlashMovie</string>
+			<string>CPFlashView</string>
+			<string>CPFont</string>
+			<string>CPFontManager</string>
+			<string>CPFormatter</string>
+			<string>CPFunctionOperation</string>
+			<string>CPGraphicsContext</string>
+			<string>CPHTTPURLResponse</string>
+			<string>CPImage</string>
+			<string>CPImageView</string>
+			<string>CPIndexPath</string>
+			<string>CPIndexSet</string>
+			<string>CPInvocation</string>
+			<string>CPInvocationOperation</string>
+			<string>CPIsNilTransformer</string>
+			<string>CPIsNotNilTransformer</string>
+			<string>CPJSONPConnection</string>
+			<string>CPKeyBinding</string>
+			<string>CPKeyedArchiver</string>
+			<string>CPKeyedUnarchiver</string>
+			<string>CPMenu</string>
+			<string>CPMenuItem</string>
+			<string>CPMutableArray</string>
+			<string>CPMutableAttributedString</string>
+			<string>CPMutableDictionary</string>
+			<string>CPMutableIndexSet</string>
+			<string>CPMutableSet</string>
+			<string>CPNegateBooleanTransformer</string>
+			<string>CPNinePartImage</string>
+			<string>CPNotification</string>
+			<string>CPNotificationCenter</string>
+			<string>CPNull</string>
+			<string>CPNumber</string>
+			<string>CPObject</string>
+			<string>CPObjectController</string>
+			<string>CPOpenPanel</string>
+			<string>CPOperation</string>
+			<string>CPOperationQueue</string>
+			<string>CPOutlineView</string>
+			<string>CPPanel</string>
+			<string>CPPasteboard</string>
+			<string>CPPlatform</string>
+			<string>CPPlatformString</string>
+			<string>CPPlatformWindow</string>
+			<string>CPPopUpButton</string>
+			<string>CPPredicate</string>
+			<string>CPPredicate_BOOL</string>
+			<string>CPPredicateScanner</string>
+			<string>CPPredicateUtilities</string>
+			<string>CPProgressIndicator</string>
+			<string>CPPropertyListSerialization</string>
+			<string>CPProxy</string>
+			<string>CPRadio</string>
+			<string>CPRadioGroup</string>
+			<string>CPResponder</string>
+			<string>CPRunLoop</string>
+			<string>CPSavePanel</string>
+			<string>CPScanner</string>
+			<string>CPScreen</string>
+			<string>CPScroller</string>
+			<string>CPScrollView</string>
+			<string>CPSearchField</string>
+			<string>CPSecureTextField</string>
+			<string>CPSegmentedControl</string>
+			<string>CPSet</string>
+			<string>CPShadow</string>
+			<string>CPShadowView</string>
+			<string>CPSlider</string>
+			<string>CPSliderColorPicker</string>
+			<string>CPSortDescriptor</string>
+			<string>CPSound</string>
+			<string>CPSplitView</string>
+			<string>CPStepper</string>
+			<string>CPString</string>
+			<string>CPTableColumn</string>
+			<string>CPTableColumnValueBinder</string>
+			<string>CPTableHeaderView</string>
+			<string>CPTableView</string>
+			<string>CPTabView</string>
+			<string>CPTabViewItem</string>
+			<string>CPTextField</string>
+			<string>CPTheme</string>
+			<string>CPThemeBlend</string>
+			<string>CPThreePartImage</string>
+			<string>CPTimer</string>
+			<string>CPTokenField</string>
+			<string>CPToolbar</string>
+			<string>CPToolbarItem</string>
+			<string>CPTreeNode</string>
+			<string>CPUnarchiveFromDataTransformer</string>
+			<string>CPUndoManager</string>
+			<string>CPURL</string>
+			<string>CPURLConnection</string>
+			<string>CPURLRequest</string>
+			<string>CPURLResponse</string>
+			<string>CPUserDefaults</string>
+			<string>CPUserDefaultsCookieStore</string>
+			<string>CPUserDefaultsLocalStore</string>
+			<string>CPUserDefaultsStore</string>
+			<string>CPUserSessionManager</string>
+			<string>CPValue</string>
+			<string>CPValueTransformer</string>
+			<string>CPView</string>
+			<string>CPViewAnimation</string>
+			<string>CPViewController</string>
+			<string>CPWebDAVManager</string>
+			<string>CPWebScriptObject</string>
+			<string>CPWebView</string>
+			<string>CPWindow</string>
+			<string>CPWindowController</string>
+
+		</array>
+	<key>BBLMLanguageCode</key> <string>objj</string>
+	<key>BBLMLanguageDisplayName</key> <string>Objective-J</string>
+	<key>BBLMScansFunctions</key> <true/>
+	<key>BBLMSupportsTextCompletion</key> <true/>
+	<key>BBLMSuffixMap</key> 
+		<array>
+			<dict>
+				<key>BBLMLanguageSuffix</key> <string>.j</string>
+			</dict>
+		</array>
+	<key>BBLMCanSpellCheckCodeRuns</key> <true/>
+	<key>Language Features</key> 
+		<dict>
+			<key>Identifier and Keyword Characters</key> <string>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz@</string>
+			<key>Function Pattern</key> <string>
+				(?x:
+					(?P&lt;leadspace&gt;^\s*)
+					(?P&lt;function&gt;
+						(?P&lt;function_name&gt;
+							( (?# method declaration)
+								(-|\+)\s*				(?# - or +)
+								\([a-zA-Z_]+\)\s*		(?# return type)
+								(
+									[a-zA-Z_1-9]+:\([a-zA-Z_]+\)[a-zA-Z_1-9]+(\s+[a-zA-Z_1-9]+:\([a-zA-Z_]+\)[a-zA-Z_1-9]+)+ |	(?# &gt;1 arguments)
+									[a-zA-Z_1-9]+:\([a-zA-Z_]+\)[a-zA-Z_1-9]+ |		(?# one arguments)
+									[a-zA-Z_1-9]+			(?# no argument)
+								)
+							) 
+							|
+							( (?# implementation)
+								@implementation\s+\w+\s+:\s+\w+
+							)
+							|
+							( (?# pragma marks)
+								(
+									(?-x)#pragma mark \w*(?x)
+								)
+								|
+								(
+									(?-x)#PRAGMA MARK \w*(?x)
+								)
+							)
+						)		
+					)
+				)
+			</string>
+			<key>Skip Pattern</key> <string>((?P&gt;comment)|(?P&gt;string)|.*\r)</string>
+			<key>Comment Pattern</key> <string>
+				(?x:
+					(//.*$)        |    (?# Line comment)
+					(?s:/\*.*?\*/)      (?# Block comment)
+				)
+				</string>
+			<key>String Pattern</key> <string>
+				(?x:
+					(@".*?(\\\r+.*?)*?")   |
+					(".*?(\\\r+.*?)*?")    |
+					('.*?(\\\r+.*?)*?')
+				)
+			</string>
+		</dict>
+</dict>
+</plist>

@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# mmd2tex --- MultiMarkdown convenience script
+#	<http://fletcherpenney.net/multimarkdown/>
+#	Fletcher T. Penney
+#
+# Pass arguments on to the binary to convert text to LaTeX
+#
+
+# Be sure to include multimarkdown in our PATH
+export PATH="/usr/local/bin:$PATH"
+
+if [ $# = 0 ]
+then
+    multimarkdown -t latex
+else
+    multimarkdown -t latex "$1"
+fi

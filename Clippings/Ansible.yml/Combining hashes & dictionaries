@@ -1,0 +1,27 @@
+# ------------------------------------------------------------
+# Combining hashes/dictionaries
+# ------------------------------------------------------------
+
+# Combine filter allows hashes to be merged in one hash
+
+  - {{ {'a':1, 'b':2}|combine({'b':3}) }}
+
+# The resulting hash would be
+
+  - {'a':1, 'b':3}
+  
+# ------------------------------------------------------------
+# Override keys and recurse into nested hashes and merge their keys
+
+  - {{ {'a':{'foo':1, 'bar':2}, 'b':2}|combine({'a':{'bar':3, 'baz':4}}, recursive=True) }}
+
+# The resulting hash would be
+
+{'a':{'foo':1, 'bar':3, 'baz':4}, 'b':2}
+# ------------------------------------------------------------
+# The filter can also take multiple arguments to merge
+
+  - {{ a|combine(b, c, d) }}
+
+# In this case, keys in d would override those in c
+# which would override those in b and so on

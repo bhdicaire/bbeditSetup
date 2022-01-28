@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>BBEditDocumentType</key>
+  <string>CodelessLanguageModule</string>
+  <key>BBLMColorsSyntax</key>
+  <true/>
+  <key>BBLMIsCaseSensitive</key>
+  <true/>
+  <key>BBLMKeywordList</key>
+  <array>
+      <string>abstract</string>
+      <string>alias</string>
+      <string>align</string>
+      <string>asm</string>
+      <string>assert</string>
+      <string>auto</string>
+      <string>body</string>
+      <string>bool</string>
+      <string>break</string>
+      <string>byte</string>
+      <string>case</string>
+      <string>cast</string>
+      <string>catch</string>
+      <string>cdouble</string>
+      <string>cent</string>
+      <string>cfloat</string>
+      <string>char</string>
+      <string>class</string>
+      <string>const</string>
+      <string>continue</string>
+      <string>creal</string>
+      <string>dchar</string>
+      <string>debug</string>
+      <string>default</string>
+      <string>delegate</string>
+      <string>delete</string>
+      <string>deprecated</string>
+      <string>do</string>
+      <string>double</string>
+      <string>else</string>
+      <string>enum</string>
+      <string>export</string>
+      <string>extern</string>
+      <string>false</string>
+      <string>final</string>
+      <string>finally</string>
+      <string>float</string>
+      <string>for</string>
+      <string>foreach</string>
+      <string>foreach_reverse</string>
+      <string>function</string>
+      <string>goto</string>
+      <string>idouble</string>
+      <string>if</string>
+      <string>ifloat</string>
+      <string>immutable</string>
+      <string>import</string>
+      <string>in</string>
+      <string>inout</string>
+      <string>int</string>
+      <string>interface</string>
+      <string>invariant</string>
+      <string>ireal</string>
+      <string>is</string>
+      <string>lazy</string>
+      <string>long</string>
+      <string>macro</string>
+      <string>mixin</string>
+      <string>module</string>
+      <string>new</string>
+      <string>nothrow</string>
+      <string>null</string>
+      <string>out</string>
+      <string>override</string>
+      <string>package</string>
+      <string>pragma</string>
+      <string>private</string>
+      <string>protected</string>
+      <string>public</string>
+      <string>pure</string>
+      <string>real</string>
+      <string>ref</string>
+      <string>return</string>
+      <string>scope</string>
+      <string>shared</string>
+      <string>short</string>
+      <string>static</string>
+      <string>struct</string>
+      <string>super</string>
+      <string>switch</string>
+      <string>synchronized</string>
+      <string>template</string>
+      <string>this</string>
+      <string>throw</string>
+      <string>true</string>
+      <string>try</string>
+      <string>typedef</string>
+      <string>typeid</string>
+      <string>typeof</string>
+      <string>ubyte</string>
+      <string>ucent</string>
+      <string>uint</string>
+      <string>ulong</string>
+      <string>union</string>
+      <string>unittest</string>
+      <string>ushort</string>
+      <string>version</string>
+      <string>void</string>
+      <string>volatile</string>
+      <string>wchar</string>
+      <string>while</string>
+      <string>with</string>
+      <string>__gshared</string>
+      <string>__thread</string>
+      <string>__traits</string>
+      <string>string</string>
+      <string>wstring</string>
+      <string>dstring</string>
+      <string>size_t</string>
+      <string>ptrdiff_t</string>
+      <string>sizediff_t</string>
+      <string>hash_t</string>
+      <string>equals_t</string>
+      <string>__FILE__</string>
+      <string>__LINE__</string>
+      <string>__DATE__</string>
+      <string>__EOF__</string>
+      <string>__TIME__</string>
+      <string>__TIMESTAMP__</string>
+      <string>__VENDOR__</string>
+      <string>__VERSION__</string>
+      <string>std.algorithm</string>
+      <string>std.array</string>
+      <string>std.ascii</string>
+      <string>std.base64</string>
+      <string>std.bigint</string>
+      <string>std.bitmanip</string>
+      <string>std.compiler</string>
+      <string>std.complex</string>
+      <string>std.concurrency</string>
+      <string>std.container</string>
+      <string>std.contracts</string>
+      <string>std.conv</string>
+      <string>std.csv</string>
+      <string>std.datetime</string>
+      <string>std.demangle</string>
+      <string>std.encoding</string>
+      <string>std.exception</string>
+      <string>std.file</string>
+      <string>std.format</string>
+      <string>std.functional</string>
+      <string>std.getopt</string>
+      <string>std.json</string>
+      <string>std.math</string>
+      <string>std.mathspecial</string>
+      <string>std.md5</string>
+      <string>std.metastrings</string>
+      <string>std.mmfile</string>
+      <string>std.numeric</string>
+      <string>std.outbuffer</string>
+      <string>std.parallelism</string>
+      <string>std.path</string>
+      <string>std.process</string>
+      <string>std.random</string>
+      <string>std.range</string>
+      <string>std.regex</string>
+      <string>std.signals</string>
+      <string>std.socket</string>
+      <string>std.socketstream</string>
+      <string>std.stdint</string>
+      <string>std.stdio</string>
+      <string>std.cstream</string>
+      <string>std.stream</string>
+      <string>std.string</string>
+      <string>std.system</string>
+      <string>std.traits</string>
+      <string>std.typecons</string>
+      <string>std.typetuple</string>
+      <string>std.uni</string>
+      <string>std.uri</string>
+      <string>std.utf</string>
+      <string>std.variant</string>
+      <string>std.xml</string>
+      <string>std.zip</string>
+      <string>std.zlib</string>
+      <string>std.c.fenv</string>
+      <string>std.c.locale</string>
+      <string>std.c.math</string>
+      <string>std.c.process</string>
+      <string>std.c.stdarg</string>
+      <string>std.c.stddef</string>
+      <string>std.c.stdio</string>
+      <string>std.c.stdlib</string>
+      <string>std.c.string</string>
+      <string>std.c.time</string>
+      <string>std.c.wcharh</string>
+      <string>std.net.curl</string>
+      <string>std.net.isemail</string>
+      <string>std.windows.charset</string>
+      <string>std.windows</string>
+      <string>std.linux</string>
+      <string>std.c.windows</string>
+      <string>std.c.linux</string>
+      <string>etc.c.curl</string>
+      <string>etc.c.sqlite3</string>
+      <string>etc.c.zlib</string>
+      <string>core.atomic</string>
+      <string>core.bitop</string>
+      <string>core.cpuid</string>
+      <string>core.exception</string>
+      <string>core.memory</string>
+      <string>core.runtime</string>
+      <string>core.thread</string>
+      <string>core.time</string>
+      <string>core.vararg</string>
+      <string>core.sync.barrier</string>
+      <string>core.sync.condition</string>
+      <string>core.sync.config</string>
+      <string>core.sync.exception</string>
+      <string>core.sync.mutex</string>
+      <string>core.sync.rwmutex</string>
+      <string>core.sync.semaphore</string>
+    </array>
+	  <key>BBLMSuffixMap</key>
+	  <array>
+		  <dict>
+			  <key>BBLMLanguageSuffix</key>
+			  <string>d</string>
+		  </dict>
+	  </array>        
+    <key>BBLMLanguageCode</key>
+    <string>CDpl</string>
+    <key>BBLMLanguageDisplayName</key>
+    <string>D Programming Language</string>
+    <key>BBLMScansFunctions</key>
+    <true/>
+    <key>Language Features</key>
+    <dict>
+        <key>Comment Pattern</key>
+        <string>(?x:
+            (?&gt;	//	.*			  $			  ) |
+            (?&gt;	\#!	.*			  $				) |            
+            (?&gt;	/\*		(?s:.*?)	(?: \*/ | \z )	) |
+            (?&gt;	/\+		(?s:.*?)	(?: \+/ | \z )	)
+        )</string>
+        <key>Function Pattern</key>
+        <string>(?x:
+            (?P&lt;function&gt;
+            
+                (?P&lt;function_name&gt;
+                    (?&gt; _* [A-Za-z] [A-Za-z0-9_]* )
+                    (?:
+                        (?:
+                            (?&gt;
+                                (?&gt; \s+ ) | (?P&gt;comment) | (?P&gt;string)
+                            )
+                        )*
+                        ::
+                        (?:
+                            (?&gt;
+                                (?&gt; \s+ ) | (?P&gt;comment) | (?P&gt;string)
+                            )
+                        )*
+                        ~?	_* [A-Za-z] [A-Za-z0-9_]*
+                    )?
+                )
+                
+                (?:
+                    (?&gt;
+                        (?&gt; \s+ ) | (?P&gt;comment) | (?P&gt;string)
+                    )
+                )*
+                
+                (?P&lt;parens&gt;
+                    \(
+                        (?:
+                            (?&gt;
+                                (?&gt; [^'"()]+ ) | (?: / (?![/*]) ) | (?P&gt;comment) | (?P&gt;string) | (?P&gt;parens)
+                            )
+                        )*
+                    \)
+                )
+                
+                (?:
+                    (?&gt;
+                        (?&gt; \s+ ) | (?P&gt;comment) | (?P&gt;string)
+                    )
+                )*
+                
+                (?:
+                    :
+                    (?:
+                        (?&gt;
+                            (?&gt; [^'"{]+ ) | (?: / (?![/*]) ) | (?P&gt;comment) | (?P&gt;string)
+                        )
+                    )*
+                )?
+                
+                (?P&lt;braces&gt;
+                    {
+                        (?:
+                            (?&gt;
+                                (?&gt; [^'"{}]+ ) | (?: / (?![/*]) ) | (?P&gt;comment) | (?P&gt;string) | (?P&gt;braces)
+                            )
+                        )*
+                    }
+                )
+            )
+        )</string>
+        <key>Identifier and Keyword Character Class</key>
+        <string>0-9A-Z_a-z</string>
+        <key>Skip Pattern</key>
+        <string>(?x:
+            (?&gt;
+                (?P&gt;comment) | (?P&gt;string)
+            )
+        )</string>
+        <key>String Pattern</key>
+        <string>(?x:
+            (?&gt;	 "	(?s: \\. | [^"] )*?		(?: " | \z)	)	|
+            (?&gt;	r"	(?s: \\. | [^"] )*?		(?: " | \z)	) |
+            (?&gt;   '  (?s: \\. | [^']  )*?    (?: '  | \z) ) |
+            (?&gt;   `  (?s: \\. | [^`]  )*?    (?: `  | \z) ) |            
+            (?&gt;	q"	(?s: \\. | [^"] )*?		(?: " | \z)	) |
+            (?&gt;  q{ .* }(?!})  )
+        )</string>
+    </dict>
+</dict>
+</plist>
