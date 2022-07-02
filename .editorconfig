@@ -24,7 +24,7 @@ trim_trailing_whitespace = true
 
 # YAML Files
 [*.{yml,yaml}]
-indent_size = 2
+# placeholder
 
 # Markdown Files
 [*.{md,mdx}]
@@ -32,7 +32,7 @@ trim_trailing_whitespace = false
 
 # Web Files
 [*.{htm,html,js,jsm,ts,tsx,cjs,cts,ctsx,mjs,mts,mtsx,css,sass,scss,less,pcss,svg,vue}]
-indent_size = 2
+indent_size = 4
 
 # Batch Files
 [*.{cmd,bat}]
@@ -45,6 +45,14 @@ end_of_line = lf
 # Makefiles
 [Makefile]
 indent_style = tab
+
+[*.properties]
+insert_final_newline = false
+charset = latin1
+
+[*.xml]
+indent_size = 4
+insert_final_newline = false
 
 ##########################################
 # BBEdit Extension
