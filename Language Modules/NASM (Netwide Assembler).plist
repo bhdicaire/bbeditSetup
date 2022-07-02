@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+NASM Syntax coloring for TextWrangler / BBEdit
+Pedro Freire (www.pedrofreire.com), 2012
+Licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License:
+	http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+Includes ALL instructions from Intel IA-32 architecture (including 64-bit
+instructions and registers), including floating-point (FPU), MMX, SSE, SSE2,
+SSE3 and virtual machine instructions.
+-->
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>NASM (Netwide Assembler)</string>
+	<key>BBLMLanguageCode</key>
+	<string>NASM</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMScansFunctions</key>
+	<false/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<!-- Data Transfer Instructions -->
+		<string>mov</string>
+		<!-- conditional move -->
+		<string>cmova</string>
+		<string>cmovae</string>
+		<string>cmovb</string>
+		<string>cmovbe</string>
+		<string>cmovc</string>
+		<string>cmove</string>
+		<string>cmovg</string>
+		<string>cmovge</string>
+		<string>cmovl</string>
+		<string>cmovle</string>
+		<string>cmovo</string>
+		<string>cmovp</string>
+		<string>cmovpe</string>
+		<string>cmovpo</string>
+		<string>cmovs</string>
+		<string>cmovz</string>
+		<!-- conditional move (negated) -->
+		<string>cmovna</string>
+		<string>cmovnae</string>
+		<string>cmovnb</string>
+		<string>cmovnbe</string>
+		<string>cmovnc</string>
+		<string>cmovne</string>
+		<string>cmovng</string>
+		<string>cmovnge</string>
+		<string>cmovnl</string>
+		<string>cmovnle</string>
+		<string>cmovno</string>
+		<string>cmovnp</string>
+		<string>cmovns</string>
+		<string>cmovnz</string>
+		<!-- other -->
+		<string>xchg</string>
+		<string>bswap</string>
+		<string>xadd</string>
+		<string>cmpxvhg</string>
+		<string>cmpxchg8b</string>
+		<string>push</string>
+		<string>pop</string>
+		<string>pusha</string>
+		<string>pushad</string>
+		<string>popa</string>
+		<string>popad</string>
+		<string>cwd</string>
+		<string>cdq</string>
+		<string>cbw</string>
+		<string>cwde</string>
+		<string>movsx</string>
+		<string>movzx</string>
+		
+		<!-- Binary Arithmetic Instructions -->
+		<string>add</string>
+		<string>adc</string>
+		<string>sub</string>
+		<string>sbb</string>
+		<string>imul</string>
+		<string>mul</string>
+		<string>idiv</string>
+		<string>div</string>
+		<string>inc</string>
+		<string>dec</string>
+		<string>neg</string>
+		<string>cmp</string>
+		
+		<!-- Decimal Arithmetic Instructions -->
+		<string>daa</string>
+		<string>das</string>
+		<string>aaa</string>
+		<string>aas</string>
+		<string>aam</string>
+		<string>aad</string>
+		
+		<!-- Logical Instructions -->
+		<string>and</string>
+		<string>or</string>
+		<string>xor</string>
+		<string>not</string>
+		
+		<!-- Shift and Rotate Instructions -->
+		<string>sar</string>
+		<string>shr</string>
+		<string>sal</string>
+		<string>shl</string>
+		<string>shrd</string>
+		<string>shld</string>
+		<string>ror</string>
+		<string>rol</string>
+		<string>rcr</string>
+		<string>rcl</string>
+		
+		<!-- Bit and Byte Instructions -->
+		<string>bt</string>
+		<string>bts</string>
+		<string>btr</string>
+		<string>btc</string>
+		<string>bsf</string>
+		<string>bsr</string>
+		<!-- set byte if -->
+		<string>seta</string>
+		<string>setae</string>
+		<string>setb</string>
+		<string>setbe</string>
+		<string>setc</string>
+		<string>sete</string>
+		<string>setg</string>
+		<string>setge</string>
+		<string>setl</string>
+		<string>setle</string>
+		<string>seto</string>
+		<string>setp</string>
+		<string>setpe</string>
+		<string>setpo</string>
+		<string>sets</string>
+		<string>setz</string>
+		<!-- set byte if (negated) -->
+		<string>setna</string>
+		<string>setnae</string>
+		<string>setnb</string>
+		<string>setnbe</string>
+		<string>setnc</string>
+		<string>setne</string>
+		<string>setng</string>
+		<string>setnge</string>
+		<string>setnl</string>
+		<string>setnle</string>
+		<string>setno</string>
+		<string>setnp</string>
+		<string>setns</string>
+		<string>setnz</string>
+		<!-- other -->
+		<string>test</string>
+		
+		<!-- Control Transfer Instructions -->
+		<string>jmp</string>
+		<!-- conditional jump (negated) -->
+		<string>ja</string>
+		<string>jae</string>
+		<string>jb</string>
+		<string>jbe</string>
+		<string>jc</string>
+		<string>jcxz</string>
+		<string>je</string>
+		<string>jecxz</string>
+		<string>jg</string>
+		<string>jge</string>
+		<string>jl</string>
+		<string>jle</string>
+		<string>jo</string>
+		<string>jp</string>
+		<string>jpe</string>
+		<string>jpo</string>
+		<string>js</string>
+		<string>jz</string>
+		<!-- conditional jump (negated) -->
+		<string>jna</string>
+		<string>jnae</string>
+		<string>jnb</string>
+		<string>jnbe</string>
+		<string>jnc</string>
+		<string>jne</string>
+		<string>jng</string>
+		<string>jnge</string>
+		<string>jnl</string>
+		<string>jnle</string>
+		<string>jno</string>
+		<string>jnp</string>
+		<string>jns</string>
+		<string>jnz</string>
+		<!-- loop -->
+		<string>loop</string>
+		<string>loope</string>
+		<string>loopz</string>
+		<string>loopne</string>
+		<string>loopnz</string>
+		<!-- subroutines -->
+		<string>call</string>
+		<string>ret</string>
+		<string>iret</string>
+		<string>int</string>
+		<string>into</string>
+		<string>bound</string>
+		<string>enter</string>
+		<string>leave</string>
+		
+		<!-- String Instructions -->
+		<string>movs</string>
+		<string>movsb</string>
+		<string>movsw</string>
+		<string>movsd</string>
+		<string>cmps</string>
+		<string>cmpsb</string>
+		<string>cmpsw</string>
+		<string>cmpsd</string>
+		<string>scas</string>
+		<string>scasb</string>
+		<string>scasw</string>
+		<string>scasd</string>
+		<string>lods</string>
+		<string>lodsb</string>
+		<string>lodsw</string>
+		<string>lodsd</string>
+		<string>stos</string>
+		<string>stosb</string>
+		<string>stosw</string>
+		<string>stosd</string>
+		<string>rep</string>
+		<string>repe</string>
+		<string>repz</string>
+		<string>repne</string>
+		<string>repnz</string>
+		
+		<!-- I/O Instructions -->
+		<string>in</string>
+		<string>out</string>
+		<string>ins</string>
+		<string>insb</string>
+		<string>insw</string>
+		<string>insd</string>
+		<string>outs</string>
+		<string>outsb</string>
+		<string>outsw</string>
+		<string>outsd</string>
+		
+		<!-- Flag Control Instructions -->
+		<string>stc</string>
+		<string>clc</string>
+		<string>cmc</string>
+		<string>cld</string>
+		<string>std</string>
+		<string>lahf</string>
+		<string>sahf</string>
+		<string>pushf</string>
+		<string>pushfd</string>
+		<string>popf</string>
+		<string>popfd</string>
+		<string>sti</string>
+		<string>cli</string>
+		
+		<!-- Segment Register Instructions -->
+		<string>lds</string>
+		<string>les</string>
+		<string>lfs</string>
+		<string>lgs</string>
+		<string>lss</string>
+		
+		<!-- Miscellaneous Instructions -->
+		<string>lea</string>
+		<string>nop</string>
+		<string>ud2</string>
+		<string>xlat</string>
+		<string>xlatb</string>
+		<string>cpuid</string>
+		
+		<!-- FPU Data Transfer Instructions -->
+		<string>fld</string>
+		<string>fst</string>
+		<string>fstp</string>
+		<string>fild</string>
+		<string>fist</string>
+		<string>fistp</string>
+		<string>fbld</string>
+		<string>fbstp</string>
+		<string>fxch</string>
+		<string>fcmovb</string>
+		<string>fcmovbe</string>
+		<string>fcmove</string>
+		<string>fcmovu</string>
+		<string>fcmovnb</string>
+		<string>fcmovnbe</string>
+		<string>fcmovne</string>
+		<string>fcmovnu</string>
+		
+		<!-- FPU Basic Arithmetic Instructions -->
+		<string>fadd</string>
+		<string>faddp</string>
+		<string>fiadd</string>
+		<string>fsub</string>
+		<string>fsubp</string>
+		<string>fisub</string>
+		<string>fsubr</string>
+		<string>fsubrp</string>
+		<string>fisubr</string>
+		<string>fmul</string>
+		<string>fmulp</string>
+		<string>fimul</string>
+		<string>fdiv</string>
+		<string>fdivp</string>
+		<string>fidiv</string>
+		<string>fdivr</string>
+		<string>fdivrp</string>
+		<string>fidivr</string>
+		<string>fprem</string>
+		<string>fprem1</string>
+		<string>fabs</string>
+		<string>fchs</string>
+		<string>frndint</string>
+		<string>fscale</string>
+		<string>fsqrt</string>
+		<string>fxtract</string>
+		
+		<!-- FPU Comparison Instructions -->
+		<string>fcom</string>
+		<string>fcomp</string>
+		<string>fcompp</string>
+		<string>fucom</string>
+		<string>fucomp</string>
+		<string>fucompp</string>
+		<string>ficom</string>
+		<string>ficomp</string>
+		<string>fcomi</string>
+		<string>fucomi</string>
+		<string>fcomip</string>
+		<string>fucomip</string>
+		<string>ftst</string>
+		<string>fxam</string>
+		
+		<!-- FPU Transcendental Instructions -->
+		<string>fsin</string>
+		<string>fcos</string>
+		<string>fsincos</string>
+		<string>fptan</string>
+		<string>fpatan</string>
+		<string>f2xm1</string>
+		<string>fyl2x</string>
+		<string>fyl2xp1</string>
+		
+		<!-- FPU Load Constants Instructions -->
+		<string>fld1</string>
+		<string>fldz</string>
+		<string>fldpi</string>
+		<string>fldl2e</string>
+		<string>fldln2</string>
+		<string>fldl2t</string>
+		<string>fldlg2</string>
+		
+		<!-- FPU Control Instructions -->
+		<string>fincstp</string>
+		<string>fdecstp</string>
+		<string>ffree</string>
+		<string>finit</string>
+		<string>fninit</string>
+		<string>fclex</string>
+		<string>fnclex</string>
+		<string>fstcw</string>
+		<string>fnstcw</string>
+		<string>fldcw</string>
+		<string>fstenv</string>
+		<string>fnstenv</string>
+		<string>fldenv</string>
+		<string>fsave</string>
+		<string>fnsave</string>
+		<string>frstor</string>
+		<string>fstsw</string>
+		<string>fnstsw</string>
+		<string>wait</string>
+		<string>fwait</string>
+		<string>fnop</string>
+		
+		<!-- FPU and SIMD State Management Instructions -->
+		<string>fxsave</string>
+		<string>fxrstor</string>
+		
+		<!-- MMX Data Transfer Instructions -->
+		<string>movd</string>
+		<string>movq</string>
+		
+		<!-- MMX Conversion Instructions -->
+		<string>packsswb</string>
+		<string>packssdw</string>
+		<string>packuswb</string>
+		<string>punpckhbw</string>
+		<string>punpckhwd</string>
+		<string>punpckhdq</string>
+		<string>punpcklbw</string>
+		<string>punpcklwd</string>
+		<string>punpckldq</string>
+		
+		<!-- MMX Packed Arithmetic Instructions -->
+		<string>paddb</string>
+		<string>paddw</string>
+		<string>paddd</string>
+		<string>paddsb</string>
+		<string>paddsw</string>
+		<string>paddusb</string>
+		<string>paddusw</string>
+		<string>psubb</string>
+		<string>psubw</string>
+		<string>psubd</string>
+		<string>psubsb</string>
+		<string>psubsw</string>
+		<string>psubusb</string>
+		<string>psubusw</string>
+		<string>pmulhw</string>
+		<string>pmullw</string>
+		<string>pmaddwd</string>
+		
+		<!-- MMX Comparison Instructions -->
+		<string>pcmpeqb</string>
+		<string>pcmpeqw</string>
+		<string>pcmpeqd</string>
+		<string>pcmpgtb</string>
+		<string>pcmpgtw</string>
+		<string>pcmpgtd</string>
+		
+		<!-- MMX Logical Instructions -->
+		<string>pand</string>
+		<string>pandn</string>
+		<string>por</string>
+		<string>pxor</string>
+		
+		<!-- MMX Shift and Rotate Instructions -->
+		<string>psllw</string>
+		<string>pslld</string>
+		<string>psllq</string>
+		<string>psrlw</string>
+		<string>psrld</string>
+		<string>psrlq</string>
+		<string>psraw</string>
+		<string>psrad</string>
+		
+		<!-- MMX State Management Instructions -->
+		<string>emms</string>
+		
+		<!-- SSE Data Transfer Instructions -->
+		<string>movaps</string>
+		<string>movups</string>
+		<string>movhps</string>
+		<string>movhlps</string>
+		<string>movlps</string>
+		<string>movlhps</string>
+		<string>movmskps</string>
+		<string>movss</string>
+		
+		<!-- SSE Packed Arithmetic Instructions -->
+		<string>addps</string>
+		<string>addss</string>
+		<string>subps</string>
+		<string>subss</string>
+		<string>mulps</string>
+		<string>mulss</string>
+		<string>divps</string>
+		<string>divss</string>
+		<string>rcpps</string>
+		<string>rcpss</string>
+		<string>sqrtps</string>
+		<string>sqrtss</string>
+		<string>rsqrtps</string>
+		<string>rsqrtss</string>
+		<string>maxps</string>
+		<string>maxss</string>
+		<string>minps</string>
+		<string>minss</string>
+		
+		<!-- SSE Comparison Instructions -->
+		<string>cmpps</string>
+		<string>cmpss</string>
+		<string>comiss</string>
+		<string>ucomiss</string>
+		
+		<!-- SSE Logical Instructions -->
+		<string>andps</string>
+		<string>andnps</string>
+		<string>orps</string>
+		<string>xorps</string>
+		
+		<!-- SSE Suffle and Unpack Instructions -->
+		<string>shufps</string>
+		<string>unpckhps</string>
+		<string>unpcklps</string>
+		
+		<!-- SSE Conversion Instructions -->
+		<string>cvtpi2ps</string>
+		<string>cvtsi2ss</string>
+		<string>cvtps2pi</string>
+		<string>cvttps2pi</string>
+		<string>cvtss2si</string>
+		<string>cvttss2si</string>
+		
+		<!-- SSE MXCSR State Management Instructions -->
+		<string>ldmxcsr</string>
+		<string>stmxcsr</string>
+		
+		<!-- SSE 64-Bit SIMD Integer Instructions -->
+		<string>pavgb</string>
+		<string>pavgw</string>
+		<string>pextrw</string>
+		<string>pinsrw</string>
+		<string>pmaxub</string>
+		<string>pmaxsw</string>
+		<string>pminub</string>
+		<string>pminsw</string>
+		<string>pmovmskb</string>
+		<string>pmulhuw</string>
+		<string>psadbw</string>
+		<string>pshufw</string>
+		
+		<!-- SSE Cacheability Control, Prefetch and Instruction Ordering Instructions -->
+		<string>maskmovq</string>
+		<string>movntq</string>
+		<string>movntps</string>
+		<string>prefetch0</string>
+		<string>prefetch1</string>
+		<string>prefetch2</string>
+		<string>prefetch3</string>
+		<string>sfence</string>
+		
+		<!-- SSE2 Data Movement Instructions -->
+		<string>movapd</string>
+		<string>movupd</string>
+		<string>movhpd</string>
+		<string>movlpd</string>
+		<string>movmskpd</string>
+		<string>movsd</string>
+		
+		<!-- SSE2 Packed Arithmetic Instructions -->
+		<string>addpd</string>
+		<string>addsd</string>
+		<string>subpd</string>
+		<string>subsd</string>
+		<string>mulpd</string>
+		<string>mulsd</string>
+		<string>divpd</string>
+		<string>divsd</string>
+		<string>sqrtpd</string>
+		<string>sqrtsd</string>
+		<string>maxpd</string>
+		<string>maxsd</string>
+		<string>minpd</string>
+		<string>minsd</string>
+		
+		<!-- SSE2 Logical Instructions -->
+		<string>andpd</string>
+		<string>andnpd</string>
+		<string>orpd</string>
+		<string>xorpd</string>
+		
+		<!-- SSE2 Compare Instructions -->
+		<string>cmppd</string>
+		<string>cmpsd</string>
+		<string>comisd</string>
+		<string>ucomisd</string>
+		
+		<!-- SSE2 Shuffle and Unpack Instructions -->
+		<string>shufpd</string>
+		<string>unpckhpd</string>
+		<string>unpcklpd</string>
+		
+		<!-- SSE2 Conversion Instructions -->
+		<string>cvtpd2pi</string>
+		<string>cvttpd2pi</string>
+		<string>cvtpi2pd</string>
+		<string>cvtpd2dq</string>
+		<string>cvttpd2dq</string>
+		<string>cvtdq2pd</string>
+		<string>cvtps2pd</string>
+		<string>cvtpd2ps</string>
+		<string>cvtss2sd</string>
+		<string>cvtsd2ss</string>
+		<string>cvtsd2si</string>
+		<string>cvttsd2si</string>
+		<string>cvtsi2sd</string>
+		
+		<!-- SSE2 Packed Single-Precision FP Instructions -->
+		<string>cvtdq2ps</string>
+		<string>cvtps2dq</string>
+		<string>cvttps2dq</string>
+		
+		<!-- SSE2 128-Bit SIMD Integer Instructions -->
+		<string>movdqa</string>
+		<string>movdqu</string>
+		<string>movq2dq</string>
+		<string>movdq2q</string>
+		<string>pmuludq</string>
+		<string>paddq</string>
+		<string>psubq</string>
+		<string>pshuflw</string>
+		<string>pshufhw</string>
+		<string>pshufd</string>
+		<string>pslldq</string>
+		<string>psrldq</string>
+		<string>punpckhqdq</string>
+		<string>punpcklqdq</string>
+		
+		<!-- SSE2 Cacheability Control and Ordering Instructions -->
+		<string>clflush</string>
+		<string>lfence</string>
+		<string>mfence</string>
+		<string>pause</string>
+		<string>maskmovdqu</string>
+		<string>movntpd</string>
+		<string>movntdq</string>
+		<string>movnti</string>
+		
+		<!-- SSE3 Instructions -->
+		<string>fisttp</string>
+		<string>lddqu</string>
+		<string>addsubps</string>
+		<string>addsubpd</string>
+		<string>haddps</string>
+		<string>hsubps</string>
+		<string>haddpd</string>
+		<string>hsubpd</string>
+		<string>movshdup</string>
+		<string>movsldup</string>
+		<string>movddup</string>
+		<string>monitor</string>
+		<string>mwait</string>
+		
+		<!-- System Instructions -->
+		<string>lgdt</string>
+		<string>sgdt</string>
+		<string>lldt</string>
+		<string>sldt</string>
+		<string>ltr</string>
+		<string>str</string>
+		<string>lidt</string>
+		<string>sidt</string>
+		<string>lmsw</string>
+		<string>smsw</string>
+		<string>clts</string>
+		<string>arpl</string>
+		<string>lar</string>
+		<string>lsl</string>
+		<string>verr</string>
+		<string>verw</string>
+		<string>invd</string>
+		<string>wbinvd</string>
+		<string>invlpg</string>
+		<string>lock</string>
+		<string>hlt</string>
+		<string>rsm</string>
+		<string>rdmsr</string>
+		<string>wrmsr</string>
+		<string>rdpmc</string>
+		<string>rdtsc</string>
+		<string>sysenter</string>
+		<string>sysexit</string>
+		
+		<!-- 64-Bit Mode Instructions -->
+		<string>cdqe</string>
+		<string>cmpsq</string>
+		<string>cmpxchg16b</string>
+		<string>lodsq</string>
+		<string>movsq</string>
+		<string>stosq</string>
+		<string>swapgs</string>
+		<string>syscall</string>
+		<string>sysret</string>
+		
+		<!-- Virtual Machine Instructions -->
+		<string>vmptrld</string>
+		<string>vmptrst</string>
+		<string>vmclear</string>
+		<string>vmread</string>
+		<string>vmwrite</string>
+		<string>vmcall</string>
+		<string>vmlaunch</string>
+		<string>vmresume</string>
+		<string>vmxoff</string>
+		<string>vmxon</string>
+		
+		<!-- 32-Bit Mode Registers -->
+		<string>al</string>
+		<string>ah</string>
+		<string>ax</string>
+		<string>eax</string>
+		<string>bl</string>
+		<string>bh</string>
+		<string>bx</string>
+		<string>ebx</string>
+		<string>cl</string>
+		<string>ch</string>
+		<string>cx</string>
+		<string>ecx</string>
+		<string>dl</string>
+		<string>dh</string>
+		<string>dx</string>
+		<string>edx</string>
+		<string>si</string>
+		<string>esi</string>
+		<string>di</string>
+		<string>edi</string>
+		<string>bp</string>
+		<string>ebp</string>
+		<string>sp</string>
+		<string>esp</string>        
+		<string>ip</string>
+		<string>eip</string>        
+		<string>cs</string>
+		<string>ds</string>
+		<string>es</string>
+		<string>fs</string>
+		<string>gs</string>
+		<string>ss</string>
+		
+		<!-- 64-Bit Mode Registers -->
+		<string>rip</string>
+		<string>sil</string>
+		<string>dil</string>
+		<string>bpl</string>
+		<string>spl</string>
+		<string>r8l</string>
+		<string>r9l</string>
+		<string>r10l</string>
+		<string>r11l</string>
+		<string>r12l</string>
+		<string>r13l</string>
+		<string>r14l</string>
+		<string>r15l</string>
+		<string>r8w</string>
+		<string>r9w</string>
+		<string>r10w</string>
+		<string>r11w</string>
+		<string>r12w</string>
+		<string>r13w</string>
+		<string>r14w</string>
+		<string>r15w</string>
+		<string>r8d</string>
+		<string>r9d</string>
+		<string>r10d</string>
+		<string>r11d</string>
+		<string>r12d</string>
+		<string>r13d</string>
+		<string>r14d</string>
+		<string>r15d</string>
+		<string>rax</string>
+		<string>rbx</string>
+		<string>rcx</string>
+		<string>rdx</string>
+		<string>rsi</string>
+		<string>rdi</string>
+		<string>rbp</string>
+		<string>rsp</string>
+		<string>r8</string>
+		<string>r9</string>
+		<string>r10</string>
+		<string>r11</string>
+		<string>r12</string>
+		<string>r13</string>
+		<string>r14</string>
+		<string>r15</string>
+		<string>rip</string>
+		
+		<!-- NASM Pseudo-Instructions -->
+		<string>db</string>
+		<string>dw</string>
+		<string>dd</string>
+		<string>dq</string>
+		<string>dt</string>
+		<string>do</string>
+		<string>resb</string>
+		<string>resw</string>
+		<string>resd</string>
+		<string>resq</string>
+		<string>rest</string>
+		<string>reso</string>
+		<string>incbin</string>
+		<string>equ</string>
+		<string>times</string>
+		<string>org</string>
+		<string>align</string>
+		<string>alignb</string>
+
+		<string>strict</string>
+		<string>byte</string>
+		<string>word</string>
+		<string>dword</string>
+		<string>qword</string>
+		<string>abs</string>
+		<string>rel</string>
+		<string>seg</string>
+		<string>wrt</string>
+		
+		<!-- NASM Directives -->
+		<string>bits</string>
+		<string>use16</string>
+		<string>use32</string>
+		<string>use64</string>
+		<string>default</string>
+		<string>section</string>
+		<string>segment</string>
+		<string>absolute</string>
+		<string>extern</string>
+		<string>global</string>
+		<string>common</string>
+		<string>cpu</string>
+
+		<string>struc</string>
+		<string>endstruc</string>
+		<string>istruc</string>
+		<string>iend</string>
+		<string>at</string>
+
+		<!-- NASM Macros -->
+		<string>%define</string>
+		<string>%xdefine</string>
+		<string>%+</string>
+		<string>%undef</string>
+		<string>%assign</string>
+		<string>%strlen</string>
+		<string>%substr</string>
+		<string>%0</string>
+		<string>%1</string>
+		<string>%2</string>
+		<string>%3</string>
+		<string>%4</string>
+		<string>%5</string>
+		<string>%6</string>
+		<string>%7</string>
+		<string>%8</string>
+		<string>%9</string>
+		<string>%rotate</string>
+		<string>%ifdef</string>
+		<string>%ifmacro</string>
+		<string>%ifctx</string>
+		<string>%if</string>
+		<string>%ifidn</string>
+		<string>%ifidni</string>
+		<string>%ifid</string>
+		<string>%ifnum</string>
+		<string>%ifstr</string>
+		<string>%error</string>
+		<string>%push</string>
+		<string>%pop</string>
+		<string>%repl</string>
+	</array>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.asm</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Comment Pattern</key>
+		<string>;.*</string>
+		<key>Function Pattern</key>
+		<string></string>
+		<key>Identifier and Keyword Character Class</key>
+		<string>A-Za-z0-9_$#@~.?%</string>
+		<key>Skip Pattern</key>
+		<string></string>
+		<key>String Pattern</key>
+		<string>"[^"\r\n]*+"|'[^'\r\n]*+'|`(\\.|[^`\\\r\n])*+`</string>
+	</dict>
+</dict>
+</plist>

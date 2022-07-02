@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+    CMake version 2.4-patch 3 syntax coloring.
+    
+    v0.1 by Michael Conrad Tadpol Tilstra <tadpol@tadpol.org>
+     http://tadpol.org/projects/bbclm_for_cmake.html
+	v0.2 Fixes Recognizing CMakeLists.txt file names.
+		Fix from William Kyngesburye
+    
+    Keyword list is made from cmake --help-command-list --help-module-list |grep -v 'cmake version'
+    
+-->
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<false/>
+	<key>BBLMKeywordList</key>
+	<array>
+	    <!-- Commands -->
+        <string>ADD_CUSTOM_COMMAND</string>
+        <string>ADD_CUSTOM_TARGET</string>
+        <string>ADD_DEFINITIONS</string>
+        <string>ADD_DEPENDENCIES</string>
+        <string>ADD_EXECUTABLE</string>
+        <string>ADD_LIBRARY</string>
+        <string>ADD_SUBDIRECTORY</string>
+        <string>ADD_TEST</string>
+        <string>AUX_SOURCE_DIRECTORY</string>
+        <string>BUILD_COMMAND</string>
+        <string>BUILD_NAME</string>
+        <string>CMAKE_MINIMUM_REQUIRED</string>
+        <string>CONFIGURE_FILE</string>
+        <string>CREATE_TEST_SOURCELIST</string>
+        <string>ELSE</string>
+        <string>ENABLE_LANGUAGE</string>
+        <string>ENABLE_TESTING</string>
+        <string>ENDFOREACH</string>
+        <string>ENDIF</string>
+        <string>ENDWHILE</string>
+        <string>EXEC_PROGRAM</string>
+        <string>EXECUTE_PROCESS</string>
+        <string>EXPORT_LIBRARY_DEPENDENCIES</string>
+        <string>FILE</string>
+        <string>FIND_FILE</string>
+        <string>FIND_LIBRARY</string>
+        <string>FIND_PACKAGE</string>
+        <string>FIND_PATH</string>
+        <string>FIND_PROGRAM</string>
+        <string>FLTK_WRAP_UI</string>
+        <string>FOREACH</string>
+        <string>GET_CMAKE_PROPERTY</string>
+        <string>GET_DIRECTORY_PROPERTY</string>
+        <string>GET_FILENAME_COMPONENT</string>
+        <string>GET_SOURCE_FILE_PROPERTY</string>
+        <string>GET_TARGET_PROPERTY</string>
+        <string>GET_TEST_PROPERTY</string>
+        <string>IF</string>
+        <string>INCLUDE</string>
+        <string>INCLUDE_DIRECTORIES</string>
+        <string>INCLUDE_EXTERNAL_MSPROJECT</string>
+        <string>INCLUDE_REGULAR_EXPRESSION</string>
+        <string>INSTALL</string>
+        <string>INSTALL_FILES</string>
+        <string>INSTALL_PROGRAMS</string>
+        <string>INSTALL_TARGETS</string>
+        <string>LINK_DIRECTORIES</string>
+        <string>LINK_LIBRARIES</string>
+        <string>LIST</string>
+        <string>LOAD_CACHE</string>
+        <string>LOAD_COMMAND</string>
+        <string>MACRO</string>
+        <string>MAKE_DIRECTORY</string>
+        <string>MARK_AS_ADVANCED</string>
+        <string>MATH</string>
+        <string>MESSAGE</string>
+        <string>OPTION</string>
+        <string>OUTPUT_REQUIRED_FILES</string>
+        <string>PROJECT</string>
+        <string>QT_WRAP_CPP</string>
+        <string>QT_WRAP_UI</string>
+        <string>REMOVE</string>
+        <string>REMOVE_DEFINITIONS</string>
+        <string>SEPARATE_ARGUMENTS</string>
+        <string>SET</string>
+        <string>SET_DIRECTORY_PROPERTIES</string>
+        <string>SET_SOURCE_FILES_PROPERTIES</string>
+        <string>SET_TARGET_PROPERTIES</string>
+        <string>SET_TESTS_PROPERTIES</string>
+        <string>SITE_NAME</string>
+        <string>SOURCE_GROUP</string>
+        <string>STRING</string>
+        <string>SUBDIR_DEPENDS</string>
+        <string>SUBDIRS</string>
+        <string>TARGET_LINK_LIBRARIES</string>
+        <string>TRY_COMPILE</string>
+        <string>TRY_RUN</string>
+        <string>USE_MANGLED_MESA</string>
+        <string>UTILITY_SOURCE</string>
+        <string>VARIABLE_REQUIRES</string>
+        <string>VTK_MAKE_INSTANTIATOR</string>
+        <string>VTK_WRAP_JAVA</string>
+        <string>VTK_WRAP_PYTHON</string>
+        <string>VTK_WRAP_TCL</string>
+        <string>WHILE</string>
+        <string>WRITE_FILE</string>
+        <!-- Modules -->
+        <string>AddFileDependencies</string>
+        <string>CheckCSourceCompiles</string>
+        <string>CheckCXXSourceCompiles</string>
+        <string>CheckFunctionExists</string>
+        <string>CheckIncludeFile</string>
+        <string>CheckIncludeFileCXX</string>
+        <string>CheckIncludeFiles</string>
+        <string>CheckLibraryExists</string>
+        <string>CheckSymbolExists</string>
+        <string>CheckTypeSize</string>
+        <string>CheckVariableExists</string>
+        <string>CMakeBackwardCompatibilityCXX</string>
+        <string>CMakeExportBuildSettings</string>
+        <string>CMakeFindFrameworks</string>
+        <string>CMakeImportBuildSettings</string>
+        <string>CMakeJavaInformation</string>
+        <string>CMakePrintSystemInformation</string>
+        <string>CPack</string>
+        <string>CTest</string>
+        <string>Dart</string>
+        <string>Documentation</string>
+        <string>FindAVIFile</string>
+        <string>FindBoost</string>
+        <string>FindCABLE</string>
+        <string>FindCurses</string>
+        <string>FindCygwin</string>
+        <string>FindDart</string>
+        <string>FindDCMTK</string>
+        <string>FindDoxygen</string>
+        <string>FindFLTK</string>
+        <string>FindGCCXML</string>
+        <string>FindGLUT</string>
+        <string>FindGnuplot</string>
+        <string>FindGTK</string>
+        <string>FindHTMLHelp</string>
+        <string>FindImageMagick</string>
+        <string>FindITK</string>
+        <string>FindJava</string>
+        <string>FindJNI</string>
+        <string>FindJPEG</string>
+        <string>FindKDE3</string>
+        <string>FindKDE4</string>
+        <string>FindLATEX</string>
+        <string>FindMatlab</string>
+        <string>FindMFC</string>
+        <string>FindMotif</string>
+        <string>FindMPEG</string>
+        <string>FindMPEG2</string>
+        <string>FindMPI</string>
+        <string>FindOpenAL</string>
+        <string>FindOpenGL</string>
+        <string>FindPerl</string>
+        <string>FindPerlLibs</string>
+        <string>FindPHP4</string>
+        <string>FindPhysFS</string>
+        <string>FindPike</string>
+        <string>FindPNG</string>
+        <string>FindPythonInterp</string>
+        <string>FindPythonLibs</string>
+        <string>FindQt</string>
+        <string>FindQt3</string>
+        <string>FindQt4</string>
+        <string>FindRuby</string>
+        <string>FindSDL</string>
+        <string>FindSDL_image</string>
+        <string>FindSDL_mixer</string>
+        <string>FindSDL_net</string>
+        <string>FindSDL_sound</string>
+        <string>FindSDL_ttf</string>
+        <string>FindSelfPackers</string>
+        <string>FindSWIG</string>
+        <string>FindTCL</string>
+        <string>FindTclsh</string>
+        <string>FindThreads</string>
+        <string>FindTIFF</string>
+        <string>FindUnixCommands</string>
+        <string>FindVTK</string>
+        <string>FindWget</string>
+        <string>FindWish</string>
+        <string>FindwxWidgets</string>
+        <string>FindwxWindows</string>
+        <string>FindX11</string>
+        <string>FindZLIB</string>
+        <string>InstallRequiredSystemLibraries</string>
+        <string>MacroAddFileDependencies</string>
+        <string>TestBigEndian</string>
+        <string>TestCXXAcceptsFlag</string>
+        <string>TestForANSIForScope</string>
+        <string>TestForANSIStreamHeaders</string>
+        <string>TestForSSTREAM</string>
+        <string>TestForSTDNamespace</string>
+        <string>Use_wxWindows</string>
+        <string>UseEcos</string>
+        <string>UsePkgConfig</string>
+        <string>UseQt4</string>
+        <string>UseSWIG</string>
+        <string>UsewxWidgets</string>
+
+	</array>
+	<key>BBLMLanguageCode</key>
+	<string>CMAK</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>CMake</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMFileNamesToMatch</key>
+	<array>
+		<string>CMakeLists.txt</string>
+	</array>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.cmake</string>
+		</dict>
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Comment Pattern</key>
+		<string><![CDATA[(?>#.*$)]]></string>
+				
+		<key>Identifier and Keyword Character Class</key>
+		<string>a-z_A-Z0-9</string>
+		
+		<key>Skip Pattern</key>
+		<string><![CDATA[((?P>comment)|(?P>string))]]></string>
+		
+		<key>String Pattern</key>
+		<string><![CDATA["(?>\\.|[^"\\])*"]]></string>
+	</dict>
+</dict>
+</plist>
